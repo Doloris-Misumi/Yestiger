@@ -1,0 +1,218 @@
+{
+  "song_id": "jibun_restart",
+  "method": "loso_structure_rf",
+  "call_spans": [
+    {
+      "start": 0.0,
+      "end": 3.12,
+      "call_role": "keepspace",
+      "bar_start": 0,
+      "bar_end": 1,
+      "bars": 2,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 3.12,
+      "end": 24.18,
+      "call_role": "mix",
+      "bar_start": 2,
+      "bar_end": 16,
+      "bars": 15,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 24.18,
+      "end": 62.08,
+      "call_role": "rhythmcall",
+      "bar_start": 17,
+      "bar_end": 43,
+      "bars": 27,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 62.08,
+      "end": 66.28,
+      "call_role": "mix",
+      "bar_start": 44,
+      "bar_end": 46,
+      "bars": 3,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 66.28,
+      "end": 67.69,
+      "call_role": "rhythmcall",
+      "bar_start": 47,
+      "bar_end": 47,
+      "bars": 1,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 67.69,
+      "end": 114.01,
+      "call_role": "underground_gei",
+      "bar_start": 48,
+      "bar_end": 80,
+      "bars": 33,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 114.01,
+      "end": 136.46,
+      "call_role": "mix",
+      "bar_start": 81,
+      "bar_end": 96,
+      "bars": 16,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 136.46,
+      "end": 171.55,
+      "call_role": "rhythmcall",
+      "bar_start": 97,
+      "bar_end": 121,
+      "bars": 25,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 171.55,
+      "end": 172.95,
+      "call_role": "mix",
+      "bar_start": 122,
+      "bar_end": 122,
+      "bars": 1,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 172.95,
+      "end": 174.36,
+      "call_role": "rhythmcall",
+      "bar_start": 123,
+      "bar_end": 123,
+      "bars": 1,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 174.36,
+      "end": 177.16,
+      "call_role": "mix",
+      "bar_start": 124,
+      "bar_end": 125,
+      "bars": 2,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 177.16,
+      "end": 179.97,
+      "call_role": "rhythmcall",
+      "bar_start": 126,
+      "bar_end": 127,
+      "bars": 2,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 179.97,
+      "end": 220.67,
+      "call_role": "underground_gei",
+      "bar_start": 128,
+      "bar_end": 156,
+      "bars": 29,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 220.67,
+      "end": 271.2,
+      "call_role": "mix",
+      "bar_start": 157,
+      "bar_end": 176,
+      "bars": 20,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 271.2,
+      "end": 290.79,
+      "call_role": "keepspace",
+      "bar_start": 177,
+      "bar_end": 183,
+      "bars": 7,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 290.79,
+      "end": 316.11,
+      "call_role": "underground_gei",
+      "bar_start": 184,
+      "bar_end": 201,
+      "bars": 18,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 316.11,
+      "end": 339.97,
+      "call_role": "mix",
+      "bar_start": 202,
+      "bar_end": 218,
+      "bars": 17,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 339.97,
+      "end": 347.66,
+      "call_role": "keepspace",
+      "bar_start": 219,
+      "bar_end": 224,
+      "bars": 6,
+      "method": "loso_structure_rf"
+    }
+  ],
+  "comparison_to_manual_grid": {
+    "time_weighted_role_accuracy": 0.305758,
+    "macro_role_iou": 0.193598,
+    "role_iou": {
+      "keepspace": 0.07024,
+      "rhythmcall": 0.209906,
+      "mix": 0.094387,
+      "underground_gei": 0.399858
+    },
+    "boundary": {
+      "precision": 0.529412,
+      "recall": 0.18,
+      "f1": 0.268657,
+      "tp": 9,
+      "fp": 8,
+      "fn": 41,
+      "target_count": 50,
+      "predicted_count": 17,
+      "tolerance_seconds": 1.4
+    },
+    "target_span_count": 51,
+    "predicted_span_count": 18,
+    "duration_seconds": 347.66,
+    "confusion_duration": {
+      "keepspace": {
+        "keepspace": 10.81,
+        "rhythmcall": 42.09,
+        "mix": 37.89,
+        "underground_gei": 43.52
+      },
+      "rhythmcall": {
+        "keepspace": 0.0,
+        "rhythmcall": 36.53,
+        "mix": 74.37,
+        "underground_gei": 21.04
+      },
+      "mix": {
+        "keepspace": 19.59,
+        "rhythmcall": 0.0,
+        "mix": 14.04,
+        "underground_gei": 2.86
+      },
+      "underground_gei": {
+        "keepspace": 0.0,
+        "rhythmcall": 0.0,
+        "mix": 0.0,
+        "underground_gei": 44.92
+      }
+    }
+  }
+}

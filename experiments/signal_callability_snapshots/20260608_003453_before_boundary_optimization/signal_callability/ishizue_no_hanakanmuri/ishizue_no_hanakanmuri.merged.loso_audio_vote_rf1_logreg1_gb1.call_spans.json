@@ -1,0 +1,281 @@
+{
+  "song_id": "ishizue_no_hanakanmuri",
+  "method": "loso_audio_vote_rf1_logreg1_gb1",
+  "call_spans": [
+    {
+      "start": 0.0,
+      "end": 3.34,
+      "call_role": "keepspace",
+      "bar_start": 0,
+      "bar_end": 1,
+      "bars": 2,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 3.34,
+      "end": 11.62,
+      "call_role": "rhythmcall",
+      "bar_start": 2,
+      "bar_end": 4,
+      "bars": 3,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 11.62,
+      "end": 14.39,
+      "call_role": "keepspace",
+      "bar_start": 5,
+      "bar_end": 5,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 14.39,
+      "end": 72.32,
+      "call_role": "rhythmcall",
+      "bar_start": 6,
+      "bar_end": 26,
+      "bars": 21,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 72.32,
+      "end": 83.36,
+      "call_role": "mix",
+      "bar_start": 27,
+      "bar_end": 30,
+      "bars": 4,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 83.36,
+      "end": 86.1,
+      "call_role": "keepspace",
+      "bar_start": 31,
+      "bar_end": 31,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 86.1,
+      "end": 88.87,
+      "call_role": "rhythmcall",
+      "bar_start": 32,
+      "bar_end": 32,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 88.87,
+      "end": 94.39,
+      "call_role": "mix",
+      "bar_start": 33,
+      "bar_end": 34,
+      "bars": 2,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 94.39,
+      "end": 102.66,
+      "call_role": "keepspace",
+      "bar_start": 35,
+      "bar_end": 37,
+      "bars": 3,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 102.66,
+      "end": 116.42,
+      "call_role": "rhythmcall",
+      "bar_start": 38,
+      "bar_end": 42,
+      "bars": 5,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 116.42,
+      "end": 138.52,
+      "call_role": "underground_gei",
+      "bar_start": 43,
+      "bar_end": 58,
+      "bars": 16,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 138.52,
+      "end": 142.66,
+      "call_role": "rhythmcall",
+      "bar_start": 59,
+      "bar_end": 61,
+      "bars": 3,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 142.66,
+      "end": 159.21,
+      "call_role": "mix",
+      "bar_start": 62,
+      "bar_end": 73,
+      "bars": 12,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 159.21,
+      "end": 171.63,
+      "call_role": "rhythmcall",
+      "bar_start": 74,
+      "bar_end": 82,
+      "bars": 9,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 171.63,
+      "end": 185.41,
+      "call_role": "mix",
+      "bar_start": 83,
+      "bar_end": 92,
+      "bars": 10,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 185.41,
+      "end": 189.56,
+      "call_role": "rhythmcall",
+      "bar_start": 93,
+      "bar_end": 95,
+      "bars": 3,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 189.56,
+      "end": 203.36,
+      "call_role": "underground_gei",
+      "bar_start": 96,
+      "bar_end": 105,
+      "bars": 10,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 203.36,
+      "end": 204.73,
+      "call_role": "rhythmcall",
+      "bar_start": 106,
+      "bar_end": 106,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 204.73,
+      "end": 206.12,
+      "call_role": "underground_gei",
+      "bar_start": 107,
+      "bar_end": 107,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 206.12,
+      "end": 208.87,
+      "call_role": "keepspace",
+      "bar_start": 108,
+      "bar_end": 109,
+      "bars": 2,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 208.87,
+      "end": 210.25,
+      "call_role": "mix",
+      "bar_start": 110,
+      "bar_end": 110,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 210.25,
+      "end": 211.63,
+      "call_role": "underground_gei",
+      "bar_start": 111,
+      "bar_end": 111,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 211.63,
+      "end": 214.39,
+      "call_role": "keepspace",
+      "bar_start": 112,
+      "bar_end": 113,
+      "bars": 2,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 214.39,
+      "end": 236.46,
+      "call_role": "underground_gei",
+      "bar_start": 114,
+      "bar_end": 129,
+      "bars": 16,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    },
+    {
+      "start": 236.46,
+      "end": 246.94,
+      "call_role": "keepspace",
+      "bar_start": 130,
+      "bar_end": 137,
+      "bars": 8,
+      "method": "loso_audio_vote_rf1_logreg1_gb1"
+    }
+  ],
+  "comparison_to_manual_grid": {
+    "time_weighted_role_accuracy": 0.363246,
+    "macro_role_iou": 0.243449,
+    "role_iou": {
+      "keepspace": 0.311333,
+      "rhythmcall": 0.097604,
+      "mix": 0.153049,
+      "underground_gei": 0.411809
+    },
+    "boundary": {
+      "precision": 0.25,
+      "recall": 0.428571,
+      "f1": 0.315789,
+      "tp": 6,
+      "fp": 18,
+      "fn": 8,
+      "target_count": 14,
+      "predicted_count": 24,
+      "tolerance_seconds": 1.38
+    },
+    "target_span_count": 15,
+    "predicted_span_count": 25,
+    "duration_seconds": 246.94,
+    "confusion_duration": {
+      "keepspace": {
+        "keepspace": 19.34,
+        "rhythmcall": 11.05,
+        "mix": 15.17,
+        "underground_gei": 2.79
+      },
+      "rhythmcall": {
+        "keepspace": 5.52,
+        "rhythmcall": 11.04,
+        "mix": 0.0,
+        "underground_gei": 2.77
+      },
+      "mix": {
+        "keepspace": 0.0,
+        "rhythmcall": 70.31,
+        "mix": 20.68,
+        "underground_gei": 16.54
+      },
+      "underground_gei": {
+        "keepspace": 8.25,
+        "rhythmcall": 12.42,
+        "mix": 12.42,
+        "underground_gei": 38.64
+      }
+    }
+  }
+}

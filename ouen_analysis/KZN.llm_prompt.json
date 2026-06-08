@@ -1,0 +1,149 @@
+{
+  "provider": "openrouter",
+  "model": "openrouter/free",
+  "base_url": "https://openrouter.ai/api/v1/chat/completions",
+  "api_config": "config\\openrouter.local.json",
+  "structured_output": false,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are YesTiger's LLM Arranger, an expert idol/anison live callbook arranger. You do not detect beats or audio boundaries. You only arrange from provided candidate slots. Optimize for live usability: avoid overfilling vocals, use call density intentionally, split long instrumental slots into sub-actions when appropriate, and mark risky calls clearly. Return only JSON that follows the provided schema."
+    },
+    {
+      "role": "user",
+      "content": "{\"task\": \"Arrange a timestamped callbook from candidate slots.\", \"style_profile\": {\"id\": \"normal_to_aggressive_idol\", \"display_name\": \"Normal to Aggressive Idol Live\", \"density\": \"normal_to_aggressive\", \"allow_high_risk\": true, \"allow_ietora\": true, \"allow_chain_mix\": true, \"allow_gachikoi\": false, \"preferred_long_instrumental_strategy\": \"chain_mix_then_transition\", \"notes\": [\"Draft profile for validating YesTiger MVP.\", \"High-risk calls are allowed as candidates, but the arranger should still add cautions.\", \"Avoid covering dense vocals unless the candidate is a chorus support call.\"]}, \"arrangement_rules\": [\"Use only action IDs that appear in each slot's candidates, except keep_space for silence.\", \"For long instrumental or extended instrumental slots, prefer chain arrangements if profile allows chain mix.\", \"If chain_candidates are provided, treat each as a suggested packing of multiple atomic actions.\", \"To choose a chain_candidate, set arrangement_type to chain and copy its actions into sub_actions.\", \"kaho_sanren_mix / Variable Triple MIX is one atomic MIX action. Do not split it into repeated kaho_sanren_mix sub-actions.\", \"When making a chain, use distinct action IDs or clearly different actions instead of repeating the same atomic MIX.\", \"keep_space is a last-resort choice. If a slot has candidates, choose one unless there is a clear reason to leave space.\", \"Do not return an all-keep_space or mostly-keep_space callbook for this profile.\", \"For verse_subsection, usually keep support light: PPPH, clap, or silence.\", \"For pre_chorus candidates, Ietora is allowed only if the profile allows it; otherwise choose PPPH/clap.\", \"For chorus, prefer repeatable support such as Fuwa Fuwa, Hai Hai, or Clap.\", \"Do not blindly choose the highest score. Consider density, risk, and musical continuity.\", \"If a slot is too short for a full MIX, use a shortened cue or choose a rhythm call.\", \"If uncertainty is high, include cautions rather than pretending certainty.\", \"Use sub_actions for chains inside a long slot; align sub_actions inside the parent start/end.\", \"You must create one entry for every provided slot. Do not return an empty entries array.\"], \"candidates\": {\"source_audio\": \"KZN.mp3\", \"bar_seconds_estimate\": 2.54, \"slot_count\": 19, \"slots\": [{\"slot_index\": 0, \"start\": 0.0, \"end\": 10.73, \"time\": \"00:00.00 - 00:10.73\", \"bars\": 3.0, \"label\": \"intro\", \"tags\": [\"intro\"], \"candidates\": [{\"id\": \"standard_mix\", \"name\": \"Standard MIX\", \"score\": 0.5549, \"risk\": \"medium\", \"text\": \"Aaa, yossha ikuzo! Tiger! Fire! Cyber! Fiber! Diver! Viber! Jya Jya!\"}], \"chain_candidates\": []}, {\"slot_index\": 1, \"start\": 10.73, \"end\": 31.04, \"time\": \"00:10.73 - 00:31.04\", \"bars\": 7.0, \"label\": \"verse_subsection\", \"tags\": [\"mid_energy_vocal\", \"verse\", \"verse_subsection\"], \"candidates\": [{\"id\": \"ppph\", \"name\": \"PPPH\", \"score\": 0.8115, \"risk\": \"low\", \"text\": \"Pan-pa-pan, hyu!\"}, {\"id\": \"clap\", \"name\": \"Clap\", \"score\": 0.7, \"risk\": \"low\", \"text\": \"Clap on beat or backbeat.\"}], \"chain_candidates\": []}, {\"slot_index\": 2, \"start\": 31.04, \"end\": 46.28, \"time\": \"00:31.04 - 00:46.28\", \"bars\": 5.0, \"label\": \"pre_chorus_build_candidate\", \"tags\": [\"high_tension_gap\", \"pre_chorus\", \"pre_chorus_build\", \"pre_chorus_build_candidate\", \"verse\"], \"candidates\": [{\"id\": \"ppph\", \"name\": \"PPPH\", \"score\": 0.8302, \"risk\": \"low\", \"text\": \"Pan-pa-pan, hyu!\"}, {\"id\": \"clap\", \"name\": \"Clap\", \"score\": 0.7161, \"risk\": \"low\", \"text\": \"Clap on beat or backbeat.\"}, {\"id\": \"ietora\", \"name\": \"Ietora\", \"score\": 0.6979, \"risk\": \"high\", \"text\": \"Ie Tiger!\"}], \"chain_candidates\": []}, {\"slot_index\": 3, \"start\": 46.28, \"end\": 66.59, \"time\": \"00:46.28 - 01:06.59\", \"bars\": 7.0, \"label\": \"chorus\", \"tags\": [\"chorus\", \"repeated_chorus\"], \"candidates\": [{\"id\": \"fuwa_fuwa\", \"name\": \"Fuwa Fuwa\", \"score\": 0.8111, \"risk\": \"low\", \"text\": \"Fuwa fuwa!\"}, {\"id\": \"hai_hai\", \"name\": \"Hai Hai\", \"score\": 0.7262, \"risk\": \"low\", \"text\": \"Hai! Hai!\"}, {\"id\": \"clap\", \"name\": \"Clap\", \"score\": 0.6952, \"risk\": \"low\", \"text\": \"Clap on beat or backbeat.\"}], \"chain_candidates\": []}, {\"slot_index\": 4, \"start\": 66.59, \"end\": 86.92, \"time\": \"01:06.59 - 01:26.92\", \"bars\": 7.0, \"label\": \"chorus\", \"tags\": [\"chorus\", \"repeated_chorus\"], \"candidates\": [{\"id\": \"fuwa_fuwa\", \"name\": \"Fuwa Fuwa\", \"score\": 0.8111, \"risk\": \"low\", \"text\": \"Fuwa fuwa!\"}, {\"id\": \"hai_hai\", \"name\": \"Hai Hai\", \"score\": 0.7262, \"risk\": \"low\", \"text\": \"Hai! Hai!\"}, {\"id\": \"clap\", \"name\": \"Clap\", \"score\": 0.6952, \"risk\": \"low\", \"text\": \"Clap on beat or backbeat.\"}], \"chain_candidates\": []}, {\"slot_index\": 5, \"start\": 86.92, \"end\": 97.07, \"time\": \"01:26.92 - 01:37.07\", \"bars\": 3.0, \"label\": \"post_chorus_interlude_candidate\", \"tags\": [\"instrumental_break\", \"post_chorus_interlude\", \"post_chorus_interlude_candidate\", \"reintro\", \"verse\"], \"candidates\": [{\"id\": \"oi_oi\", \"name\": \"Oi Oi\", \"score\": 0.72, \"risk\": \"low\", \"text\": \"Oi! Oi!\"}, {\"id\": \"clap\", \"name\": \"Clap\", \"score\": 0.6796, \"risk\": \"low\", \"text\": \"Clap on beat or backbeat.\"}, {\"id\": \"tiger_fire_activation\", \"name\": \"Tiger Fire Activation\", \"score\": 0.6444, \"risk\": \"medium\", \"text\": \"Tiger! Fire! ...\"}, {\"id\": \"japanese_mix\", \"name\": \"Japanese MIX\", \"score\": 0.6326, \"risk\": \"medium\", \"text\": \"Aaa, mou iccho ikuzo! Tora! Hi! Jinzou! Sen-i! Ama! Shindou! Kasen-tobi-jokyo!\"}, {\"id\": \"standard_mix\", \"name\": \"Standard MIX\", \"score\": 0.6296, \"risk\": \"medium\", \"text\": \"Aaa, yossha ikuzo! Tiger! Fire! Cyber! Fiber! Diver! Viber! Jya Jya!\"}], \"chain_candidates\": []}, {\"slot_index\": 6, \"start\": 97.07, \"end\": 117.4, \"time\": \"01:37.07 - 01:57.40\", \"bars\": 7.0, \"label\": \"verse_subsection\", \"tags\": [\"mid_energy_vocal\", \"verse\", \"verse_subsection\"], \"candidates\": [{\"id\": \"ppph\", \"name\": \"PPPH\", \"score\": 0.7785, \"risk\": \"low\", \"text\": \"Pan-pa-pan, hyu!\"}, {\"id\": \"clap\", \"name\": \"Clap\", \"score\": 0.6715, \"risk\": \"low\", \"text\": \"Clap on beat or backbeat.\"}], \"chain_candidates\": []}, {\"slot_index\": 7, \"start\": 117.4, \"end\": 132.62, \"time\": \"01:57.40 - 02:12.62\", \"bars\": 5.0, \"label\": \"pre_chorus_candidate\", \"tags\": [\"pre_chorus\", \"pre_chorus_candidate\", \"verse\"], \"candidates\": [{\"id\": \"ppph\", \"name\": \"PPPH\", \"score\": 0.7571, \"risk\": \"low\", \"text\": \"Pan-pa-pan, hyu!\"}, {\"id\": \"clap\", \"name\": \"Clap\", \"score\": 0.6531, \"risk\": \"low\", \"text\": \"Clap on beat or backbeat.\"}, {\"id\": \"ietora\", \"name\": \"Ietora\", \"score\": 0.5336, \"risk\": \"high\", \"text\": \"Ie Tiger!\"}], \"chain_candidates\": []}, {\"slot_index\": 8, \"start\": 132.62, \"end\": 152.92, \"time\": \"02:12.62 - 02:32.92\", \"bars\": 7.0, \"label\": \"chorus\", \"tags\": [\"chorus\", \"repeated_chorus\"], \"candidates\": [{\"id\": \"fuwa_fuwa\", \"name\": \"Fuwa Fuwa\", \"score\": 0.8111, \"risk\": \"low\", \"text\": \"Fuwa fuwa!\"}, {\"id\": \"hai_hai\", \"name\": \"Hai Hai\", \"score\": 0.7262, \"risk\": \"low\", \"text\": \"Hai! Hai!\"}, {\"id\": \"clap\", \"name\": \"Clap\", \"score\": 0.6952, \"risk\": \"low\", \"text\": \"Clap on beat or backbeat.\"}], \"chain_candidates\": []}, {\"slot_index\": 9, \"start\": 152.92, \"end\": 175.8, \"time\": \"02:32.92 - 02:55.80\", \"bars\": 8.0, \"label\": \"chorus\", \"tags\": [\"chorus\", \"repeated_chorus\"], \"candidates\": [{\"id\": \"fuwa_fuwa\", \"name\": \"Fuwa Fuwa\", \"score\": 0.8111, \"risk\": \"low\", \"text\": \"Fuwa fuwa!\"}, {\"id\": \"hai_hai\", \"name\": \"Hai Hai\", \"score\": 0.7262, \"risk\": \"low\", \"text\": \"Hai! Hai!\"}, {\"id\": \"clap\", \"name\": \"Clap\", \"score\": 0.6952, \"risk\": \"low\", \"text\": \"Clap on beat or backbeat.\"}], \"chain_candidates\": []}, {\"slot_index\": 10, \"start\": 175.8, \"end\": 203.73, \"time\": \"02:55.80 - 03:23.73\", \"bars\": 10.0, \"label\": \"inst\", \"tags\": [\"extended_instrumental\", \"inst\", \"instrumental_break\"], \"candidates\": [{\"id\": \"oi_oi\", \"name\": \"Oi Oi\", \"score\": 0.7366, \"risk\": \"low\", \"text\": \"Oi! Oi!\"}, {\"id\": \"kaho_sanren_mix\", \"name\": \"Variable Triple MIX\", \"score\": 0.6604, \"risk\": \"high\", \"text\": \"MIX variants chained in three phrases.\"}, {\"id\": \"gachikoi_koujou\", \"name\": \"Gachikoi Koujou\", \"score\": 0.6542, \"risk\": \"high\", \"text\": \"A fixed love/oshi speech shouted in a long gap.\"}, {\"id\": \"ainu_mix\", \"name\": \"Ainu MIX\", \"score\": 0.6293, \"risk\": \"medium\", \"text\": \"Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!\"}, {\"id\": \"tiger_fire_activation\", \"name\": \"Tiger Fire Activation\", \"score\": 0.6293, \"risk\": \"medium\", \"text\": \"Tiger! Fire! ...\"}], \"chain_candidates\": [{\"id\": \"chain_oi_oi_ainu_mix_tiger_fire_activation\", \"name\": \"Oi Oi -> Ainu MIX -> Tiger Fire Activation\", \"score\": 0.7423, \"risk\": \"medium\", \"actions\": [{\"id\": \"oi_oi\", \"name\": \"Oi Oi\", \"time\": \"02:55.80 - 03:01.39\", \"text\": \"Oi! Oi!\", \"risk\": \"low\"}, {\"id\": \"ainu_mix\", \"name\": \"Ainu MIX\", \"time\": \"03:01.39 - 03:12.56\", \"text\": \"Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!\", \"risk\": \"medium\"}, {\"id\": \"tiger_fire_activation\", \"name\": \"Tiger Fire Activation\", \"time\": \"03:12.56 - 03:23.73\", \"text\": \"Tiger! Fire! ...\", \"risk\": \"medium\"}]}, {\"id\": \"chain_oi_oi_tiger_fire_activation_ainu_mix\", \"name\": \"Oi Oi -> Tiger Fire Activation -> Ainu MIX\", \"score\": 0.7423, \"risk\": \"medium\", \"actions\": [{\"id\": \"oi_oi\", \"name\": \"Oi Oi\", \"time\": \"02:55.80 - 03:01.39\", \"text\": \"Oi! Oi!\", \"risk\": \"low\"}, {\"id\": \"tiger_fire_activation\", \"name\": \"Tiger Fire Activation\", \"time\": \"03:01.39 - 03:12.56\", \"text\": \"Tiger! Fire! ...\", \"risk\": \"medium\"}, {\"id\": \"ainu_mix\", \"name\": \"Ainu MIX\", \"time\": \"03:12.56 - 03:23.73\", \"text\": \"Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!\", \"risk\": \"medium\"}]}, {\"id\": \"chain_ainu_mix_oi_oi_tiger_fire_activation\", \"name\": \"Ainu MIX -> Oi Oi -> Tiger Fire Activation\", \"score\": 0.7423, \"risk\": \"medium\", \"actions\": [{\"id\": \"ainu_mix\", \"name\": \"Ainu MIX\", \"time\": \"02:55.80 - 03:06.97\", \"text\": \"Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!\", \"risk\": \"medium\"}, {\"id\": \"oi_oi\", \"name\": \"Oi Oi\", \"time\": \"03:06.97 - 03:12.56\", \"text\": \"Oi! Oi!\", \"risk\": \"low\"}, {\"id\": \"tiger_fire_activation\", \"name\": \"Tiger Fire Activation\", \"time\": \"03:12.56 - 03:23.73\", \"text\": \"Tiger! Fire! ...\", \"risk\": \"medium\"}]}, {\"id\": \"chain_ainu_mix_tiger_fire_activation_oi_oi\", \"name\": \"Ainu MIX -> Tiger Fire Activation -> Oi Oi\", \"score\": 0.7423, \"risk\": \"medium\", \"actions\": [{\"id\": \"ainu_mix\", \"name\": \"Ainu MIX\", \"time\": \"02:55.80 - 03:06.97\", \"text\": \"Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!\", \"risk\": \"medium\"}, {\"id\": \"tiger_fire_activation\", \"name\": \"Tiger Fire Activation\", \"time\": \"03:06.97 - 03:18.14\", \"text\": \"Tiger! Fire! ...\", \"risk\": \"medium\"}, {\"id\": \"oi_oi\", \"name\": \"Oi Oi\", \"time\": \"03:18.14 - 03:23.73\", \"text\": \"Oi! Oi!\", \"risk\": \"low\"}]}, {\"id\": \"chain_tiger_fire_activation_oi_oi_ainu_mix\", \"name\": \"Tiger Fire Activation -> Oi Oi -> Ainu MIX\", \"score\": 0.7423, \"risk\": \"medium\", \"actions\": [{\"id\": \"tiger_fire_activation\", \"name\": \"Tiger Fire Activation\", \"time\": \"02:55.80 - 03:06.97\", \"text\": \"Tiger! Fire! ...\", \"risk\": \"medium\"}, {\"id\": \"oi_oi\", \"name\": \"Oi Oi\", \"time\": \"03:06.97 - 03:12.56\", \"text\": \"Oi! Oi!\", \"risk\": \"low\"}, {\"id\": \"ainu_mix\", \"name\": \"Ainu MIX\", \"time\": \"03:12.56 - 03:23.73\", \"text\": \"Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!\", \"risk\": \"medium\"}]}]}, {\"slot_index\": 11, \"start\": 203.73, \"end\": 216.43, \"time\": \"03:23.73 - 03:36.43\", \"bars\": 4.0, \"label\": \"solo\", \"tags\": [\"emotional_solo\", \"instrumental_break\", \"member_focus\", \"solo\"], \"candidates\": [{\"id\": \"oi_oi\", \"name\": \"Oi Oi\", \"score\": 0.7366, \"risk\": \"low\", \"text\": \"Oi! Oi!\"}, {\"id\": \"ainu_mix\", \"name\": \"Ainu MIX\", \"score\": 0.7121, \"risk\": \"medium\", \"text\": \"Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!\"}, {\"id\": \"tiger_fire_activation\", \"name\": \"Tiger Fire Activation\", \"score\": 0.7121, \"risk\": \"medium\", \"text\": \"Tiger! Fire! ...\"}, {\"id\": \"japanese_mix\", \"name\": \"Japanese MIX\", \"score\": 0.71, \"risk\": \"medium\", \"text\": \"Aaa, mou iccho ikuzo! Tora! Hi! Jinzou! Sen-i! Ama! Shindou! Kasen-tobi-jokyo!\"}, {\"id\": \"standard_mix\", \"name\": \"Standard MIX\", \"score\": 0.7069, \"risk\": \"medium\", \"text\": \"Aaa, yossha ikuzo! Tiger! Fire! Cyber! Fiber! Diver! Viber! Jya Jya!\"}], \"chain_candidates\": []}, {\"slot_index\": 12, \"start\": 216.43, \"end\": 229.14, \"time\": \"03:36.43 - 03:49.14\", \"bars\": 4.0, \"label\": \"verse_subsection\", \"tags\": [\"mid_energy_vocal\", \"verse\", \"verse_subsection\"], \"candidates\": [{\"id\": \"ppph\", \"name\": \"PPPH\", \"score\": 0.7658, \"risk\": \"low\", \"text\": \"Pan-pa-pan, hyu!\"}, {\"id\": \"clap\", \"name\": \"Clap\", \"score\": 0.6606, \"risk\": \"low\", \"text\": \"Clap on beat or backbeat.\"}], \"chain_candidates\": []}, {\"slot_index\": 13, \"start\": 229.14, \"end\": 245.64, \"time\": \"03:49.14 - 04:05.64\", \"bars\": 6.0, \"label\": \"pre_chorus_candidate\", \"tags\": [\"pre_chorus\", \"pre_chorus_candidate\", \"verse\"], \"candidates\": [{\"id\": \"ppph\", \"name\": \"PPPH\", \"score\": 0.7658, \"risk\": \"low\", \"text\": \"Pan-pa-pan, hyu!\"}, {\"id\": \"clap\", \"name\": \"Clap\", \"score\": 0.6606, \"risk\": \"low\", \"text\": \"Clap on beat or backbeat.\"}, {\"id\": \"ietora\", \"name\": \"Ietora\", \"score\": 0.5131, \"risk\": \"high\", \"text\": \"Ie Tiger!\"}], \"chain_candidates\": []}, {\"slot_index\": 14, \"start\": 245.64, \"end\": 268.48, \"time\": \"04:05.64 - 04:28.48\", \"bars\": 8.0, \"label\": \"chorus\", \"tags\": [\"chorus\", \"repeated_chorus\"], \"candidates\": [{\"id\": \"fuwa_fuwa\", \"name\": \"Fuwa Fuwa\", \"score\": 0.8111, \"risk\": \"low\", \"text\": \"Fuwa fuwa!\"}, {\"id\": \"hai_hai\", \"name\": \"Hai Hai\", \"score\": 0.7262, \"risk\": \"low\", \"text\": \"Hai! Hai!\"}, {\"id\": \"clap\", \"name\": \"Clap\", \"score\": 0.6952, \"risk\": \"low\", \"text\": \"Clap on beat or backbeat.\"}], \"chain_candidates\": []}, {\"slot_index\": 15, \"start\": 268.48, \"end\": 293.9, \"time\": \"04:28.48 - 04:53.90\", \"bars\": 9.0, \"label\": \"chorus\", \"tags\": [\"chorus\", \"repeated_chorus\"], \"candidates\": [{\"id\": \"fuwa_fuwa\", \"name\": \"Fuwa Fuwa\", \"score\": 0.8111, \"risk\": \"low\", \"text\": \"Fuwa fuwa!\"}, {\"id\": \"hai_hai\", \"name\": \"Hai Hai\", \"score\": 0.7262, \"risk\": \"low\", \"text\": \"Hai! Hai!\"}, {\"id\": \"clap\", \"name\": \"Clap\", \"score\": 0.6952, \"risk\": \"low\", \"text\": \"Clap on beat or backbeat.\"}], \"chain_candidates\": []}, {\"slot_index\": 16, \"start\": 293.9, \"end\": 304.08, \"time\": \"04:53.90 - 05:04.08\", \"bars\": 3.0, \"label\": \"outro\", \"tags\": [\"high_energy_outro\", \"outro\"], \"candidates\": [{\"id\": \"oi_oi\", \"name\": \"Oi Oi\", \"score\": 0.7431, \"risk\": \"low\", \"text\": \"Oi! Oi!\"}, {\"id\": \"clap\", \"name\": \"Clap\", \"score\": 0.7013, \"risk\": \"low\", \"text\": \"Clap on beat or backbeat.\"}], \"chain_candidates\": []}, {\"slot_index\": 17, \"start\": 304.08, \"end\": 310.73, \"time\": \"05:04.08 - 05:10.73\", \"bars\": 2.0, \"label\": \"outro\", \"tags\": [\"high_energy_outro\", \"outro\"], \"candidates\": [{\"id\": \"oi_oi\", \"name\": \"Oi Oi\", \"score\": 0.7431, \"risk\": \"low\", \"text\": \"Oi! Oi!\"}, {\"id\": \"clap\", \"name\": \"Clap\", \"score\": 0.7013, \"risk\": \"low\", \"text\": \"Clap on beat or backbeat.\"}], \"chain_candidates\": []}, {\"slot_index\": 18, \"start\": 310.73, \"end\": 315.4, \"time\": \"05:10.73 - 05:15.40\", \"bars\": 1.84, \"label\": \"end\", \"tags\": [\"end\"], \"candidates\": [], \"chain_candidates\": []}]}}"
+    }
+  ],
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "summary": {
+        "type": "string"
+      },
+      "entries": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "start": {
+              "type": "number"
+            },
+            "end": {
+              "type": "number"
+            },
+            "time": {
+              "type": "string"
+            },
+            "slot_label": {
+              "type": "string"
+            },
+            "arrangement_type": {
+              "type": "string",
+              "enum": [
+                "single",
+                "chain",
+                "support",
+                "silence"
+              ]
+            },
+            "primary_action_id": {
+              "type": "string"
+            },
+            "display_name": {
+              "type": "string"
+            },
+            "intensity": {
+              "type": "number"
+            },
+            "risk": {
+              "type": "string"
+            },
+            "instructions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "sub_actions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "start": {
+                    "type": "number"
+                  },
+                  "end": {
+                    "type": "number"
+                  },
+                  "time": {
+                    "type": "string"
+                  },
+                  "action_id": {
+                    "type": "string"
+                  },
+                  "display_name": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "note": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "start",
+                  "end",
+                  "time",
+                  "action_id",
+                  "display_name",
+                  "text",
+                  "note"
+                ]
+              }
+            },
+            "alternatives": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "rationale": {
+              "type": "string"
+            },
+            "cautions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "start",
+            "end",
+            "time",
+            "slot_label",
+            "arrangement_type",
+            "primary_action_id",
+            "display_name",
+            "intensity",
+            "risk",
+            "instructions",
+            "sub_actions",
+            "alternatives",
+            "rationale",
+            "cautions"
+          ]
+        }
+      }
+    },
+    "required": [
+      "summary",
+      "entries"
+    ]
+  }
+}

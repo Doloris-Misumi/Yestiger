@@ -1,0 +1,191 @@
+{
+  "song_id": "nijuu_no_niji",
+  "method": "callability_rule",
+  "call_spans": [
+    {
+      "start": 0.0,
+      "end": 1.0,
+      "call_role": "keepspace",
+      "bar_start": 0,
+      "bar_end": 0,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 1.0,
+      "end": 31.65,
+      "call_role": "mix",
+      "bar_start": 1,
+      "bar_end": 12,
+      "bars": 12,
+      "method": "callability_rule"
+    },
+    {
+      "start": 31.65,
+      "end": 82.71,
+      "call_role": "rhythmcall",
+      "bar_start": 13,
+      "bar_end": 32,
+      "bars": 20,
+      "method": "callability_rule"
+    },
+    {
+      "start": 82.71,
+      "end": 87.81,
+      "call_role": "mix",
+      "bar_start": 33,
+      "bar_end": 34,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 87.81,
+      "end": 90.37,
+      "call_role": "rhythmcall",
+      "bar_start": 35,
+      "bar_end": 35,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 90.37,
+      "end": 100.57,
+      "call_role": "mix",
+      "bar_start": 36,
+      "bar_end": 39,
+      "bars": 4,
+      "method": "callability_rule"
+    },
+    {
+      "start": 100.57,
+      "end": 133.76,
+      "call_role": "rhythmcall",
+      "bar_start": 40,
+      "bar_end": 52,
+      "bars": 13,
+      "method": "callability_rule"
+    },
+    {
+      "start": 133.76,
+      "end": 174.62,
+      "call_role": "mix",
+      "bar_start": 53,
+      "bar_end": 68,
+      "bars": 16,
+      "method": "callability_rule"
+    },
+    {
+      "start": 174.62,
+      "end": 215.48,
+      "call_role": "rhythmcall",
+      "bar_start": 69,
+      "bar_end": 84,
+      "bars": 16,
+      "method": "callability_rule"
+    },
+    {
+      "start": 215.48,
+      "end": 218.01,
+      "call_role": "mix",
+      "bar_start": 85,
+      "bar_end": 85,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 218.01,
+      "end": 220.57,
+      "call_role": "rhythmcall",
+      "bar_start": 86,
+      "bar_end": 86,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 220.57,
+      "end": 223.12,
+      "call_role": "mix",
+      "bar_start": 87,
+      "bar_end": 87,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 223.12,
+      "end": 238.46,
+      "call_role": "rhythmcall",
+      "bar_start": 88,
+      "bar_end": 93,
+      "bars": 6,
+      "method": "callability_rule"
+    },
+    {
+      "start": 238.46,
+      "end": 243.56,
+      "call_role": "mix",
+      "bar_start": 94,
+      "bar_end": 95,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 243.56,
+      "end": 245.07,
+      "call_role": "keepspace",
+      "bar_start": 96,
+      "bar_end": 96,
+      "bars": 1,
+      "method": "callability_rule"
+    }
+  ],
+  "comparison_to_manual_grid": {
+    "time_weighted_role_accuracy": 0.531236,
+    "macro_role_iou": 0.23054,
+    "role_iou": {
+      "keepspace": 0.1231,
+      "rhythmcall": 0.409245,
+      "mix": 0.389815,
+      "underground_gei": 0.0
+    },
+    "boundary": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "tp": 7,
+      "fp": 7,
+      "fn": 7,
+      "target_count": 14,
+      "predicted_count": 14,
+      "tolerance_seconds": 2.55
+    },
+    "target_span_count": 15,
+    "predicted_span_count": 15,
+    "duration_seconds": 245.07,
+    "confusion_duration": {
+      "keepspace": {
+        "keepspace": 2.51,
+        "rhythmcall": 5.11,
+        "mix": 12.77,
+        "underground_gei": 0.0
+      },
+      "rhythmcall": {
+        "keepspace": 0.0,
+        "rhythmcall": 68.97,
+        "mix": 22.96,
+        "underground_gei": 0.0
+      },
+      "mix": {
+        "keepspace": 0.0,
+        "rhythmcall": 53.62,
+        "mix": 58.71,
+        "underground_gei": 0.0
+      },
+      "underground_gei": {
+        "keepspace": 0.0,
+        "rhythmcall": 17.87,
+        "mix": 2.55,
+        "underground_gei": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,2849 @@
+{
+  "version": "0.1.0",
+  "notes": [
+    "Draft library for YesTiger MVP.",
+    "These entries are candidate support actions, not universal rules.",
+    "Venue, artist, group, and fandom rules should override this library."
+  ],
+  "actions": [
+    {
+      "id": "keepspace",
+      "display_name": "Keep Space",
+      "aliases": [
+        "Silence",
+        "No call"
+      ],
+      "category": "keepspace",
+      "typical_text": "",
+      "best_context": [
+        "verse",
+        "end",
+        "quiet_listening_section",
+        "dense_vocal"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 64,
+        "vocal_density": "any"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "strict_bars": false,
+        "can_compress": true,
+        "can_extend": true
+      },
+      "avoid": [],
+      "intensity": 0.0,
+      "risk": "low"
+    },
+    {
+      "id": "standard_mix",
+      "display_name": "Standard MIX",
+      "aliases": [
+        "English MIX",
+        "Tiger Fire"
+      ],
+      "category": "mix",
+      "typical_text": "Aaa, yossha ikuzo! Tiger! Fire! Cyber! Fiber! Diver! Viber! Jya Jya!",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 8,
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "quiet_ballad",
+        "important_lyric_line"
+      ],
+      "intensity": 0.85,
+      "risk": "medium"
+    },
+    {
+      "id": "standard_mix_long",
+      "display_name": "standard_mix_long",
+      "aliases": [
+        "Standard MIX Long",
+        "English MIX Long",
+        "Tiger Fire Long"
+      ],
+      "category": "mix",
+      "typical_text": "Standard MIX long phrase; fill exact chant text after local validation.",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "high_energy_break"
+      ],
+      "requires": {
+        "min_bars": 5,
+        "max_bars": 5,
+        "allowed_bars": [
+          5
+        ],
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 5,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_5_bars",
+        "quiet_ballad"
+      ],
+      "intensity": 0.87,
+      "risk": "medium"
+    },
+    {
+      "id": "mix_leadin_aaa_ikuzo",
+      "display_name": "MIX Lead-in Aaa Ikuzo",
+      "aliases": [
+        "Aaa Yossha Ikuzo",
+        "MIX Lead-in",
+        "MIX Kakegoe"
+      ],
+      "category": "mix",
+      "typical_text": "Aaa, yossha ikuzo!",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "high_energy_break"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 2,
+        "allowed_bars": [
+          1,
+          2
+        ],
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 1,
+        "preferred_counts": 4,
+        "count_unit": "beat",
+        "strict_bars": false,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_4_beats",
+        "quiet_ballad"
+      ],
+      "intensity": 0.82,
+      "risk": "medium"
+    },
+    {
+      "id": "standard_mix_first_half",
+      "display_name": "Standard MIX First Half",
+      "aliases": [
+        "English MIX First Half",
+        "Standard MIX Zenhan",
+        "Tiger Fire Zenhan"
+      ],
+      "category": "mix",
+      "typical_text": "Aaa, yossha ikuzo! Tiger! Fire! Cyber! Fiber!",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "high_energy_break"
+      ],
+      "requires": {
+        "min_bars": 2,
+        "max_bars": 2,
+        "allowed_bars": [
+          2
+        ],
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 2,
+        "preferred_counts": 8,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_8_beats",
+        "quiet_ballad"
+      ],
+      "intensity": 0.84,
+      "risk": "medium"
+    },
+    {
+      "id": "standard_mix_second_half",
+      "display_name": "Standard MIX Second Half",
+      "aliases": [
+        "English MIX Second Half",
+        "Standard MIX Kouhan",
+        "Tiger Fire Kouhan"
+      ],
+      "category": "mix",
+      "typical_text": "Tiger! Fire! Cyber! Fiber! Diver! Viber! Jya! Jya!",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "high_energy_break"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 4,
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "preferred_counts": 16,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_16_beats",
+        "quiet_ballad"
+      ],
+      "intensity": 0.86,
+      "risk": "medium"
+    },
+    {
+      "id": "std_mix_kouhan_dt",
+      "display_name": "Std MIX Kouhan DT",
+      "aliases": [
+        "Standard MIX Second Half Double Time",
+        "Standard MIX Kouhan Double Time",
+        "Tiger Fire Kouhan Double Time"
+      ],
+      "category": "mix",
+      "typical_text": "Standard MIX second-half phrase performed at double speed.",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "short_high_energy_gap"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 1,
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 1,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_1_bar",
+        "quiet_ballad"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "id": "japanese_mix",
+      "display_name": "Japanese MIX",
+      "aliases": [
+        "Nihongo MIX"
+      ],
+      "category": "mix",
+      "typical_text": "Aaa, mou iccho ikuzo! Tora! Hi! Jinzou! Sen-i! Ama! Shindou! Kasen-tobi-jokyo!",
+      "best_context": [
+        "second_intro",
+        "instrumental_break",
+        "post_chorus_interlude"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 8,
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "quiet_ballad"
+      ],
+      "intensity": 0.88,
+      "risk": "medium"
+    },
+    {
+      "id": "japanese_mix_long",
+      "display_name": "japanese_mix_long",
+      "aliases": [
+        "Japanese MIX Long",
+        "Nihongo MIX Long"
+      ],
+      "category": "mix",
+      "typical_text": "Japanese MIX long phrase; fill exact chant text after local validation.",
+      "best_context": [
+        "second_intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "high_energy_break"
+      ],
+      "requires": {
+        "min_bars": 5,
+        "max_bars": 5,
+        "allowed_bars": [
+          5
+        ],
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 5,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_5_bars",
+        "quiet_ballad"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "id": "japanese_mix_second_half",
+      "display_name": "Japanese MIX Second Half",
+      "aliases": [
+        "Nihongo MIX Kouhan",
+        "Japanese MIX Kouhan"
+      ],
+      "category": "mix",
+      "typical_text": "Japanese MIX second-half phrase in romanized form.",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "high_energy_break"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 2,
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 2,
+        "preferred_counts": 8,
+        "count_unit": "beat",
+        "strict_bars": false,
+        "can_compress": true,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_4_beats",
+        "quiet_ballad"
+      ],
+      "intensity": 0.88,
+      "risk": "medium"
+    },
+    {
+      "id": "japanese_mix_second_half_double_time",
+      "display_name": "Japanese MIX Second Half Double Time",
+      "aliases": [
+        "Nihongo MIX Kouhan Double Time",
+        "Japanese MIX Kouhan Double Speed",
+        "Japanese MIX Second Half Baisoku"
+      ],
+      "category": "mix",
+      "typical_text": "Japanese MIX second-half phrase performed at double speed.",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "short_high_energy_gap"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 1,
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 1,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_1_bar",
+        "quiet_ballad"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "id": "jp_mix_seigyaku_dt",
+      "display_name": "JP MIX Seigyaku Double Time",
+      "aliases": [
+        "Japanese MIX Seigyaku Double Time",
+        "Nihongo MIX Seigyaku Baisoku",
+        "Seigyaku Japanese MIX",
+        "Seigyaku Nihongo MIX Double Time"
+      ],
+      "category": "mix",
+      "typical_text": "Japanese MIX forward-reverse phrase performed at double speed.",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "short_high_energy_gap",
+        "chorus_entry"
+      ],
+      "requires": {
+        "min_bars": 2,
+        "max_bars": 2,
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 2,
+        "preferred_counts": 8,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_2_bars",
+        "quiet_ballad"
+      ],
+      "intensity": 0.91,
+      "risk": "medium"
+    },
+    {
+      "id": "ainu_mix",
+      "display_name": "Ainu MIX",
+      "aliases": [
+        "Ainu-style MIX"
+      ],
+      "category": "mix",
+      "typical_text": "Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!",
+      "best_context": [
+        "long_intro",
+        "instrumental_break",
+        "final_build"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 8,
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "low_energy_intro"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "id": "ainu_mix_long",
+      "display_name": "ainu_mix_long",
+      "aliases": [
+        "Ainu MIX Long",
+        "Ainu-style MIX Long"
+      ],
+      "category": "mix",
+      "typical_text": "Ainu MIX long phrase; fill exact chant text after local validation.",
+      "best_context": [
+        "long_intro",
+        "instrumental_break",
+        "final_build",
+        "high_energy_break"
+      ],
+      "requires": {
+        "min_bars": 5,
+        "max_bars": 5,
+        "allowed_bars": [
+          5
+        ],
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 5,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_5_bars",
+        "quiet_ballad"
+      ],
+      "intensity": 0.91,
+      "risk": "medium"
+    },
+    {
+      "id": "ainu_second_half_mix",
+      "display_name": "Ainu MIX Second Half",
+      "aliases": [
+        "Ainu MIX Kouhan",
+        "Ainu Second Half MIX"
+      ],
+      "category": "mix",
+      "typical_text": "Ainu MIX second-half phrase in romanized form.",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "high_energy_break",
+        "pre_chorus",
+        "chorus_entry"
+      ],
+      "requires": {
+        "min_bars": 2,
+        "max_bars": 2,
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 2,
+        "preferred_counts": 8,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_8_beats",
+        "quiet_ballad"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "id": "ainu_kahen_mix",
+      "display_name": "Ainu Kahen MIX",
+      "aliases": [
+        "Ainu Variable MIX",
+        "Ainu Kahen"
+      ],
+      "category": "mix",
+      "typical_text": "Ainu variable MIX phrase in romanized form.",
+      "best_context": [
+        "instrumental_break",
+        "outro",
+        "high_energy_break",
+        "post_chorus_interlude"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 8,
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "preferred_counts": 16,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_16_beats",
+        "quiet_ballad"
+      ],
+      "intensity": 0.92,
+      "risk": "medium"
+    },
+    {
+      "id": "myhontousuke",
+      "display_name": "Myohon-tusuke",
+      "aliases": [
+        "Myohon Tusuke"
+      ],
+      "category": "mix",
+      "typical_text": "Myohon-tusuke!",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "high_energy_break"
+      ],
+      "requires": {
+        "min_bars": 2,
+        "max_bars": 2,
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 2,
+        "preferred_counts": 8,
+        "count_unit": "beat",
+        "strict_bars": false,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_8_beats",
+        "quiet_ballad"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "id": "myohon_activation",
+      "display_name": "Myohon Activation",
+      "aliases": [
+        "Myohon Hatsudou",
+        "Myohon"
+      ],
+      "category": "mix",
+      "typical_text": "Myohon activation phrase for a 2-bar gap.",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "reintro",
+        "short_high_energy_gap",
+        "high_energy_break"
+      ],
+      "requires": {
+        "min_bars": 2,
+        "max_bars": 2,
+        "allowed_bars": [
+          2
+        ],
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 2,
+        "preferred_counts": 8,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_8_beats",
+        "quiet_ballad"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "id": "kaho_sanren_mix",
+      "display_name": "Variable Triple MIX",
+      "aliases": [
+        "Kahen Sanren MIX"
+      ],
+      "category": "mix",
+      "typical_text": "MIX variants chained in three phrases.",
+      "best_context": [
+        "long_intro",
+        "extended_instrumental",
+        "high_energy_break",
+        "outro",
+        "high_energy_outro"
+      ],
+      "requires": {
+        "min_bars": 8,
+        "max_bars": 16,
+        "vocal_density": "low",
+        "energy": "high"
+      },
+      "duration": {
+        "preferred_bars": 8,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "short_gap",
+        "dense_vocal",
+        "restrained_live_style"
+      ],
+      "intensity": 0.98,
+      "risk": "high"
+    },
+    {
+      "id": "shuumaku_kahen_mix",
+      "display_name": "Shuumaku Kahen MIX",
+      "aliases": [
+        "Shumaku Kahen MIX",
+        "Terminal Variable MIX",
+        "Finale Variable MIX",
+        "終幕可変 MIX",
+        "终幕可变 MIX"
+      ],
+      "category": "mix",
+      "typical_text": "Shuumaku Kahen MIX phrase; fill exact chant text after local validation.",
+      "best_context": [
+        "outro",
+        "high_energy_outro",
+        "extended_instrumental",
+        "high_energy_break"
+      ],
+      "requires": {
+        "min_bars": 8,
+        "max_bars": 16,
+        "vocal_density": "low",
+        "energy": "high"
+      },
+      "duration": {
+        "preferred_bars": 8,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "short_gap",
+        "dense_vocal",
+        "restrained_live_style"
+      ],
+      "intensity": 0.98,
+      "risk": "high"
+    },
+    {
+      "id": "ietora_konzetsu_mix",
+      "display_name": "Ietora Konzetsu MIX",
+      "aliases": [
+        "Ie Tiger Konzetsu MIX",
+        "Iettaiga Konzetsu MIX"
+      ],
+      "category": "mix",
+      "typical_text": "Ietora Konzetsu MIX phrase in romanized form.",
+      "best_context": [
+        "long_intro",
+        "instrumental_break",
+        "high_energy_break",
+        "pre_final_chorus_gap"
+      ],
+      "requires": {
+        "min_bars": 8,
+        "max_bars": 8,
+        "vocal_density": "low",
+        "energy": "high"
+      },
+      "duration": {
+        "preferred_bars": 8,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "short_gap",
+        "dense_vocal",
+        "formal_live",
+        "restrained_live_style"
+      ],
+      "intensity": 0.98,
+      "risk": "high"
+    },
+    {
+      "id": "lin_xiu_mix",
+      "display_name": "林修 MIX",
+      "aliases": [
+        "Lin Xiu MIX",
+        "Hayashi Osamu MIX"
+      ],
+      "category": "mix",
+      "typical_text": "林修 MIX phrase; fill exact chant text after local validation.",
+      "best_context": [
+        "long_intro",
+        "instrumental_break",
+        "extended_instrumental",
+        "high_energy_break",
+        "pre_final_chorus_gap",
+        "outro",
+        "high_energy_outro"
+      ],
+      "requires": {
+        "min_bars": 8,
+        "max_bars": 8,
+        "allowed_bars": [
+          8
+        ],
+        "vocal_density": "low",
+        "energy": "high"
+      },
+      "duration": {
+        "preferred_bars": 8,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "short_gap",
+        "dense_vocal",
+        "formal_live",
+        "restrained_live_style"
+      ],
+      "intensity": 0.96,
+      "risk": "high"
+    },
+    {
+      "id": "hogwarts_mix",
+      "display_name": "Hogwarts MIX",
+      "aliases": [
+        "Hogwart MIX",
+        "Hogwarts Mix"
+      ],
+      "category": "mix",
+      "typical_text": "Hogwarts MIX phrase; fill exact chant text after local validation.",
+      "best_context": [
+        "pre_chorus",
+        "pre_chorus_build",
+        "high_tension_gap",
+        "chorus_entry",
+        "high_energy_break"
+      ],
+      "requires": {
+        "min_bars": 8,
+        "max_bars": 8,
+        "allowed_bars": [
+          8
+        ],
+        "vocal_density": "low_or_gap",
+        "energy": "high"
+      },
+      "duration": {
+        "preferred_bars": 8,
+        "preferred_counts": 32,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "short_gap_under_32_beats",
+        "dense_vocal",
+        "formal_live",
+        "restrained_live_style"
+      ],
+      "intensity": 0.96,
+      "risk": "high"
+    },
+    {
+      "id": "sae_mix",
+      "display_name": "Sae MIX",
+      "aliases": [
+        "Sae Mix"
+      ],
+      "category": "mix",
+      "typical_text": "Sae MIX phrase; fill exact chant text after local validation.",
+      "best_context": [
+        "verse",
+        "mid_energy_vocal",
+        "instrumental_break",
+        "short_high_energy_gap"
+      ],
+      "requires": {
+        "min_bars": 3,
+        "max_bars": 3,
+        "allowed_bars": [
+          3
+        ],
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 3,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_3_bars",
+        "quiet_ballad"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "id": "chokokoro_call",
+      "display_name": "Chokokoro Call",
+      "aliases": [
+        "Chokokoro"
+      ],
+      "category": "rhythmcall",
+      "typical_text": "Chokokoro call phrase; fill exact chant text after local validation.",
+      "best_context": [
+        "verse",
+        "mid_energy_vocal",
+        "short_vocal_hook",
+        "call_and_response"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 1,
+        "vocal_density": "gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 1,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "quiet_ballad"
+      ],
+      "intensity": 0.58,
+      "risk": "low"
+    },
+    {
+      "id": "jyajya_mix",
+      "display_name": "Jya Jya MIX",
+      "aliases": [
+        "Jyajya MIX",
+        "JyaJya MIX"
+      ],
+      "category": "mix",
+      "typical_text": "Jya Jya MIX phrase; fill exact chant text after local validation.",
+      "best_context": [
+        "pre_chorus",
+        "pre_chorus_build",
+        "chorus_entry",
+        "high_tension_gap"
+      ],
+      "requires": {
+        "min_bars": 3.5,
+        "max_bars": 3.5,
+        "allowed_bars": [
+          3.5
+        ],
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 3.5,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_3_5_bars",
+        "quiet_ballad"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "id": "popipa_mix",
+      "display_name": "Popipa MIX",
+      "aliases": [
+        "Poppin'Party MIX",
+        "PoPiPa MIX"
+      ],
+      "category": "mix",
+      "typical_text": "Popipa MIX phrase; fill exact chant text after local validation.",
+      "best_context": [
+        "bridge",
+        "instrumental_break",
+        "extended_instrumental",
+        "high_energy_break",
+        "pre_final_chorus_gap"
+      ],
+      "requires": {
+        "min_bars": 8,
+        "max_bars": 8,
+        "allowed_bars": [
+          8
+        ],
+        "vocal_density": "low_or_gap",
+        "energy": "high"
+      },
+      "duration": {
+        "preferred_bars": 8,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "short_gap",
+        "dense_vocal",
+        "restrained_live_style"
+      ],
+      "intensity": 0.94,
+      "risk": "high"
+    },
+    {
+      "id": "popipapipopa",
+      "display_name": "Popipa Pipopa",
+      "aliases": [
+        "Po Pi Pa Pi Po Pa"
+      ],
+      "category": "rhythmcall",
+      "typical_text": "Popipa pipopa phrase; fill exact chant text after local validation.",
+      "best_context": [
+        "bridge",
+        "chant",
+        "short_vocal_hook",
+        "call_and_response",
+        "chorus_entry"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 1,
+        "vocal_density": "gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 1,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "quiet_ballad"
+      ],
+      "intensity": 0.62,
+      "risk": "low"
+    },
+    {
+      "id": "takamatsu_mix",
+      "display_name": "Takamatsu MIX",
+      "aliases": [
+        "Takamatsu"
+      ],
+      "category": "mix",
+      "typical_text": "Takamatsu MIX phrase; fill exact chant text after local validation.",
+      "best_context": [
+        "verse",
+        "pre_chorus",
+        "pre_chorus_build",
+        "chorus_entry",
+        "high_tension_gap"
+      ],
+      "requires": {
+        "min_bars": 7,
+        "max_bars": 7,
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 7,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_7_bars",
+        "quiet_ballad"
+      ],
+      "intensity": 0.94,
+      "risk": "high"
+    },
+    {
+      "id": "bandor_mix",
+      "display_name": "Bandor MIX",
+      "aliases": [
+        "Bandori MIX",
+        "BanG Dream MIX"
+      ],
+      "category": "mix",
+      "typical_text": "Bandor MIX phrase; fill exact chant text after local validation.",
+      "best_context": [
+        "post_chorus",
+        "post_chorus_interlude",
+        "instrumental_break",
+        "high_energy_break"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 4,
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_4_bars",
+        "quiet_ballad"
+      ],
+      "intensity": 0.93,
+      "risk": "high"
+    },
+    {
+      "id": "highclap",
+      "display_name": "High Clap",
+      "aliases": [
+        "Highclap",
+        "High Clap Gei"
+      ],
+      "category": "mix",
+      "typical_text": "High-clap movement/action treated as an er-kai MIX action.",
+      "best_context": [
+        "solo",
+        "instrumental_break",
+        "high_energy_break",
+        "chorus_entry"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 2,
+        "allowed_bars": [
+          1,
+          2
+        ],
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 1,
+        "strict_bars": false,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "dense_vocal",
+        "quiet_ballad"
+      ],
+      "intensity": 0.78,
+      "risk": "high"
+    },
+    {
+      "id": "sekai_konton_mix",
+      "display_name": "Sekai Konton MIX",
+      "aliases": [
+        "World Chaos MIX",
+        "Sekai Chaos MIX"
+      ],
+      "category": "mix",
+      "typical_text": "Sekai Konton MIX phrase in romanized form.",
+      "best_context": [
+        "long_intro",
+        "instrumental_break",
+        "high_energy_break",
+        "pre_final_chorus_gap"
+      ],
+      "requires": {
+        "min_bars": 8,
+        "max_bars": 16,
+        "bar_multiple": 8,
+        "allowed_bars": [
+          8,
+          16
+        ],
+        "vocal_density": "low",
+        "energy": "high"
+      },
+      "duration": {
+        "preferred_bars": 8,
+        "strict_bars": false,
+        "strict_bar_multiple": true,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "short_gap",
+        "dense_vocal",
+        "formal_live",
+        "restrained_live_style"
+      ],
+      "intensity": 0.98,
+      "risk": "high"
+    },
+    {
+      "id": "sekai_konton_mix_first_half",
+      "display_name": "Sekai Konton MIX First Half",
+      "aliases": [
+        "World Chaos MIX First Half",
+        "Sekai Chaos MIX First Half",
+        "Sekai Konton MIX Zenhan"
+      ],
+      "category": "mix",
+      "typical_text": "Sekai Konton MIX first-half phrase in romanized form.",
+      "best_context": [
+        "instrumental_break",
+        "high_energy_break",
+        "pre_final_chorus_gap",
+        "short_high_energy_gap"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 8,
+        "vocal_density": "low",
+        "energy": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "strict_bars": false,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "short_gap_under_4_bars",
+        "dense_vocal",
+        "formal_live",
+        "restrained_live_style"
+      ],
+      "intensity": 0.96,
+      "risk": "high"
+    },
+    {
+      "id": "ietora",
+      "display_name": "Ietora",
+      "aliases": [
+        "Ie Tiger",
+        "Iettaiga",
+        "Ie Tora"
+      ],
+      "category": "mix",
+      "typical_text": "Ie Tiger!",
+      "best_context": [
+        "pre_chorus",
+        "pre_chorus_build",
+        "chorus_entry",
+        "high_tension_gap"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 4,
+        "energy_trend": "rising",
+        "vocal_density": "low_or_gap"
+      },
+      "duration": {
+        "preferred_bars": 1,
+        "strict_bars": false,
+        "can_compress": true,
+        "can_extend": false
+      },
+      "avoid": [
+        "artist_bans_ietora",
+        "quiet_ballad",
+        "dense_vocal"
+      ],
+      "intensity": 0.95,
+      "risk": "high"
+    },
+    {
+      "id": "tiger_fire_activation",
+      "display_name": "Tiger Fire Activation",
+      "aliases": [
+        "Tora-hi hatsudou",
+        "Tora-hi hatsudou"
+      ],
+      "category": "mix",
+      "typical_text": "Tiger! Fire! ...",
+      "best_context": [
+        "post_chorus_interlude",
+        "instrumental_break",
+        "reintro"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 8,
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_4_bars"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "id": "short_tiger_fire_activation",
+      "display_name": "Short Tiger Fire Activation",
+      "aliases": [
+        "Short Tora-hi hatsudou",
+        "Tiger Fire Short"
+      ],
+      "category": "mix",
+      "typical_text": "Tiger! Fire!",
+      "best_context": [
+        "post_chorus_interlude",
+        "instrumental_break",
+        "reintro",
+        "short_high_energy_gap"
+      ],
+      "requires": {
+        "min_bars": 2,
+        "max_bars": 2,
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 2,
+        "preferred_counts": 8,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_8_beats",
+        "quiet_ballad"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "id": "haiseno_activation",
+      "display_name": "Haiseno Activation",
+      "aliases": [
+        "Haiseno",
+        "Hai Seno",
+        "Hai Se-no Activation",
+        "Hai Se-no",
+        "Haiseno Hatsudou"
+      ],
+      "category": "mix",
+      "typical_text": "Haiseno activation phrase for a 1 or 2 eight-count gap.",
+      "best_context": [
+        "post_chorus_interlude",
+        "instrumental_break",
+        "reintro",
+        "short_high_energy_gap",
+        "chorus_entry"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 2,
+        "allowed_bars": [
+          1,
+          2
+        ],
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 2,
+        "preferred_counts": 8,
+        "count_unit": "beat",
+        "preferred_eight_counts": 2,
+        "strict_bars": false,
+        "can_compress": true,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_4_beats",
+        "quiet_ballad"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "id": "mouikai",
+      "display_name": "Mou Ikkai",
+      "aliases": [
+        "Mou Ikai",
+        "Mou Ikkai Call"
+      ],
+      "category": "mix",
+      "typical_text": "Mou ikkai!",
+      "best_context": [
+        "pre_chorus",
+        "pre_chorus_build",
+        "short_high_energy_gap",
+        "chorus_entry",
+        "instrumental_break",
+        "post_chorus_interlude"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 1,
+        "allowed_bars": [
+          1
+        ],
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 1,
+        "preferred_counts": 4,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_1_bar",
+        "quiet_ballad"
+      ],
+      "intensity": 0.82,
+      "risk": "medium"
+    },
+    {
+      "id": "bismarck_mix_first_half",
+      "display_name": "Bismarck MIX First Half",
+      "aliases": [
+        "Bismarck MIX Zenhan",
+        "Bismaruku MIX Zenhan"
+      ],
+      "category": "mix",
+      "typical_text": "Bismarck MIX first-half phrase in romanized form.",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "high_energy_break"
+      ],
+      "requires": {
+        "min_bars": 2,
+        "max_bars": 2,
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 2,
+        "preferred_counts": 8,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_8_beats",
+        "quiet_ballad"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "id": "bismarck_mix",
+      "display_name": "Bismarck MIX",
+      "aliases": [
+        "Bismarck MIX Full",
+        "Bismaruku MIX"
+      ],
+      "category": "mix",
+      "typical_text": "Bismarck MIX full phrase in romanized form.",
+      "best_context": [
+        "verse",
+        "pre_chorus",
+        "pre_chorus_build",
+        "chorus_entry",
+        "high_tension_gap",
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "high_energy_break",
+        "long_vocal_gap"
+      ],
+      "requires": {
+        "min_bars": 6,
+        "max_bars": 7,
+        "allowed_bars": [
+          6,
+          7
+        ],
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 6,
+        "preferred_counts": 48,
+        "count_unit": "double_time_call_count",
+        "preferred_eight_counts": 6,
+        "strict_bars": false,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_6_call_eight_counts",
+        "quiet_ballad"
+      ],
+      "intensity": 0.92,
+      "risk": "medium"
+    },
+    {
+      "id": "bismarck+kanzenseniki_mix",
+      "display_name": "Bismarck + Kanzenseniki MIX",
+      "aliases": [
+        "Bismarck Kanzenseniki MIX",
+        "Bismarck + Kanzenseniki",
+        "bismarck_kanzenseniki_mix"
+      ],
+      "category": "mix",
+      "typical_text": "Bismarck MIX into Kanzenseniki extension; fill exact chant text after local validation.",
+      "best_context": [
+        "verse",
+        "pre_chorus",
+        "pre_chorus_build",
+        "chorus_entry",
+        "high_tension_gap",
+        "long_vocal_gap",
+        "high_energy_break"
+      ],
+      "requires": {
+        "min_bars": 9,
+        "max_bars": 9,
+        "allowed_bars": [
+          9
+        ],
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 9,
+        "preferred_counts": 72,
+        "count_unit": "double_time_call_count",
+        "preferred_eight_counts": 9,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_9_call_eight_counts",
+        "quiet_ballad"
+      ],
+      "intensity": 0.94,
+      "risk": "medium"
+    },
+    {
+      "id": "aiai_mix",
+      "display_name": "Aiai MIX",
+      "aliases": [
+        "Meaningless Aiai MIX",
+        "Imi Fumei Aiai MIX"
+      ],
+      "category": "mix",
+      "typical_text": "Aiai-style short MIX phrase in romanized form.",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "short_high_energy_gap"
+      ],
+      "requires": {
+        "min_bars": 2,
+        "max_bars": 4,
+        "bar_multiple": 2,
+        "allowed_bars": [
+          2,
+          4
+        ],
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 2,
+        "strict_bars": false,
+        "strict_bar_multiple": true,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_2_bars",
+        "quiet_ballad"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "id": "imi_fumei_ai_mix",
+      "display_name": "Imi Fumei Ai MIX",
+      "aliases": [
+        "Meaningless Ai MIX",
+        "Imi Fumei Ai MIX",
+        "意味不明愛 MIX",
+        "意味不明爱 MIX"
+      ],
+      "category": "mix",
+      "typical_text": "Imi fumei ai MIX phrase in romanized form.",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "short_high_energy_gap",
+        "chorus_entry"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 2,
+        "allowed_bars": [
+          1,
+          2
+        ],
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 1,
+        "strict_bars": false,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_1_bar",
+        "quiet_ballad"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "id": "pan_mix",
+      "display_name": "Pan MIX",
+      "aliases": [
+        "Bread MIX",
+        "Menbao MIX"
+      ],
+      "category": "mix",
+      "typical_text": "Pan MIX phrase in romanized form.",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "high_energy_break"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 8,
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "strict_bars": false,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_4_bars",
+        "quiet_ballad"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "id": "gozen_ichiban_mix",
+      "display_name": "Gozen Ichiban MIX",
+      "aliases": [
+        "Gozen Ichiban",
+        "Gozen MIX",
+        "Gozen Ichiban"
+      ],
+      "category": "mix",
+      "typical_text": "Gozen Ichiban MIX phrase in romanized form.",
+      "best_context": [
+        "intro",
+        "instrumental_break",
+        "post_chorus_interlude",
+        "high_energy_break",
+        "pre_final_chorus_gap"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 8,
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "strict_bars": false,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_4_bars",
+        "quiet_ballad"
+      ],
+      "intensity": 0.92,
+      "risk": "medium"
+    },
+    {
+      "id": "bariyado_mix",
+      "display_name": "Bariyado MIX",
+      "aliases": [
+        "Bariyado"
+      ],
+      "category": "mix",
+      "typical_text": "Bariyado MIX phrase in romanized form.",
+      "best_context": [
+        "long_intro",
+        "instrumental_break",
+        "extended_instrumental",
+        "high_energy_break",
+        "pre_final_chorus_gap"
+      ],
+      "requires": {
+        "min_bars": 8,
+        "max_bars": 8,
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 8,
+        "preferred_counts": 32,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_8_bars",
+        "quiet_ballad"
+      ],
+      "intensity": 0.94,
+      "risk": "medium"
+    },
+    {
+      "id": "tsunagaridai_mix",
+      "display_name": "Tsunagaridai MIX",
+      "aliases": [
+        "Tsunagaritai MIX",
+        "Tsunagari-dai MIX"
+      ],
+      "category": "mix",
+      "typical_text": "Tsunagaridai MIX phrase in romanized form.",
+      "best_context": [
+        "long_intro",
+        "instrumental_break",
+        "extended_instrumental",
+        "high_energy_break",
+        "pre_final_chorus_gap"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 8,
+        "allowed_bars": [
+          4,
+          8
+        ],
+        "vocal_density": "low",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 8,
+        "strict_bars": false,
+        "strict_bar_multiple": true,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_4_bars",
+        "quiet_ballad"
+      ],
+      "intensity": 0.95,
+      "risk": "high"
+    },
+    {
+      "id": "gachikoi_koujou",
+      "display_name": "Gachikoi Koujou",
+      "aliases": [
+        "Gachi-koi speech",
+        "Gachikoi Koujou Japanese"
+      ],
+      "category": "mix",
+      "typical_text": "A fixed love/oshi speech shouted in a long gap.",
+      "best_context": [
+        "long_intro",
+        "instrumental_break",
+        "pre_final_chorus_gap"
+      ],
+      "requires": {
+        "min_bars": 8,
+        "max_bars": 16,
+        "vocal_density": "low",
+        "emotional_style": "oshi_focused"
+      },
+      "duration": {
+        "preferred_bars": 8,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "short_gap",
+        "dense_vocal",
+        "formal_live"
+      ],
+      "intensity": 0.92,
+      "risk": "high"
+    },
+    {
+      "id": "chikipa_mix",
+      "display_name": "Chikipa MIX",
+      "aliases": [
+        "Chikipa",
+        "Cheeky Parade MIX"
+      ],
+      "category": "mix",
+      "typical_text": "Chikipa MIX phrase in romanized form.",
+      "best_context": [
+        "instrumental_break",
+        "high_energy_break",
+        "post_chorus_interlude",
+        "verse",
+        "mid_energy_vocal"
+      ],
+      "requires": {
+        "min_bars": 7,
+        "max_bars": 7,
+        "allowed_bars": [
+          7
+        ],
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 7,
+        "preferred_counts": 28,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_7_bars",
+        "quiet_ballad",
+        "formal_live"
+      ],
+      "intensity": 0.94,
+      "risk": "high"
+    },
+    {
+      "id": "wakage_no_itari_mix",
+      "display_name": "若気の至り MIX",
+      "aliases": [
+        "Wakage no Itari MIX",
+        "若気の至りmix",
+        "若気の至り MIX"
+      ],
+      "category": "mix",
+      "typical_text": "Wakage no Itari MIX phrase; fill exact chant text after local validation.",
+      "best_context": [
+        "instrumental_break",
+        "high_energy_break",
+        "post_chorus_interlude",
+        "pre_chorus_build",
+        "chorus_entry",
+        "short_high_energy_gap"
+      ],
+      "requires": {
+        "min_bars": 2,
+        "max_bars": 2,
+        "allowed_bars": [
+          2
+        ],
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 2,
+        "preferred_counts": 8,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_2_bars",
+        "quiet_ballad"
+      ],
+      "intensity": 0.9,
+      "risk": "medium"
+    },
+    {
+      "category": "underground_gei",
+      "best_context": [
+        "instrumental_break",
+        "high_energy_break",
+        "pre_chorus_build",
+        "post_chorus_interlude"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 8,
+        "bar_multiple": 4,
+        "allowed_bars": [
+          4,
+          8
+        ],
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "preferred_counts": 16,
+        "count_unit": "beat",
+        "strict_bar_multiple": true,
+        "strict_bars": false,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_16_beats",
+        "formal_live",
+        "quiet_ballad"
+      ],
+      "intensity": 0.95,
+      "risk": "high",
+      "id": "long_zhi_mao",
+      "display_name": "Long Zhi Mao",
+      "aliases": [
+        "long zhi mao"
+      ],
+      "typical_text": "Long Zhi Mao underground-gei movement sequence."
+    },
+    {
+      "id": "gongfu_she",
+      "display_name": "Gongfu She",
+      "aliases": [
+        "gongfu she",
+        "Gong Fu She"
+      ],
+      "category": "underground_gei",
+      "typical_text": "Gongfu She underground-gei movement sequence.",
+      "best_context": [
+        "chorus",
+        "instrumental_break",
+        "high_energy_break",
+        "extended_instrumental"
+      ],
+      "requires": {
+        "min_bars": 8,
+        "max_bars": 9,
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 8,
+        "preferred_counts": 32,
+        "count_unit": "beat",
+        "strict_bars": false,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_32_beats",
+        "formal_live",
+        "quiet_ballad"
+      ],
+      "intensity": 0.98,
+      "risk": "high"
+    },
+    {
+      "id": "ali_shizi",
+      "display_name": "Ali Shizi",
+      "aliases": [
+        "Ali Shizi",
+        "Ari Juji",
+        "Ali Cross",
+        "阿里十字"
+      ],
+      "category": "underground_gei",
+      "typical_text": "Ali Shizi underground-gei movement sequence.",
+      "best_context": [
+        "chorus",
+        "instrumental_break",
+        "high_energy_break",
+        "pre_chorus_build",
+        "post_chorus_interlude"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 4,
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "preferred_counts": 16,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_16_beats",
+        "formal_live",
+        "quiet_ballad"
+      ],
+      "intensity": 0.96,
+      "risk": "high"
+    },
+    {
+      "id": "heibai_shuangyi",
+      "display_name": "Heibai Shuangyi",
+      "aliases": [
+        "Heibai Shuangyi",
+        "Black White Double Wings",
+        "黑白双翼"
+      ],
+      "category": "underground_gei",
+      "typical_text": "Heibai Shuangyi underground-gei movement sequence.",
+      "best_context": [
+        "chorus",
+        "instrumental_break",
+        "high_energy_break",
+        "pre_chorus_build",
+        "post_chorus_interlude"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 4,
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "preferred_counts": 16,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_16_beats",
+        "formal_live",
+        "quiet_ballad"
+      ],
+      "intensity": 0.96,
+      "risk": "high"
+    },
+    {
+      "category": "underground_gei",
+      "best_context": [
+        "instrumental_break",
+        "high_energy_break",
+        "pre_chorus_build",
+        "post_chorus_interlude"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 8,
+        "bar_multiple": 4,
+        "allowed_bars": [
+          4,
+          8
+        ],
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "preferred_counts": 16,
+        "count_unit": "beat",
+        "strict_bar_multiple": true,
+        "strict_bars": false,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_16_beats",
+        "formal_live",
+        "quiet_ballad"
+      ],
+      "intensity": 0.95,
+      "risk": "high",
+      "id": "cun_zheng",
+      "display_name": "Cun Zheng",
+      "aliases": [
+        "cun zheng"
+      ],
+      "typical_text": "Cun Zheng underground-gei movement sequence."
+    },
+    {
+      "category": "underground_gei",
+      "best_context": [
+        "instrumental_break",
+        "high_energy_break",
+        "pre_chorus_build",
+        "post_chorus_interlude"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 8,
+        "bar_multiple": 4,
+        "allowed_bars": [
+          4,
+          8
+        ],
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "preferred_counts": 16,
+        "count_unit": "beat",
+        "strict_bar_multiple": true,
+        "strict_bars": false,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_16_beats",
+        "formal_live",
+        "quiet_ballad"
+      ],
+      "intensity": 0.95,
+      "risk": "high",
+      "id": "lei_she",
+      "display_name": "Lei She",
+      "aliases": [
+        "lei she"
+      ],
+      "typical_text": "Lei She underground-gei movement sequence."
+    },
+    {
+      "category": "underground_gei",
+      "best_context": [
+        "instrumental_break",
+        "high_energy_break",
+        "pre_chorus_build",
+        "post_chorus_interlude"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 8,
+        "bar_multiple": 4,
+        "allowed_bars": [
+          4,
+          8
+        ],
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "preferred_counts": 16,
+        "count_unit": "beat",
+        "strict_bar_multiple": true,
+        "strict_bars": false,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_16_beats",
+        "formal_live",
+        "quiet_ballad"
+      ],
+      "intensity": 0.95,
+      "risk": "high",
+      "id": "luo_man_si",
+      "display_name": "Luo Man Si",
+      "aliases": [
+        "luo man si"
+      ],
+      "typical_text": "Luo Man Si underground-gei movement sequence."
+    },
+    {
+      "category": "underground_gei",
+      "best_context": [
+        "instrumental_break",
+        "high_energy_break",
+        "long_intro",
+        "extended_instrumental"
+      ],
+      "requires": {
+        "min_bars": 8,
+        "max_bars": 16,
+        "bar_multiple": 8,
+        "allowed_bars": [
+          8,
+          16
+        ],
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 8,
+        "preferred_counts": 32,
+        "count_unit": "beat",
+        "strict_bars": false,
+        "strict_bar_multiple": true,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_16_beats",
+        "formal_live",
+        "quiet_ballad"
+      ],
+      "intensity": 0.98,
+      "risk": "high",
+      "id": "dian_bo_she",
+      "display_name": "Dian Bo She",
+      "aliases": [
+        "dian bo she"
+      ],
+      "typical_text": "Dian Bo She underground-gei movement sequence."
+    },
+    {
+      "category": "underground_gei",
+      "best_context": [
+        "instrumental_break",
+        "high_energy_break",
+        "long_intro",
+        "extended_instrumental"
+      ],
+      "requires": {
+        "min_bars": 8,
+        "max_bars": 8,
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 8,
+        "preferred_counts": 32,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_32_beats",
+        "formal_live",
+        "quiet_ballad"
+      ],
+      "intensity": 0.98,
+      "risk": "high",
+      "id": "zi_he_she",
+      "display_name": "Zi He She",
+      "aliases": [
+        "zi he she"
+      ],
+      "typical_text": "Zi He She underground-gei movement sequence."
+    },
+    {
+      "id": "chan_she",
+      "display_name": "Chan She",
+      "aliases": [
+        "chan she"
+      ],
+      "category": "underground_gei",
+      "typical_text": "Chan She underground-gei movement sequence.",
+      "best_context": [
+        "instrumental_break",
+        "high_energy_break",
+        "long_intro",
+        "extended_instrumental"
+      ],
+      "requires": {
+        "min_bars": 8,
+        "max_bars": 8,
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 8,
+        "preferred_counts": 32,
+        "count_unit": "beat",
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_32_beats",
+        "formal_live",
+        "quiet_ballad"
+      ],
+      "intensity": 0.98,
+      "risk": "high"
+    },
+    {
+      "id": "tian_zhao",
+      "display_name": "Tian Zhao",
+      "aliases": [
+        "tian zhao",
+        "Amaterasu"
+      ],
+      "category": "underground_gei",
+      "typical_text": "Tian Zhao underground-gei movement sequence.",
+      "best_context": [
+        "chorus",
+        "instrumental_break",
+        "high_energy_break",
+        "extended_instrumental"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 8,
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high",
+        "bar_multiple": 4,
+        "allowed_bars": [
+          4,
+          8
+        ]
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "preferred_counts": 16,
+        "count_unit": "beat",
+        "strict_bars": false,
+        "can_compress": false,
+        "can_extend": true,
+        "strict_bar_multiple": true
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_32_beats",
+        "formal_live",
+        "quiet_ballad"
+      ],
+      "intensity": 0.98,
+      "risk": "high"
+    },
+    {
+      "id": "tian_qu_short",
+      "display_name": "Tian Qu Short",
+      "aliases": [
+        "tian_qu",
+        "tian qu",
+        "Tian Qu",
+        "Tian Qu 6 Eight-count"
+      ],
+      "category": "underground_gei",
+      "typical_text": "Tian Qu underground-gei movement sequence, short 6 eight-count version.",
+      "best_context": [
+        "instrumental_break",
+        "high_energy_break",
+        "extended_instrumental",
+        "pre_final_chorus_gap"
+      ],
+      "requires": {
+        "min_bars": 12,
+        "max_bars": 12,
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 12,
+        "preferred_counts": 48,
+        "count_unit": "beat",
+        "preferred_eight_counts": 6,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_48_beats",
+        "formal_live",
+        "quiet_ballad"
+      ],
+      "intensity": 0.98,
+      "risk": "high"
+    },
+    {
+      "id": "tian_qu_long",
+      "display_name": "Tian Qu Long",
+      "aliases": [
+        "tian_qu",
+        "tian qu",
+        "Tian Qu",
+        "Tian Qu 10 Eight-count"
+      ],
+      "category": "underground_gei",
+      "typical_text": "Tian Qu underground-gei movement sequence, long 10 eight-count version.",
+      "best_context": [
+        "instrumental_break",
+        "high_energy_break",
+        "extended_instrumental",
+        "pre_final_chorus_gap"
+      ],
+      "requires": {
+        "min_bars": 20,
+        "max_bars": 20,
+        "vocal_density": "low_or_gap",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 20,
+        "preferred_counts": 80,
+        "count_unit": "beat",
+        "preferred_eight_counts": 10,
+        "strict_bars": true,
+        "can_compress": false,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "short_gap_under_80_beats",
+        "formal_live",
+        "quiet_ballad"
+      ],
+      "intensity": 0.99,
+      "risk": "high"
+    },
+    {
+      "id": "ppph",
+      "display_name": "PPPH",
+      "aliases": [
+        "Pan Pa-pan Hyu",
+        "PPPH clap"
+      ],
+      "category": "rhythmcall",
+      "typical_text": "Pan-pa-pan, hyu!",
+      "best_context": [
+        "verse",
+        "pre_chorus",
+        "mid_energy_vocal"
+      ],
+      "requires": {
+        "min_bars": 2,
+        "max_bars": 16,
+        "vocal_density": "medium",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "strict_bars": false,
+        "can_compress": true,
+        "can_extend": true
+      },
+      "avoid": [
+        "very_dense_vocal",
+        "quiet_ballad"
+      ],
+      "intensity": 0.55,
+      "risk": "low"
+    },
+    {
+      "id": "fuwa_fuwa",
+      "display_name": "Fuwa Fuwa",
+      "aliases": [
+        "Fuwa call"
+      ],
+      "category": "rhythmcall",
+      "typical_text": "Fuwa fuwa!",
+      "best_context": [
+        "chorus",
+        "repeated_chorus"
+      ],
+      "requires": {
+        "min_bars": 0.5,
+        "max_bars": 16,
+        "energy": "medium_high",
+        "vocal_density": "can_overlap"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "strict_bars": false,
+        "can_compress": true,
+        "can_extend": true
+      },
+      "avoid": [
+        "serious_ballad",
+        "low_energy_chorus"
+      ],
+      "intensity": 0.6,
+      "risk": "low"
+    },
+    {
+      "id": "fufu_call",
+      "display_name": "Fu Fu Fu Call",
+      "aliases": [
+        "Fu Fu Fu",
+        "Fufu call",
+        "Three-hit fu call"
+      ],
+      "category": "rhythmcall",
+      "typical_text": "Fu! Fu! Fu!",
+      "best_context": [
+        "pre_chorus_build",
+        "chant",
+        "drum_hit_accent",
+        "chorus_entry"
+      ],
+      "requires": {
+        "min_bars": 0.25,
+        "max_bars": 1,
+        "energy": "rising",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 0.5,
+        "strict_bars": false,
+        "can_compress": true,
+        "can_extend": false
+      },
+      "avoid": [
+        "quiet_ballad",
+        "dense_vocal",
+        "no_accent_hits"
+      ],
+      "intensity": 0.62,
+      "risk": "low"
+    },
+    {
+      "id": "hai_hai",
+      "display_name": "Hai Hai",
+      "aliases": [
+        "Hai call"
+      ],
+      "category": "rhythmcall",
+      "typical_text": "Hai! Hai!",
+      "best_context": [
+        "chorus",
+        "post_chorus",
+        "instrumental_riff"
+      ],
+      "requires": {
+        "min_bars": 0.5,
+        "max_bars": 16,
+        "energy": "medium_high",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 1,
+        "strict_bars": false,
+        "can_compress": true,
+        "can_extend": true
+      },
+      "avoid": [
+        "quiet_ballad",
+        "important_lyric_line"
+      ],
+      "intensity": 0.65,
+      "risk": "low"
+    },
+    {
+      "id": "o_call",
+      "display_name": "O Call",
+      "aliases": [
+        "Oh call",
+        "Oooo call"
+      ],
+      "category": "rhythmcall",
+      "typical_text": "O! O! O! O!",
+      "best_context": [
+        "chant",
+        "intro",
+        "instrumental_riff",
+        "call_and_response"
+      ],
+      "requires": {
+        "min_bars": 0.5,
+        "max_bars": 4,
+        "energy": "medium_high",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 1,
+        "strict_bars": false,
+        "can_compress": true,
+        "can_extend": true
+      },
+      "avoid": [
+        "quiet_ballad",
+        "dense_vocal"
+      ],
+      "intensity": 0.6,
+      "risk": "low"
+    },
+    {
+      "id": "oi_oi",
+      "display_name": "Oi Oi",
+      "aliases": [
+        "Oi call"
+      ],
+      "category": "rhythmcall",
+      "typical_text": "Oi! Oi!",
+      "best_context": [
+        "rock_chorus",
+        "instrumental_break",
+        "high_energy_outro"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 16,
+        "energy": "high",
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 2,
+        "strict_bars": false,
+        "can_compress": true,
+        "can_extend": true
+      },
+      "avoid": [
+        "cute_soft_chorus",
+        "quiet_ballad"
+      ],
+      "intensity": 0.75,
+      "risk": "low"
+    },
+    {
+      "id": "clap",
+      "display_name": "Clap",
+      "aliases": [
+        "Hand clap",
+        "Tebyooshi"
+      ],
+      "category": "rhythmcall",
+      "typical_text": "Clap on beat or backbeat.",
+      "best_context": [
+        "verse",
+        "chorus",
+        "bridge",
+        "outro"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 32,
+        "beat_stability": "high"
+      },
+      "duration": {
+        "preferred_bars": 2,
+        "strict_bars": false,
+        "can_compress": true,
+        "can_extend": true
+      },
+      "avoid": [
+        "silent_break",
+        "very_quiet_section"
+      ],
+      "intensity": 0.35,
+      "risk": "low"
+    },
+    {
+      "id": "name_call",
+      "display_name": "Name Call",
+      "aliases": [
+        "Member name call",
+        "Oshi name call"
+      ],
+      "category": "rhythmcall",
+      "typical_text": "<member_name>!",
+      "best_context": [
+        "solo_line_gap",
+        "post_phrase_gap",
+        "member_focus"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 8,
+        "metadata": "member_or_unit_name",
+        "vocal_density": "gap"
+      },
+      "duration": {
+        "preferred_bars": 1,
+        "strict_bars": false,
+        "can_compress": true,
+        "can_extend": false
+      },
+      "avoid": [
+        "unknown_member_focus",
+        "dense_vocal"
+      ],
+      "intensity": 0.55,
+      "risk": "medium"
+    },
+    {
+      "id": "vocal_chant",
+      "display_name": "Vocal Chant",
+      "aliases": [
+        "Original vocal chant",
+        "Short chant follow",
+        "Singer-led chant"
+      ],
+      "category": "rhythmcall",
+      "typical_text": "Follow the short chant or shouted phrase already present in the song.",
+      "best_context": [
+        "chant",
+        "vocal_chant",
+        "call_and_response",
+        "short_vocal_hook"
+      ],
+      "requires": {
+        "min_bars": 0.5,
+        "max_bars": 2,
+        "vocal_density": "chant",
+        "lyric_familiarity": "medium"
+      },
+      "duration": {
+        "preferred_bars": 1,
+        "strict_bars": false,
+        "can_compress": true,
+        "can_extend": true
+      },
+      "avoid": [
+        "dense_melody_line",
+        "quiet_listening_section",
+        "unknown_lyrics"
+      ],
+      "intensity": 0.5,
+      "risk": "low"
+    },
+    {
+      "id": "aizuchi",
+      "display_name": "Aizuchi Call",
+      "aliases": [
+        "Call and response",
+        "Aizuchi"
+      ],
+      "category": "rhythmcall",
+      "typical_text": "Short response in lyric gaps.",
+      "best_context": [
+        "post_phrase_gap",
+        "chorus_gap",
+        "catchy_hook"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 8,
+        "vocal_density": "gap",
+        "lyric_or_phrase_pattern": "preferred"
+      },
+      "duration": {
+        "preferred_bars": 1,
+        "strict_bars": false,
+        "can_compress": true,
+        "can_extend": false
+      },
+      "avoid": [
+        "dense_vocal",
+        "unknown_gap_timing"
+      ],
+      "intensity": 0.5,
+      "risk": "low"
+    },
+    {
+      "id": "kecha",
+      "display_name": "Kecha",
+      "aliases": [
+        "Kechak",
+        "Forward reach"
+      ],
+      "category": "rhythmcall",
+      "typical_text": "Forward-reaching oshi gesture rather than shouted text.",
+      "best_context": [
+        "emotional_solo",
+        "ballad_chorus",
+        "oshi_focus"
+      ],
+      "requires": {
+        "min_bars": 4,
+        "max_bars": 32,
+        "energy": "low_to_medium",
+        "vocal_density": "can_overlap"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "strict_bars": false,
+        "can_compress": false,
+        "can_extend": true
+      },
+      "avoid": [
+        "high_speed_mix_section",
+        "aggressive_chorus"
+      ],
+      "intensity": 0.3,
+      "risk": "low"
+    },
+    {
+      "id": "sing_along",
+      "display_name": "Sing Along",
+      "aliases": [
+        "Audience sing-along",
+        "Follow vocal"
+      ],
+      "category": "rhythmcall",
+      "typical_text": "Sing the main hook or chorus melody with the crowd.",
+      "best_context": [
+        "chorus",
+        "final_chorus",
+        "anthem_hook",
+        "outro"
+      ],
+      "requires": {
+        "min_bars": 1,
+        "max_bars": 32,
+        "vocal_density": "can_overlap",
+        "lyric_familiarity": "high"
+      },
+      "duration": {
+        "preferred_bars": 4,
+        "strict_bars": false,
+        "can_compress": true,
+        "can_extend": true
+      },
+      "avoid": [
+        "solo_line_focus",
+        "quiet_listening_section",
+        "unknown_lyrics"
+      ],
+      "intensity": 0.45,
+      "risk": "low"
+    }
+  ]
+}

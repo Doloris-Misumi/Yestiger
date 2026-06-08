@@ -1,0 +1,31 @@
+.venv/
+.cache/
+.hf/
+demix/
+spec/
+webapp_runs/
+outputs/
+runtime_cache/
+signal_experiments_test/
+
+# Large/local datasets and media
+songs/
+datasets/
+external_datasets/
+models/
+*.mp3
+*.wav
+*.flac
+*.m4a
+*.ogg
+*.mp4
+*.webm
+
+# Python/cache artifacts
+*.pyc
+__pycache__/
+.pytest_cache/
+
+# Local secrets
+config/openai.local.json
+config/openrouter.local.json

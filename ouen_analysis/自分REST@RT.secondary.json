@@ -1,0 +1,518 @@
+{
+  "source_struct": "struct\\\u81ea\u5206REST@RT.json",
+  "source_audio": "songs\\\u81ea\u5206REST@RT.mp3",
+  "method": {
+    "description": "allin1 coarse segments + downbeat grid + librosa novelty/timbre/energy/onset refinement",
+    "lyrics_used": false,
+    "features": [
+      "rms_energy",
+      "onset_strength",
+      "spectral_centroid",
+      "spectral_bandwidth",
+      "spectral_rolloff",
+      "mfcc",
+      "chroma"
+    ]
+  },
+  "refined_segments": [
+    {
+      "start": 0.0,
+      "end": 1.71,
+      "parent_label": "intro",
+      "label": "intro",
+      "confidence": 0.55,
+      "reason": "Short segment; kept allin1 label: intro."
+    },
+    {
+      "start": 1.71,
+      "end": 12.95,
+      "parent_label": "intro",
+      "label": "intro",
+      "confidence": 0.35,
+      "reason": "Kept allin1 label: intro."
+    },
+    {
+      "start": 12.95,
+      "end": 24.18,
+      "parent_label": "intro",
+      "label": "intro",
+      "confidence": 0.35,
+      "reason": "Kept allin1 label: intro."
+    },
+    {
+      "start": 24.18,
+      "end": 31.2,
+      "parent_label": "verse",
+      "label": "verse_subsection",
+      "confidence": 0.4452459581686008,
+      "reason": "Internal timbre/energy change inside allin1 verse; check as A-melo repeat or smaller verse unit."
+    },
+    {
+      "start": 31.2,
+      "end": 39.62,
+      "parent_label": "verse",
+      "label": "verse_subsection",
+      "confidence": 0.4452459581686008,
+      "reason": "Internal timbre/energy change inside allin1 verse; check as A-melo repeat or smaller verse unit."
+    },
+    {
+      "start": 39.62,
+      "end": 46.63,
+      "parent_label": "verse",
+      "label": "verse_subsection",
+      "confidence": 0.44422231931548595,
+      "reason": "Internal timbre/energy change inside allin1 verse; check as A-melo repeat or smaller verse unit."
+    },
+    {
+      "start": 46.63,
+      "end": 64.88,
+      "parent_label": "verse",
+      "label": "verse_subsection",
+      "confidence": 0.5202407361264706,
+      "reason": "Internal timbre/energy change inside allin1 verse; check as A-melo repeat or smaller verse unit."
+    },
+    {
+      "start": 64.88,
+      "end": 68.38,
+      "parent_label": "verse",
+      "label": "pre_chorus_candidate",
+      "confidence": 0.5202407361264706,
+      "reason": "Last verse piece before chorus; check as B-melo/pre-chorus."
+    },
+    {
+      "start": 68.38,
+      "end": 77.51,
+      "parent_label": "chorus",
+      "label": "chorus_part",
+      "confidence": 0.4249482438416995,
+      "reason": "Internal change inside chorus; check as chorus half or repeated sabi."
+    },
+    {
+      "start": 77.51,
+      "end": 87.34,
+      "parent_label": "chorus",
+      "label": "chorus_part",
+      "confidence": 0.4534458337264859,
+      "reason": "Internal change inside chorus; check as chorus half or repeated sabi."
+    },
+    {
+      "start": 87.34,
+      "end": 91.55,
+      "parent_label": "chorus",
+      "label": "chorus_part",
+      "confidence": 0.4534458337264859,
+      "reason": "Internal change inside chorus; check as chorus half or repeated sabi."
+    },
+    {
+      "start": 91.55,
+      "end": 98.56,
+      "parent_label": "chorus",
+      "label": "chorus_part",
+      "confidence": 0.44716877054942783,
+      "reason": "Internal change inside chorus; check as chorus half or repeated sabi."
+    },
+    {
+      "start": 98.56,
+      "end": 111.2,
+      "parent_label": "chorus",
+      "label": "chorus_part",
+      "confidence": 0.46287324266966373,
+      "reason": "Internal change inside chorus; check as chorus half or repeated sabi."
+    },
+    {
+      "start": 111.2,
+      "end": 114.0,
+      "parent_label": "chorus",
+      "label": "chorus_part",
+      "confidence": 0.46287324266966373,
+      "reason": "Internal change inside chorus; check as chorus half or repeated sabi."
+    },
+    {
+      "start": 114.0,
+      "end": 136.46,
+      "parent_label": "inst",
+      "label": "inst",
+      "confidence": 0.45,
+      "reason": "No strong internal boundary detected; kept allin1 label: inst."
+    },
+    {
+      "start": 136.46,
+      "end": 139.27,
+      "parent_label": "verse",
+      "label": "verse_subsection",
+      "confidence": 0.44878081672259723,
+      "reason": "Internal timbre/energy change inside allin1 verse; check as A-melo repeat or smaller verse unit."
+    },
+    {
+      "start": 139.27,
+      "end": 154.71,
+      "parent_label": "verse",
+      "label": "verse_subsection",
+      "confidence": 0.4541928462167531,
+      "reason": "Internal timbre/energy change inside allin1 verse; check as A-melo repeat or smaller verse unit."
+    },
+    {
+      "start": 154.71,
+      "end": 158.91,
+      "parent_label": "verse",
+      "label": "verse_subsection",
+      "confidence": 0.4541928462167531,
+      "reason": "Internal timbre/energy change inside allin1 verse; check as A-melo repeat or smaller verse unit."
+    },
+    {
+      "start": 158.91,
+      "end": 168.74,
+      "parent_label": "verse",
+      "label": "verse_subsection",
+      "confidence": 0.4408770419513303,
+      "reason": "Internal timbre/energy change inside allin1 verse; check as A-melo repeat or smaller verse unit."
+    },
+    {
+      "start": 168.74,
+      "end": 180.66,
+      "parent_label": "verse",
+      "label": "pre_chorus_candidate",
+      "confidence": 0.4408770419513303,
+      "reason": "Last verse piece before chorus; check as B-melo/pre-chorus."
+    },
+    {
+      "start": 180.66,
+      "end": 189.79,
+      "parent_label": "chorus",
+      "label": "chorus_part",
+      "confidence": 0.4361277468299354,
+      "reason": "Internal change inside chorus; check as chorus half or repeated sabi."
+    },
+    {
+      "start": 189.79,
+      "end": 201.02,
+      "parent_label": "chorus",
+      "label": "chorus_part",
+      "confidence": 0.459520576326627,
+      "reason": "Internal change inside chorus; check as chorus half or repeated sabi."
+    },
+    {
+      "start": 201.02,
+      "end": 203.83,
+      "parent_label": "chorus",
+      "label": "chorus_part",
+      "confidence": 0.459520576326627,
+      "reason": "Internal change inside chorus; check as chorus half or repeated sabi."
+    },
+    {
+      "start": 203.83,
+      "end": 215.06,
+      "parent_label": "chorus",
+      "label": "chorus_part",
+      "confidence": 0.4316809681355875,
+      "reason": "Internal change inside chorus; check as chorus half or repeated sabi."
+    },
+    {
+      "start": 215.06,
+      "end": 220.67,
+      "parent_label": "chorus",
+      "label": "chorus_part",
+      "confidence": 0.4316809681355875,
+      "reason": "Internal change inside chorus; check as chorus half or repeated sabi."
+    },
+    {
+      "start": 220.67,
+      "end": 229.09,
+      "parent_label": "bridge",
+      "label": "bridge",
+      "confidence": 0.4432426248332889,
+      "reason": "Kept allin1 label: bridge."
+    },
+    {
+      "start": 229.09,
+      "end": 246.12,
+      "parent_label": "bridge",
+      "label": "bridge",
+      "confidence": 0.4432426248332889,
+      "reason": "Kept allin1 label: bridge."
+    },
+    {
+      "start": 246.12,
+      "end": 248.74,
+      "parent_label": "bridge",
+      "label": "bridge",
+      "confidence": 0.40363937408507267,
+      "reason": "Kept allin1 label: bridge."
+    },
+    {
+      "start": 248.74,
+      "end": 270.49,
+      "parent_label": "inst",
+      "label": "inst",
+      "confidence": 0.45,
+      "reason": "No strong internal boundary detected; kept allin1 label: inst."
+    },
+    {
+      "start": 270.49,
+      "end": 290.79,
+      "parent_label": "chorus",
+      "label": "chorus_part",
+      "confidence": 0.484741927922123,
+      "reason": "Internal change inside chorus; check as chorus half or repeated sabi."
+    },
+    {
+      "start": 290.79,
+      "end": 293.65,
+      "parent_label": "chorus",
+      "label": "chorus_part",
+      "confidence": 0.484741927922123,
+      "reason": "Internal change inside chorus; check as chorus half or repeated sabi."
+    },
+    {
+      "start": 293.65,
+      "end": 299.27,
+      "parent_label": "chorus",
+      "label": "chorus_part",
+      "confidence": 0.4750004135392973,
+      "reason": "Internal change inside chorus; check as chorus half or repeated sabi."
+    },
+    {
+      "start": 299.27,
+      "end": 313.31,
+      "parent_label": "chorus",
+      "label": "chorus_part",
+      "confidence": 0.4837381345496175,
+      "reason": "Internal change inside chorus; check as chorus half or repeated sabi."
+    },
+    {
+      "start": 313.31,
+      "end": 316.1,
+      "parent_label": "chorus",
+      "label": "chorus_part",
+      "confidence": 0.4837381345496175,
+      "reason": "Internal change inside chorus; check as chorus half or repeated sabi."
+    },
+    {
+      "start": 316.1,
+      "end": 338.57,
+      "parent_label": "outro",
+      "label": "outro",
+      "confidence": 0.45,
+      "reason": "No strong internal boundary detected; kept allin1 label: outro."
+    },
+    {
+      "start": 338.57,
+      "end": 347.66,
+      "parent_label": "outro",
+      "label": "outro",
+      "confidence": 0.55,
+      "reason": "Short segment; kept allin1 label: outro."
+    }
+  ],
+  "candidate_boundaries": [
+    {
+      "time": 12.95,
+      "score": 0.4299356638782082,
+      "novelty": 0.635157585144043,
+      "timbre_change": 0.39641963226251886,
+      "energy_change": 0.1820383071899414,
+      "onset_change": 0.098200124502182,
+      "parent_label": "intro",
+      "parent_start": 1.71,
+      "parent_end": 24.18
+    },
+    {
+      "time": 31.2,
+      "score": 0.4452459581686008,
+      "novelty": 0.8704311847686768,
+      "timbre_change": 0.2726483555047136,
+      "energy_change": 0.007410943508148193,
+      "onset_change": 0.005349183082580567,
+      "parent_label": "verse",
+      "parent_start": 24.18,
+      "parent_end": 46.63
+    },
+    {
+      "time": 39.62,
+      "score": 0.44422231931548595,
+      "novelty": 0.847760021686554,
+      "timbre_change": 0.2731068037538665,
+      "energy_change": 0.02792072296142578,
+      "onset_change": 0.05342820882797241,
+      "parent_label": "verse",
+      "parent_start": 24.18,
+      "parent_end": 46.63
+    },
+    {
+      "time": 64.88,
+      "score": 0.5202407361264706,
+      "novelty": 0.9248587489128113,
+      "timbre_change": 0.3416679164329259,
+      "energy_change": 0.12661689519882202,
+      "onset_change": 0.11720931529998779,
+      "parent_label": "verse",
+      "parent_start": 46.63,
+      "parent_end": 68.38
+    },
+    {
+      "time": 77.51,
+      "score": 0.4249482438416995,
+      "novelty": 0.8451533913612366,
+      "timbre_change": 0.22873813693061237,
+      "energy_change": 0.042703342437744145,
+      "onset_change": 0.004230380058288574,
+      "parent_label": "chorus",
+      "parent_start": 68.38,
+      "parent_end": 91.55
+    },
+    {
+      "time": 87.34,
+      "score": 0.4534458337264859,
+      "novelty": 0.8982752561569214,
+      "timbre_change": 0.2522853947927846,
+      "energy_change": 0.012123155593872071,
+      "onset_change": 0.040173697471618655,
+      "parent_label": "chorus",
+      "parent_start": 68.38,
+      "parent_end": 91.55
+    },
+    {
+      "time": 98.56,
+      "score": 0.44716877054942783,
+      "novelty": 0.7645145654678345,
+      "timbre_change": 0.35040457963299576,
+      "energy_change": 0.04966721534729004,
+      "onset_change": 0.11271259188652039,
+      "parent_label": "chorus",
+      "parent_start": 91.55,
+      "parent_end": 114.0
+    },
+    {
+      "time": 111.2,
+      "score": 0.46287324266966373,
+      "novelty": 0.8919195532798767,
+      "timbre_change": 0.26632865886847723,
+      "energy_change": 0.047907042503356936,
+      "onset_change": 0.05704334378242493,
+      "parent_label": "chorus",
+      "parent_start": 91.55,
+      "parent_end": 114.0
+    },
+    {
+      "time": 139.27,
+      "score": 0.44878081672259723,
+      "novelty": 0.9057408571243286,
+      "timbre_change": 0.21538971301682097,
+      "energy_change": 0.04604097604751587,
+      "onset_change": 0.041919279098510745,
+      "parent_label": "verse",
+      "parent_start": 136.46,
+      "parent_end": 158.91
+    },
+    {
+      "time": 154.71,
+      "score": 0.4541928462167531,
+      "novelty": 0.9089096784591675,
+      "timbre_change": 0.2518197207166892,
+      "energy_change": 0.0009001493453979492,
+      "onset_change": 0.023570501804351808,
+      "parent_label": "verse",
+      "parent_start": 136.46,
+      "parent_end": 158.91
+    },
+    {
+      "time": 168.74,
+      "score": 0.4408770419513303,
+      "novelty": 0.7708215713500977,
+      "timbre_change": 0.33299254217463403,
+      "energy_change": 0.019975268840789796,
+      "onset_change": 0.13004733324050904,
+      "parent_label": "verse",
+      "parent_start": 158.91,
+      "parent_end": 180.66
+    },
+    {
+      "time": 189.79,
+      "score": 0.4361277468299354,
+      "novelty": 0.7268618941307068,
+      "timbre_change": 0.36311312610066615,
+      "energy_change": 0.09158005714416505,
+      "onset_change": 0.04556386470794678,
+      "parent_label": "chorus",
+      "parent_start": 180.66,
+      "parent_end": 203.83
+    },
+    {
+      "time": 201.02,
+      "score": 0.459520576326627,
+      "novelty": 0.7579618692398071,
+      "timbre_change": 0.4133217991209556,
+      "energy_change": 0.0497157096862793,
+      "onset_change": 0.042158424854278564,
+      "parent_label": "chorus",
+      "parent_start": 180.66,
+      "parent_end": 203.83
+    },
+    {
+      "time": 215.06,
+      "score": 0.4316809681355875,
+      "novelty": 0.8077912926673889,
+      "timbre_change": 0.2828939106634461,
+      "energy_change": 0.01808806657791138,
+      "onset_change": 0.06838372349739075,
+      "parent_label": "chorus",
+      "parent_start": 203.83,
+      "parent_end": 220.67
+    },
+    {
+      "time": 229.09,
+      "score": 0.5909901664443852,
+      "novelty": 0.7698365449905396,
+      "timbre_change": 0.7548007703361176,
+      "energy_change": 0.07276403903961182,
+      "onset_change": 0.07960672974586487,
+      "parent_label": "bridge",
+      "parent_start": 220.67,
+      "parent_end": 248.74
+    },
+    {
+      "time": 246.12,
+      "score": 0.5381858321134302,
+      "novelty": 0.7753158211708069,
+      "timbre_change": 0.49935258175760566,
+      "energy_change": 0.28401256799697877,
+      "onset_change": 0.1068421483039856,
+      "parent_label": "bridge",
+      "parent_start": 220.67,
+      "parent_end": 248.74
+    },
+    {
+      "time": 290.79,
+      "score": 0.484741927922123,
+      "novelty": 0.9075063467025757,
+      "timbre_change": 0.33391210845638836,
+      "energy_change": 0.022464466094970704,
+      "onset_change": 0.01500481367111206,
+      "parent_label": "chorus",
+      "parent_start": 270.49,
+      "parent_end": 293.65
+    },
+    {
+      "time": 299.27,
+      "score": 0.4750004135392973,
+      "novelty": 0.8605129718780518,
+      "timbre_change": 0.3194943782326347,
+      "energy_change": 0.07215893268585205,
+      "onset_change": 0.0814835250377655,
+      "parent_label": "chorus",
+      "parent_start": 293.65,
+      "parent_end": 316.1
+    },
+    {
+      "time": 313.31,
+      "score": 0.4837381345496175,
+      "novelty": 0.8230785131454468,
+      "timbre_change": 0.32563258763313224,
+      "energy_change": 0.11451315879821777,
+      "onset_change": 0.23358349800109865,
+      "parent_label": "chorus",
+      "parent_start": 293.65,
+      "parent_end": 316.1
+    }
+  ]
+}

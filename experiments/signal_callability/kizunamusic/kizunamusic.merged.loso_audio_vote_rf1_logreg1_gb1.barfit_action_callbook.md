@@ -1,0 +1,28 @@
+# Action-Enriched Signal Callbook: kizunamusic
+
+Base method: `loso_audio_vote_rf1_logreg1_gb1`
+
+Action selector: `loso_annotation_prototype_plus_knowledge_library_barfit`
+
+| Time | Role | Context | Bars | Actions | Typical Text / Notes |
+|---:|---|---|---:|---|---|
+| 00:00.00-00:00.56 | keepspace | intro/intro | 1 | Keep Space | top score=1.000<br>role is keepspace |
+| 00:00.56-00:33.59 | mix | verse/verse | 13 | 00:00.56-00:15.81 Bismarck MIX [medium] (6 bars)<br>00:15.81-00:23.43 Sae MIX [medium] (3 bars)<br>00:23.43-00:33.59 Gozen Ichiban MIX [medium] (4 bars) | `Bismarck MIX full phrase in romanized form.`<br>`Sae MIX phrase; fill exact chant text after local validation.`<br>`Gozen Ichiban MIX phrase in romanized form.`<br>top score=0.851<br>seen 2 times in training songs for role `mix` |
+| 00:33.59-00:36.12 | rhythmcall | pre_chorus/verse | 1 | 00:33.59-00:36.12 Hai Hai (1 bars) | `Hai! Hai!`<br>top score=0.889<br>seen 19 times in training songs for role `rhythmcall` |
+| 00:36.12-00:43.74 | mix | pre_chorus_build/verse | 3 | 00:36.12-00:41.20 Bismarck MIX First Half [medium] (2 bars)<br>00:41.20-00:43.74 Haiseno Activation [medium] (1 bars) | `Bismarck MIX first-half phrase in romanized form.`<br>`Haiseno activation phrase for a 1 or 2 eight-count gap.`<br>top score=0.818<br>seen 1 times in training songs for role `mix` |
+| 00:43.74-00:46.28 | rhythmcall | pre_chorus_build/verse | 1 | 00:43.74-00:46.28 Fu Fu Fu Call (1 bars) | `Fu! Fu! Fu!`<br>top score=0.932<br>seen 28 times in training songs for role `rhythmcall` |
+| 00:46.28-01:26.92 | underground_gei | chorus/chorus | 16 | 00:46.28-01:26.92 Dian Bo She [high] (16 bars) | `Dian Bo She underground-gei movement sequence.`<br>top score=0.825<br>seen 1 times in training songs for role `underground_gei` |
+| 01:26.92-02:05.01 | mix | verse/verse | 15 | 01:26.92-01:37.07 Pan MIX [medium] (4 bars)<br>01:37.07-01:42.16 Haiseno Activation [medium] (2 bars)<br>01:42.16-02:05.01 Bismarck + Kanzenseniki MIX [medium] (9 bars) | `Pan MIX phrase in romanized form.`<br>`Haiseno activation phrase for a 1 or 2 eight-count gap.`<br>`Bismarck MIX into Kanzenseniki extension; fill exact chant text after local validation.`<br>top score=0.848<br>seen 2 times in training songs for role `mix` |
+| 02:05.01-02:07.55 | rhythmcall | pre_chorus_build/verse | 1 | 02:05.01-02:07.55 Fu Fu Fu Call (1 bars) | `Fu! Fu! Fu!`<br>top score=0.934<br>seen 28 times in training songs for role `rhythmcall` |
+| 02:07.55-02:12.63 | mix | pre_chorus_build/verse | 2 | 02:07.55-02:12.63 Bismarck MIX First Half [medium] (2 bars) | `Bismarck MIX first-half phrase in romanized form.`<br>top score=0.868<br>seen 1 times in training songs for role `mix` |
+| 02:12.63-02:50.72 | underground_gei | chorus/chorus | 15 | 02:12.63-02:35.48 Gongfu She [high] (9 bars) fit=0.89<br>02:35.48-02:45.64 Tian Zhao [high] (4 bars)<br>02:45.64-02:50.72 Keep Space / Unassigned Gap (2 bars) | `Gongfu She underground-gei movement sequence.`<br>`Tian Zhao underground-gei movement sequence.`<br>top score=0.820<br>seen 1 times in training songs for role `underground_gei` |
+| 02:50.72-04:28.49 | mix | chorus/verse | 39 | 02:50.72-02:55.80 Imi Fumei Ai MIX [medium] (2 bars)<br>02:55.80-03:16.12 Bariyado MIX [medium] (8 bars)<br>03:16.12-03:26.28 Aiai MIX [medium] (4 bars)<br>03:26.28-03:31.35 Haiseno Activation [medium] (2 bars)<br>03:31.35-03:49.14 Sekai Konton MIX First Half [high] (7 bars) fit=0.57<br>03:49.14-04:28.49 Sekai Konton MIX [high] (16 bars) | `Imi fumei ai MIX phrase in romanized form.`<br>`Bariyado MIX phrase in romanized form.`<br>`Aiai-style short MIX phrase in romanized form.`<br>`Haiseno activation phrase for a 1 or 2 eight-count gap.`<br>`Sekai Konton MIX first-half phrase in romanized form.`<br>`Sekai Konton MIX phrase in romanized form.`<br>top score=0.813<br>seen 6 times in training songs for role `mix` |
+| 04:28.49-04:31.05 | keepspace | chorus/chorus | 1 | Keep Space | top score=1.000<br>role is keepspace |
+| 04:31.05-04:36.13 | mix | chorus/chorus | 2 | 04:31.05-04:36.13 Imi Fumei Ai MIX [medium] (2 bars) | `Imi fumei ai MIX phrase in romanized form.`<br>top score=0.913<br>seen 6 times in training songs for role `mix` |
+| 04:36.13-04:38.66 | underground_gei | chorus/chorus | 1 | 04:36.13-04:38.66 Keep Space / Too Short for Action (1 bars) | top score=0.461<br>seen 2 times in training songs for role `underground_gei` |
+| 04:38.66-04:41.20 | mix | chorus/chorus | 1 | 04:38.66-04:41.20 Imi Fumei Ai MIX [medium] (1 bars) | `Imi fumei ai MIX phrase in romanized form.`<br>top score=0.917<br>seen 6 times in training songs for role `mix` |
+| 04:41.20-04:43.75 | underground_gei | chorus/chorus | 1 | 04:41.20-04:43.75 Keep Space / Too Short for Action (1 bars) | top score=0.461<br>seen 2 times in training songs for role `underground_gei` |
+| 04:43.75-04:46.29 | mix | chorus/chorus | 1 | 04:43.75-04:46.29 Imi Fumei Ai MIX [medium] (1 bars) | `Imi fumei ai MIX phrase in romanized form.`<br>top score=0.917<br>seen 6 times in training songs for role `mix` |
+| 04:46.29-04:48.82 | underground_gei | chorus/chorus | 1 | 04:46.29-04:48.82 Keep Space / Too Short for Action (1 bars) | top score=0.461<br>seen 2 times in training songs for role `underground_gei` |
+| 04:48.82-05:11.58 | mix | outro/outro | 9 | 04:48.82-05:01.53 ainu_mix_long [medium] (5 bars)<br>05:01.53-05:11.58 Ainu MIX [medium] (4 bars) | `Ainu MIX long phrase; fill exact chant text after local validation.`<br>`Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!`<br>top score=0.812<br>seen 1 times in training songs for role `mix` |
+| 05:11.58-05:15.40 | keepspace | end/end | 2 | Keep Space | top score=1.000<br>role is keepspace |

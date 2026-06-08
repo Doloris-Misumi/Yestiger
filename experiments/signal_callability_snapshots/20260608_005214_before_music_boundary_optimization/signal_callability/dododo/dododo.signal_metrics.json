@@ -1,0 +1,561 @@
+{
+  "song_id": "dododo",
+  "title": "dododo",
+  "annotation": "annotations\\dododo\\dododo.annotation.json",
+  "struct": "struct\\dododo.json",
+  "audio": "D:\\yetiger\\songs\\dododo.mp3",
+  "bars": 111,
+  "target_distribution": {
+    "keepspace": 10,
+    "rhythmcall": 34,
+    "mix": 51,
+    "underground_gei": 16
+  },
+  "merged_span_comparison": {
+    "structure_baseline": {
+      "time_weighted_role_accuracy": 0.377796,
+      "macro_role_iou": 0.178348,
+      "role_iou": {
+        "keepspace": 0.281206,
+        "rhythmcall": 0.336161,
+        "mix": 0.096025,
+        "underground_gei": 0.0
+      },
+      "boundary": {
+        "precision": 0.5,
+        "recall": 0.04,
+        "f1": 0.074074,
+        "tp": 1,
+        "fp": 1,
+        "fn": 24,
+        "target_count": 25,
+        "predicted_count": 2,
+        "tolerance_seconds": 2.44
+      },
+      "target_span_count": 26,
+      "predicted_span_count": 3,
+      "duration_seconds": 267.34,
+      "confusion_duration": {
+        "keepspace": {
+          "keepspace": 5.97,
+          "rhythmcall": 12.49,
+          "mix": 2.77,
+          "underground_gei": 0.0
+        },
+        "rhythmcall": {
+          "keepspace": 0.0,
+          "rhythmcall": 82.83,
+          "mix": 0.0,
+          "underground_gei": 0.0
+        },
+        "mix": {
+          "keepspace": 0.0,
+          "rhythmcall": 112.08,
+          "mix": 12.2,
+          "underground_gei": 0.0
+        },
+        "underground_gei": {
+          "keepspace": 0.0,
+          "rhythmcall": 39.0,
+          "mix": 0.0,
+          "underground_gei": 0.0
+        }
+      }
+    },
+    "callability_rule": {
+      "time_weighted_role_accuracy": 0.360814,
+      "macro_role_iou": 0.136156,
+      "role_iou": {
+        "keepspace": 0.067358,
+        "rhythmcall": 0.304858,
+        "mix": 0.172409,
+        "underground_gei": 0.0
+      },
+      "boundary": {
+        "precision": 0.666667,
+        "recall": 0.48,
+        "f1": 0.55814,
+        "tp": 12,
+        "fp": 6,
+        "fn": 13,
+        "target_count": 25,
+        "predicted_count": 18,
+        "tolerance_seconds": 2.44
+      },
+      "target_span_count": 26,
+      "predicted_span_count": 19,
+      "duration_seconds": 267.34,
+      "confusion_duration": {
+        "keepspace": {
+          "keepspace": 1.43,
+          "rhythmcall": 10.04,
+          "mix": 9.76,
+          "underground_gei": 0.0
+        },
+        "rhythmcall": {
+          "keepspace": 0.0,
+          "rhythmcall": 70.66,
+          "mix": 7.31,
+          "underground_gei": 4.86
+        },
+        "mix": {
+          "keepspace": 0.0,
+          "rhythmcall": 99.91,
+          "mix": 24.37,
+          "underground_gei": 0.0
+        },
+        "underground_gei": {
+          "keepspace": 0.0,
+          "rhythmcall": 39.0,
+          "mix": 0.0,
+          "underground_gei": 0.0
+        }
+      }
+    },
+    "loso_structure_rf": {
+      "time_weighted_role_accuracy": 0.506696,
+      "macro_role_iou": 0.341947,
+      "role_iou": {
+        "keepspace": 0.334992,
+        "rhythmcall": 0.300057,
+        "mix": 0.332575,
+        "underground_gei": 0.400164
+      },
+      "boundary": {
+        "precision": 0.4,
+        "recall": 0.32,
+        "f1": 0.355556,
+        "tp": 8,
+        "fp": 12,
+        "fn": 17,
+        "target_count": 25,
+        "predicted_count": 20,
+        "tolerance_seconds": 2.44
+      },
+      "target_span_count": 26,
+      "predicted_span_count": 21,
+      "duration_seconds": 267.34,
+      "confusion_duration": {
+        "keepspace": {
+          "keepspace": 8.75,
+          "rhythmcall": 0.0,
+          "mix": 12.48,
+          "underground_gei": 0.0
+        },
+        "rhythmcall": {
+          "keepspace": 0.0,
+          "rhythmcall": 36.55,
+          "mix": 17.07,
+          "underground_gei": 29.21
+        },
+        "mix": {
+          "keepspace": 4.89,
+          "rhythmcall": 38.98,
+          "mix": 51.16,
+          "underground_gei": 29.25
+        },
+        "underground_gei": {
+          "keepspace": 0.0,
+          "rhythmcall": 0.0,
+          "mix": 0.0,
+          "underground_gei": 39.0
+        }
+      }
+    },
+    "loso_audio_rf": {
+      "time_weighted_role_accuracy": 0.397434,
+      "macro_role_iou": 0.270542,
+      "role_iou": {
+        "keepspace": 0.361084,
+        "rhythmcall": 0.250205,
+        "mix": 0.212703,
+        "underground_gei": 0.258176
+      },
+      "boundary": {
+        "precision": 0.37037,
+        "recall": 0.4,
+        "f1": 0.384615,
+        "tp": 10,
+        "fp": 17,
+        "fn": 15,
+        "target_count": 25,
+        "predicted_count": 27,
+        "tolerance_seconds": 2.44
+      },
+      "target_span_count": 26,
+      "predicted_span_count": 28,
+      "duration_seconds": 267.34,
+      "confusion_duration": {
+        "keepspace": {
+          "keepspace": 11.19,
+          "rhythmcall": 0.0,
+          "mix": 5.17,
+          "underground_gei": 4.87
+        },
+        "rhythmcall": {
+          "keepspace": 0.0,
+          "rhythmcall": 24.38,
+          "mix": 19.49,
+          "underground_gei": 38.96
+        },
+        "mix": {
+          "keepspace": 9.76,
+          "rhythmcall": 14.61,
+          "mix": 31.68,
+          "underground_gei": 68.23
+        },
+        "underground_gei": {
+          "keepspace": 0.0,
+          "rhythmcall": 0.0,
+          "mix": 0.0,
+          "underground_gei": 39.0
+        }
+      }
+    },
+    "loso_audio_vote_rf1_logreg1_gb1": {
+      "time_weighted_role_accuracy": 0.507893,
+      "macro_role_iou": 0.358585,
+      "role_iou": {
+        "keepspace": 0.456346,
+        "rhythmcall": 0.307968,
+        "mix": 0.349908,
+        "underground_gei": 0.320118
+      },
+      "boundary": {
+        "precision": 0.425,
+        "recall": 0.68,
+        "f1": 0.523077,
+        "tp": 17,
+        "fp": 23,
+        "fn": 8,
+        "target_count": 25,
+        "predicted_count": 40,
+        "tolerance_seconds": 2.44
+      },
+      "target_span_count": 26,
+      "predicted_span_count": 41,
+      "duration_seconds": 267.34,
+      "confusion_duration": {
+        "keepspace": {
+          "keepspace": 16.36,
+          "rhythmcall": 0.0,
+          "mix": 0.0,
+          "underground_gei": 4.87
+        },
+        "rhythmcall": {
+          "keepspace": 2.43,
+          "rhythmcall": 29.26,
+          "mix": 21.93,
+          "underground_gei": 29.21
+        },
+        "mix": {
+          "keepspace": 12.19,
+          "rhythmcall": 12.18,
+          "mix": 51.16,
+          "underground_gei": 48.75
+        },
+        "underground_gei": {
+          "keepspace": 0.0,
+          "rhythmcall": 0.0,
+          "mix": 0.0,
+          "underground_gei": 39.0
+        }
+      }
+    },
+    "loso_audio_rf_boundary_topk_struct_heavy_len": {
+      "time_weighted_role_accuracy": 0.370053,
+      "macro_role_iou": 0.252681,
+      "role_iou": {
+        "keepspace": 0.361084,
+        "rhythmcall": 0.214425,
+        "mix": 0.177038,
+        "underground_gei": 0.258176
+      },
+      "boundary": {
+        "precision": 0.416667,
+        "recall": 0.4,
+        "f1": 0.408163,
+        "tp": 10,
+        "fp": 14,
+        "fn": 15,
+        "target_count": 25,
+        "predicted_count": 24,
+        "tolerance_seconds": 2.44
+      },
+      "target_span_count": 26,
+      "predicted_span_count": 25,
+      "duration_seconds": 267.34,
+      "confusion_duration": {
+        "keepspace": {
+          "keepspace": 11.19,
+          "rhythmcall": 0.0,
+          "mix": 5.17,
+          "underground_gei": 4.87
+        },
+        "rhythmcall": {
+          "keepspace": 0.0,
+          "rhythmcall": 21.94,
+          "mix": 21.93,
+          "underground_gei": 38.96
+        },
+        "mix": {
+          "keepspace": 9.76,
+          "rhythmcall": 19.49,
+          "mix": 26.8,
+          "underground_gei": 68.23
+        },
+        "underground_gei": {
+          "keepspace": 0.0,
+          "rhythmcall": 0.0,
+          "mix": 0.0,
+          "underground_gei": 39.0
+        }
+      }
+    }
+  },
+  "feature_definition": {
+    "frame_features": [
+      "rms_energy",
+      "onset_strength",
+      "spectral_centroid",
+      "spectral_bandwidth",
+      "spectral_rolloff",
+      "spectral_flatness",
+      "mfcc_13",
+      "chroma_stft"
+    ],
+    "bar_features": [
+      "energy",
+      "onset",
+      "vocal_density_proxy",
+      "beat_stability",
+      "timbre_novelty",
+      "harmony_novelty",
+      "energy_novelty",
+      "onset_novelty",
+      "fused_novelty"
+    ],
+    "note": "vocal_density_proxy is a spectral proxy, not source-separated vocals."
+  },
+  "structure_baseline": {
+    "accuracy": 0.378378,
+    "macro_f1": 0.284414,
+    "total": 111,
+    "per_role": {
+      "keepspace": {
+        "precision": 1.0,
+        "recall": 0.3,
+        "f1": 0.461538,
+        "support": 10
+      },
+      "rhythmcall": {
+        "precision": 0.336634,
+        "recall": 1.0,
+        "f1": 0.503704,
+        "support": 34
+      },
+      "mix": {
+        "precision": 0.714286,
+        "recall": 0.098039,
+        "f1": 0.172414,
+        "support": 51
+      },
+      "underground_gei": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 16
+      }
+    },
+    "confusion": {
+      "keepspace": {
+        "keepspace": 3,
+        "rhythmcall": 5,
+        "mix": 2,
+        "underground_gei": 0
+      },
+      "rhythmcall": {
+        "keepspace": 0,
+        "rhythmcall": 34,
+        "mix": 0,
+        "underground_gei": 0
+      },
+      "mix": {
+        "keepspace": 0,
+        "rhythmcall": 46,
+        "mix": 5,
+        "underground_gei": 0
+      },
+      "underground_gei": {
+        "keepspace": 0,
+        "rhythmcall": 16,
+        "mix": 0,
+        "underground_gei": 0
+      }
+    }
+  },
+  "callability_rule": {
+    "accuracy": 0.369369,
+    "macro_f1": 0.273798,
+    "total": 111,
+    "per_role": {
+      "keepspace": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1": 0.333333,
+        "support": 10
+      },
+      "rhythmcall": {
+        "precision": 0.322222,
+        "recall": 0.852941,
+        "f1": 0.467742,
+        "support": 34
+      },
+      "mix": {
+        "precision": 0.588235,
+        "recall": 0.196078,
+        "f1": 0.294118,
+        "support": 51
+      },
+      "underground_gei": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 16
+      }
+    },
+    "confusion": {
+      "keepspace": {
+        "keepspace": 2,
+        "rhythmcall": 4,
+        "mix": 4,
+        "underground_gei": 0
+      },
+      "rhythmcall": {
+        "keepspace": 0,
+        "rhythmcall": 29,
+        "mix": 3,
+        "underground_gei": 2
+      },
+      "mix": {
+        "keepspace": 0,
+        "rhythmcall": 41,
+        "mix": 10,
+        "underground_gei": 0
+      },
+      "underground_gei": {
+        "keepspace": 0,
+        "rhythmcall": 16,
+        "mix": 0,
+        "underground_gei": 0
+      }
+    }
+  },
+  "boundary_detection": {
+    "target_boundaries": [
+      1,
+      3,
+      4,
+      7,
+      15,
+      23,
+      24,
+      32,
+      37,
+      41,
+      49,
+      57,
+      58,
+      66,
+      71,
+      72,
+      84,
+      85,
+      86,
+      90,
+      91,
+      92,
+      94,
+      98,
+      106
+    ],
+    "structure_boundary": {
+      "precision": 0.545455,
+      "recall": 0.24,
+      "f1": 0.333333,
+      "tp": 6,
+      "fp": 5,
+      "fn": 19,
+      "target_count": 25,
+      "predicted_count": 11,
+      "tolerance_bars": 1
+    },
+    "fused_novelty_topk": {
+      "precision": 0.52,
+      "recall": 0.52,
+      "f1": 0.52,
+      "tp": 13,
+      "fp": 12,
+      "fn": 12,
+      "target_count": 25,
+      "predicted_count": 25,
+      "tolerance_bars": 1
+    }
+  },
+  "music_boundary_comparison": {
+    "target_counts": {
+      "manual_fine": 19,
+      "manual_coarse": 11,
+      "allin1_struct": 7
+    },
+    "manual_fine": {
+      "allin1_structure": {
+        "precision": 0.857143,
+        "recall": 0.315789,
+        "f1": 0.461538,
+        "tp": 6,
+        "fp": 1,
+        "fn": 13,
+        "target_count": 19,
+        "predicted_count": 7,
+        "tolerance_seconds": 2.44
+      },
+      "fused_novelty_topk": {
+        "precision": 0.315789,
+        "recall": 0.315789,
+        "f1": 0.315789,
+        "tp": 6,
+        "fp": 13,
+        "fn": 13,
+        "target_count": 19,
+        "predicted_count": 19,
+        "tolerance_seconds": 2.44
+      }
+    },
+    "manual_coarse": {
+      "allin1_structure": {
+        "precision": 0.714286,
+        "recall": 0.454545,
+        "f1": 0.555556,
+        "tp": 5,
+        "fp": 2,
+        "fn": 6,
+        "target_count": 11,
+        "predicted_count": 7,
+        "tolerance_seconds": 2.44
+      },
+      "fused_novelty_topk": {
+        "precision": 0.272727,
+        "recall": 0.272727,
+        "f1": 0.272727,
+        "tp": 3,
+        "fp": 8,
+        "fn": 8,
+        "target_count": 11,
+        "predicted_count": 11,
+        "tolerance_seconds": 2.44
+      }
+    },
+    "note": "manual_fine uses all human music-section boundaries; manual_coarse collapses pre/post/refinement labels to the coarse allin1-like label set before comparison."
+  }
+}

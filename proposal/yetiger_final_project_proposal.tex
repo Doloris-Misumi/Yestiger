@@ -1,0 +1,154 @@
+\documentclass[lettersize,journal]{IEEEtran}
+\usepackage{amsmath,amsfonts}
+\usepackage{array}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{url}
+
+\hyphenation{beat-syn-chro-nous call-a-bil-i-ty an-i-song}
+
+\begin{document}
+
+\title{Audio-Based Detection of Suitable Call Moments\\
+for Idol/Anisong Live Performances}
+
+\author{Your Name, Teammate Name, and Teammate Name%
+\thanks{Project proposal for the final project of Advanced Signal Processing. Team members will be finalized in Week 14.}}
+
+\markboth{Advanced Signal Processing Final Project Proposal, Week 14}{}
+
+\maketitle
+
+\begin{abstract}
+In many live music performances, the audience does not only listen passively. Listeners may clap, shout short rhythmic phrases, respond to musical accents, or intentionally remain silent during important vocal passages. In this proposal, these time-synchronized audience actions are referred to as \emph{calls}. For idol, anisong, and some J-pop concerts, planning suitable call moments can make audience participation more coordinated. However, calls inserted at inappropriate positions, such as dense vocal lines or rhythmically unstable passages, may interfere with the music. Therefore, detecting suitable call moments can be formulated as an audio signal processing problem.
+
+This project studies an audio-based method for detecting call moments in popular music recordings. From the waveform, we will extract beat/downbeat alignment, energy, onset strength, timbral and harmonic novelty, repetition cues, and vocal-density-related signals. These features will be aggregated at the bar level to estimate how suitable each bar is for different audience actions. We call this intermediate representation \emph{callability}. Experiments will use a small annotated dataset that we constructed, including audio files, automatically extracted beat/downbeat information, and human annotations of music sections and call spans. The expected outcome is a reproducible signal processing pipeline that detects audience-participation windows and provides interpretable audio evidence for later callbook generation.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Music information retrieval, audio signal processing, beat-synchronous analysis, music structure analysis, vocal density, callbook generation.
+\end{IEEEkeywords}
+
+\section{Motivation}
+\IEEEPARstart{A}{udience} participation in live music has to be aligned with musical structure. Even a simple clapping pattern depends on a stable beat. A loud group shout may be suitable during an instrumental gap, but inappropriate when the lead vocal line is dense. A boundary before a chorus may be a good place for a collective response, while the ending of a song may require silence. These decisions depend on multiple acoustic cues rather than on tempo or song metadata alone.
+
+Most automatic music analysis systems focus on structural labels such as verse, chorus, and bridge. For live audience participation, however, structural labels are not sufficient. We also need to know whether the current bar has a stable rhythmic pulse, clear onsets, rising energy, sparse or dense vocals, and similarity to earlier repeated sections. These questions naturally connect to signal processing techniques covered in the course, including short-time spectral analysis, spectral descriptors, onset detection, beat-synchronous feature aggregation, novelty curves, and self-similarity matrices.
+
+In previous work, we built a small data foundation for this study: audio recordings of idol/anison songs, automatically extracted beat/downbeat and coarse section information, and human annotations of music sections and call spans. This dataset provides ground truth for evaluating whether audio-derived features can detect suitable call windows. Therefore, the focus of this final project is not to generate textual audience chants, but to design and evaluate an audio signal processing method for finding when audience participation is musically appropriate.
+
+\section{Research Problem}
+Given a song waveform $x(t)$ and a beat/downbeat grid, the goal is to estimate for each bar $b$ a vector
+\begin{equation}
+\mathbf{c}_b =
+\left[
+c_b^{\mathrm{space}},
+c_b^{\mathrm{rhythm}},
+c_b^{\mathrm{mix}},
+c_b^{\mathrm{gei}}
+\right],
+\end{equation}
+where the four dimensions correspond to keeping space, light rhythm calls, MIX, and high-intensity underground-gei-style actions. Unlike standard music structure analysis, the output is not only a structural label such as verse or chorus. It is an action-oriented audio affordance: whether the musical signal provides a suitable window for a particular audience behavior.
+
+The central hypothesis is that vocal-aware and beat-synchronous signal features can improve the prediction of call roles compared with a structure-only baseline. A second hypothesis is that downbeat-constrained novelty analysis can produce more interpretable call windows than frame-level thresholding.
+
+\section{Proposed Method}
+The proposed method has four stages.
+
+\subsection{Beat-Synchronous Feature Extraction}
+Audio will be converted into frame-level features using short-time spectral analysis. Candidate features include RMS energy, onset strength, spectral centroid, spectral bandwidth, spectral rolloff, MFCCs, chroma or CQT-based harmonic features, and tempogram-like rhythmic stability. Instead of using frame-level decisions, these features will be pooled over beat or bar intervals defined by the downbeat grid:
+\begin{equation}
+\mathbf{f}_b =
+\mathrm{Pool}\{\phi(x_t): t \in [\tau_b,\tau_{b+1})\},
+\end{equation}
+where $\phi(\cdot)$ denotes frame-level audio descriptors and $\tau_b$ denotes bar boundaries.
+
+\subsection{Vocal-Aware Callability}
+A key live-performance rule is that dense vocal passages should not be covered by aggressive calls. We will therefore estimate a vocal-density signal. The feasible version will use spectral and onset cues already available in the project; if time permits, a vocal stem from Demucs will be used to compute a vocal energy ratio:
+\begin{equation}
+v_b =
+\frac{E_{\mathrm{vocal}}(b)}
+{E_{\mathrm{mix}}(b)+\epsilon}.
+\end{equation}
+High vocal density will suppress MIX callability but may still allow light rhythm calls or sing-along support.
+
+\subsection{Novelty and Repetition Cues}
+Music structure will be modeled through timbral, harmonic, and energy novelty curves. A self-similarity matrix over bar-level features will also be computed to identify repeated choruses or instrumental sections. This provides two useful signals: boundary strength, which indicates possible MIX starting points, and repetition similarity, which supports reusing a call pattern across similar sections.
+
+\subsection{Call Role Decoding}
+The bar-level callability vector will be decoded into the existing YesTiger call roles:
+\begin{equation}
+y_b \in
+\{\mathrm{keepspace}, \mathrm{rhythmcall}, \mathrm{mix}, \mathrm{underground\_gei}\}.
+\end{equation}
+We will compare a rule-based decoder with a small supervised model trained on YesTiger annotations. The supervised model will remain lightweight so that the contribution is still interpretable signal processing rather than an opaque large model.
+
+\section{Dataset and Baselines}
+The experiment will use the local YesTiger dataset. At the proposal stage, the workspace contains 15 audio files, 15 allin1 structure files, and 14 human annotation files. Each annotation includes music segments and call spans. The current training manifest uses 8 songs; during the project we will rebuild the dataset to include the newly annotated songs.
+
+Baselines will include:
+\begin{itemize}
+\item allin1 coarse structure features only;
+\item the current YesTiger tiny pipeline using position, bar duration, downbeat flags, and allin1 section labels;
+\item the current secondary audio analysis heuristic based on novelty, timbre, energy, and onset changes.
+\end{itemize}
+
+\section{Evaluation Plan}
+We will evaluate both signal-level and downstream behavior.
+
+\subsection{Boundary Evaluation}
+Predicted structural or call-window boundaries will be compared with human annotation boundaries using precision, recall, and F1 score under a tolerance window, such as one downbeat or one second.
+
+\subsection{Call Role Evaluation}
+Each bar will be assigned a ground-truth call role from the annotated call spans. We will report accuracy and macro-F1 for the four call roles. Ablation experiments will remove vocal density, novelty, repetition, or downbeat constraints to measure their contribution.
+
+\subsection{Case Study}
+The final report will include a detailed case study on ``Poppin'Dream!''. We will visualize energy, vocal density, novelty, callability, and selected call windows, then compare the generated draft with the human annotation.
+
+\section{Expected Contributions}
+The expected contributions are:
+\begin{enumerate}
+\item a new task formulation: beat-synchronous callability estimation for live callbook generation;
+\item a vocal-aware signal processing pipeline for detecting suitable audience-call windows;
+\item an evaluation protocol using human callbook annotations as ground truth;
+\item an integrated YesTiger demonstration that turns audio evidence into interpretable callbook drafts.
+\end{enumerate}
+
+\section{Feasibility and Schedule}
+This project is feasible within approximately one week if the scope is controlled. The audio files, annotations, validation scripts, and tiny learning pipeline already exist. The main implementation work is to add bar-level audio features, compute the callability curve, rebuild the dataset, retrain the small model, and run ablation experiments.
+
+The planned schedule is:
+\begin{itemize}
+\item Days 1--2: implement bar-level audio feature extraction and vocal-density estimation;
+\item Days 3--4: add callability features to the dataset and train/evaluate call-role models;
+\item Day 5: run ablation experiments and generate visualizations;
+\item Days 6--7: prepare the IEEE-style paper and 10-minute presentation.
+\end{itemize}
+The optional Demucs-based vocal stem experiment will be treated as a bonus. If it is too time-consuming, the final project will use spectral proxy features for vocal density.
+
+\section{Author Contribution Statement}
+For the proposal, team members and responsibilities are still to be finalized. In the final paper, this section will explicitly state each author's contribution, including audio feature extraction, model implementation, annotation review, experiments, writing, and presentation preparation.
+
+\section*{Acknowledgment}
+This project builds on the existing YesTiger workspace, including manually reviewed annotations, allin1 structure outputs, and a small local training pipeline.
+
+\begin{thebibliography}{1}
+
+\bibitem{foote2000}
+J. Foote, ``Automatic audio segmentation using a measure of audio novelty,'' in \emph{Proc. IEEE International Conference on Multimedia and Expo}, 2000.
+
+\bibitem{peeters2023}
+G. Peeters, ``Self-similarity-based and novelty-based loss for music structure analysis,'' in \emph{Proc. International Society for Music Information Retrieval Conference}, 2023.
+
+\bibitem{serra2014}
+J. Serra, M. Muller, P. Grosche, and J. L. Arcos, ``Unsupervised detection of music boundaries by time series structure features,'' in \emph{Proc. AAAI Conference on Artificial Intelligence}, 2012.
+
+\bibitem{mert2023}
+Y. Li \emph{et al.}, ``MERT: Acoustic music understanding model with large-scale self-supervised training,'' arXiv:2306.00107, 2023.
+
+\bibitem{rouard2023}
+S. Rouard, F. Massa, and A. Defossez, ``Hybrid transformers for music source separation,'' in \emph{Proc. IEEE International Conference on Acoustics, Speech and Signal Processing}, 2023.
+
+\end{thebibliography}
+
+\end{document}

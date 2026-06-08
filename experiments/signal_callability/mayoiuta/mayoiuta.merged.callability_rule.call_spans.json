@@ -1,0 +1,110 @@
+{
+  "song_id": "mayoiuta",
+  "method": "callability_rule",
+  "call_spans": [
+    {
+      "start": 0.0,
+      "end": 1.16,
+      "call_role": "keepspace",
+      "bar_start": 0,
+      "bar_end": 0,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 1.16,
+      "end": 6.21,
+      "call_role": "mix",
+      "bar_start": 1,
+      "bar_end": 2,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 6.21,
+      "end": 200.76,
+      "call_role": "rhythmcall",
+      "bar_start": 3,
+      "bar_end": 79,
+      "bars": 77,
+      "method": "callability_rule"
+    },
+    {
+      "start": 200.76,
+      "end": 203.29,
+      "call_role": "mix",
+      "bar_start": 80,
+      "bar_end": 80,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 203.29,
+      "end": 208.35,
+      "call_role": "rhythmcall",
+      "bar_start": 81,
+      "bar_end": 82,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 208.35,
+      "end": 211.38,
+      "call_role": "mix",
+      "bar_start": 83,
+      "bar_end": 83,
+      "bars": 1,
+      "method": "callability_rule"
+    }
+  ],
+  "comparison_to_manual_grid": {
+    "time_weighted_role_accuracy": 0.148973,
+    "macro_role_iou": 0.047626,
+    "role_iou": {
+      "keepspace": 0.040446,
+      "rhythmcall": 0.150059,
+      "mix": 0.0,
+      "underground_gei": 0.0
+    },
+    "boundary": {
+      "precision": 0.2,
+      "recall": 0.066667,
+      "f1": 0.1,
+      "tp": 1,
+      "fp": 4,
+      "fn": 14,
+      "target_count": 15,
+      "predicted_count": 5,
+      "tolerance_seconds": 2.53
+    },
+    "target_span_count": 16,
+    "predicted_span_count": 6,
+    "duration_seconds": 211.38,
+    "confusion_duration": {
+      "keepspace": {
+        "keepspace": 1.16,
+        "rhythmcall": 19.42,
+        "mix": 8.1,
+        "underground_gei": 0.0
+      },
+      "rhythmcall": {
+        "keepspace": 0.0,
+        "rhythmcall": 30.33,
+        "mix": 2.51,
+        "underground_gei": 0.0
+      },
+      "mix": {
+        "keepspace": 0.0,
+        "rhythmcall": 109.45,
+        "mix": 0.0,
+        "underground_gei": 0.0
+      },
+      "underground_gei": {
+        "keepspace": 0.0,
+        "rhythmcall": 40.41,
+        "mix": 0.0,
+        "underground_gei": 0.0
+      }
+    }
+  }
+}

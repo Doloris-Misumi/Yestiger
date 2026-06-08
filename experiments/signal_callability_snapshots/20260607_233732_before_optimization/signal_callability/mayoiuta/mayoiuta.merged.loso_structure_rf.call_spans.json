@@ -1,0 +1,245 @@
+{
+  "song_id": "mayoiuta",
+  "method": "loso_structure_rf",
+  "call_spans": [
+    {
+      "start": 0.0,
+      "end": 1.16,
+      "call_role": "keepspace",
+      "bar_start": 0,
+      "bar_end": 0,
+      "bars": 1,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 1.16,
+      "end": 16.33,
+      "call_role": "mix",
+      "bar_start": 1,
+      "bar_end": 6,
+      "bars": 6,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 16.33,
+      "end": 48.72,
+      "call_role": "rhythmcall",
+      "bar_start": 7,
+      "bar_end": 19,
+      "bars": 13,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 48.72,
+      "end": 50.43,
+      "call_role": "mix",
+      "bar_start": 20,
+      "bar_end": 20,
+      "bars": 1,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 50.43,
+      "end": 83.27,
+      "call_role": "underground_gei",
+      "bar_start": 21,
+      "bar_end": 33,
+      "bars": 13,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 83.27,
+      "end": 114.86,
+      "call_role": "rhythmcall",
+      "bar_start": 34,
+      "bar_end": 45,
+      "bars": 12,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 114.86,
+      "end": 117.37,
+      "call_role": "mix",
+      "bar_start": 46,
+      "bar_end": 46,
+      "bars": 1,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 117.37,
+      "end": 127.47,
+      "call_role": "underground_gei",
+      "bar_start": 47,
+      "bar_end": 50,
+      "bars": 4,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 127.47,
+      "end": 135.07,
+      "call_role": "keepspace",
+      "bar_start": 51,
+      "bar_end": 53,
+      "bars": 3,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 135.07,
+      "end": 137.56,
+      "call_role": "mix",
+      "bar_start": 54,
+      "bar_end": 54,
+      "bars": 1,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 137.56,
+      "end": 140.12,
+      "call_role": "keepspace",
+      "bar_start": 55,
+      "bar_end": 55,
+      "bars": 1,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 140.12,
+      "end": 160.33,
+      "call_role": "mix",
+      "bar_start": 56,
+      "bar_end": 63,
+      "bars": 8,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 160.33,
+      "end": 162.85,
+      "call_role": "keepspace",
+      "bar_start": 64,
+      "bar_end": 64,
+      "bars": 1,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 162.85,
+      "end": 180.53,
+      "call_role": "mix",
+      "bar_start": 65,
+      "bar_end": 71,
+      "bars": 7,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 180.53,
+      "end": 183.06,
+      "call_role": "keepspace",
+      "bar_start": 72,
+      "bar_end": 72,
+      "bars": 1,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 183.06,
+      "end": 185.59,
+      "call_role": "mix",
+      "bar_start": 73,
+      "bar_end": 73,
+      "bars": 1,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 185.59,
+      "end": 188.11,
+      "call_role": "rhythmcall",
+      "bar_start": 74,
+      "bar_end": 74,
+      "bars": 1,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 188.11,
+      "end": 193.16,
+      "call_role": "mix",
+      "bar_start": 75,
+      "bar_end": 76,
+      "bars": 2,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 193.16,
+      "end": 195.7,
+      "call_role": "rhythmcall",
+      "bar_start": 77,
+      "bar_end": 77,
+      "bars": 1,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 195.7,
+      "end": 198.23,
+      "call_role": "mix",
+      "bar_start": 78,
+      "bar_end": 78,
+      "bars": 1,
+      "method": "loso_structure_rf"
+    },
+    {
+      "start": 198.23,
+      "end": 211.38,
+      "call_role": "keepspace",
+      "bar_start": 79,
+      "bar_end": 83,
+      "bars": 5,
+      "method": "loso_structure_rf"
+    }
+  ],
+  "comparison_to_manual_grid": {
+    "time_weighted_role_accuracy": 0.557574,
+    "macro_role_iou": 0.394213,
+    "role_iou": {
+      "keepspace": 0.326042,
+      "rhythmcall": 0.286851,
+      "mix": 0.392206,
+      "underground_gei": 0.571752
+    },
+    "boundary": {
+      "precision": 0.45,
+      "recall": 0.6,
+      "f1": 0.514286,
+      "tp": 9,
+      "fp": 11,
+      "fn": 6,
+      "target_count": 15,
+      "predicted_count": 20,
+      "tolerance_seconds": 2.53
+    },
+    "target_span_count": 16,
+    "predicted_span_count": 21,
+    "duration_seconds": 211.38,
+    "confusion_duration": {
+      "keepspace": {
+        "keepspace": 14.31,
+        "rhythmcall": 2.54,
+        "mix": 11.83,
+        "underground_gei": 0.0
+      },
+      "rhythmcall": {
+        "keepspace": 2.56,
+        "rhythmcall": 22.71,
+        "mix": 5.04,
+        "underground_gei": 2.53
+      },
+      "mix": {
+        "keepspace": 5.05,
+        "rhythmcall": 43.79,
+        "mix": 50.52,
+        "underground_gei": 10.09
+      },
+      "underground_gei": {
+        "keepspace": 7.6,
+        "rhythmcall": 0.0,
+        "mix": 2.49,
+        "underground_gei": 30.32
+      }
+    }
+  }
+}

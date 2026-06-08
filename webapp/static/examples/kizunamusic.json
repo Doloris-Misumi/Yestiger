@@ -1,0 +1,4798 @@
+{
+  "job_id": "example_kizunamusic",
+  "song": {
+    "song_id": "kizunamusic",
+    "title": "Kizuna Music",
+    "duration": 315.4,
+    "tempo": null,
+    "bar_count": 126
+  },
+  "method": {
+    "name": "loso_annotation_prototype_plus_knowledge_library_barfit",
+    "strategy": "barfit",
+    "held_out_song": "kizunamusic",
+    "training_action_examples": 357,
+    "nonrepeatable_mix_rule": "For barfit, mix actions planned for 3 or more bars are used at most once per song; short mix actions and ietora/activation-style triggers may repeat.",
+    "uses_tiny_action_ranker": false,
+    "leakage_note": "The held-out song's recommended_actions are not used for action selection."
+  },
+  "call_spans": [
+    {
+      "start": 0.0,
+      "end": 0.56,
+      "call_role": "keepspace",
+      "bar_start": 0,
+      "bar_end": 0,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "intro",
+      "allin1_struct_context": "intro",
+      "context_tags": [
+        "intro",
+        "keepspace"
+      ],
+      "signal_summary": {
+        "energy": 0.092,
+        "onset": 0.218,
+        "vocal_density_proxy": 0.054,
+        "beat_stability": 0.185,
+        "fused_novelty": 0.387
+      },
+      "recommended_actions": [],
+      "action_plan": [],
+      "action_candidates": [
+        {
+          "action_id": "keepspace",
+          "display_name": "Keep Space",
+          "score": 1.0,
+          "prototype_score": 1.0,
+          "library_score": 1.0,
+          "risk": "low",
+          "category": "keepspace",
+          "typical_text": "",
+          "selection_reasons": [
+            "role is keepspace"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 0.56,
+      "end": 33.59,
+      "call_role": "mix",
+      "bar_start": 1,
+      "bar_end": 13,
+      "bars": 13,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "verse",
+      "allin1_struct_context": "verse",
+      "context_tags": [
+        "mid_energy_vocal",
+        "mix",
+        "verse"
+      ],
+      "signal_summary": {
+        "energy": 0.784,
+        "onset": 0.5157,
+        "vocal_density_proxy": 0.7159,
+        "beat_stability": 0.9957,
+        "fused_novelty": 0.2581
+      },
+      "recommended_actions": [
+        "bismarck_mix",
+        "sae_mix",
+        "gozen_ichiban_mix"
+      ],
+      "action_plan": [
+        {
+          "start": 0.56,
+          "end": 15.81,
+          "time": "00:00.56-00:15.81",
+          "action_id": "bismarck_mix",
+          "display_name": "Bismarck MIX",
+          "typical_text": "Bismarck MIX full phrase in romanized form.",
+          "risk": "medium",
+          "bar_start_offset": 0,
+          "bar_count": 6,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        },
+        {
+          "start": 15.81,
+          "end": 23.43,
+          "time": "00:15.81-00:23.43",
+          "action_id": "sae_mix",
+          "display_name": "Sae MIX",
+          "typical_text": "Sae MIX phrase; fill exact chant text after local validation.",
+          "risk": "medium",
+          "bar_start_offset": 6,
+          "bar_count": 3,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        },
+        {
+          "start": 23.43,
+          "end": 33.59,
+          "time": "00:23.43-00:33.59",
+          "action_id": "gozen_ichiban_mix",
+          "display_name": "Gozen Ichiban MIX",
+          "typical_text": "Gozen Ichiban MIX phrase in romanized form.",
+          "risk": "medium",
+          "bar_start_offset": 9,
+          "bar_count": 4,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "bismarck_mix",
+          "display_name": "Bismarck MIX",
+          "score": 0.8512,
+          "prototype_score": 0.9882,
+          "library_score": 0.7142,
+          "evidence_count": 2,
+          "matched_fields": {
+            "music_label": 2,
+            "coarse_music_label": 2,
+            "struct_label": 2,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Bismarck MIX full phrase in romanized form.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: verse",
+            "duration differs from allowed bars by 6.0"
+          ]
+        },
+        {
+          "action_id": "sae_mix",
+          "display_name": "Sae MIX",
+          "score": 0.8421,
+          "prototype_score": 0.9839,
+          "library_score": 0.7004,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Sae MIX phrase; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: mid_energy_vocal, verse",
+            "duration differs from allowed bars by 10.0"
+          ]
+        },
+        {
+          "action_id": "gozen_ichiban_mix",
+          "display_name": "Gozen Ichiban MIX",
+          "score": 0.8194,
+          "prototype_score": 0.9999,
+          "library_score": 0.639,
+          "evidence_count": 4,
+          "matched_fields": {
+            "music_label": 4,
+            "coarse_music_label": 4,
+            "struct_label": 4,
+            "position_bucket": 3
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Gozen Ichiban MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 4 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "longer than preferred maximum 8.0 bars"
+          ]
+        },
+        {
+          "action_id": "pan_mix",
+          "display_name": "Pan MIX",
+          "score": 0.7736,
+          "prototype_score": 0.9083,
+          "library_score": 0.639,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Pan MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "longer than preferred maximum 8.0 bars"
+          ]
+        },
+        {
+          "action_id": "haiseno_activation",
+          "display_name": "Haiseno Activation",
+          "score": 0.7202,
+          "prototype_score": 0.8963,
+          "library_score": 0.544,
+          "evidence_count": 6,
+          "matched_fields": {
+            "music_label": 2,
+            "coarse_music_label": 3,
+            "struct_label": 2,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Haiseno activation phrase for a 1 or 2 eight-count gap.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "duration differs from allowed bars by 11.0"
+          ]
+        },
+        {
+          "action_id": "bismarck+kanzenseniki_mix",
+          "display_name": "Bismarck + Kanzenseniki MIX",
+          "score": 0.6925,
+          "prototype_score": 0.6308,
+          "library_score": 0.7542,
+          "evidence_count": 1,
+          "matched_fields": {
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Bismarck MIX into Kanzenseniki extension; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: verse",
+            "duration differs from allowed bars by 4.0"
+          ]
+        },
+        {
+          "action_id": "takamatsu_mix",
+          "display_name": "Takamatsu MIX",
+          "score": 0.6571,
+          "prototype_score": 1.0,
+          "library_score": 0.5542,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "high",
+          "typical_text": "Takamatsu MIX phrase; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: verse",
+            "longer than preferred maximum 7.0 bars",
+            "balanced strategy down-weights high-risk mix actions"
+          ]
+        },
+        {
+          "action_id": "tsunagaridai_mix",
+          "display_name": "Tsunagaridai MIX",
+          "score": 0.567,
+          "prototype_score": 0.8949,
+          "library_score": 0.479,
+          "evidence_count": 3,
+          "matched_fields": {
+            "coarse_music_label": 3,
+            "struct_label": 3,
+            "music_label": 1,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "high",
+          "typical_text": "Tsunagaridai MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 3 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "duration differs from allowed bars by 5.0",
+            "balanced strategy down-weights high-risk mix actions"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "sae_mix"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 33.59,
+      "end": 36.12,
+      "call_role": "rhythmcall",
+      "bar_start": 14,
+      "bar_end": 14,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "pre_chorus",
+      "allin1_struct_context": "verse",
+      "context_tags": [
+        "chorus_entry",
+        "high_tension_gap",
+        "pre_chorus",
+        "rhythmcall",
+        "verse"
+      ],
+      "signal_summary": {
+        "energy": 0.451,
+        "onset": 0.497,
+        "vocal_density_proxy": 0.363,
+        "beat_stability": 0.992,
+        "fused_novelty": 0.475
+      },
+      "recommended_actions": [
+        "hai_hai"
+      ],
+      "action_plan": [
+        {
+          "start": 33.59,
+          "end": 36.12,
+          "time": "00:33.59-00:36.12",
+          "action_id": "hai_hai",
+          "display_name": "Hai Hai",
+          "typical_text": "Hai! Hai!",
+          "risk": "low",
+          "bar_start_offset": 0,
+          "bar_count": 1,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "hai_hai",
+          "display_name": "Hai Hai",
+          "score": 0.8895,
+          "prototype_score": 1.0,
+          "library_score": 0.779,
+          "evidence_count": 19,
+          "matched_fields": {
+            "coarse_music_label": 10,
+            "struct_label": 9,
+            "position_bucket": 5,
+            "music_label": 4,
+            "duration_bucket": 8
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Hai! Hai!",
+          "selection_reasons": [
+            "seen 19 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "ppph",
+          "display_name": "PPPH",
+          "score": 0.8539,
+          "prototype_score": 0.9025,
+          "library_score": 0.8054,
+          "evidence_count": 19,
+          "matched_fields": {
+            "music_label": 19,
+            "coarse_music_label": 19,
+            "struct_label": 14,
+            "position_bucket": 2
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Pan-pa-pan, hyu!",
+          "selection_reasons": [
+            "seen 19 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "context match: pre_chorus, verse",
+            "shorter than preferred minimum 2.0 bars"
+          ]
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.8111,
+          "prototype_score": 0.7481,
+          "library_score": 0.8742,
+          "evidence_count": 35,
+          "matched_fields": {
+            "coarse_music_label": 25,
+            "struct_label": 23,
+            "duration_bucket": 10,
+            "position_bucket": 18,
+            "music_label": 2
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Clap on beat or backbeat.",
+          "selection_reasons": [
+            "seen 35 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "context match: verse"
+          ]
+        },
+        {
+          "action_id": "chokokoro_call",
+          "display_name": "Chokokoro Call",
+          "score": 0.7964,
+          "prototype_score": 0.7186,
+          "library_score": 0.8742,
+          "evidence_count": 1,
+          "matched_fields": {
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "duration_bucket": 1,
+            "position_bucket": 1
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Chokokoro call phrase; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "context match: verse"
+          ]
+        },
+        {
+          "action_id": "fufu_call",
+          "display_name": "Fu Fu Fu Call",
+          "score": 0.7882,
+          "prototype_score": 0.7022,
+          "library_score": 0.8742,
+          "evidence_count": 28,
+          "matched_fields": {
+            "coarse_music_label": 8,
+            "duration_bucket": 20,
+            "struct_label": 4,
+            "position_bucket": 2
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Fu! Fu! Fu!",
+          "selection_reasons": [
+            "seen 28 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "context match: chorus_entry"
+          ]
+        },
+        {
+          "action_id": "name_call",
+          "display_name": "Name Call",
+          "score": 0.7815,
+          "prototype_score": 0.8241,
+          "library_score": 0.739,
+          "evidence_count": 11,
+          "matched_fields": {
+            "position_bucket": 6,
+            "coarse_music_label": 9,
+            "struct_label": 8,
+            "music_label": 1,
+            "duration_bucket": 4
+          },
+          "category": "rhythmcall",
+          "risk": "medium",
+          "typical_text": "<member_name>!",
+          "selection_reasons": [
+            "seen 11 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "vocal_chant",
+          "display_name": "Vocal Chant",
+          "score": 0.7512,
+          "prototype_score": 0.7233,
+          "library_score": 0.779,
+          "evidence_count": 7,
+          "matched_fields": {
+            "coarse_music_label": 6,
+            "duration_bucket": 7,
+            "position_bucket": 3,
+            "struct_label": 5
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Follow the short chant or shouted phrase already present in the song.",
+          "selection_reasons": [
+            "seen 7 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "sing_along",
+          "display_name": "Sing Along",
+          "score": 0.7427,
+          "prototype_score": 0.7064,
+          "library_score": 0.779,
+          "evidence_count": 52,
+          "matched_fields": {
+            "coarse_music_label": 19,
+            "struct_label": 14,
+            "duration_bucket": 20,
+            "position_bucket": 8
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Sing the main hook or chorus melody with the crowd.",
+          "selection_reasons": [
+            "seen 52 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "no exact knowledge-library context match"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "sae_mix"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 36.12,
+      "end": 43.74,
+      "call_role": "mix",
+      "bar_start": 15,
+      "bar_end": 17,
+      "bars": 3,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "pre_chorus_build",
+      "allin1_struct_context": "verse",
+      "context_tags": [
+        "chorus_entry",
+        "high_tension_gap",
+        "mix",
+        "pre_chorus",
+        "pre_chorus_build",
+        "verse"
+      ],
+      "signal_summary": {
+        "energy": 0.8106,
+        "onset": 0.4897,
+        "vocal_density_proxy": 0.7419,
+        "beat_stability": 0.9947,
+        "fused_novelty": 0.3199
+      },
+      "recommended_actions": [
+        "bismarck_mix_first_half",
+        "haiseno_activation"
+      ],
+      "action_plan": [
+        {
+          "start": 36.12,
+          "end": 41.2,
+          "time": "00:36.12-00:41.20",
+          "action_id": "bismarck_mix_first_half",
+          "display_name": "Bismarck MIX First Half",
+          "typical_text": "Bismarck MIX first-half phrase in romanized form.",
+          "risk": "medium",
+          "bar_start_offset": 0,
+          "bar_count": 2,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        },
+        {
+          "start": 41.2,
+          "end": 43.74,
+          "time": "00:41.20-00:43.74",
+          "action_id": "haiseno_activation",
+          "display_name": "Haiseno Activation",
+          "typical_text": "Haiseno activation phrase for a 1 or 2 eight-count gap.",
+          "risk": "medium",
+          "bar_start_offset": 2,
+          "bar_count": 1,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "bismarck_mix_first_half",
+          "display_name": "Bismarck MIX First Half",
+          "score": 0.8181,
+          "prototype_score": 0.9839,
+          "library_score": 0.6523,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "duration_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Bismarck MIX first-half phrase in romanized form.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "longer than preferred maximum 2.0 bars"
+          ]
+        },
+        {
+          "action_id": "sae_mix",
+          "display_name": "Sae MIX",
+          "score": 0.7794,
+          "prototype_score": 0.7246,
+          "library_score": 0.8342,
+          "evidence_count": 1,
+          "matched_fields": {
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "duration_bucket": 1,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Sae MIX phrase; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: verse"
+          ]
+        },
+        {
+          "action_id": "haiseno_activation",
+          "display_name": "Haiseno Activation",
+          "score": 0.7418,
+          "prototype_score": 0.7361,
+          "library_score": 0.7475,
+          "evidence_count": 6,
+          "matched_fields": {
+            "coarse_music_label": 3,
+            "struct_label": 2,
+            "duration_bucket": 5,
+            "position_bucket": 1,
+            "music_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Haiseno activation phrase for a 1 or 2 eight-count gap.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry"
+          ]
+        },
+        {
+          "action_id": "jyajya_mix",
+          "display_name": "Jya Jya MIX",
+          "score": 0.6685,
+          "prototype_score": 0.4204,
+          "library_score": 0.9167,
+          "evidence_count": 1,
+          "matched_fields": {
+            "coarse_music_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Jya Jya MIX phrase; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry, high_tension_gap, pre_chorus, pre_chorus_build"
+          ]
+        },
+        {
+          "action_id": "bismarck_mix",
+          "display_name": "Bismarck MIX",
+          "score": 0.6645,
+          "prototype_score": 0.564,
+          "library_score": 0.765,
+          "evidence_count": 2,
+          "matched_fields": {
+            "coarse_music_label": 2,
+            "struct_label": 2,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Bismarck MIX full phrase in romanized form.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry, high_tension_gap, pre_chorus, pre_chorus_build",
+            "duration differs from allowed bars by 3.0"
+          ]
+        },
+        {
+          "action_id": "bismarck+kanzenseniki_mix",
+          "display_name": "Bismarck + Kanzenseniki MIX",
+          "score": 0.659,
+          "prototype_score": 0.5529,
+          "library_score": 0.765,
+          "evidence_count": 1,
+          "matched_fields": {
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Bismarck MIX into Kanzenseniki extension; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry, high_tension_gap, pre_chorus, pre_chorus_build",
+            "duration differs from allowed bars by 6.0"
+          ]
+        },
+        {
+          "action_id": "ainu_second_half_mix",
+          "display_name": "Ainu MIX Second Half",
+          "score": 0.6576,
+          "prototype_score": 0.5064,
+          "library_score": 0.8087,
+          "evidence_count": 2,
+          "matched_fields": {
+            "coarse_music_label": 1,
+            "duration_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Ainu MIX second-half phrase in romanized form.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry, pre_chorus",
+            "longer than preferred maximum 2.0 bars"
+          ]
+        },
+        {
+          "action_id": "mouikai",
+          "display_name": "Mou Ikkai",
+          "score": 0.6498,
+          "prototype_score": 0.5164,
+          "library_score": 0.7833,
+          "evidence_count": 2,
+          "matched_fields": {
+            "coarse_music_label": 2,
+            "struct_label": 2
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Mou ikkai!",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry, pre_chorus, pre_chorus_build",
+            "duration differs from allowed bars by 2.0"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "sae_mix"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 43.74,
+      "end": 46.28,
+      "call_role": "rhythmcall",
+      "bar_start": 18,
+      "bar_end": 18,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "pre_chorus_build",
+      "allin1_struct_context": "verse",
+      "context_tags": [
+        "chorus_entry",
+        "high_tension_gap",
+        "pre_chorus",
+        "pre_chorus_build",
+        "rhythmcall",
+        "verse"
+      ],
+      "signal_summary": {
+        "energy": 0.757,
+        "onset": 0.527,
+        "vocal_density_proxy": 0.624,
+        "beat_stability": 1.0,
+        "fused_novelty": 0.315
+      },
+      "recommended_actions": [
+        "fufu_call"
+      ],
+      "action_plan": [
+        {
+          "start": 43.74,
+          "end": 46.28,
+          "time": "00:43.74-00:46.28",
+          "action_id": "fufu_call",
+          "display_name": "Fu Fu Fu Call",
+          "typical_text": "Fu! Fu! Fu!",
+          "risk": "low",
+          "bar_start_offset": 0,
+          "bar_count": 1,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "fufu_call",
+          "display_name": "Fu Fu Fu Call",
+          "score": 0.9322,
+          "prototype_score": 0.9291,
+          "library_score": 0.9354,
+          "evidence_count": 28,
+          "matched_fields": {
+            "music_label": 4,
+            "coarse_music_label": 8,
+            "duration_bucket": 20,
+            "struct_label": 4,
+            "position_bucket": 2
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Fu! Fu! Fu!",
+          "selection_reasons": [
+            "seen 28 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "context match: chorus_entry, pre_chorus_build"
+          ]
+        },
+        {
+          "action_id": "sing_along",
+          "display_name": "Sing Along",
+          "score": 0.8895,
+          "prototype_score": 1.0,
+          "library_score": 0.779,
+          "evidence_count": 52,
+          "matched_fields": {
+            "coarse_music_label": 19,
+            "struct_label": 14,
+            "duration_bucket": 20,
+            "position_bucket": 8,
+            "music_label": 6
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Sing the main hook or chorus melody with the crowd.",
+          "selection_reasons": [
+            "seen 52 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "chokokoro_call",
+          "display_name": "Chokokoro Call",
+          "score": 0.8226,
+          "prototype_score": 0.7711,
+          "library_score": 0.8742,
+          "evidence_count": 1,
+          "matched_fields": {
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "duration_bucket": 1,
+            "position_bucket": 1
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Chokokoro call phrase; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "context match: verse"
+          ]
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.8215,
+          "prototype_score": 0.7688,
+          "library_score": 0.8742,
+          "evidence_count": 35,
+          "matched_fields": {
+            "coarse_music_label": 25,
+            "struct_label": 23,
+            "duration_bucket": 10,
+            "position_bucket": 18
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Clap on beat or backbeat.",
+          "selection_reasons": [
+            "seen 35 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "context match: verse"
+          ]
+        },
+        {
+          "action_id": "vocal_chant",
+          "display_name": "Vocal Chant",
+          "score": 0.7776,
+          "prototype_score": 0.7762,
+          "library_score": 0.779,
+          "evidence_count": 7,
+          "matched_fields": {
+            "coarse_music_label": 6,
+            "duration_bucket": 7,
+            "position_bucket": 3,
+            "struct_label": 5
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Follow the short chant or shouted phrase already present in the song.",
+          "selection_reasons": [
+            "seen 7 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "hai_hai",
+          "display_name": "Hai Hai",
+          "score": 0.7682,
+          "prototype_score": 0.7575,
+          "library_score": 0.779,
+          "evidence_count": 19,
+          "matched_fields": {
+            "coarse_music_label": 10,
+            "struct_label": 9,
+            "position_bucket": 5,
+            "duration_bucket": 8
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Hai! Hai!",
+          "selection_reasons": [
+            "seen 19 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "name_call",
+          "display_name": "Name Call",
+          "score": 0.7564,
+          "prototype_score": 0.7738,
+          "library_score": 0.739,
+          "evidence_count": 11,
+          "matched_fields": {
+            "position_bucket": 6,
+            "coarse_music_label": 9,
+            "struct_label": 8,
+            "duration_bucket": 4
+          },
+          "category": "rhythmcall",
+          "risk": "medium",
+          "typical_text": "<member_name>!",
+          "selection_reasons": [
+            "seen 11 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "fuwa_fuwa",
+          "display_name": "Fuwa Fuwa",
+          "score": 0.753,
+          "prototype_score": 0.7271,
+          "library_score": 0.779,
+          "evidence_count": 9,
+          "matched_fields": {
+            "duration_bucket": 9,
+            "coarse_music_label": 2,
+            "struct_label": 2,
+            "position_bucket": 1
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Fuwa fuwa!",
+          "selection_reasons": [
+            "seen 9 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "no exact knowledge-library context match"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "sae_mix"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 46.28,
+      "end": 86.92,
+      "call_role": "underground_gei",
+      "bar_start": 19,
+      "bar_end": 34,
+      "bars": 16,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "chorus",
+      "allin1_struct_context": "chorus",
+      "context_tags": [
+        "chorus",
+        "chorus_entry",
+        "high_energy_break",
+        "high_intensity",
+        "repeated_chorus",
+        "underground_gei"
+      ],
+      "signal_summary": {
+        "energy": 0.8257,
+        "onset": 0.4931,
+        "vocal_density_proxy": 0.7062,
+        "beat_stability": 0.9951,
+        "fused_novelty": 0.1197
+      },
+      "recommended_actions": [
+        "dian_bo_she"
+      ],
+      "action_plan": [
+        {
+          "start": 46.28,
+          "end": 86.92,
+          "time": "00:46.28-01:26.92",
+          "action_id": "dian_bo_she",
+          "display_name": "Dian Bo She",
+          "typical_text": "Dian Bo She underground-gei movement sequence.",
+          "risk": "high",
+          "bar_start_offset": 0,
+          "bar_count": 16,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "dian_bo_she",
+          "display_name": "Dian Bo She",
+          "score": 0.8251,
+          "prototype_score": 0.976,
+          "library_score": 0.6742,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Dian Bo She underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break"
+          ]
+        },
+        {
+          "action_id": "tian_qu_short",
+          "display_name": "Tian Qu Short",
+          "score": 0.8046,
+          "prototype_score": 1.0,
+          "library_score": 0.6092,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Tian Qu underground-gei movement sequence, short 6 eight-count version.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "longer than preferred maximum 12.0 bars"
+          ]
+        },
+        {
+          "action_id": "gongfu_she",
+          "display_name": "Gongfu She",
+          "score": 0.7988,
+          "prototype_score": 0.976,
+          "library_score": 0.6217,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Gongfu She underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "longer than preferred maximum 9.0 bars"
+          ]
+        },
+        {
+          "action_id": "tian_zhao",
+          "display_name": "Tian Zhao",
+          "score": 0.7942,
+          "prototype_score": 0.983,
+          "library_score": 0.6054,
+          "evidence_count": 2,
+          "matched_fields": {
+            "music_label": 2,
+            "coarse_music_label": 2,
+            "struct_label": 2
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Tian Zhao underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "duration differs from allowed bars by 8.0"
+          ]
+        },
+        {
+          "action_id": "heibai_shuangyi",
+          "display_name": "Heibai Shuangyi",
+          "score": 0.7815,
+          "prototype_score": 0.9706,
+          "library_score": 0.5924,
+          "evidence_count": 2,
+          "matched_fields": {
+            "music_label": 2,
+            "coarse_music_label": 2,
+            "struct_label": 2
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Heibai Shuangyi underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "longer than preferred maximum 4.0 bars"
+          ]
+        },
+        {
+          "action_id": "ali_shizi",
+          "display_name": "Ali Shizi",
+          "score": 0.7792,
+          "prototype_score": 0.966,
+          "library_score": 0.5924,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Ali Shizi underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "longer than preferred maximum 4.0 bars"
+          ]
+        },
+        {
+          "action_id": "lei_she",
+          "display_name": "Lei She",
+          "score": 0.7717,
+          "prototype_score": 0.9991,
+          "library_score": 0.5442,
+          "evidence_count": 11,
+          "matched_fields": {
+            "music_label": 11,
+            "coarse_music_label": 11,
+            "struct_label": 11
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Lei She underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 11 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "duration differs from allowed bars by 8.0"
+          ]
+        },
+        {
+          "action_id": "cun_zheng",
+          "display_name": "Cun Zheng",
+          "score": 0.7701,
+          "prototype_score": 0.9961,
+          "library_score": 0.5442,
+          "evidence_count": 6,
+          "matched_fields": {
+            "music_label": 6,
+            "coarse_music_label": 6,
+            "struct_label": 6
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Cun Zheng underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "duration differs from allowed bars by 8.0"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "sae_mix"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 86.92,
+      "end": 125.01,
+      "call_role": "mix",
+      "bar_start": 35,
+      "bar_end": 49,
+      "bars": 15,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "verse",
+      "allin1_struct_context": "verse",
+      "context_tags": [
+        "mid_energy_vocal",
+        "mix",
+        "verse"
+      ],
+      "signal_summary": {
+        "energy": 0.788,
+        "onset": 0.4948,
+        "vocal_density_proxy": 0.7081,
+        "beat_stability": 0.9923,
+        "fused_novelty": 0.1734
+      },
+      "recommended_actions": [
+        "pan_mix",
+        "haiseno_activation",
+        "bismarck+kanzenseniki_mix"
+      ],
+      "action_plan": [
+        {
+          "start": 86.92,
+          "end": 97.07,
+          "time": "01:26.92-01:37.07",
+          "action_id": "pan_mix",
+          "display_name": "Pan MIX",
+          "typical_text": "Pan MIX phrase in romanized form.",
+          "risk": "medium",
+          "bar_start_offset": 0,
+          "bar_count": 4,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        },
+        {
+          "start": 97.07,
+          "end": 102.16,
+          "time": "01:37.07-01:42.16",
+          "action_id": "haiseno_activation",
+          "display_name": "Haiseno Activation",
+          "typical_text": "Haiseno activation phrase for a 1 or 2 eight-count gap.",
+          "risk": "medium",
+          "bar_start_offset": 4,
+          "bar_count": 2,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        },
+        {
+          "start": 102.16,
+          "end": 125.01,
+          "time": "01:42.16-02:05.01",
+          "action_id": "bismarck+kanzenseniki_mix",
+          "display_name": "Bismarck + Kanzenseniki MIX",
+          "typical_text": "Bismarck MIX into Kanzenseniki extension; fill exact chant text after local validation.",
+          "risk": "medium",
+          "bar_start_offset": 6,
+          "bar_count": 9,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "bismarck_mix",
+          "display_name": "Bismarck MIX",
+          "score": 0.8478,
+          "prototype_score": 1.0,
+          "library_score": 0.6955,
+          "evidence_count": 2,
+          "matched_fields": {
+            "music_label": 2,
+            "coarse_music_label": 2,
+            "struct_label": 2,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Bismarck MIX full phrase in romanized form.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: verse",
+            "duration differs from allowed bars by 8.0"
+          ]
+        },
+        {
+          "action_id": "sae_mix",
+          "display_name": "Sae MIX",
+          "score": 0.8085,
+          "prototype_score": 0.9165,
+          "library_score": 0.7004,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Sae MIX phrase; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: mid_energy_vocal, verse",
+            "duration differs from allowed bars by 12.0"
+          ]
+        },
+        {
+          "action_id": "gozen_ichiban_mix",
+          "display_name": "Gozen Ichiban MIX",
+          "score": 0.8059,
+          "prototype_score": 0.9941,
+          "library_score": 0.6177,
+          "evidence_count": 4,
+          "matched_fields": {
+            "music_label": 4,
+            "coarse_music_label": 4,
+            "struct_label": 4,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Gozen Ichiban MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 4 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "longer than preferred maximum 8.0 bars"
+          ]
+        },
+        {
+          "action_id": "pan_mix",
+          "display_name": "Pan MIX",
+          "score": 0.7682,
+          "prototype_score": 0.9188,
+          "library_score": 0.6177,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Pan MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "longer than preferred maximum 8.0 bars"
+          ]
+        },
+        {
+          "action_id": "haiseno_activation",
+          "display_name": "Haiseno Activation",
+          "score": 0.7303,
+          "prototype_score": 0.9166,
+          "library_score": 0.544,
+          "evidence_count": 6,
+          "matched_fields": {
+            "music_label": 2,
+            "coarse_music_label": 3,
+            "struct_label": 2,
+            "position_bucket": 2
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Haiseno activation phrase for a 1 or 2 eight-count gap.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "duration differs from allowed bars by 13.0"
+          ]
+        },
+        {
+          "action_id": "bismarck+kanzenseniki_mix",
+          "display_name": "Bismarck + Kanzenseniki MIX",
+          "score": 0.6395,
+          "prototype_score": 0.5487,
+          "library_score": 0.7302,
+          "evidence_count": 1,
+          "matched_fields": {
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Bismarck MIX into Kanzenseniki extension; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: verse",
+            "duration differs from allowed bars by 6.0"
+          ]
+        },
+        {
+          "action_id": "takamatsu_mix",
+          "display_name": "Takamatsu MIX",
+          "score": 0.6119,
+          "prototype_score": 0.9283,
+          "library_score": 0.5355,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "mix",
+          "risk": "high",
+          "typical_text": "Takamatsu MIX phrase; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: verse",
+            "longer than preferred maximum 7.0 bars",
+            "balanced strategy down-weights high-risk mix actions"
+          ]
+        },
+        {
+          "action_id": "bismarck_mix_first_half",
+          "display_name": "Bismarck MIX First Half",
+          "score": 0.6008,
+          "prototype_score": 0.6056,
+          "library_score": 0.596,
+          "evidence_count": 1,
+          "matched_fields": {
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Bismarck MIX first-half phrase in romanized form.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "longer than preferred maximum 2.0 bars"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "bismarck+kanzenseniki_mix",
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "pan_mix",
+          "sae_mix"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 125.01,
+      "end": 127.55,
+      "call_role": "rhythmcall",
+      "bar_start": 50,
+      "bar_end": 50,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "pre_chorus_build",
+      "allin1_struct_context": "verse",
+      "context_tags": [
+        "chorus_entry",
+        "high_tension_gap",
+        "pre_chorus",
+        "pre_chorus_build",
+        "rhythmcall",
+        "verse"
+      ],
+      "signal_summary": {
+        "energy": 0.436,
+        "onset": 0.531,
+        "vocal_density_proxy": 0.319,
+        "beat_stability": 1.0,
+        "fused_novelty": 0.513
+      },
+      "recommended_actions": [
+        "fufu_call"
+      ],
+      "action_plan": [
+        {
+          "start": 125.01,
+          "end": 127.55,
+          "time": "02:05.01-02:07.55",
+          "action_id": "fufu_call",
+          "display_name": "Fu Fu Fu Call",
+          "typical_text": "Fu! Fu! Fu!",
+          "risk": "low",
+          "bar_start_offset": 0,
+          "bar_count": 1,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "fufu_call",
+          "display_name": "Fu Fu Fu Call",
+          "score": 0.9345,
+          "prototype_score": 0.9337,
+          "library_score": 0.9354,
+          "evidence_count": 28,
+          "matched_fields": {
+            "music_label": 4,
+            "coarse_music_label": 8,
+            "duration_bucket": 20,
+            "position_bucket": 9,
+            "struct_label": 4
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Fu! Fu! Fu!",
+          "selection_reasons": [
+            "seen 28 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "context match: chorus_entry, pre_chorus_build"
+          ]
+        },
+        {
+          "action_id": "sing_along",
+          "display_name": "Sing Along",
+          "score": 0.8895,
+          "prototype_score": 1.0,
+          "library_score": 0.779,
+          "evidence_count": 52,
+          "matched_fields": {
+            "coarse_music_label": 19,
+            "struct_label": 14,
+            "duration_bucket": 20,
+            "position_bucket": 21,
+            "music_label": 6
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Sing the main hook or chorus melody with the crowd.",
+          "selection_reasons": [
+            "seen 52 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.796,
+          "prototype_score": 0.7177,
+          "library_score": 0.8742,
+          "evidence_count": 35,
+          "matched_fields": {
+            "coarse_music_label": 25,
+            "struct_label": 23,
+            "duration_bucket": 10,
+            "position_bucket": 12
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Clap on beat or backbeat.",
+          "selection_reasons": [
+            "seen 35 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "context match: verse"
+          ]
+        },
+        {
+          "action_id": "chokokoro_call",
+          "display_name": "Chokokoro Call",
+          "score": 0.7626,
+          "prototype_score": 0.651,
+          "library_score": 0.8742,
+          "evidence_count": 1,
+          "matched_fields": {
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "duration_bucket": 1
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Chokokoro call phrase; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "context match: verse"
+          ]
+        },
+        {
+          "action_id": "vocal_chant",
+          "display_name": "Vocal Chant",
+          "score": 0.7555,
+          "prototype_score": 0.732,
+          "library_score": 0.779,
+          "evidence_count": 7,
+          "matched_fields": {
+            "coarse_music_label": 6,
+            "duration_bucket": 7,
+            "struct_label": 5,
+            "position_bucket": 3
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Follow the short chant or shouted phrase already present in the song.",
+          "selection_reasons": [
+            "seen 7 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "hai_hai",
+          "display_name": "Hai Hai",
+          "score": 0.7473,
+          "prototype_score": 0.7155,
+          "library_score": 0.779,
+          "evidence_count": 19,
+          "matched_fields": {
+            "position_bucket": 8,
+            "coarse_music_label": 10,
+            "struct_label": 9,
+            "duration_bucket": 8
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Hai! Hai!",
+          "selection_reasons": [
+            "seen 19 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "oi_oi",
+          "display_name": "Oi Oi",
+          "score": 0.7353,
+          "prototype_score": 0.6915,
+          "library_score": 0.779,
+          "evidence_count": 4,
+          "matched_fields": {
+            "coarse_music_label": 3,
+            "struct_label": 3,
+            "duration_bucket": 1,
+            "position_bucket": 3
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Oi! Oi!",
+          "selection_reasons": [
+            "seen 4 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "fuwa_fuwa",
+          "display_name": "Fuwa Fuwa",
+          "score": 0.7337,
+          "prototype_score": 0.6883,
+          "library_score": 0.779,
+          "evidence_count": 9,
+          "matched_fields": {
+            "duration_bucket": 9,
+            "position_bucket": 4,
+            "coarse_music_label": 2,
+            "struct_label": 2
+          },
+          "category": "rhythmcall",
+          "risk": "low",
+          "typical_text": "Fuwa fuwa!",
+          "selection_reasons": [
+            "seen 9 times in training songs for role `rhythmcall`",
+            "category matches role `rhythmcall`",
+            "no exact knowledge-library context match"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "bismarck+kanzenseniki_mix",
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "pan_mix",
+          "sae_mix"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 127.55,
+      "end": 132.63,
+      "call_role": "mix",
+      "bar_start": 51,
+      "bar_end": 52,
+      "bars": 2,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "pre_chorus_build",
+      "allin1_struct_context": "verse",
+      "context_tags": [
+        "chorus_entry",
+        "high_tension_gap",
+        "mix",
+        "pre_chorus",
+        "pre_chorus_build",
+        "verse"
+      ],
+      "signal_summary": {
+        "energy": 0.8575,
+        "onset": 0.4945,
+        "vocal_density_proxy": 0.7795,
+        "beat_stability": 1.0,
+        "fused_novelty": 0.382
+      },
+      "recommended_actions": [
+        "bismarck_mix_first_half"
+      ],
+      "action_plan": [
+        {
+          "start": 127.55,
+          "end": 132.63,
+          "time": "02:07.55-02:12.63",
+          "action_id": "bismarck_mix_first_half",
+          "display_name": "Bismarck MIX First Half",
+          "typical_text": "Bismarck MIX first-half phrase in romanized form.",
+          "risk": "medium",
+          "bar_start_offset": 0,
+          "bar_count": 2,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "bismarck_mix_first_half",
+          "display_name": "Bismarck MIX First Half",
+          "score": 0.8681,
+          "prototype_score": 0.9973,
+          "library_score": 0.739,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "duration_bucket": 1,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Bismarck MIX first-half phrase in romanized form.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "haiseno_activation",
+          "display_name": "Haiseno Activation",
+          "score": 0.7908,
+          "prototype_score": 0.7474,
+          "library_score": 0.8342,
+          "evidence_count": 6,
+          "matched_fields": {
+            "coarse_music_label": 3,
+            "struct_label": 2,
+            "duration_bucket": 5,
+            "position_bucket": 2,
+            "music_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Haiseno activation phrase for a 1 or 2 eight-count gap.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry"
+          ]
+        },
+        {
+          "action_id": "mouikai",
+          "display_name": "Mou Ikkai",
+          "score": 0.6925,
+          "prototype_score": 0.5585,
+          "library_score": 0.8266,
+          "evidence_count": 2,
+          "matched_fields": {
+            "coarse_music_label": 2,
+            "struct_label": 2,
+            "position_bucket": 2
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Mou ikkai!",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry, pre_chorus, pre_chorus_build"
+          ]
+        },
+        {
+          "action_id": "ainu_second_half_mix",
+          "display_name": "Ainu MIX Second Half",
+          "score": 0.6847,
+          "prototype_score": 0.4741,
+          "library_score": 0.8954,
+          "evidence_count": 2,
+          "matched_fields": {
+            "position_bucket": 1,
+            "coarse_music_label": 1,
+            "duration_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Ainu MIX second-half phrase in romanized form.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry, pre_chorus"
+          ]
+        },
+        {
+          "action_id": "japanese_mix_second_half",
+          "display_name": "Japanese MIX Second Half",
+          "score": 0.6636,
+          "prototype_score": 0.5883,
+          "library_score": 0.739,
+          "evidence_count": 3,
+          "matched_fields": {
+            "position_bucket": 3,
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "duration_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Japanese MIX second-half phrase in romanized form.",
+          "selection_reasons": [
+            "seen 3 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "sae_mix",
+          "display_name": "Sae MIX",
+          "score": 0.6521,
+          "prototype_score": 0.6,
+          "library_score": 0.7042,
+          "evidence_count": 1,
+          "matched_fields": {
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "duration_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Sae MIX phrase; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: verse"
+          ]
+        },
+        {
+          "action_id": "bismarck_mix",
+          "display_name": "Bismarck MIX",
+          "score": 0.6408,
+          "prototype_score": 0.5167,
+          "library_score": 0.765,
+          "evidence_count": 2,
+          "matched_fields": {
+            "coarse_music_label": 2,
+            "struct_label": 2,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Bismarck MIX full phrase in romanized form.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry, high_tension_gap, pre_chorus, pre_chorus_build",
+            "duration differs from allowed bars by 4.0"
+          ]
+        },
+        {
+          "action_id": "jp_mix_seigyaku_dt",
+          "display_name": "JP MIX Seigyaku Double Time",
+          "score": 0.6335,
+          "prototype_score": 0.4328,
+          "library_score": 0.8342,
+          "evidence_count": 1,
+          "matched_fields": {
+            "duration_bucket": 1,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Japanese MIX forward-reverse phrase performed at double speed.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "bismarck+kanzenseniki_mix",
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "pan_mix",
+          "sae_mix"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 132.63,
+      "end": 170.72,
+      "call_role": "underground_gei",
+      "bar_start": 53,
+      "bar_end": 67,
+      "bars": 15,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "chorus",
+      "allin1_struct_context": "chorus",
+      "context_tags": [
+        "chorus",
+        "chorus_entry",
+        "high_energy_break",
+        "high_intensity",
+        "repeated_chorus",
+        "underground_gei"
+      ],
+      "signal_summary": {
+        "energy": 0.8393,
+        "onset": 0.4926,
+        "vocal_density_proxy": 0.724,
+        "beat_stability": 0.9963,
+        "fused_novelty": 0.1053
+      },
+      "recommended_actions": [
+        "gongfu_she",
+        "tian_zhao"
+      ],
+      "action_plan": [
+        {
+          "start": 132.63,
+          "end": 155.48,
+          "time": "02:12.63-02:35.48",
+          "action_id": "gongfu_she",
+          "display_name": "Gongfu She",
+          "typical_text": "Gongfu She underground-gei movement sequence.",
+          "risk": "high",
+          "bar_start_offset": 0,
+          "bar_count": 9,
+          "duration_fit": 0.8889,
+          "mode": "barfit_action"
+        },
+        {
+          "start": 155.48,
+          "end": 165.64,
+          "time": "02:35.48-02:45.64",
+          "action_id": "tian_zhao",
+          "display_name": "Tian Zhao",
+          "typical_text": "Tian Zhao underground-gei movement sequence.",
+          "risk": "high",
+          "bar_start_offset": 9,
+          "bar_count": 4,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        },
+        {
+          "start": 165.64,
+          "end": 170.72,
+          "time": "02:45.64-02:50.72",
+          "action_id": "keepspace",
+          "display_name": "Keep Space / Unassigned Gap",
+          "typical_text": "",
+          "risk": "low",
+          "bar_start_offset": 13,
+          "bar_count": 2,
+          "duration_fit": 1.0,
+          "mode": "barfit_gap"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "dian_bo_she",
+          "display_name": "Dian Bo She",
+          "score": 0.8198,
+          "prototype_score": 0.9827,
+          "library_score": 0.6569,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "position_bucket": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Dian Bo She underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break"
+          ]
+        },
+        {
+          "action_id": "gongfu_she",
+          "display_name": "Gongfu She",
+          "score": 0.8071,
+          "prototype_score": 0.9827,
+          "library_score": 0.6314,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "position_bucket": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Gongfu She underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "longer than preferred maximum 9.0 bars"
+          ]
+        },
+        {
+          "action_id": "tian_zhao",
+          "display_name": "Tian Zhao",
+          "score": 0.7947,
+          "prototype_score": 0.9752,
+          "library_score": 0.6141,
+          "evidence_count": 2,
+          "matched_fields": {
+            "music_label": 2,
+            "coarse_music_label": 2,
+            "struct_label": 2,
+            "position_bucket": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Tian Zhao underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "duration differs from allowed bars by 7.0"
+          ]
+        },
+        {
+          "action_id": "heibai_shuangyi",
+          "display_name": "Heibai Shuangyi",
+          "score": 0.7841,
+          "prototype_score": 0.9758,
+          "library_score": 0.5924,
+          "evidence_count": 2,
+          "matched_fields": {
+            "music_label": 2,
+            "coarse_music_label": 2,
+            "struct_label": 2,
+            "position_bucket": 2
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Heibai Shuangyi underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "longer than preferred maximum 4.0 bars"
+          ]
+        },
+        {
+          "action_id": "ali_shizi",
+          "display_name": "Ali Shizi",
+          "score": 0.7821,
+          "prototype_score": 0.9719,
+          "library_score": 0.5924,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "position_bucket": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Ali Shizi underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "longer than preferred maximum 4.0 bars"
+          ]
+        },
+        {
+          "action_id": "tian_qu_short",
+          "display_name": "Tian Qu Short",
+          "score": 0.7767,
+          "prototype_score": 0.9312,
+          "library_score": 0.6222,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Tian Qu underground-gei movement sequence, short 6 eight-count version.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "longer than preferred maximum 12.0 bars"
+          ]
+        },
+        {
+          "action_id": "lei_she",
+          "display_name": "Lei She",
+          "score": 0.7764,
+          "prototype_score": 1.0,
+          "library_score": 0.5529,
+          "evidence_count": 11,
+          "matched_fields": {
+            "music_label": 11,
+            "coarse_music_label": 11,
+            "struct_label": 11,
+            "position_bucket": 7
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Lei She underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 11 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "duration differs from allowed bars by 7.0"
+          ]
+        },
+        {
+          "action_id": "cun_zheng",
+          "display_name": "Cun Zheng",
+          "score": 0.7751,
+          "prototype_score": 0.9973,
+          "library_score": 0.5529,
+          "evidence_count": 6,
+          "matched_fields": {
+            "music_label": 6,
+            "coarse_music_label": 6,
+            "struct_label": 6,
+            "position_bucket": 4
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Cun Zheng underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "duration differs from allowed bars by 7.0"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "bismarck+kanzenseniki_mix",
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "pan_mix",
+          "sae_mix"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 170.72,
+      "end": 268.49,
+      "call_role": "mix",
+      "bar_start": 68,
+      "bar_end": 106,
+      "bars": 39,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "chorus",
+      "allin1_struct_context": "verse",
+      "context_tags": [
+        "chorus",
+        "chorus_entry",
+        "mix",
+        "repeated_chorus",
+        "verse"
+      ],
+      "signal_summary": {
+        "energy": 0.7872,
+        "onset": 0.4796,
+        "vocal_density_proxy": 0.6959,
+        "beat_stability": 0.9791,
+        "fused_novelty": 0.2041
+      },
+      "recommended_actions": [
+        "imi_fumei_ai_mix",
+        "bariyado_mix",
+        "aiai_mix",
+        "haiseno_activation",
+        "sekai_konton_mix_first_half",
+        "sekai_konton_mix"
+      ],
+      "action_plan": [
+        {
+          "start": 170.72,
+          "end": 175.8,
+          "time": "02:50.72-02:55.80",
+          "action_id": "imi_fumei_ai_mix",
+          "display_name": "Imi Fumei Ai MIX",
+          "typical_text": "Imi fumei ai MIX phrase in romanized form.",
+          "risk": "medium",
+          "bar_start_offset": 0,
+          "bar_count": 2,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        },
+        {
+          "start": 175.8,
+          "end": 196.12,
+          "time": "02:55.80-03:16.12",
+          "action_id": "bariyado_mix",
+          "display_name": "Bariyado MIX",
+          "typical_text": "Bariyado MIX phrase in romanized form.",
+          "risk": "medium",
+          "bar_start_offset": 2,
+          "bar_count": 8,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        },
+        {
+          "start": 196.12,
+          "end": 206.28,
+          "time": "03:16.12-03:26.28",
+          "action_id": "aiai_mix",
+          "display_name": "Aiai MIX",
+          "typical_text": "Aiai-style short MIX phrase in romanized form.",
+          "risk": "medium",
+          "bar_start_offset": 10,
+          "bar_count": 4,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        },
+        {
+          "start": 206.28,
+          "end": 211.35,
+          "time": "03:26.28-03:31.35",
+          "action_id": "haiseno_activation",
+          "display_name": "Haiseno Activation",
+          "typical_text": "Haiseno activation phrase for a 1 or 2 eight-count gap.",
+          "risk": "medium",
+          "bar_start_offset": 14,
+          "bar_count": 2,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        },
+        {
+          "start": 211.35,
+          "end": 229.14,
+          "time": "03:31.35-03:49.14",
+          "action_id": "sekai_konton_mix_first_half",
+          "display_name": "Sekai Konton MIX First Half",
+          "typical_text": "Sekai Konton MIX first-half phrase in romanized form.",
+          "risk": "high",
+          "bar_start_offset": 16,
+          "bar_count": 7,
+          "duration_fit": 0.5714,
+          "mode": "barfit_action"
+        },
+        {
+          "start": 229.14,
+          "end": 268.49,
+          "time": "03:49.14-04:28.49",
+          "action_id": "sekai_konton_mix",
+          "display_name": "Sekai Konton MIX",
+          "typical_text": "Sekai Konton MIX phrase in romanized form.",
+          "risk": "high",
+          "bar_start_offset": 23,
+          "bar_count": 16,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "imi_fumei_ai_mix",
+          "display_name": "Imi Fumei Ai MIX",
+          "score": 0.8128,
+          "prototype_score": 0.9864,
+          "library_score": 0.6392,
+          "evidence_count": 6,
+          "matched_fields": {
+            "music_label": 6,
+            "coarse_music_label": 6,
+            "position_bucket": 2
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Imi fumei ai MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry",
+            "duration differs from allowed bars by 37.0"
+          ]
+        },
+        {
+          "action_id": "bariyado_mix",
+          "display_name": "Bariyado MIX",
+          "score": 0.7867,
+          "prototype_score": 0.9773,
+          "library_score": 0.596,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Bariyado MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "longer than preferred maximum 8.0 bars"
+          ]
+        },
+        {
+          "action_id": "aiai_mix",
+          "display_name": "Aiai MIX",
+          "score": 0.766,
+          "prototype_score": 0.988,
+          "library_score": 0.544,
+          "evidence_count": 9,
+          "matched_fields": {
+            "music_label": 9,
+            "coarse_music_label": 9,
+            "position_bucket": 2
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Aiai-style short MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 9 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "duration differs from allowed bars by 35.0"
+          ]
+        },
+        {
+          "action_id": "haiseno_activation",
+          "display_name": "Haiseno Activation",
+          "score": 0.716,
+          "prototype_score": 0.7928,
+          "library_score": 0.6392,
+          "evidence_count": 6,
+          "matched_fields": {
+            "struct_label": 2,
+            "position_bucket": 2,
+            "music_label": 1,
+            "coarse_music_label": 2
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Haiseno activation phrase for a 1 or 2 eight-count gap.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry",
+            "duration differs from allowed bars by 37.0"
+          ]
+        },
+        {
+          "action_id": "myhontousuke",
+          "display_name": "Myohon-tusuke",
+          "score": 0.6702,
+          "prototype_score": 0.7444,
+          "library_score": 0.596,
+          "evidence_count": 4,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Myohon-tusuke!",
+          "selection_reasons": [
+            "seen 4 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "longer than preferred maximum 2.0 bars"
+          ]
+        },
+        {
+          "action_id": "standard_mix_first_half",
+          "display_name": "Standard MIX First Half",
+          "score": 0.6607,
+          "prototype_score": 0.7774,
+          "library_score": 0.544,
+          "evidence_count": 4,
+          "matched_fields": {
+            "coarse_music_label": 2,
+            "position_bucket": 1,
+            "music_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Aaa, yossha ikuzo! Tiger! Fire! Cyber! Fiber!",
+          "selection_reasons": [
+            "seen 4 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "duration differs from allowed bars by 37.0"
+          ]
+        },
+        {
+          "action_id": "sekai_konton_mix_first_half",
+          "display_name": "Sekai Konton MIX First Half",
+          "score": 0.598,
+          "prototype_score": 1.0,
+          "library_score": 0.436,
+          "evidence_count": 2,
+          "matched_fields": {
+            "music_label": 2,
+            "coarse_music_label": 2,
+            "struct_label": 1
+          },
+          "category": "mix",
+          "risk": "high",
+          "typical_text": "Sekai Konton MIX first-half phrase in romanized form.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "longer than preferred maximum 8.0 bars",
+            "balanced strategy down-weights high-risk mix actions"
+          ]
+        },
+        {
+          "action_id": "bismarck_mix",
+          "display_name": "Bismarck MIX",
+          "score": 0.5774,
+          "prototype_score": 0.4545,
+          "library_score": 0.7004,
+          "evidence_count": 2,
+          "matched_fields": {
+            "struct_label": 2,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Bismarck MIX full phrase in romanized form.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry, verse",
+            "duration differs from allowed bars by 32.0"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "aiai_mix",
+          "bariyado_mix",
+          "bismarck+kanzenseniki_mix",
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "pan_mix",
+          "sae_mix",
+          "sekai_konton_mix",
+          "sekai_konton_mix_first_half"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 268.49,
+      "end": 271.05,
+      "call_role": "keepspace",
+      "bar_start": 107,
+      "bar_end": 107,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "chorus",
+      "allin1_struct_context": "chorus",
+      "context_tags": [
+        "chorus",
+        "chorus_entry",
+        "keepspace",
+        "repeated_chorus"
+      ],
+      "signal_summary": {
+        "energy": 0.847,
+        "onset": 0.546,
+        "vocal_density_proxy": 0.725,
+        "beat_stability": 0.985,
+        "fused_novelty": 0.89
+      },
+      "recommended_actions": [],
+      "action_plan": [],
+      "action_candidates": [
+        {
+          "action_id": "keepspace",
+          "display_name": "Keep Space",
+          "score": 1.0,
+          "prototype_score": 1.0,
+          "library_score": 1.0,
+          "risk": "low",
+          "category": "keepspace",
+          "typical_text": "",
+          "selection_reasons": [
+            "role is keepspace"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "aiai_mix",
+          "bariyado_mix",
+          "bismarck+kanzenseniki_mix",
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "pan_mix",
+          "sae_mix",
+          "sekai_konton_mix",
+          "sekai_konton_mix_first_half"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 271.05,
+      "end": 276.13,
+      "call_role": "mix",
+      "bar_start": 108,
+      "bar_end": 109,
+      "bars": 2,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "chorus",
+      "allin1_struct_context": "chorus",
+      "context_tags": [
+        "chorus",
+        "chorus_entry",
+        "mix",
+        "repeated_chorus"
+      ],
+      "signal_summary": {
+        "energy": 0.8649,
+        "onset": 0.487,
+        "vocal_density_proxy": 0.7594,
+        "beat_stability": 0.992,
+        "fused_novelty": 0.3279
+      },
+      "recommended_actions": [
+        "imi_fumei_ai_mix"
+      ],
+      "action_plan": [
+        {
+          "start": 271.05,
+          "end": 276.13,
+          "time": "04:31.05-04:36.13",
+          "action_id": "imi_fumei_ai_mix",
+          "display_name": "Imi Fumei Ai MIX",
+          "typical_text": "Imi fumei ai MIX phrase in romanized form.",
+          "risk": "medium",
+          "bar_start_offset": 0,
+          "bar_count": 2,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "imi_fumei_ai_mix",
+          "display_name": "Imi Fumei Ai MIX",
+          "score": 0.9128,
+          "prototype_score": 0.9913,
+          "library_score": 0.8342,
+          "evidence_count": 6,
+          "matched_fields": {
+            "music_label": 6,
+            "coarse_music_label": 6,
+            "struct_label": 6,
+            "duration_bucket": 3,
+            "position_bucket": 2
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Imi fumei ai MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry"
+          ]
+        },
+        {
+          "action_id": "aiai_mix",
+          "display_name": "Aiai MIX",
+          "score": 0.8695,
+          "prototype_score": 1.0,
+          "library_score": 0.739,
+          "evidence_count": 9,
+          "matched_fields": {
+            "music_label": 9,
+            "coarse_music_label": 9,
+            "struct_label": 9,
+            "duration_bucket": 6,
+            "position_bucket": 2
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Aiai-style short MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 9 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "haiseno_activation",
+          "display_name": "Haiseno Activation",
+          "score": 0.8392,
+          "prototype_score": 0.8442,
+          "library_score": 0.8342,
+          "evidence_count": 6,
+          "matched_fields": {
+            "duration_bucket": 5,
+            "music_label": 1,
+            "coarse_music_label": 2,
+            "struct_label": 4,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Haiseno activation phrase for a 1 or 2 eight-count gap.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry"
+          ]
+        },
+        {
+          "action_id": "standard_mix_first_half",
+          "display_name": "Standard MIX First Half",
+          "score": 0.7929,
+          "prototype_score": 0.8469,
+          "library_score": 0.739,
+          "evidence_count": 4,
+          "matched_fields": {
+            "coarse_music_label": 2,
+            "struct_label": 3,
+            "duration_bucket": 4,
+            "position_bucket": 1,
+            "music_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Aaa, yossha ikuzo! Tiger! Fire! Cyber! Fiber!",
+          "selection_reasons": [
+            "seen 4 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "myhontousuke",
+          "display_name": "Myohon-tusuke",
+          "score": 0.771,
+          "prototype_score": 0.803,
+          "library_score": 0.739,
+          "evidence_count": 4,
+          "matched_fields": {
+            "duration_bucket": 4,
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Myohon-tusuke!",
+          "selection_reasons": [
+            "seen 4 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "bariyado_mix",
+          "display_name": "Bariyado MIX",
+          "score": 0.6572,
+          "prototype_score": 0.7703,
+          "library_score": 0.544,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Bariyado MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "shorter than preferred minimum 8.0 bars"
+          ]
+        },
+        {
+          "action_id": "jp_mix_seigyaku_dt",
+          "display_name": "JP MIX Seigyaku Double Time",
+          "score": 0.6474,
+          "prototype_score": 0.4606,
+          "library_score": 0.8342,
+          "evidence_count": 1,
+          "matched_fields": {
+            "struct_label": 1,
+            "duration_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Japanese MIX forward-reverse phrase performed at double speed.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry"
+          ]
+        },
+        {
+          "action_id": "wakage_no_itari_mix",
+          "display_name": "若気の至り MIX",
+          "score": 0.6333,
+          "prototype_score": 0.4324,
+          "library_score": 0.8342,
+          "evidence_count": 1,
+          "matched_fields": {
+            "duration_bucket": 1,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Wakage no Itari MIX phrase; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "aiai_mix",
+          "bariyado_mix",
+          "bismarck+kanzenseniki_mix",
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "pan_mix",
+          "sae_mix",
+          "sekai_konton_mix",
+          "sekai_konton_mix_first_half"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 276.13,
+      "end": 278.66,
+      "call_role": "underground_gei",
+      "bar_start": 110,
+      "bar_end": 110,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "chorus",
+      "allin1_struct_context": "chorus",
+      "context_tags": [
+        "chorus",
+        "chorus_entry",
+        "high_energy_break",
+        "high_intensity",
+        "repeated_chorus",
+        "underground_gei"
+      ],
+      "signal_summary": {
+        "energy": 0.843,
+        "onset": 0.482,
+        "vocal_density_proxy": 0.73,
+        "beat_stability": 0.992,
+        "fused_novelty": 0.081
+      },
+      "recommended_actions": [],
+      "action_plan": [
+        {
+          "start": 276.13,
+          "end": 278.66,
+          "time": "04:36.13-04:38.66",
+          "action_id": "keepspace",
+          "display_name": "Keep Space / Too Short for Action",
+          "typical_text": "",
+          "risk": "low",
+          "bar_start_offset": 0,
+          "bar_count": 1,
+          "duration_fit": 1.0,
+          "mode": "barfit_gap"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "heibai_shuangyi",
+          "display_name": "Heibai Shuangyi",
+          "score": 0.4609,
+          "prototype_score": 0.9464,
+          "library_score": 0.5404,
+          "evidence_count": 2,
+          "matched_fields": {
+            "music_label": 2,
+            "coarse_music_label": 2,
+            "struct_label": 2
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Heibai Shuangyi underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "shorter than preferred minimum 4.0 bars",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "lei_she",
+          "display_name": "Lei She",
+          "score": 0.4586,
+          "prototype_score": 1.0,
+          "library_score": 0.4792,
+          "evidence_count": 11,
+          "matched_fields": {
+            "music_label": 11,
+            "coarse_music_label": 11,
+            "struct_label": 11,
+            "position_bucket": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Lei She underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 11 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "duration differs from allowed bars by 3.0",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "cun_zheng",
+          "display_name": "Cun Zheng",
+          "score": 0.458,
+          "prototype_score": 0.9982,
+          "library_score": 0.4792,
+          "evidence_count": 6,
+          "matched_fields": {
+            "music_label": 6,
+            "coarse_music_label": 6,
+            "struct_label": 6,
+            "position_bucket": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Cun Zheng underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "duration differs from allowed bars by 3.0",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "ali_shizi",
+          "display_name": "Ali Shizi",
+          "score": 0.4563,
+          "prototype_score": 0.9315,
+          "library_score": 0.5404,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Ali Shizi underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "shorter than preferred minimum 4.0 bars",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "tian_zhao",
+          "display_name": "Tian Zhao",
+          "score": 0.4527,
+          "prototype_score": 0.92,
+          "library_score": 0.5404,
+          "evidence_count": 2,
+          "matched_fields": {
+            "music_label": 2,
+            "coarse_music_label": 2,
+            "struct_label": 2
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Tian Zhao underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "duration differs from allowed bars by 3.0",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "gongfu_she",
+          "display_name": "Gongfu She",
+          "score": 0.4507,
+          "prototype_score": 0.9134,
+          "library_score": 0.5404,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Gongfu She underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "shorter than preferred minimum 8.0 bars",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "long_zhi_mao",
+          "display_name": "Long Zhi Mao",
+          "score": 0.4453,
+          "prototype_score": 0.9571,
+          "library_score": 0.4792,
+          "evidence_count": 5,
+          "matched_fields": {
+            "music_label": 5,
+            "coarse_music_label": 5,
+            "struct_label": 5
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Long Zhi Mao underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 5 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "duration differs from allowed bars by 3.0",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "dian_bo_she",
+          "display_name": "Dian Bo She",
+          "score": 0.4317,
+          "prototype_score": 0.9134,
+          "library_score": 0.4792,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Dian Bo She underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "duration differs from allowed bars by 7.0",
+            "high-risk action down-weighted for a short slot"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "aiai_mix",
+          "bariyado_mix",
+          "bismarck+kanzenseniki_mix",
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "pan_mix",
+          "sae_mix",
+          "sekai_konton_mix",
+          "sekai_konton_mix_first_half"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 278.66,
+      "end": 281.2,
+      "call_role": "mix",
+      "bar_start": 111,
+      "bar_end": 111,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "chorus",
+      "allin1_struct_context": "chorus",
+      "context_tags": [
+        "chorus",
+        "chorus_entry",
+        "mix",
+        "repeated_chorus"
+      ],
+      "signal_summary": {
+        "energy": 0.869,
+        "onset": 0.5,
+        "vocal_density_proxy": 0.76,
+        "beat_stability": 1.0,
+        "fused_novelty": 0.085
+      },
+      "recommended_actions": [
+        "imi_fumei_ai_mix"
+      ],
+      "action_plan": [
+        {
+          "start": 278.66,
+          "end": 281.2,
+          "time": "04:38.66-04:41.20",
+          "action_id": "imi_fumei_ai_mix",
+          "display_name": "Imi Fumei Ai MIX",
+          "typical_text": "Imi fumei ai MIX phrase in romanized form.",
+          "risk": "medium",
+          "bar_start_offset": 0,
+          "bar_count": 1,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "imi_fumei_ai_mix",
+          "display_name": "Imi Fumei Ai MIX",
+          "score": 0.9171,
+          "prototype_score": 1.0,
+          "library_score": 0.8342,
+          "evidence_count": 6,
+          "matched_fields": {
+            "music_label": 6,
+            "coarse_music_label": 6,
+            "struct_label": 6,
+            "duration_bucket": 2,
+            "position_bucket": 2
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Imi fumei ai MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry"
+          ]
+        },
+        {
+          "action_id": "haiseno_activation",
+          "display_name": "Haiseno Activation",
+          "score": 0.8095,
+          "prototype_score": 0.7848,
+          "library_score": 0.8342,
+          "evidence_count": 6,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 2,
+            "struct_label": 4,
+            "position_bucket": 1,
+            "duration_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Haiseno activation phrase for a 1 or 2 eight-count gap.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry"
+          ]
+        },
+        {
+          "action_id": "aiai_mix",
+          "display_name": "Aiai MIX",
+          "score": 0.7417,
+          "prototype_score": 0.9394,
+          "library_score": 0.544,
+          "evidence_count": 9,
+          "matched_fields": {
+            "music_label": 9,
+            "coarse_music_label": 9,
+            "struct_label": 9,
+            "position_bucket": 2
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Aiai-style short MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 9 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "bariyado_mix",
+          "display_name": "Bariyado MIX",
+          "score": 0.6811,
+          "prototype_score": 0.8183,
+          "library_score": 0.544,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Bariyado MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "shorter than preferred minimum 8.0 bars"
+          ]
+        },
+        {
+          "action_id": "myhontousuke",
+          "display_name": "Myohon-tusuke",
+          "score": 0.667,
+          "prototype_score": 0.7249,
+          "library_score": 0.609,
+          "evidence_count": 4,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Myohon-tusuke!",
+          "selection_reasons": [
+            "seen 4 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "shorter than preferred minimum 2.0 bars"
+          ]
+        },
+        {
+          "action_id": "standard_mix_first_half",
+          "display_name": "Standard MIX First Half",
+          "score": 0.658,
+          "prototype_score": 0.772,
+          "library_score": 0.544,
+          "evidence_count": 4,
+          "matched_fields": {
+            "coarse_music_label": 2,
+            "struct_label": 3,
+            "position_bucket": 1,
+            "music_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Aaa, yossha ikuzo! Tiger! Fire! Cyber! Fiber!",
+          "selection_reasons": [
+            "seen 4 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "mouikai",
+          "display_name": "Mou Ikkai",
+          "score": 0.6158,
+          "prototype_score": 0.3975,
+          "library_score": 0.8342,
+          "evidence_count": 2,
+          "matched_fields": {
+            "duration_bucket": 2
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Mou ikkai!",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry"
+          ]
+        },
+        {
+          "action_id": "std_mix_kouhan_dt",
+          "display_name": "Std MIX Kouhan DT",
+          "score": 0.6065,
+          "prototype_score": 0.4741,
+          "library_score": 0.739,
+          "evidence_count": 3,
+          "matched_fields": {
+            "struct_label": 2,
+            "duration_bucket": 2
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Standard MIX second-half phrase performed at double speed.",
+          "selection_reasons": [
+            "seen 3 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "aiai_mix",
+          "bariyado_mix",
+          "bismarck+kanzenseniki_mix",
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "pan_mix",
+          "sae_mix",
+          "sekai_konton_mix",
+          "sekai_konton_mix_first_half"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 281.2,
+      "end": 283.75,
+      "call_role": "underground_gei",
+      "bar_start": 112,
+      "bar_end": 112,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "chorus",
+      "allin1_struct_context": "chorus",
+      "context_tags": [
+        "chorus",
+        "chorus_entry",
+        "high_energy_break",
+        "high_intensity",
+        "repeated_chorus",
+        "underground_gei"
+      ],
+      "signal_summary": {
+        "energy": 0.863,
+        "onset": 0.486,
+        "vocal_density_proxy": 0.751,
+        "beat_stability": 0.992,
+        "fused_novelty": 0.093
+      },
+      "recommended_actions": [],
+      "action_plan": [
+        {
+          "start": 281.2,
+          "end": 283.75,
+          "time": "04:41.20-04:43.75",
+          "action_id": "keepspace",
+          "display_name": "Keep Space / Too Short for Action",
+          "typical_text": "",
+          "risk": "low",
+          "bar_start_offset": 0,
+          "bar_count": 1,
+          "duration_fit": 1.0,
+          "mode": "barfit_gap"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "heibai_shuangyi",
+          "display_name": "Heibai Shuangyi",
+          "score": 0.4609,
+          "prototype_score": 0.9464,
+          "library_score": 0.5404,
+          "evidence_count": 2,
+          "matched_fields": {
+            "music_label": 2,
+            "coarse_music_label": 2,
+            "struct_label": 2
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Heibai Shuangyi underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "shorter than preferred minimum 4.0 bars",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "lei_she",
+          "display_name": "Lei She",
+          "score": 0.4586,
+          "prototype_score": 1.0,
+          "library_score": 0.4792,
+          "evidence_count": 11,
+          "matched_fields": {
+            "music_label": 11,
+            "coarse_music_label": 11,
+            "struct_label": 11,
+            "position_bucket": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Lei She underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 11 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "duration differs from allowed bars by 3.0",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "cun_zheng",
+          "display_name": "Cun Zheng",
+          "score": 0.458,
+          "prototype_score": 0.9982,
+          "library_score": 0.4792,
+          "evidence_count": 6,
+          "matched_fields": {
+            "music_label": 6,
+            "coarse_music_label": 6,
+            "struct_label": 6,
+            "position_bucket": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Cun Zheng underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "duration differs from allowed bars by 3.0",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "ali_shizi",
+          "display_name": "Ali Shizi",
+          "score": 0.4563,
+          "prototype_score": 0.9315,
+          "library_score": 0.5404,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Ali Shizi underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "shorter than preferred minimum 4.0 bars",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "tian_zhao",
+          "display_name": "Tian Zhao",
+          "score": 0.4527,
+          "prototype_score": 0.92,
+          "library_score": 0.5404,
+          "evidence_count": 2,
+          "matched_fields": {
+            "music_label": 2,
+            "coarse_music_label": 2,
+            "struct_label": 2
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Tian Zhao underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "duration differs from allowed bars by 3.0",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "gongfu_she",
+          "display_name": "Gongfu She",
+          "score": 0.4507,
+          "prototype_score": 0.9134,
+          "library_score": 0.5404,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Gongfu She underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "shorter than preferred minimum 8.0 bars",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "long_zhi_mao",
+          "display_name": "Long Zhi Mao",
+          "score": 0.4453,
+          "prototype_score": 0.9571,
+          "library_score": 0.4792,
+          "evidence_count": 5,
+          "matched_fields": {
+            "music_label": 5,
+            "coarse_music_label": 5,
+            "struct_label": 5
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Long Zhi Mao underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 5 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "duration differs from allowed bars by 3.0",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "dian_bo_she",
+          "display_name": "Dian Bo She",
+          "score": 0.4317,
+          "prototype_score": 0.9134,
+          "library_score": 0.4792,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Dian Bo She underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "duration differs from allowed bars by 7.0",
+            "high-risk action down-weighted for a short slot"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "aiai_mix",
+          "bariyado_mix",
+          "bismarck+kanzenseniki_mix",
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "pan_mix",
+          "sae_mix",
+          "sekai_konton_mix",
+          "sekai_konton_mix_first_half"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 283.75,
+      "end": 286.29,
+      "call_role": "mix",
+      "bar_start": 113,
+      "bar_end": 113,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "chorus",
+      "allin1_struct_context": "chorus",
+      "context_tags": [
+        "chorus",
+        "chorus_entry",
+        "mix",
+        "repeated_chorus"
+      ],
+      "signal_summary": {
+        "energy": 0.83,
+        "onset": 0.488,
+        "vocal_density_proxy": 0.715,
+        "beat_stability": 1.0,
+        "fused_novelty": 0.068
+      },
+      "recommended_actions": [
+        "imi_fumei_ai_mix"
+      ],
+      "action_plan": [
+        {
+          "start": 283.75,
+          "end": 286.29,
+          "time": "04:43.75-04:46.29",
+          "action_id": "imi_fumei_ai_mix",
+          "display_name": "Imi Fumei Ai MIX",
+          "typical_text": "Imi fumei ai MIX phrase in romanized form.",
+          "risk": "medium",
+          "bar_start_offset": 0,
+          "bar_count": 1,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "imi_fumei_ai_mix",
+          "display_name": "Imi Fumei Ai MIX",
+          "score": 0.9171,
+          "prototype_score": 1.0,
+          "library_score": 0.8342,
+          "evidence_count": 6,
+          "matched_fields": {
+            "music_label": 6,
+            "coarse_music_label": 6,
+            "struct_label": 6,
+            "duration_bucket": 2,
+            "position_bucket": 2
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Imi fumei ai MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry"
+          ]
+        },
+        {
+          "action_id": "haiseno_activation",
+          "display_name": "Haiseno Activation",
+          "score": 0.8095,
+          "prototype_score": 0.7848,
+          "library_score": 0.8342,
+          "evidence_count": 6,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 2,
+            "struct_label": 4,
+            "position_bucket": 1,
+            "duration_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Haiseno activation phrase for a 1 or 2 eight-count gap.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry"
+          ]
+        },
+        {
+          "action_id": "aiai_mix",
+          "display_name": "Aiai MIX",
+          "score": 0.7417,
+          "prototype_score": 0.9394,
+          "library_score": 0.544,
+          "evidence_count": 9,
+          "matched_fields": {
+            "music_label": 9,
+            "coarse_music_label": 9,
+            "struct_label": 9,
+            "position_bucket": 2
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Aiai-style short MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 9 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "bariyado_mix",
+          "display_name": "Bariyado MIX",
+          "score": 0.6811,
+          "prototype_score": 0.8183,
+          "library_score": 0.544,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Bariyado MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "shorter than preferred minimum 8.0 bars"
+          ]
+        },
+        {
+          "action_id": "myhontousuke",
+          "display_name": "Myohon-tusuke",
+          "score": 0.667,
+          "prototype_score": 0.7249,
+          "library_score": 0.609,
+          "evidence_count": 4,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Myohon-tusuke!",
+          "selection_reasons": [
+            "seen 4 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "shorter than preferred minimum 2.0 bars"
+          ]
+        },
+        {
+          "action_id": "standard_mix_first_half",
+          "display_name": "Standard MIX First Half",
+          "score": 0.658,
+          "prototype_score": 0.772,
+          "library_score": 0.544,
+          "evidence_count": 4,
+          "matched_fields": {
+            "coarse_music_label": 2,
+            "struct_label": 3,
+            "position_bucket": 1,
+            "music_label": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Aaa, yossha ikuzo! Tiger! Fire! Cyber! Fiber!",
+          "selection_reasons": [
+            "seen 4 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match"
+          ]
+        },
+        {
+          "action_id": "mouikai",
+          "display_name": "Mou Ikkai",
+          "score": 0.6158,
+          "prototype_score": 0.3975,
+          "library_score": 0.8342,
+          "evidence_count": 2,
+          "matched_fields": {
+            "duration_bucket": 2
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Mou ikkai!",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: chorus_entry"
+          ]
+        },
+        {
+          "action_id": "std_mix_kouhan_dt",
+          "display_name": "Std MIX Kouhan DT",
+          "score": 0.6065,
+          "prototype_score": 0.4741,
+          "library_score": 0.739,
+          "evidence_count": 3,
+          "matched_fields": {
+            "struct_label": 2,
+            "duration_bucket": 2
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Standard MIX second-half phrase performed at double speed.",
+          "selection_reasons": [
+            "seen 3 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "aiai_mix",
+          "bariyado_mix",
+          "bismarck+kanzenseniki_mix",
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "pan_mix",
+          "sae_mix",
+          "sekai_konton_mix",
+          "sekai_konton_mix_first_half"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 286.29,
+      "end": 288.82,
+      "call_role": "underground_gei",
+      "bar_start": 114,
+      "bar_end": 114,
+      "bars": 1,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "chorus",
+      "allin1_struct_context": "chorus",
+      "context_tags": [
+        "chorus",
+        "chorus_entry",
+        "high_energy_break",
+        "high_intensity",
+        "repeated_chorus",
+        "underground_gei"
+      ],
+      "signal_summary": {
+        "energy": 0.854,
+        "onset": 0.493,
+        "vocal_density_proxy": 0.734,
+        "beat_stability": 0.992,
+        "fused_novelty": 0.055
+      },
+      "recommended_actions": [],
+      "action_plan": [
+        {
+          "start": 286.29,
+          "end": 288.82,
+          "time": "04:46.29-04:48.82",
+          "action_id": "keepspace",
+          "display_name": "Keep Space / Too Short for Action",
+          "typical_text": "",
+          "risk": "low",
+          "bar_start_offset": 0,
+          "bar_count": 1,
+          "duration_fit": 1.0,
+          "mode": "barfit_gap"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "heibai_shuangyi",
+          "display_name": "Heibai Shuangyi",
+          "score": 0.4609,
+          "prototype_score": 0.9464,
+          "library_score": 0.5404,
+          "evidence_count": 2,
+          "matched_fields": {
+            "music_label": 2,
+            "coarse_music_label": 2,
+            "struct_label": 2
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Heibai Shuangyi underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "shorter than preferred minimum 4.0 bars",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "lei_she",
+          "display_name": "Lei She",
+          "score": 0.4586,
+          "prototype_score": 1.0,
+          "library_score": 0.4792,
+          "evidence_count": 11,
+          "matched_fields": {
+            "music_label": 11,
+            "coarse_music_label": 11,
+            "struct_label": 11,
+            "position_bucket": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Lei She underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 11 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "duration differs from allowed bars by 3.0",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "cun_zheng",
+          "display_name": "Cun Zheng",
+          "score": 0.458,
+          "prototype_score": 0.9982,
+          "library_score": 0.4792,
+          "evidence_count": 6,
+          "matched_fields": {
+            "music_label": 6,
+            "coarse_music_label": 6,
+            "struct_label": 6,
+            "position_bucket": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Cun Zheng underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 6 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "duration differs from allowed bars by 3.0",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "ali_shizi",
+          "display_name": "Ali Shizi",
+          "score": 0.4563,
+          "prototype_score": 0.9315,
+          "library_score": 0.5404,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Ali Shizi underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "shorter than preferred minimum 4.0 bars",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "tian_zhao",
+          "display_name": "Tian Zhao",
+          "score": 0.4527,
+          "prototype_score": 0.92,
+          "library_score": 0.5404,
+          "evidence_count": 2,
+          "matched_fields": {
+            "music_label": 2,
+            "coarse_music_label": 2,
+            "struct_label": 2
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Tian Zhao underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "duration differs from allowed bars by 3.0",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "gongfu_she",
+          "display_name": "Gongfu She",
+          "score": 0.4507,
+          "prototype_score": 0.9134,
+          "library_score": 0.5404,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Gongfu She underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: chorus, high_energy_break",
+            "shorter than preferred minimum 8.0 bars",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "long_zhi_mao",
+          "display_name": "Long Zhi Mao",
+          "score": 0.4453,
+          "prototype_score": 0.9571,
+          "library_score": 0.4792,
+          "evidence_count": 5,
+          "matched_fields": {
+            "music_label": 5,
+            "coarse_music_label": 5,
+            "struct_label": 5
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Long Zhi Mao underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 5 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "duration differs from allowed bars by 3.0",
+            "high-risk action down-weighted for a short slot"
+          ]
+        },
+        {
+          "action_id": "dian_bo_she",
+          "display_name": "Dian Bo She",
+          "score": 0.4317,
+          "prototype_score": 0.9134,
+          "library_score": 0.4792,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "underground_gei",
+          "risk": "high",
+          "typical_text": "Dian Bo She underground-gei movement sequence.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `underground_gei`",
+            "category matches role `underground_gei`",
+            "context match: high_energy_break",
+            "duration differs from allowed bars by 7.0",
+            "high-risk action down-weighted for a short slot"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "aiai_mix",
+          "bariyado_mix",
+          "bismarck+kanzenseniki_mix",
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "pan_mix",
+          "sae_mix",
+          "sekai_konton_mix",
+          "sekai_konton_mix_first_half"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 288.82,
+      "end": 311.58,
+      "call_role": "mix",
+      "bar_start": 115,
+      "bar_end": 123,
+      "bars": 9,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "outro",
+      "allin1_struct_context": "outro",
+      "context_tags": [
+        "high_energy_outro",
+        "mix",
+        "outro"
+      ],
+      "signal_summary": {
+        "energy": 0.7216,
+        "onset": 0.4355,
+        "vocal_density_proxy": 0.642,
+        "beat_stability": 0.9855,
+        "fused_novelty": 0.3944
+      },
+      "recommended_actions": [
+        "ainu_mix_long",
+        "ainu_mix"
+      ],
+      "action_plan": [
+        {
+          "start": 288.82,
+          "end": 301.53,
+          "time": "04:48.82-05:01.53",
+          "action_id": "ainu_mix_long",
+          "display_name": "ainu_mix_long",
+          "typical_text": "Ainu MIX long phrase; fill exact chant text after local validation.",
+          "risk": "medium",
+          "bar_start_offset": 0,
+          "bar_count": 5,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        },
+        {
+          "start": 301.53,
+          "end": 311.58,
+          "time": "05:01.53-05:11.58",
+          "action_id": "ainu_mix",
+          "display_name": "Ainu MIX",
+          "typical_text": "Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!",
+          "risk": "medium",
+          "bar_start_offset": 5,
+          "bar_count": 4,
+          "duration_fit": 1.0,
+          "mode": "barfit_action"
+        }
+      ],
+      "action_candidates": [
+        {
+          "action_id": "ainu_mix_long",
+          "display_name": "ainu_mix_long",
+          "score": 0.8117,
+          "prototype_score": 1.0,
+          "library_score": 0.6234,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "duration_bucket": 1,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Ainu MIX long phrase; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "duration differs from allowed bars by 4.0"
+          ]
+        },
+        {
+          "action_id": "ainu_mix",
+          "display_name": "Ainu MIX",
+          "score": 0.7821,
+          "prototype_score": 0.854,
+          "library_score": 0.7101,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "longer than preferred maximum 8.0 bars"
+          ]
+        },
+        {
+          "action_id": "kaho_sanren_mix",
+          "display_name": "Variable Triple MIX",
+          "score": 0.6763,
+          "prototype_score": 0.8571,
+          "library_score": 0.7354,
+          "evidence_count": 5,
+          "matched_fields": {
+            "duration_bucket": 4,
+            "position_bucket": 2,
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1
+          },
+          "category": "mix",
+          "risk": "high",
+          "typical_text": "MIX variants chained in three phrases.",
+          "selection_reasons": [
+            "seen 5 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: high_energy_outro, outro",
+            "balanced strategy down-weights high-risk mix actions"
+          ]
+        },
+        {
+          "action_id": "lin_xiu_mix",
+          "display_name": "林修 MIX",
+          "score": 0.6693,
+          "prototype_score": 0.8721,
+          "library_score": 0.7065,
+          "evidence_count": 2,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "duration_bucket": 1,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "high",
+          "typical_text": "林修 MIX phrase; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: high_energy_outro, outro",
+            "balanced strategy down-weights high-risk mix actions"
+          ]
+        },
+        {
+          "action_id": "wakage_no_itari_mix",
+          "display_name": "若気の至り MIX",
+          "score": 0.6466,
+          "prototype_score": 0.7492,
+          "library_score": 0.544,
+          "evidence_count": 1,
+          "matched_fields": {
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Wakage no Itari MIX phrase; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match",
+            "duration differs from allowed bars by 7.0"
+          ]
+        },
+        {
+          "action_id": "shuumaku_kahen_mix",
+          "display_name": "Shuumaku Kahen MIX",
+          "score": 0.6292,
+          "prototype_score": 0.7631,
+          "library_score": 0.7354,
+          "evidence_count": 2,
+          "matched_fields": {
+            "duration_bucket": 1,
+            "music_label": 1,
+            "coarse_music_label": 1,
+            "struct_label": 1,
+            "position_bucket": 1
+          },
+          "category": "mix",
+          "risk": "high",
+          "typical_text": "Shuumaku Kahen MIX phrase; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: high_energy_outro, outro",
+            "balanced strategy down-weights high-risk mix actions"
+          ]
+        },
+        {
+          "action_id": "ainu_kahen_mix",
+          "display_name": "Ainu Kahen MIX",
+          "score": 0.5726,
+          "prototype_score": 0.3398,
+          "library_score": 0.8053,
+          "evidence_count": 2,
+          "matched_fields": {
+            "duration_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Ainu variable MIX phrase in romanized form.",
+          "selection_reasons": [
+            "seen 2 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "context match: outro",
+            "longer than preferred maximum 8.0 bars"
+          ]
+        },
+        {
+          "action_id": "bismarck+kanzenseniki_mix",
+          "display_name": "Bismarck + Kanzenseniki MIX",
+          "score": 0.5556,
+          "prototype_score": 0.3722,
+          "library_score": 0.739,
+          "evidence_count": 1,
+          "matched_fields": {
+            "duration_bucket": 1
+          },
+          "category": "mix",
+          "risk": "medium",
+          "typical_text": "Bismarck MIX into Kanzenseniki extension; fill exact chant text after local validation.",
+          "selection_reasons": [
+            "seen 1 times in training songs for role `mix`",
+            "category matches role `mix`",
+            "no exact knowledge-library context match"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "aiai_mix",
+          "ainu_mix",
+          "ainu_mix_long",
+          "bariyado_mix",
+          "bismarck+kanzenseniki_mix",
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "pan_mix",
+          "sae_mix",
+          "sekai_konton_mix",
+          "sekai_konton_mix_first_half"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    },
+    {
+      "start": 311.58,
+      "end": 315.4,
+      "call_role": "keepspace",
+      "bar_start": 124,
+      "bar_end": 125,
+      "bars": 2,
+      "method": "loso_audio_vote_rf1_logreg1_gb1",
+      "music_label_context": "end",
+      "allin1_struct_context": "end",
+      "context_tags": [
+        "end",
+        "keepspace"
+      ],
+      "signal_summary": {
+        "energy": 0.0093,
+        "onset": 0.002,
+        "vocal_density_proxy": 0.006,
+        "beat_stability": 0.7085,
+        "fused_novelty": 0.9936
+      },
+      "recommended_actions": [],
+      "action_plan": [],
+      "action_candidates": [
+        {
+          "action_id": "keepspace",
+          "display_name": "Keep Space",
+          "score": 1.0,
+          "prototype_score": 1.0,
+          "library_score": 1.0,
+          "risk": "low",
+          "category": "keepspace",
+          "typical_text": "",
+          "selection_reasons": [
+            "role is keepspace"
+          ]
+        }
+      ],
+      "action_selection": {
+        "mode": "loso_annotation_prototype_plus_knowledge_library_barfit",
+        "held_out_song": "kizunamusic",
+        "training_action_examples": 357,
+        "used_nonrepeatable_mix_actions": [
+          "aiai_mix",
+          "ainu_mix",
+          "ainu_mix_long",
+          "bariyado_mix",
+          "bismarck+kanzenseniki_mix",
+          "bismarck_mix",
+          "gozen_ichiban_mix",
+          "pan_mix",
+          "sae_mix",
+          "sekai_konton_mix",
+          "sekai_konton_mix_first_half"
+        ],
+        "note": "Held-out song annotation actions are not used for selection."
+      }
+    }
+  ],
+  "timeline": [
+    {
+      "start": 0.56,
+      "end": 15.81,
+      "time": "00:00.56-00:15.81",
+      "action_id": "bismarck_mix",
+      "display_name": "Bismarck MIX",
+      "role": "mix",
+      "music_label": "verse",
+      "risk": "medium",
+      "bar_count": 6,
+      "typical_text": "Bismarck MIX full phrase in romanized form.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 15.81,
+      "end": 23.43,
+      "time": "00:15.81-00:23.43",
+      "action_id": "sae_mix",
+      "display_name": "Sae MIX",
+      "role": "mix",
+      "music_label": "verse",
+      "risk": "medium",
+      "bar_count": 3,
+      "typical_text": "Sae MIX phrase; fill exact chant text after local validation.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 23.43,
+      "end": 33.59,
+      "time": "00:23.43-00:33.59",
+      "action_id": "gozen_ichiban_mix",
+      "display_name": "Gozen Ichiban MIX",
+      "role": "mix",
+      "music_label": "verse",
+      "risk": "medium",
+      "bar_count": 4,
+      "typical_text": "Gozen Ichiban MIX phrase in romanized form.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 33.59,
+      "end": 36.12,
+      "time": "00:33.59-00:36.12",
+      "action_id": "hai_hai",
+      "display_name": "Hai Hai",
+      "role": "rhythmcall",
+      "music_label": "pre_chorus",
+      "risk": "low",
+      "bar_count": 1,
+      "typical_text": "Hai! Hai!",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 36.12,
+      "end": 41.2,
+      "time": "00:36.12-00:41.20",
+      "action_id": "bismarck_mix_first_half",
+      "display_name": "Bismarck MIX First Half",
+      "role": "mix",
+      "music_label": "pre_chorus_build",
+      "risk": "medium",
+      "bar_count": 2,
+      "typical_text": "Bismarck MIX first-half phrase in romanized form.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 41.2,
+      "end": 43.74,
+      "time": "00:41.20-00:43.74",
+      "action_id": "haiseno_activation",
+      "display_name": "Haiseno Activation",
+      "role": "mix",
+      "music_label": "pre_chorus_build",
+      "risk": "medium",
+      "bar_count": 1,
+      "typical_text": "Haiseno activation phrase for a 1 or 2 eight-count gap.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 43.74,
+      "end": 46.28,
+      "time": "00:43.74-00:46.28",
+      "action_id": "fufu_call",
+      "display_name": "Fu Fu Fu Call",
+      "role": "rhythmcall",
+      "music_label": "pre_chorus_build",
+      "risk": "low",
+      "bar_count": 1,
+      "typical_text": "Fu! Fu! Fu!",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 46.28,
+      "end": 86.92,
+      "time": "00:46.28-01:26.92",
+      "action_id": "dian_bo_she",
+      "display_name": "Dian Bo She",
+      "role": "underground_gei",
+      "music_label": "chorus",
+      "risk": "high",
+      "bar_count": 16,
+      "typical_text": "Dian Bo She underground-gei movement sequence.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 86.92,
+      "end": 97.07,
+      "time": "01:26.92-01:37.07",
+      "action_id": "pan_mix",
+      "display_name": "Pan MIX",
+      "role": "mix",
+      "music_label": "verse",
+      "risk": "medium",
+      "bar_count": 4,
+      "typical_text": "Pan MIX phrase in romanized form.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 97.07,
+      "end": 102.16,
+      "time": "01:37.07-01:42.16",
+      "action_id": "haiseno_activation",
+      "display_name": "Haiseno Activation",
+      "role": "mix",
+      "music_label": "verse",
+      "risk": "medium",
+      "bar_count": 2,
+      "typical_text": "Haiseno activation phrase for a 1 or 2 eight-count gap.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 102.16,
+      "end": 125.01,
+      "time": "01:42.16-02:05.01",
+      "action_id": "bismarck+kanzenseniki_mix",
+      "display_name": "Bismarck + Kanzenseniki MIX",
+      "role": "mix",
+      "music_label": "verse",
+      "risk": "medium",
+      "bar_count": 9,
+      "typical_text": "Bismarck MIX into Kanzenseniki extension; fill exact chant text after local validation.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 125.01,
+      "end": 127.55,
+      "time": "02:05.01-02:07.55",
+      "action_id": "fufu_call",
+      "display_name": "Fu Fu Fu Call",
+      "role": "rhythmcall",
+      "music_label": "pre_chorus_build",
+      "risk": "low",
+      "bar_count": 1,
+      "typical_text": "Fu! Fu! Fu!",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 127.55,
+      "end": 132.63,
+      "time": "02:07.55-02:12.63",
+      "action_id": "bismarck_mix_first_half",
+      "display_name": "Bismarck MIX First Half",
+      "role": "mix",
+      "music_label": "pre_chorus_build",
+      "risk": "medium",
+      "bar_count": 2,
+      "typical_text": "Bismarck MIX first-half phrase in romanized form.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 132.63,
+      "end": 155.48,
+      "time": "02:12.63-02:35.48",
+      "action_id": "gongfu_she",
+      "display_name": "Gongfu She",
+      "role": "underground_gei",
+      "music_label": "chorus",
+      "risk": "high",
+      "bar_count": 9,
+      "typical_text": "Gongfu She underground-gei movement sequence.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 155.48,
+      "end": 165.64,
+      "time": "02:35.48-02:45.64",
+      "action_id": "tian_zhao",
+      "display_name": "Tian Zhao",
+      "role": "underground_gei",
+      "music_label": "chorus",
+      "risk": "high",
+      "bar_count": 4,
+      "typical_text": "Tian Zhao underground-gei movement sequence.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 165.64,
+      "end": 170.72,
+      "time": "02:45.64-02:50.72",
+      "action_id": "keepspace",
+      "display_name": "Keep Space / Unassigned Gap",
+      "role": "underground_gei",
+      "music_label": "chorus",
+      "risk": "low",
+      "bar_count": 2,
+      "typical_text": "",
+      "mode": "barfit_gap"
+    },
+    {
+      "start": 170.72,
+      "end": 175.8,
+      "time": "02:50.72-02:55.80",
+      "action_id": "imi_fumei_ai_mix",
+      "display_name": "Imi Fumei Ai MIX",
+      "role": "mix",
+      "music_label": "chorus",
+      "risk": "medium",
+      "bar_count": 2,
+      "typical_text": "Imi fumei ai MIX phrase in romanized form.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 175.8,
+      "end": 196.12,
+      "time": "02:55.80-03:16.12",
+      "action_id": "bariyado_mix",
+      "display_name": "Bariyado MIX",
+      "role": "mix",
+      "music_label": "chorus",
+      "risk": "medium",
+      "bar_count": 8,
+      "typical_text": "Bariyado MIX phrase in romanized form.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 196.12,
+      "end": 206.28,
+      "time": "03:16.12-03:26.28",
+      "action_id": "aiai_mix",
+      "display_name": "Aiai MIX",
+      "role": "mix",
+      "music_label": "chorus",
+      "risk": "medium",
+      "bar_count": 4,
+      "typical_text": "Aiai-style short MIX phrase in romanized form.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 206.28,
+      "end": 211.35,
+      "time": "03:26.28-03:31.35",
+      "action_id": "haiseno_activation",
+      "display_name": "Haiseno Activation",
+      "role": "mix",
+      "music_label": "chorus",
+      "risk": "medium",
+      "bar_count": 2,
+      "typical_text": "Haiseno activation phrase for a 1 or 2 eight-count gap.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 211.35,
+      "end": 229.14,
+      "time": "03:31.35-03:49.14",
+      "action_id": "sekai_konton_mix_first_half",
+      "display_name": "Sekai Konton MIX First Half",
+      "role": "mix",
+      "music_label": "chorus",
+      "risk": "high",
+      "bar_count": 7,
+      "typical_text": "Sekai Konton MIX first-half phrase in romanized form.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 229.14,
+      "end": 268.49,
+      "time": "03:49.14-04:28.49",
+      "action_id": "sekai_konton_mix",
+      "display_name": "Sekai Konton MIX",
+      "role": "mix",
+      "music_label": "chorus",
+      "risk": "high",
+      "bar_count": 16,
+      "typical_text": "Sekai Konton MIX phrase in romanized form.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 271.05,
+      "end": 276.13,
+      "time": "04:31.05-04:36.13",
+      "action_id": "imi_fumei_ai_mix",
+      "display_name": "Imi Fumei Ai MIX",
+      "role": "mix",
+      "music_label": "chorus",
+      "risk": "medium",
+      "bar_count": 2,
+      "typical_text": "Imi fumei ai MIX phrase in romanized form.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 276.13,
+      "end": 278.66,
+      "time": "04:36.13-04:38.66",
+      "action_id": "keepspace",
+      "display_name": "Keep Space / Too Short for Action",
+      "role": "underground_gei",
+      "music_label": "chorus",
+      "risk": "low",
+      "bar_count": 1,
+      "typical_text": "",
+      "mode": "barfit_gap"
+    },
+    {
+      "start": 278.66,
+      "end": 281.2,
+      "time": "04:38.66-04:41.20",
+      "action_id": "imi_fumei_ai_mix",
+      "display_name": "Imi Fumei Ai MIX",
+      "role": "mix",
+      "music_label": "chorus",
+      "risk": "medium",
+      "bar_count": 1,
+      "typical_text": "Imi fumei ai MIX phrase in romanized form.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 281.2,
+      "end": 283.75,
+      "time": "04:41.20-04:43.75",
+      "action_id": "keepspace",
+      "display_name": "Keep Space / Too Short for Action",
+      "role": "underground_gei",
+      "music_label": "chorus",
+      "risk": "low",
+      "bar_count": 1,
+      "typical_text": "",
+      "mode": "barfit_gap"
+    },
+    {
+      "start": 283.75,
+      "end": 286.29,
+      "time": "04:43.75-04:46.29",
+      "action_id": "imi_fumei_ai_mix",
+      "display_name": "Imi Fumei Ai MIX",
+      "role": "mix",
+      "music_label": "chorus",
+      "risk": "medium",
+      "bar_count": 1,
+      "typical_text": "Imi fumei ai MIX phrase in romanized form.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 286.29,
+      "end": 288.82,
+      "time": "04:46.29-04:48.82",
+      "action_id": "keepspace",
+      "display_name": "Keep Space / Too Short for Action",
+      "role": "underground_gei",
+      "music_label": "chorus",
+      "risk": "low",
+      "bar_count": 1,
+      "typical_text": "",
+      "mode": "barfit_gap"
+    },
+    {
+      "start": 288.82,
+      "end": 301.53,
+      "time": "04:48.82-05:01.53",
+      "action_id": "ainu_mix_long",
+      "display_name": "ainu_mix_long",
+      "role": "mix",
+      "music_label": "outro",
+      "risk": "medium",
+      "bar_count": 5,
+      "typical_text": "Ainu MIX long phrase; fill exact chant text after local validation.",
+      "mode": "barfit_action"
+    },
+    {
+      "start": 301.53,
+      "end": 311.58,
+      "time": "05:01.53-05:11.58",
+      "action_id": "ainu_mix",
+      "display_name": "Ainu MIX",
+      "role": "mix",
+      "music_label": "outro",
+      "risk": "medium",
+      "bar_count": 4,
+      "typical_text": "Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!",
+      "mode": "barfit_action"
+    }
+  ],
+  "markdown": "# Action-Enriched Signal Callbook: kizunamusic\n\nBase method: `loso_audio_vote_rf1_logreg1_gb1`\n\nAction selector: `loso_annotation_prototype_plus_knowledge_library_barfit`\n\n| Time | Role | Context | Bars | Actions | Typical Text / Notes |\n|---:|---|---|---:|---|---|\n| 00:00.00-00:00.56 | keepspace | intro/intro | 1 | Keep Space | top score=1.000<br>role is keepspace |\n| 00:00.56-00:33.59 | mix | verse/verse | 13 | 00:00.56-00:15.81 Bismarck MIX [medium] (6 bars)<br>00:15.81-00:23.43 Sae MIX [medium] (3 bars)<br>00:23.43-00:33.59 Gozen Ichiban MIX [medium] (4 bars) | `Bismarck MIX full phrase in romanized form.`<br>`Sae MIX phrase; fill exact chant text after local validation.`<br>`Gozen Ichiban MIX phrase in romanized form.`<br>top score=0.851<br>seen 2 times in training songs for role `mix` |\n| 00:33.59-00:36.12 | rhythmcall | pre_chorus/verse | 1 | 00:33.59-00:36.12 Hai Hai (1 bars) | `Hai! Hai!`<br>top score=0.889<br>seen 19 times in training songs for role `rhythmcall` |\n| 00:36.12-00:43.74 | mix | pre_chorus_build/verse | 3 | 00:36.12-00:41.20 Bismarck MIX First Half [medium] (2 bars)<br>00:41.20-00:43.74 Haiseno Activation [medium] (1 bars) | `Bismarck MIX first-half phrase in romanized form.`<br>`Haiseno activation phrase for a 1 or 2 eight-count gap.`<br>top score=0.818<br>seen 1 times in training songs for role `mix` |\n| 00:43.74-00:46.28 | rhythmcall | pre_chorus_build/verse | 1 | 00:43.74-00:46.28 Fu Fu Fu Call (1 bars) | `Fu! Fu! Fu!`<br>top score=0.932<br>seen 28 times in training songs for role `rhythmcall` |\n| 00:46.28-01:26.92 | underground_gei | chorus/chorus | 16 | 00:46.28-01:26.92 Dian Bo She [high] (16 bars) | `Dian Bo She underground-gei movement sequence.`<br>top score=0.825<br>seen 1 times in training songs for role `underground_gei` |\n| 01:26.92-02:05.01 | mix | verse/verse | 15 | 01:26.92-01:37.07 Pan MIX [medium] (4 bars)<br>01:37.07-01:42.16 Haiseno Activation [medium] (2 bars)<br>01:42.16-02:05.01 Bismarck + Kanzenseniki MIX [medium] (9 bars) | `Pan MIX phrase in romanized form.`<br>`Haiseno activation phrase for a 1 or 2 eight-count gap.`<br>`Bismarck MIX into Kanzenseniki extension; fill exact chant text after local validation.`<br>top score=0.848<br>seen 2 times in training songs for role `mix` |\n| 02:05.01-02:07.55 | rhythmcall | pre_chorus_build/verse | 1 | 02:05.01-02:07.55 Fu Fu Fu Call (1 bars) | `Fu! Fu! Fu!`<br>top score=0.934<br>seen 28 times in training songs for role `rhythmcall` |\n| 02:07.55-02:12.63 | mix | pre_chorus_build/verse | 2 | 02:07.55-02:12.63 Bismarck MIX First Half [medium] (2 bars) | `Bismarck MIX first-half phrase in romanized form.`<br>top score=0.868<br>seen 1 times in training songs for role `mix` |\n| 02:12.63-02:50.72 | underground_gei | chorus/chorus | 15 | 02:12.63-02:35.48 Gongfu She [high] (9 bars) fit=0.89<br>02:35.48-02:45.64 Tian Zhao [high] (4 bars)<br>02:45.64-02:50.72 Keep Space / Unassigned Gap (2 bars) | `Gongfu She underground-gei movement sequence.`<br>`Tian Zhao underground-gei movement sequence.`<br>top score=0.820<br>seen 1 times in training songs for role `underground_gei` |\n| 02:50.72-04:28.49 | mix | chorus/verse | 39 | 02:50.72-02:55.80 Imi Fumei Ai MIX [medium] (2 bars)<br>02:55.80-03:16.12 Bariyado MIX [medium] (8 bars)<br>03:16.12-03:26.28 Aiai MIX [medium] (4 bars)<br>03:26.28-03:31.35 Haiseno Activation [medium] (2 bars)<br>03:31.35-03:49.14 Sekai Konton MIX First Half [high] (7 bars) fit=0.57<br>03:49.14-04:28.49 Sekai Konton MIX [high] (16 bars) | `Imi fumei ai MIX phrase in romanized form.`<br>`Bariyado MIX phrase in romanized form.`<br>`Aiai-style short MIX phrase in romanized form.`<br>`Haiseno activation phrase for a 1 or 2 eight-count gap.`<br>`Sekai Konton MIX first-half phrase in romanized form.`<br>`Sekai Konton MIX phrase in romanized form.`<br>top score=0.813<br>seen 6 times in training songs for role `mix` |\n| 04:28.49-04:31.05 | keepspace | chorus/chorus | 1 | Keep Space | top score=1.000<br>role is keepspace |\n| 04:31.05-04:36.13 | mix | chorus/chorus | 2 | 04:31.05-04:36.13 Imi Fumei Ai MIX [medium] (2 bars) | `Imi fumei ai MIX phrase in romanized form.`<br>top score=0.913<br>seen 6 times in training songs for role `mix` |\n| 04:36.13-04:38.66 | underground_gei | chorus/chorus | 1 | 04:36.13-04:38.66 Keep Space / Too Short for Action (1 bars) | top score=0.461<br>seen 2 times in training songs for role `underground_gei` |\n| 04:38.66-04:41.20 | mix | chorus/chorus | 1 | 04:38.66-04:41.20 Imi Fumei Ai MIX [medium] (1 bars) | `Imi fumei ai MIX phrase in romanized form.`<br>top score=0.917<br>seen 6 times in training songs for role `mix` |\n| 04:41.20-04:43.75 | underground_gei | chorus/chorus | 1 | 04:41.20-04:43.75 Keep Space / Too Short for Action (1 bars) | top score=0.461<br>seen 2 times in training songs for role `underground_gei` |\n| 04:43.75-04:46.29 | mix | chorus/chorus | 1 | 04:43.75-04:46.29 Imi Fumei Ai MIX [medium] (1 bars) | `Imi fumei ai MIX phrase in romanized form.`<br>top score=0.917<br>seen 6 times in training songs for role `mix` |\n| 04:46.29-04:48.82 | underground_gei | chorus/chorus | 1 | 04:46.29-04:48.82 Keep Space / Too Short for Action (1 bars) | top score=0.461<br>seen 2 times in training songs for role `underground_gei` |\n| 04:48.82-05:11.58 | mix | outro/outro | 9 | 04:48.82-05:01.53 ainu_mix_long [medium] (5 bars)<br>05:01.53-05:11.58 Ainu MIX [medium] (4 bars) | `Ainu MIX long phrase; fill exact chant text after local validation.`<br>`Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!`<br>top score=0.812<br>seen 1 times in training songs for role `mix` |\n| 05:11.58-05:15.40 | keepspace | end/end | 2 | Keep Space | top score=1.000<br>role is keepspace |\n"
+}

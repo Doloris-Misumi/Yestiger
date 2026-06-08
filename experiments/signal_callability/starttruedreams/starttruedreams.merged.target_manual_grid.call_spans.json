@@ -1,0 +1,195 @@
+{
+  "song_id": "starttruedreams",
+  "method": "target_manual_grid",
+  "call_spans": [
+    {
+      "start": 0.0,
+      "end": 2.06,
+      "call_role": "keepspace",
+      "bar_start": 0,
+      "bar_end": 0,
+      "bars": 1,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 2.06,
+      "end": 10.16,
+      "call_role": "rhythmcall",
+      "bar_start": 1,
+      "bar_end": 3,
+      "bars": 3,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 10.16,
+      "end": 29.02,
+      "call_role": "mix",
+      "bar_start": 4,
+      "bar_end": 10,
+      "bars": 7,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 29.02,
+      "end": 31.73,
+      "call_role": "rhythmcall",
+      "bar_start": 11,
+      "bar_end": 11,
+      "bars": 1,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 31.73,
+      "end": 39.82,
+      "call_role": "mix",
+      "bar_start": 12,
+      "bar_end": 14,
+      "bars": 3,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 39.82,
+      "end": 56.0,
+      "call_role": "rhythmcall",
+      "bar_start": 15,
+      "bar_end": 20,
+      "bars": 6,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 56.0,
+      "end": 58.69,
+      "call_role": "keepspace",
+      "bar_start": 21,
+      "bar_end": 21,
+      "bars": 1,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 58.69,
+      "end": 65.42,
+      "call_role": "mix",
+      "bar_start": 22,
+      "bar_end": 23,
+      "bars": 2,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 65.42,
+      "end": 81.61,
+      "call_role": "rhythmcall",
+      "bar_start": 24,
+      "bar_end": 29,
+      "bars": 6,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 81.61,
+      "end": 84.32,
+      "call_role": "keepspace",
+      "bar_start": 30,
+      "bar_end": 30,
+      "bars": 1,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 84.32,
+      "end": 95.1,
+      "call_role": "mix",
+      "bar_start": 31,
+      "bar_end": 34,
+      "bars": 4,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 95.1,
+      "end": 100.5,
+      "call_role": "keepspace",
+      "bar_start": 35,
+      "bar_end": 36,
+      "bars": 2,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 100.5,
+      "end": 113.96,
+      "call_role": "rhythmcall",
+      "bar_start": 37,
+      "bar_end": 41,
+      "bars": 5,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 113.96,
+      "end": 124.76,
+      "call_role": "mix",
+      "bar_start": 42,
+      "bar_end": 45,
+      "bars": 4,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 124.76,
+      "end": 146.33,
+      "call_role": "underground_gei",
+      "bar_start": 46,
+      "bar_end": 53,
+      "bars": 8,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 146.33,
+      "end": 170.61,
+      "call_role": "mix",
+      "bar_start": 54,
+      "bar_end": 62,
+      "bars": 9,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 170.61,
+      "end": 181.39,
+      "call_role": "rhythmcall",
+      "bar_start": 63,
+      "bar_end": 66,
+      "bars": 4,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 181.39,
+      "end": 184.09,
+      "call_role": "mix",
+      "bar_start": 67,
+      "bar_end": 67,
+      "bars": 1,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 184.09,
+      "end": 211.05,
+      "call_role": "rhythmcall",
+      "bar_start": 68,
+      "bar_end": 77,
+      "bars": 10,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 211.05,
+      "end": 235.32,
+      "call_role": "mix",
+      "bar_start": 78,
+      "bar_end": 86,
+      "bars": 9,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 235.32,
+      "end": 242.72,
+      "call_role": "keepspace",
+      "bar_start": 87,
+      "bar_end": 89,
+      "bars": 3,
+      "method": "target_manual_grid"
+    }
+  ]
+}

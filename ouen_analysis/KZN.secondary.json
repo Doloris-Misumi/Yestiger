@@ -1,0 +1,228 @@
+{
+  "source_struct": "struct\\KZN.json",
+  "source_audio": "songs\\KZN.mp3",
+  "method": {
+    "description": "allin1 coarse segments + downbeat grid + librosa novelty/timbre/energy/onset refinement",
+    "lyrics_used": false,
+    "features": [
+      "rms_energy",
+      "onset_strength",
+      "spectral_centroid",
+      "spectral_bandwidth",
+      "spectral_rolloff",
+      "mfcc",
+      "chroma"
+    ]
+  },
+  "refined_segments": [
+    {
+      "start": 0.0,
+      "end": 10.73,
+      "parent_label": "intro",
+      "label": "intro",
+      "confidence": 0.45,
+      "reason": "No strong internal boundary detected; kept allin1 label: intro."
+    },
+    {
+      "start": 10.73,
+      "end": 31.04,
+      "parent_label": "verse",
+      "label": "verse_subsection",
+      "confidence": 0.4739908395031061,
+      "reason": "Internal timbre/energy change inside allin1 verse; check as A-melo repeat or smaller verse unit."
+    },
+    {
+      "start": 31.04,
+      "end": 46.28,
+      "parent_label": "verse",
+      "label": "pre_chorus_build_candidate",
+      "confidence": 0.5539908395031061,
+      "reason": "Last verse piece before chorus with rising energy; check as ietora/pre-chorus candidate."
+    },
+    {
+      "start": 46.28,
+      "end": 66.59,
+      "parent_label": "chorus",
+      "label": "chorus",
+      "confidence": 0.45,
+      "reason": "No strong internal boundary detected; kept allin1 label: chorus."
+    },
+    {
+      "start": 66.59,
+      "end": 86.92,
+      "parent_label": "chorus",
+      "label": "chorus",
+      "confidence": 0.45,
+      "reason": "No strong internal boundary detected; kept allin1 label: chorus."
+    },
+    {
+      "start": 86.92,
+      "end": 97.07,
+      "parent_label": "verse",
+      "label": "post_chorus_interlude_candidate",
+      "confidence": 0.37252138784176647,
+      "reason": "Early verse piece after chorus; check as post-chorus interlude/tiger-fire candidate."
+    },
+    {
+      "start": 97.07,
+      "end": 117.4,
+      "parent_label": "verse",
+      "label": "verse_subsection",
+      "confidence": 0.3325213878417665,
+      "reason": "Internal timbre/energy change inside allin1 verse; check as A-melo repeat or smaller verse unit."
+    },
+    {
+      "start": 117.4,
+      "end": 132.62,
+      "parent_label": "verse",
+      "label": "pre_chorus_candidate",
+      "confidence": 0.24117549543498823,
+      "reason": "Last verse piece before chorus; check as B-melo/pre-chorus."
+    },
+    {
+      "start": 132.62,
+      "end": 152.92,
+      "parent_label": "chorus",
+      "label": "chorus",
+      "confidence": 0.45,
+      "reason": "No strong internal boundary detected; kept allin1 label: chorus."
+    },
+    {
+      "start": 152.92,
+      "end": 175.8,
+      "parent_label": "chorus",
+      "label": "chorus",
+      "confidence": 0.45,
+      "reason": "No strong internal boundary detected; kept allin1 label: chorus."
+    },
+    {
+      "start": 175.8,
+      "end": 203.73,
+      "parent_label": "inst",
+      "label": "inst",
+      "confidence": 0.45,
+      "reason": "No strong internal boundary detected; kept allin1 label: inst."
+    },
+    {
+      "start": 203.73,
+      "end": 216.43,
+      "parent_label": "solo",
+      "label": "solo",
+      "confidence": 0.45,
+      "reason": "No strong internal boundary detected; kept allin1 label: solo."
+    },
+    {
+      "start": 216.43,
+      "end": 229.14,
+      "parent_label": "verse",
+      "label": "verse_subsection",
+      "confidence": 0.2784314378086965,
+      "reason": "Internal timbre/energy change inside allin1 verse; check as A-melo repeat or smaller verse unit."
+    },
+    {
+      "start": 229.14,
+      "end": 245.64,
+      "parent_label": "verse",
+      "label": "pre_chorus_candidate",
+      "confidence": 0.2784314378086965,
+      "reason": "Last verse piece before chorus; check as B-melo/pre-chorus."
+    },
+    {
+      "start": 245.64,
+      "end": 268.48,
+      "parent_label": "chorus",
+      "label": "chorus",
+      "confidence": 0.45,
+      "reason": "No strong internal boundary detected; kept allin1 label: chorus."
+    },
+    {
+      "start": 268.48,
+      "end": 293.9,
+      "parent_label": "chorus",
+      "label": "chorus",
+      "confidence": 0.45,
+      "reason": "No strong internal boundary detected; kept allin1 label: chorus."
+    },
+    {
+      "start": 293.9,
+      "end": 304.08,
+      "parent_label": "outro",
+      "label": "outro",
+      "confidence": 0.48040453533528127,
+      "reason": "Kept allin1 label: outro."
+    },
+    {
+      "start": 304.08,
+      "end": 310.73,
+      "parent_label": "outro",
+      "label": "outro",
+      "confidence": 0.48040453533528127,
+      "reason": "Kept allin1 label: outro."
+    },
+    {
+      "start": 310.73,
+      "end": 315.4,
+      "parent_label": "end",
+      "label": "end",
+      "confidence": 0.55,
+      "reason": "Short segment; kept allin1 label: end."
+    }
+  ],
+  "candidate_boundaries": [
+    {
+      "time": 31.04,
+      "score": 0.4739908395031061,
+      "novelty": 0.6600341796875,
+      "timbre_change": 0.443771520915192,
+      "energy_change": 0.2678853034973145,
+      "onset_change": 0.1447433978319168,
+      "parent_label": "verse",
+      "parent_start": 10.73,
+      "parent_end": 46.28
+    },
+    {
+      "time": 97.07,
+      "score": 0.3325213878417665,
+      "novelty": 0.468093603849411,
+      "timbre_change": 0.35135043747784245,
+      "energy_change": 0.09134842157363891,
+      "onset_change": 0.08609029948711396,
+      "parent_label": "verse",
+      "parent_start": 86.92,
+      "parent_end": 132.62
+    },
+    {
+      "time": 117.4,
+      "score": 0.24117549543498823,
+      "novelty": 0.416881263256073,
+      "timbre_change": 0.18879312716548982,
+      "energy_change": 0.04854133129119873,
+      "onset_change": 0.010641959309577943,
+      "parent_label": "verse",
+      "parent_start": 86.92,
+      "parent_end": 132.62
+    },
+    {
+      "time": 229.14,
+      "score": 0.2784314378086965,
+      "novelty": 0.4465639293193817,
+      "timbre_change": 0.23002539333395752,
+      "energy_change": 0.09301171302795411,
+      "onset_change": 0.0534522145986557,
+      "parent_label": "verse",
+      "parent_start": 216.43,
+      "parent_end": 245.64
+    },
+    {
+      "time": 304.08,
+      "score": 0.6405393804470417,
+      "novelty": 0.7402032017707825,
+      "timbre_change": 0.7533162546611166,
+      "energy_change": 0.4448936104774475,
+      "onset_change": 0.14063369035720827,
+      "parent_label": "outro",
+      "parent_start": 293.9,
+      "parent_end": 310.73
+    }
+  ]
+}

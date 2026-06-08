@@ -1,0 +1,74 @@
+{
+  "song_id": "hitoshizuku",
+  "method": "structure_baseline",
+  "call_spans": [
+    {
+      "start": 0.0,
+      "end": 181.66,
+      "call_role": "rhythmcall",
+      "bar_start": 0,
+      "bar_end": 78,
+      "bars": 79,
+      "method": "structure_baseline"
+    },
+    {
+      "start": 181.66,
+      "end": 189.59,
+      "call_role": "keepspace",
+      "bar_start": 79,
+      "bar_end": 82,
+      "bars": 4,
+      "method": "structure_baseline"
+    }
+  ],
+  "comparison_to_manual_grid": {
+    "time_weighted_role_accuracy": 0.362677,
+    "macro_role_iou": 0.159608,
+    "role_iou": {
+      "keepspace": 0.295082,
+      "rhythmcall": 0.343351,
+      "mix": 0.0,
+      "underground_gei": 0.0
+    },
+    "boundary": {
+      "precision": 1.0,
+      "recall": 0.058824,
+      "f1": 0.111111,
+      "tp": 1,
+      "fp": 0,
+      "fn": 16,
+      "target_count": 17,
+      "predicted_count": 1,
+      "tolerance_seconds": 2.35
+    },
+    "target_span_count": 18,
+    "predicted_span_count": 2,
+    "duration_seconds": 189.59,
+    "confusion_duration": {
+      "keepspace": {
+        "keepspace": 5.58,
+        "rhythmcall": 10.98,
+        "mix": 0.0,
+        "underground_gei": 0.0
+      },
+      "rhythmcall": {
+        "keepspace": 2.35,
+        "rhythmcall": 63.18,
+        "mix": 0.0,
+        "underground_gei": 0.0
+      },
+      "mix": {
+        "keepspace": 0.0,
+        "rhythmcall": 87.53,
+        "mix": 0.0,
+        "underground_gei": 0.0
+      },
+      "underground_gei": {
+        "keepspace": 0.0,
+        "rhythmcall": 19.97,
+        "mix": 0.0,
+        "underground_gei": 0.0
+      }
+    }
+  }
+}

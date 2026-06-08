@@ -1,0 +1,619 @@
+{
+  "target": "manual_coarse",
+  "method": "mert95m_contextual_foote_loso_tuned",
+  "group": "04_mert_embedding",
+  "candidate": {
+    "model": "m-a-p/MERT-v1-95M",
+    "load_mode": "standard Wav2Vec2Model, no trust_remote_code",
+    "decoder": "Foote-style self-similarity novelty on bar-pooled contextual embeddings"
+  },
+  "uses_allin1": false,
+  "uses_manual_training": true,
+  "aggregate": {
+    "precision": 0.453488,
+    "recall": 0.490566,
+    "f1": 0.471299,
+    "tp": 78,
+    "fp": 94,
+    "fn": 81,
+    "target_count": 159,
+    "predicted_count": 172,
+    "mean_tolerance_seconds": 2.285
+  },
+  "per_song": [
+    {
+      "precision": 0.454545,
+      "recall": 0.454545,
+      "f1": 0.454545,
+      "tp": 5,
+      "fp": 6,
+      "fn": 6,
+      "target_count": 11,
+      "predicted_count": 11,
+      "tolerance_seconds": 2.44,
+      "song_id": "dododo",
+      "boundary_indices": [
+        4,
+        14,
+        26,
+        37,
+        41,
+        59,
+        66,
+        76,
+        85,
+        91,
+        106
+      ],
+      "selected_training_f1": 0.484848,
+      "selected_method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3"
+    },
+    {
+      "precision": 0.333333,
+      "recall": 0.7,
+      "f1": 0.451613,
+      "tp": 7,
+      "fp": 14,
+      "fn": 3,
+      "target_count": 10,
+      "predicted_count": 21,
+      "tolerance_seconds": 1.6,
+      "song_id": "godknows",
+      "boundary_indices": [
+        13,
+        18,
+        26,
+        32,
+        38,
+        51,
+        60,
+        64,
+        76,
+        88,
+        91,
+        101,
+        113,
+        118,
+        124,
+        130,
+        138,
+        150,
+        154,
+        163,
+        169
+      ],
+      "selected_training_f1": 0.498442,
+      "selected_method": "mert95m_foote_k4_smooth0p5_scale1p15_gap3"
+    },
+    {
+      "precision": 0.625,
+      "recall": 0.555556,
+      "f1": 0.588235,
+      "tp": 5,
+      "fp": 3,
+      "fn": 4,
+      "target_count": 9,
+      "predicted_count": 8,
+      "tolerance_seconds": 2.35,
+      "song_id": "hitoshizuku",
+      "boundary_indices": [
+        4,
+        8,
+        27,
+        40,
+        58,
+        62,
+        65,
+        78
+      ],
+      "selected_training_f1": 0.478405,
+      "selected_method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3"
+    },
+    {
+      "precision": 0.5625,
+      "recall": 0.75,
+      "f1": 0.642857,
+      "tp": 9,
+      "fp": 7,
+      "fn": 3,
+      "target_count": 12,
+      "predicted_count": 16,
+      "tolerance_seconds": 1.38,
+      "song_id": "ishizue_no_hanakanmuri",
+      "boundary_indices": [
+        6,
+        14,
+        20,
+        24,
+        29,
+        32,
+        35,
+        39,
+        45,
+        59,
+        67,
+        74,
+        82,
+        89,
+        94,
+        130
+      ],
+      "selected_training_f1": 0.471698,
+      "selected_method": "mert95m_foote_k4_smooth0p5_scale1p15_gap3"
+    },
+    {
+      "precision": 0.142857,
+      "recall": 0.363636,
+      "f1": 0.205128,
+      "tp": 4,
+      "fp": 24,
+      "fn": 7,
+      "target_count": 11,
+      "predicted_count": 28,
+      "tolerance_seconds": 1.4,
+      "song_id": "jibun_restart",
+      "boundary_indices": [
+        9,
+        14,
+        17,
+        43,
+        47,
+        57,
+        69,
+        72,
+        77,
+        80,
+        99,
+        110,
+        115,
+        127,
+        130,
+        142,
+        149,
+        156,
+        161,
+        169,
+        173,
+        176,
+        187,
+        190,
+        198,
+        202,
+        205,
+        217
+      ],
+      "selected_training_f1": 0.545455,
+      "selected_method": "mert95m_foote_k4_smooth0p5_scale1p15_gap3"
+    },
+    {
+      "precision": 0.461538,
+      "recall": 0.5,
+      "f1": 0.48,
+      "tp": 6,
+      "fp": 7,
+      "fn": 6,
+      "target_count": 12,
+      "predicted_count": 13,
+      "tolerance_seconds": 2.54,
+      "song_id": "kizunamusic",
+      "boundary_indices": [
+        5,
+        9,
+        19,
+        53,
+        56,
+        64,
+        68,
+        72,
+        81,
+        86,
+        91,
+        95,
+        116
+      ],
+      "selected_training_f1": 0.482993,
+      "selected_method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3"
+    },
+    {
+      "precision": 0.444444,
+      "recall": 0.4,
+      "f1": 0.421053,
+      "tp": 4,
+      "fp": 5,
+      "fn": 6,
+      "target_count": 10,
+      "predicted_count": 9,
+      "tolerance_seconds": 2.46,
+      "song_id": "louder",
+      "boundary_indices": [
+        13,
+        17,
+        55,
+        59,
+        63,
+        69,
+        74,
+        78,
+        82
+      ],
+      "selected_training_f1": 0.488294,
+      "selected_method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3"
+    },
+    {
+      "precision": 0.5,
+      "recall": 0.444444,
+      "f1": 0.470588,
+      "tp": 4,
+      "fp": 4,
+      "fn": 5,
+      "target_count": 9,
+      "predicted_count": 8,
+      "tolerance_seconds": 2.53,
+      "song_id": "mayoiuta",
+      "boundary_indices": [
+        7,
+        11,
+        21,
+        34,
+        41,
+        64,
+        68,
+        78
+      ],
+      "selected_training_f1": 0.48505,
+      "selected_method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3"
+    },
+    {
+      "precision": 0.625,
+      "recall": 0.384615,
+      "f1": 0.47619,
+      "tp": 5,
+      "fp": 3,
+      "fn": 8,
+      "target_count": 13,
+      "predicted_count": 8,
+      "tolerance_seconds": 2.38,
+      "song_id": "more_jump_more",
+      "boundary_indices": [
+        4,
+        18,
+        22,
+        34,
+        38,
+        43,
+        59,
+        72
+      ],
+      "selected_training_f1": 0.47619,
+      "selected_method": "mert95m_foote_k4_smooth0p5_scale1p15_gap3"
+    },
+    {
+      "precision": 0.666667,
+      "recall": 0.5,
+      "f1": 0.571429,
+      "tp": 6,
+      "fp": 3,
+      "fn": 6,
+      "target_count": 12,
+      "predicted_count": 9,
+      "tolerance_seconds": 2.55,
+      "song_id": "nijuu_no_niji",
+      "boundary_indices": [
+        13,
+        17,
+        40,
+        52,
+        59,
+        69,
+        73,
+        85,
+        90
+      ],
+      "selected_training_f1": 0.474576,
+      "selected_method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3"
+    },
+    {
+      "precision": 0.363636,
+      "recall": 0.333333,
+      "f1": 0.347826,
+      "tp": 4,
+      "fp": 7,
+      "fn": 8,
+      "target_count": 12,
+      "predicted_count": 11,
+      "tolerance_seconds": 2.4,
+      "song_id": "poppindream",
+      "boundary_indices": [
+        8,
+        12,
+        34,
+        40,
+        44,
+        55,
+        66,
+        74,
+        84,
+        92,
+        96
+      ],
+      "selected_training_f1": 0.494915,
+      "selected_method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3"
+    },
+    {
+      "precision": 0.555556,
+      "recall": 0.384615,
+      "f1": 0.454545,
+      "tp": 5,
+      "fp": 4,
+      "fn": 8,
+      "target_count": 13,
+      "predicted_count": 9,
+      "tolerance_seconds": 2.7,
+      "song_id": "starttruedreams",
+      "boundary_indices": [
+        5,
+        11,
+        34,
+        38,
+        63,
+        68,
+        78,
+        82,
+        85
+      ],
+      "selected_training_f1": 0.482993,
+      "selected_method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3"
+    },
+    {
+      "precision": 0.7,
+      "recall": 0.538462,
+      "f1": 0.608696,
+      "tp": 7,
+      "fp": 3,
+      "fn": 6,
+      "target_count": 13,
+      "predicted_count": 10,
+      "tolerance_seconds": 2.53,
+      "song_id": "teardrops",
+      "boundary_indices": [
+        5,
+        9,
+        27,
+        45,
+        56,
+        60,
+        64,
+        67,
+        72,
+        79
+      ],
+      "selected_training_f1": 0.471338,
+      "selected_method": "mert95m_foote_k4_smooth0p5_scale1p15_gap3"
+    },
+    {
+      "precision": 0.636364,
+      "recall": 0.583333,
+      "f1": 0.608696,
+      "tp": 7,
+      "fp": 4,
+      "fn": 5,
+      "target_count": 12,
+      "predicted_count": 11,
+      "tolerance_seconds": 2.73,
+      "song_id": "xiuwaxiuwa",
+      "boundary_indices": [
+        5,
+        10,
+        23,
+        30,
+        36,
+        58,
+        66,
+        75,
+        79,
+        102,
+        107
+      ],
+      "selected_training_f1": 0.474576,
+      "selected_method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3"
+    }
+  ],
+  "selected_candidates": [
+    {
+      "song_id": "dododo",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.484848,
+      "selected_candidate": {
+        "method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3",
+        "model": "m-a-p/MERT-v1-95M",
+        "kernel_size": 4,
+        "smooth_sigma": 0.0,
+        "scale": 1.0,
+        "min_gap": 3,
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "godknows",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.498442,
+      "selected_candidate": {
+        "method": "mert95m_foote_k4_smooth0p5_scale1p15_gap3",
+        "model": "m-a-p/MERT-v1-95M",
+        "kernel_size": 4,
+        "smooth_sigma": 0.5,
+        "scale": 1.15,
+        "min_gap": 3,
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "hitoshizuku",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.478405,
+      "selected_candidate": {
+        "method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3",
+        "model": "m-a-p/MERT-v1-95M",
+        "kernel_size": 4,
+        "smooth_sigma": 0.0,
+        "scale": 1.0,
+        "min_gap": 3,
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "ishizue_no_hanakanmuri",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.471698,
+      "selected_candidate": {
+        "method": "mert95m_foote_k4_smooth0p5_scale1p15_gap3",
+        "model": "m-a-p/MERT-v1-95M",
+        "kernel_size": 4,
+        "smooth_sigma": 0.5,
+        "scale": 1.15,
+        "min_gap": 3,
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "jibun_restart",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.545455,
+      "selected_candidate": {
+        "method": "mert95m_foote_k4_smooth0p5_scale1p15_gap3",
+        "model": "m-a-p/MERT-v1-95M",
+        "kernel_size": 4,
+        "smooth_sigma": 0.5,
+        "scale": 1.15,
+        "min_gap": 3,
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "kizunamusic",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.482993,
+      "selected_candidate": {
+        "method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3",
+        "model": "m-a-p/MERT-v1-95M",
+        "kernel_size": 4,
+        "smooth_sigma": 0.0,
+        "scale": 1.0,
+        "min_gap": 3,
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "louder",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.488294,
+      "selected_candidate": {
+        "method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3",
+        "model": "m-a-p/MERT-v1-95M",
+        "kernel_size": 4,
+        "smooth_sigma": 0.0,
+        "scale": 1.0,
+        "min_gap": 3,
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "mayoiuta",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.48505,
+      "selected_candidate": {
+        "method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3",
+        "model": "m-a-p/MERT-v1-95M",
+        "kernel_size": 4,
+        "smooth_sigma": 0.0,
+        "scale": 1.0,
+        "min_gap": 3,
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "more_jump_more",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.47619,
+      "selected_candidate": {
+        "method": "mert95m_foote_k4_smooth0p5_scale1p15_gap3",
+        "model": "m-a-p/MERT-v1-95M",
+        "kernel_size": 4,
+        "smooth_sigma": 0.5,
+        "scale": 1.15,
+        "min_gap": 3,
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "nijuu_no_niji",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.474576,
+      "selected_candidate": {
+        "method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3",
+        "model": "m-a-p/MERT-v1-95M",
+        "kernel_size": 4,
+        "smooth_sigma": 0.0,
+        "scale": 1.0,
+        "min_gap": 3,
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "poppindream",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.494915,
+      "selected_candidate": {
+        "method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3",
+        "model": "m-a-p/MERT-v1-95M",
+        "kernel_size": 4,
+        "smooth_sigma": 0.0,
+        "scale": 1.0,
+        "min_gap": 3,
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "starttruedreams",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.482993,
+      "selected_candidate": {
+        "method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3",
+        "model": "m-a-p/MERT-v1-95M",
+        "kernel_size": 4,
+        "smooth_sigma": 0.0,
+        "scale": 1.0,
+        "min_gap": 3,
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "teardrops",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.471338,
+      "selected_candidate": {
+        "method": "mert95m_foote_k4_smooth0p5_scale1p15_gap3",
+        "model": "m-a-p/MERT-v1-95M",
+        "kernel_size": 4,
+        "smooth_sigma": 0.5,
+        "scale": 1.15,
+        "min_gap": 3,
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "xiuwaxiuwa",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.474576,
+      "selected_candidate": {
+        "method": "mert95m_foote_k4_smooth0p0_scale1p0_gap3",
+        "model": "m-a-p/MERT-v1-95M",
+        "kernel_size": 4,
+        "smooth_sigma": 0.0,
+        "scale": 1.0,
+        "min_gap": 3,
+        "uses_manual_training": true
+      }
+    }
+  ]
+}

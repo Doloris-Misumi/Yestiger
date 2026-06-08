@@ -1,0 +1,334 @@
+{
+  "annotation_version": "0.2.0",
+  "song": {
+    "song_id": "mayoiuta_model_smoke",
+    "title": "迷星叫",
+    "artist": "",
+    "franchise": "",
+    "audio_path": "songs\\迷星叫.mp3",
+    "bpm": 95,
+    "meter": "4/4"
+  },
+  "model_prediction": {
+    "model_dir": "models\\tiny_pipeline",
+    "source_struct": "struct\\迷星叫.json",
+    "bar_rows": 84,
+    "warning": "Machine-generated draft; manually review before using as a human annotation."
+  },
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 16.33,
+      "music_label": "intro",
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 16.33,
+      "end": 36.53,
+      "music_label": "verse",
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 36.53,
+      "end": 41.58,
+      "music_label": "pre_chorus",
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 41.58,
+      "end": 50.43,
+      "music_label": "pre_chorus_build",
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 50.43,
+      "end": 73.18,
+      "music_label": "chorus",
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 73.18,
+      "end": 75.7,
+      "music_label": "post_chorus",
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 75.7,
+      "end": 83.27,
+      "music_label": "instrumental_break",
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 83.27,
+      "end": 103.49,
+      "music_label": "verse",
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 103.49,
+      "end": 108.54,
+      "music_label": "pre_chorus",
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 108.54,
+      "end": 117.37,
+      "music_label": "pre_chorus_build",
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 117.37,
+      "end": 140.12,
+      "music_label": "chorus",
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 140.12,
+      "end": 142.64,
+      "music_label": "post_chorus",
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 142.64,
+      "end": 162.85,
+      "music_label": "solo",
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 162.85,
+      "end": 185.59,
+      "music_label": "chorus",
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 185.59,
+      "end": 188.11,
+      "music_label": "post_chorus",
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 188.11,
+      "end": 208.35,
+      "music_label": "outro",
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 208.35,
+      "end": 211.38,
+      "music_label": "end",
+      "notes": "predicted_by_tiny_pipeline"
+    }
+  ],
+  "call_spans": [
+    {
+      "start": 0.0,
+      "end": 3.7,
+      "call_role": "keepspace",
+      "recommended_actions": [],
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 3.7,
+      "end": 6.21,
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "clap"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=clap:0.9579, hai_hai:0.5309, o_call:0.3945"
+    },
+    {
+      "start": 6.21,
+      "end": 16.33,
+      "call_role": "mix",
+      "recommended_actions": [
+        "tiger_fire_activation"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=tiger_fire_activation:0.9997, standard_mix_second_half:0.0001, standard_mix:0.0000"
+    },
+    {
+      "start": 16.33,
+      "end": 23.91,
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "clap"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=clap:0.9786, name_call:0.1818, hai_hai:0.0095"
+    },
+    {
+      "start": 23.91,
+      "end": 26.43,
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "name_call"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=name_call:0.9079, clap:0.8762, fuwa_fuwa:0.8260"
+    },
+    {
+      "start": 26.43,
+      "end": 44.12,
+      "call_role": "mix",
+      "recommended_actions": [
+        "takamatsu_mix"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=takamatsu_mix:0.9985, gozen_ichiban_mix:0.9596, bismarck_mix:0.4507"
+    },
+    {
+      "start": 44.12,
+      "end": 48.72,
+      "call_role": "mix",
+      "recommended_actions": [
+        "ietora"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=ietora:0.9949, bismarck_mix_first_half:0.8708, japanese_mix_second_half:0.0000"
+    },
+    {
+      "start": 48.72,
+      "end": 50.43,
+      "call_role": "keepspace",
+      "recommended_actions": [],
+      "notes": "predicted_by_tiny_pipeline"
+    },
+    {
+      "start": 50.43,
+      "end": 60.52,
+      "call_role": "underground_gei",
+      "recommended_actions": [
+        "long_zhi_mao"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=long_zhi_mao:0.9601, lei_she:0.9391, luo_man_si:0.8448"
+    },
+    {
+      "start": 60.52,
+      "end": 70.65,
+      "call_role": "underground_gei",
+      "recommended_actions": [
+        "long_zhi_mao"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=long_zhi_mao:0.9435, lei_she:0.9292, cun_zheng:0.7974"
+    },
+    {
+      "start": 70.65,
+      "end": 73.18,
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "fufu_call"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=fufu_call:0.9626, sing_along:0.9463, fuwa_fuwa:0.0110"
+    },
+    {
+      "start": 73.18,
+      "end": 83.27,
+      "call_role": "mix",
+      "recommended_actions": [
+        "bandor_mix"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=bandor_mix:0.9993, tiger_fire_activation:0.0162, chikipa_mix:0.0090"
+    },
+    {
+      "start": 83.27,
+      "end": 90.83,
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "clap"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=clap:0.9448, name_call:0.8480, oi_oi:0.1942"
+    },
+    {
+      "start": 90.83,
+      "end": 93.36,
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "name_call"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=name_call:0.9810, hai_hai:0.8361, fuwa_fuwa:0.7513"
+    },
+    {
+      "start": 93.36,
+      "end": 111.08,
+      "call_role": "mix",
+      "recommended_actions": [
+        "bismarck_mix"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=bismarck_mix:0.9997, takamatsu_mix:0.0048, tsunagaridai_mix:0.0013"
+    },
+    {
+      "start": 111.08,
+      "end": 117.37,
+      "call_role": "mix",
+      "recommended_actions": [
+        "ietora"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=ietora:0.9943, aiai_mix:0.0000, haiseno_activation:0.0000"
+    },
+    {
+      "start": 117.37,
+      "end": 127.47,
+      "call_role": "underground_gei",
+      "recommended_actions": [
+        "lei_she"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=lei_she:0.9438, cun_zheng:0.9189, heibai_shuangyi:0.0079"
+    },
+    {
+      "start": 127.47,
+      "end": 137.56,
+      "call_role": "underground_gei",
+      "recommended_actions": [
+        "lei_she"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=lei_she:0.9534, cun_zheng:0.9346, tian_zhao:0.0024"
+    },
+    {
+      "start": 137.56,
+      "end": 140.12,
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "fuwa_fuwa"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=fuwa_fuwa:0.9132, fufu_call:0.9079, sing_along:0.9055"
+    },
+    {
+      "start": 140.12,
+      "end": 160.33,
+      "call_role": "mix",
+      "recommended_actions": [
+        "ietora_konzetsu_mix"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=ietora_konzetsu_mix:0.9998, gachikoi_koujou:0.0000, ainu_kahen_mix:0.0000"
+    },
+    {
+      "start": 160.33,
+      "end": 162.85,
+      "call_role": "mix",
+      "recommended_actions": [
+        "highclap"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=highclap:0.9990, ietora:0.0006, japanese_mix_second_half_double_time:0.0000"
+    },
+    {
+      "start": 162.85,
+      "end": 183.06,
+      "call_role": "mix",
+      "recommended_actions": [
+        "sekai_konton_mix"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=sekai_konton_mix:0.9985, bariyado_mix:0.0000, sekai_konton_mix_first_half:0.0000"
+    },
+    {
+      "start": 183.06,
+      "end": 188.11,
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "sing_along"
+      ],
+      "notes": "predicted_by_tiny_pipeline; candidates=sing_along:0.9316, fuwa_fuwa:0.7710, fufu_call:0.3123"
+    },
+    {
+      "start": 188.11,
+      "end": 211.38,
+      "call_role": "keepspace",
+      "recommended_actions": [],
+      "notes": "predicted_by_tiny_pipeline"
+    }
+  ]
+}

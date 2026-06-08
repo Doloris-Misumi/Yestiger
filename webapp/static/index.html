@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YesTiger Web Studio</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <h1>YesTiger Web Studio</h1>
+          <p id="statusLine">Ready</p>
+        </div>
+        <div class="top-actions">
+          <select id="exampleSelect" aria-label="Example songs">
+            <option value="">Examples</option>
+          </select>
+          <button id="loadExampleBtn" type="button">Load</button>
+        </div>
+      </header>
+
+      <section class="workspace">
+        <aside class="control-panel">
+          <form id="uploadForm" class="upload-form">
+            <label id="dropZone" class="drop-zone" for="audioInput">
+              <input id="audioInput" name="audio" type="file" accept="audio/*" />
+              <span class="drop-title">Drop audio</span>
+              <span id="fileName" class="drop-meta">mp3 / wav / flac</span>
+            </label>
+            <label class="field-label">
+              Title
+              <input id="titleInput" name="title" type="text" placeholder="Song title" />
+            </label>
+            <button id="analyzeBtn" type="submit">Analyze</button>
+          </form>
+
+          <div class="stats-grid">
+            <div>
+              <span>Duration</span>
+              <strong id="durationStat">-</strong>
+            </div>
+            <div>
+              <span>Tempo</span>
+              <strong id="tempoStat">-</strong>
+            </div>
+            <div>
+              <span>Bars</span>
+              <strong id="barsStat">-</strong>
+            </div>
+            <div>
+              <span>Actions</span>
+              <strong id="actionsStat">-</strong>
+            </div>
+          </div>
+
+          <div class="export-panel">
+            <button id="exportJsonBtn" type="button" disabled>Export JSON</button>
+            <button id="exportMdBtn" type="button" disabled>Export MD</button>
+            <button id="recordBtn" type="button" disabled>Record WebM</button>
+          </div>
+        </aside>
+
+        <section class="main-panel">
+          <div class="preview-panel">
+            <canvas id="videoCanvas" width="1280" height="720"></canvas>
+            <audio id="audioPlayer" controls></audio>
+          </div>
+
+          <div class="timeline-header">
+            <h2>Action Timeline</h2>
+            <div id="currentAction" class="current-action">No action loaded</div>
+          </div>
+
+          <div class="timeline-wrap">
+            <table id="timelineTable">
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Role</th>
+                  <th>Action</th>
+                  <th>Bars</th>
+                  <th>Risk</th>
+                  <th>Text</th>
+                </tr>
+              </thead>
+              <tbody id="timelineBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="/static/config.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

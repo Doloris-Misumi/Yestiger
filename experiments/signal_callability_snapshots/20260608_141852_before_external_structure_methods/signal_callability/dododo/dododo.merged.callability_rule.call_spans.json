@@ -1,0 +1,227 @@
+{
+  "song_id": "dododo",
+  "method": "callability_rule",
+  "call_spans": [
+    {
+      "start": 0.0,
+      "end": 0.34,
+      "call_role": "keepspace",
+      "bar_start": 0,
+      "bar_end": 0,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 0.34,
+      "end": 5.23,
+      "call_role": "mix",
+      "bar_start": 1,
+      "bar_end": 2,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 5.23,
+      "end": 12.54,
+      "call_role": "rhythmcall",
+      "bar_start": 3,
+      "bar_end": 5,
+      "bars": 3,
+      "method": "callability_rule"
+    },
+    {
+      "start": 12.54,
+      "end": 14.97,
+      "call_role": "mix",
+      "bar_start": 6,
+      "bar_end": 6,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 14.97,
+      "end": 53.96,
+      "call_role": "rhythmcall",
+      "bar_start": 7,
+      "bar_end": 22,
+      "bars": 16,
+      "method": "callability_rule"
+    },
+    {
+      "start": 53.96,
+      "end": 56.39,
+      "call_role": "underground_gei",
+      "bar_start": 23,
+      "bar_end": 23,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 56.39,
+      "end": 95.38,
+      "call_role": "rhythmcall",
+      "bar_start": 24,
+      "bar_end": 39,
+      "bars": 16,
+      "method": "callability_rule"
+    },
+    {
+      "start": 95.38,
+      "end": 100.25,
+      "call_role": "mix",
+      "bar_start": 40,
+      "bar_end": 41,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 100.25,
+      "end": 124.62,
+      "call_role": "rhythmcall",
+      "bar_start": 42,
+      "bar_end": 51,
+      "bars": 10,
+      "method": "callability_rule"
+    },
+    {
+      "start": 124.62,
+      "end": 131.93,
+      "call_role": "mix",
+      "bar_start": 52,
+      "bar_end": 54,
+      "bars": 3,
+      "method": "callability_rule"
+    },
+    {
+      "start": 131.93,
+      "end": 136.8,
+      "call_role": "rhythmcall",
+      "bar_start": 55,
+      "bar_end": 56,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 136.8,
+      "end": 139.23,
+      "call_role": "underground_gei",
+      "bar_start": 57,
+      "bar_end": 57,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 139.23,
+      "end": 168.47,
+      "call_role": "rhythmcall",
+      "bar_start": 58,
+      "bar_end": 69,
+      "bars": 12,
+      "method": "callability_rule"
+    },
+    {
+      "start": 168.47,
+      "end": 173.34,
+      "call_role": "mix",
+      "bar_start": 70,
+      "bar_end": 71,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 173.34,
+      "end": 205.02,
+      "call_role": "rhythmcall",
+      "bar_start": 72,
+      "bar_end": 84,
+      "bars": 13,
+      "method": "callability_rule"
+    },
+    {
+      "start": 205.02,
+      "end": 214.77,
+      "call_role": "mix",
+      "bar_start": 85,
+      "bar_end": 88,
+      "bars": 4,
+      "method": "callability_rule"
+    },
+    {
+      "start": 214.77,
+      "end": 258.93,
+      "call_role": "rhythmcall",
+      "bar_start": 89,
+      "bar_end": 106,
+      "bars": 18,
+      "method": "callability_rule"
+    },
+    {
+      "start": 258.93,
+      "end": 266.25,
+      "call_role": "mix",
+      "bar_start": 107,
+      "bar_end": 109,
+      "bars": 3,
+      "method": "callability_rule"
+    },
+    {
+      "start": 266.25,
+      "end": 267.34,
+      "call_role": "keepspace",
+      "bar_start": 110,
+      "bar_end": 110,
+      "bars": 1,
+      "method": "callability_rule"
+    }
+  ],
+  "comparison_to_manual_grid": {
+    "time_weighted_role_accuracy": 0.360814,
+    "macro_role_iou": 0.136156,
+    "role_iou": {
+      "keepspace": 0.067358,
+      "rhythmcall": 0.304858,
+      "mix": 0.172409,
+      "underground_gei": 0.0
+    },
+    "boundary": {
+      "precision": 0.666667,
+      "recall": 0.48,
+      "f1": 0.55814,
+      "tp": 12,
+      "fp": 6,
+      "fn": 13,
+      "target_count": 25,
+      "predicted_count": 18,
+      "tolerance_seconds": 2.44
+    },
+    "target_span_count": 26,
+    "predicted_span_count": 19,
+    "duration_seconds": 267.34,
+    "confusion_duration": {
+      "keepspace": {
+        "keepspace": 1.43,
+        "rhythmcall": 10.04,
+        "mix": 9.76,
+        "underground_gei": 0.0
+      },
+      "rhythmcall": {
+        "keepspace": 0.0,
+        "rhythmcall": 70.66,
+        "mix": 7.31,
+        "underground_gei": 4.86
+      },
+      "mix": {
+        "keepspace": 0.0,
+        "rhythmcall": 99.91,
+        "mix": 24.37,
+        "underground_gei": 0.0
+      },
+      "underground_gei": {
+        "keepspace": 0.0,
+        "rhythmcall": 39.0,
+        "mix": 0.0,
+        "underground_gei": 0.0
+      }
+    }
+  }
+}

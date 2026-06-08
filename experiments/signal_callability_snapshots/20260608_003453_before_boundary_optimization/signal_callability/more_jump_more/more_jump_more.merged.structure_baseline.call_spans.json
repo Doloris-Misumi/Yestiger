@@ -1,0 +1,65 @@
+{
+  "song_id": "more_jump_more",
+  "method": "structure_baseline",
+  "call_spans": [
+    {
+      "start": 0.0,
+      "end": 182.13,
+      "call_role": "rhythmcall",
+      "bar_start": 0,
+      "bar_end": 76,
+      "bars": 77,
+      "method": "structure_baseline"
+    }
+  ],
+  "comparison_to_manual_grid": {
+    "time_weighted_role_accuracy": 0.326196,
+    "macro_role_iou": 0.081549,
+    "role_iou": {
+      "keepspace": 0.0,
+      "rhythmcall": 0.326196,
+      "mix": 0.0,
+      "underground_gei": 0.0
+    },
+    "boundary": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 19,
+      "target_count": 19,
+      "predicted_count": 0,
+      "tolerance_seconds": 2.38
+    },
+    "target_span_count": 20,
+    "predicted_span_count": 1,
+    "duration_seconds": 182.13,
+    "confusion_duration": {
+      "keepspace": {
+        "keepspace": 0.0,
+        "rhythmcall": 6.27,
+        "mix": 0.0,
+        "underground_gei": 0.0
+      },
+      "rhythmcall": {
+        "keepspace": 0.0,
+        "rhythmcall": 59.41,
+        "mix": 0.0,
+        "underground_gei": 0.0
+      },
+      "mix": {
+        "keepspace": 0.0,
+        "rhythmcall": 106.94,
+        "mix": 0.0,
+        "underground_gei": 0.0
+      },
+      "underground_gei": {
+        "keepspace": 0.0,
+        "rhythmcall": 9.51,
+        "mix": 0.0,
+        "underground_gei": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,2402 @@
+{
+  "source_secondary": "struct\\KZN.json",
+  "source_audio": "songs\\KZN.mp3",
+  "library_version": "0.1.0",
+  "bar_seconds_estimate": 2.54,
+  "slots": [
+    {
+      "start": 0.0,
+      "end": 10.73,
+      "time": "00:00.00 - 00:10.73",
+      "duration_seconds": 10.73,
+      "estimated_bars": 3.0,
+      "source_label": "intro",
+      "parent_label": "intro",
+      "segment_confidence": 0.45,
+      "context_tags": [
+        "intro"
+      ],
+      "source_reason": "No strong internal boundary detected; kept allin1 label: intro.",
+      "candidates": [
+        {
+          "action_id": "standard_mix",
+          "display_name": "Standard MIX",
+          "category": "mix",
+          "score": 0.5549,
+          "intensity": 0.85,
+          "risk": "medium",
+          "min_bars": 4,
+          "max_bars": 8,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "Aaa, yossha ikuzo! Tiger! Fire! Cyber! Fiber! Diver! Viber! Jya Jya!",
+          "matched_context": [
+            "intro"
+          ],
+          "reasons": [
+            "context match: intro"
+          ],
+          "cautions": [
+            "shorter than preferred minimum (3.0 < 4.0 bars)",
+            "medium-risk call; verify local live culture"
+          ]
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 10.73,
+      "end": 31.04,
+      "time": "00:10.73 - 00:31.04",
+      "duration_seconds": 20.31,
+      "estimated_bars": 7.0,
+      "source_label": "verse_subsection",
+      "parent_label": "verse",
+      "segment_confidence": 0.474,
+      "context_tags": [
+        "mid_energy_vocal",
+        "verse",
+        "verse_subsection"
+      ],
+      "source_reason": "Internal timbre/energy change inside allin1 verse; check as A-melo repeat or smaller verse unit.",
+      "candidates": [
+        {
+          "action_id": "ppph",
+          "display_name": "PPPH",
+          "category": "rhythm_call",
+          "score": 0.8115,
+          "intensity": 0.55,
+          "risk": "low",
+          "min_bars": 4,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Pan-pa-pan, hyu!",
+          "matched_context": [
+            "mid_energy_vocal",
+            "verse"
+          ],
+          "reasons": [
+            "context match: mid_energy_vocal, verse",
+            "fits minimum bar length (7.0 bars)",
+            "within maximum bar length (7.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "category": "rhythm_support",
+          "score": 0.7,
+          "intensity": 0.35,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 32,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Clap on beat or backbeat.",
+          "matched_context": [
+            "verse"
+          ],
+          "reasons": [
+            "context match: verse",
+            "fits minimum bar length (7.0 bars)",
+            "within maximum bar length (7.0 bars)"
+          ],
+          "cautions": []
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 31.04,
+      "end": 46.28,
+      "time": "00:31.04 - 00:46.28",
+      "duration_seconds": 15.24,
+      "estimated_bars": 5.0,
+      "source_label": "pre_chorus_build_candidate",
+      "parent_label": "verse",
+      "segment_confidence": 0.554,
+      "context_tags": [
+        "high_tension_gap",
+        "pre_chorus",
+        "pre_chorus_build",
+        "pre_chorus_build_candidate",
+        "verse"
+      ],
+      "source_reason": "Last verse piece before chorus with rising energy; check as ietora/pre-chorus candidate.",
+      "candidates": [
+        {
+          "action_id": "ppph",
+          "display_name": "PPPH",
+          "category": "rhythm_call",
+          "score": 0.8302,
+          "intensity": 0.55,
+          "risk": "low",
+          "min_bars": 4,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Pan-pa-pan, hyu!",
+          "matched_context": [
+            "pre_chorus",
+            "verse"
+          ],
+          "reasons": [
+            "context match: pre_chorus, verse",
+            "fits minimum bar length (5.0 bars)",
+            "within maximum bar length (5.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "category": "rhythm_support",
+          "score": 0.7161,
+          "intensity": 0.35,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 32,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Clap on beat or backbeat.",
+          "matched_context": [
+            "verse"
+          ],
+          "reasons": [
+            "context match: verse",
+            "fits minimum bar length (5.0 bars)",
+            "within maximum bar length (5.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "ietora",
+          "display_name": "Ietora",
+          "category": "call",
+          "score": 0.6979,
+          "intensity": 0.95,
+          "risk": "high",
+          "min_bars": 1,
+          "max_bars": 4,
+          "duration": {
+            "preferred_bars": 1,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": false
+          },
+          "typical_text": "Ie Tiger!",
+          "matched_context": [
+            "high_tension_gap",
+            "pre_chorus",
+            "pre_chorus_build"
+          ],
+          "reasons": [
+            "context match: high_tension_gap, pre_chorus, pre_chorus_build"
+          ],
+          "cautions": [
+            "longer than preferred maximum (5.0 > 4.0 bars)",
+            "high-risk call; should be style/profile gated"
+          ]
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 46.28,
+      "end": 66.59,
+      "time": "00:46.28 - 01:06.59",
+      "duration_seconds": 20.31,
+      "estimated_bars": 7.0,
+      "source_label": "chorus",
+      "parent_label": "chorus",
+      "segment_confidence": 0.45,
+      "context_tags": [
+        "chorus",
+        "repeated_chorus"
+      ],
+      "source_reason": "No strong internal boundary detected; kept allin1 label: chorus.",
+      "candidates": [
+        {
+          "action_id": "fuwa_fuwa",
+          "display_name": "Fuwa Fuwa",
+          "category": "chorus_call",
+          "score": 0.8111,
+          "intensity": 0.6,
+          "risk": "low",
+          "min_bars": 4,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Fuwa fuwa!",
+          "matched_context": [
+            "chorus",
+            "repeated_chorus"
+          ],
+          "reasons": [
+            "context match: chorus, repeated_chorus",
+            "fits minimum bar length (7.0 bars)",
+            "within maximum bar length (7.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "hai_hai",
+          "display_name": "Hai Hai",
+          "category": "rhythm_call",
+          "score": 0.7262,
+          "intensity": 0.65,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Hai! Hai!",
+          "matched_context": [
+            "chorus"
+          ],
+          "reasons": [
+            "context match: chorus",
+            "fits minimum bar length (7.0 bars)",
+            "within maximum bar length (7.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "category": "rhythm_support",
+          "score": 0.6952,
+          "intensity": 0.35,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 32,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Clap on beat or backbeat.",
+          "matched_context": [
+            "chorus"
+          ],
+          "reasons": [
+            "context match: chorus",
+            "fits minimum bar length (7.0 bars)",
+            "within maximum bar length (7.0 bars)"
+          ],
+          "cautions": []
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 66.59,
+      "end": 86.92,
+      "time": "01:06.59 - 01:26.92",
+      "duration_seconds": 20.33,
+      "estimated_bars": 7.0,
+      "source_label": "chorus",
+      "parent_label": "chorus",
+      "segment_confidence": 0.45,
+      "context_tags": [
+        "chorus",
+        "repeated_chorus"
+      ],
+      "source_reason": "No strong internal boundary detected; kept allin1 label: chorus.",
+      "candidates": [
+        {
+          "action_id": "fuwa_fuwa",
+          "display_name": "Fuwa Fuwa",
+          "category": "chorus_call",
+          "score": 0.8111,
+          "intensity": 0.6,
+          "risk": "low",
+          "min_bars": 4,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Fuwa fuwa!",
+          "matched_context": [
+            "chorus",
+            "repeated_chorus"
+          ],
+          "reasons": [
+            "context match: chorus, repeated_chorus",
+            "fits minimum bar length (7.0 bars)",
+            "within maximum bar length (7.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "hai_hai",
+          "display_name": "Hai Hai",
+          "category": "rhythm_call",
+          "score": 0.7262,
+          "intensity": 0.65,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Hai! Hai!",
+          "matched_context": [
+            "chorus"
+          ],
+          "reasons": [
+            "context match: chorus",
+            "fits minimum bar length (7.0 bars)",
+            "within maximum bar length (7.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "category": "rhythm_support",
+          "score": 0.6952,
+          "intensity": 0.35,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 32,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Clap on beat or backbeat.",
+          "matched_context": [
+            "chorus"
+          ],
+          "reasons": [
+            "context match: chorus",
+            "fits minimum bar length (7.0 bars)",
+            "within maximum bar length (7.0 bars)"
+          ],
+          "cautions": []
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 86.92,
+      "end": 97.07,
+      "time": "01:26.92 - 01:37.07",
+      "duration_seconds": 10.15,
+      "estimated_bars": 3.0,
+      "source_label": "post_chorus_interlude_candidate",
+      "parent_label": "verse",
+      "segment_confidence": 0.3725,
+      "context_tags": [
+        "instrumental_break",
+        "post_chorus_interlude",
+        "post_chorus_interlude_candidate",
+        "reintro",
+        "verse"
+      ],
+      "source_reason": "Early verse piece after chorus; check as post-chorus interlude/tiger-fire candidate.",
+      "candidates": [
+        {
+          "action_id": "oi_oi",
+          "display_name": "Oi Oi",
+          "category": "rhythm_call",
+          "score": 0.72,
+          "intensity": 0.75,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Oi! Oi!",
+          "matched_context": [
+            "instrumental_break"
+          ],
+          "reasons": [
+            "context match: instrumental_break",
+            "fits minimum bar length (3.0 bars)",
+            "within maximum bar length (3.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "category": "rhythm_support",
+          "score": 0.6796,
+          "intensity": 0.35,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 32,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Clap on beat or backbeat.",
+          "matched_context": [
+            "verse"
+          ],
+          "reasons": [
+            "context match: verse",
+            "fits minimum bar length (3.0 bars)",
+            "within maximum bar length (3.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "tiger_fire_activation",
+          "display_name": "Tiger Fire Activation",
+          "category": "mix",
+          "score": 0.6444,
+          "intensity": 0.9,
+          "risk": "medium",
+          "min_bars": 4,
+          "max_bars": 8,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "Tiger! Fire! ...",
+          "matched_context": [
+            "instrumental_break",
+            "post_chorus_interlude",
+            "reintro"
+          ],
+          "reasons": [
+            "context match: instrumental_break, post_chorus_interlude, reintro"
+          ],
+          "cautions": [
+            "shorter than preferred minimum (3.0 < 4.0 bars)",
+            "medium-risk call; verify local live culture"
+          ]
+        },
+        {
+          "action_id": "japanese_mix",
+          "display_name": "Japanese MIX",
+          "category": "mix",
+          "score": 0.6326,
+          "intensity": 0.88,
+          "risk": "medium",
+          "min_bars": 4,
+          "max_bars": 8,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "Aaa, mou iccho ikuzo! Tora! Hi! Jinzou! Sen-i! Ama! Shindou! Kasen-tobi-jokyo!",
+          "matched_context": [
+            "instrumental_break",
+            "post_chorus_interlude"
+          ],
+          "reasons": [
+            "context match: instrumental_break, post_chorus_interlude"
+          ],
+          "cautions": [
+            "shorter than preferred minimum (3.0 < 4.0 bars)",
+            "medium-risk call; verify local live culture"
+          ]
+        },
+        {
+          "action_id": "standard_mix",
+          "display_name": "Standard MIX",
+          "category": "mix",
+          "score": 0.6296,
+          "intensity": 0.85,
+          "risk": "medium",
+          "min_bars": 4,
+          "max_bars": 8,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "Aaa, yossha ikuzo! Tiger! Fire! Cyber! Fiber! Diver! Viber! Jya Jya!",
+          "matched_context": [
+            "instrumental_break",
+            "post_chorus_interlude"
+          ],
+          "reasons": [
+            "context match: instrumental_break, post_chorus_interlude"
+          ],
+          "cautions": [
+            "shorter than preferred minimum (3.0 < 4.0 bars)",
+            "medium-risk call; verify local live culture"
+          ]
+        },
+        {
+          "action_id": "ppph",
+          "display_name": "PPPH",
+          "category": "rhythm_call",
+          "score": 0.5512,
+          "intensity": 0.55,
+          "risk": "low",
+          "min_bars": 4,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Pan-pa-pan, hyu!",
+          "matched_context": [
+            "verse"
+          ],
+          "reasons": [
+            "context match: verse"
+          ],
+          "cautions": [
+            "shorter than preferred minimum (3.0 < 4.0 bars)"
+          ]
+        },
+        {
+          "action_id": "ainu_mix",
+          "display_name": "Ainu MIX",
+          "category": "mix",
+          "score": 0.5466,
+          "intensity": 0.9,
+          "risk": "medium",
+          "min_bars": 4,
+          "max_bars": 8,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!",
+          "matched_context": [
+            "instrumental_break"
+          ],
+          "reasons": [
+            "context match: instrumental_break"
+          ],
+          "cautions": [
+            "shorter than preferred minimum (3.0 < 4.0 bars)",
+            "medium-risk call; verify local live culture"
+          ]
+        },
+        {
+          "action_id": "gachikoi_koujou",
+          "display_name": "Gachikoi Koujou",
+          "category": "koujou",
+          "score": 0.4365,
+          "intensity": 0.92,
+          "risk": "high",
+          "min_bars": 8,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 8,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "A fixed love/oshi speech shouted in a long gap.",
+          "matched_context": [
+            "instrumental_break"
+          ],
+          "reasons": [
+            "context match: instrumental_break"
+          ],
+          "cautions": [
+            "shorter than preferred minimum (3.0 < 8.0 bars)",
+            "high-risk call; should be style/profile gated"
+          ]
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 97.07,
+      "end": 117.4,
+      "time": "01:37.07 - 01:57.40",
+      "duration_seconds": 20.33,
+      "estimated_bars": 7.0,
+      "source_label": "verse_subsection",
+      "parent_label": "verse",
+      "segment_confidence": 0.3325,
+      "context_tags": [
+        "mid_energy_vocal",
+        "verse",
+        "verse_subsection"
+      ],
+      "source_reason": "Internal timbre/energy change inside allin1 verse; check as A-melo repeat or smaller verse unit.",
+      "candidates": [
+        {
+          "action_id": "ppph",
+          "display_name": "PPPH",
+          "category": "rhythm_call",
+          "score": 0.7785,
+          "intensity": 0.55,
+          "risk": "low",
+          "min_bars": 4,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Pan-pa-pan, hyu!",
+          "matched_context": [
+            "mid_energy_vocal",
+            "verse"
+          ],
+          "reasons": [
+            "context match: mid_energy_vocal, verse",
+            "fits minimum bar length (7.0 bars)",
+            "within maximum bar length (7.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "category": "rhythm_support",
+          "score": 0.6715,
+          "intensity": 0.35,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 32,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Clap on beat or backbeat.",
+          "matched_context": [
+            "verse"
+          ],
+          "reasons": [
+            "context match: verse",
+            "fits minimum bar length (7.0 bars)",
+            "within maximum bar length (7.0 bars)"
+          ],
+          "cautions": []
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 117.4,
+      "end": 132.62,
+      "time": "01:57.40 - 02:12.62",
+      "duration_seconds": 15.22,
+      "estimated_bars": 5.0,
+      "source_label": "pre_chorus_candidate",
+      "parent_label": "verse",
+      "segment_confidence": 0.2412,
+      "context_tags": [
+        "pre_chorus",
+        "pre_chorus_candidate",
+        "verse"
+      ],
+      "source_reason": "Last verse piece before chorus; check as B-melo/pre-chorus.",
+      "candidates": [
+        {
+          "action_id": "ppph",
+          "display_name": "PPPH",
+          "category": "rhythm_call",
+          "score": 0.7571,
+          "intensity": 0.55,
+          "risk": "low",
+          "min_bars": 4,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Pan-pa-pan, hyu!",
+          "matched_context": [
+            "pre_chorus",
+            "verse"
+          ],
+          "reasons": [
+            "context match: pre_chorus, verse",
+            "fits minimum bar length (5.0 bars)",
+            "within maximum bar length (5.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "category": "rhythm_support",
+          "score": 0.6531,
+          "intensity": 0.35,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 32,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Clap on beat or backbeat.",
+          "matched_context": [
+            "verse"
+          ],
+          "reasons": [
+            "context match: verse",
+            "fits minimum bar length (5.0 bars)",
+            "within maximum bar length (5.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "ietora",
+          "display_name": "Ietora",
+          "category": "call",
+          "score": 0.5336,
+          "intensity": 0.95,
+          "risk": "high",
+          "min_bars": 1,
+          "max_bars": 4,
+          "duration": {
+            "preferred_bars": 1,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": false
+          },
+          "typical_text": "Ie Tiger!",
+          "matched_context": [
+            "pre_chorus"
+          ],
+          "reasons": [
+            "context match: pre_chorus"
+          ],
+          "cautions": [
+            "longer than preferred maximum (5.0 > 4.0 bars)",
+            "high-risk call; should be style/profile gated"
+          ]
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 132.62,
+      "end": 152.92,
+      "time": "02:12.62 - 02:32.92",
+      "duration_seconds": 20.3,
+      "estimated_bars": 7.0,
+      "source_label": "chorus",
+      "parent_label": "chorus",
+      "segment_confidence": 0.45,
+      "context_tags": [
+        "chorus",
+        "repeated_chorus"
+      ],
+      "source_reason": "No strong internal boundary detected; kept allin1 label: chorus.",
+      "candidates": [
+        {
+          "action_id": "fuwa_fuwa",
+          "display_name": "Fuwa Fuwa",
+          "category": "chorus_call",
+          "score": 0.8111,
+          "intensity": 0.6,
+          "risk": "low",
+          "min_bars": 4,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Fuwa fuwa!",
+          "matched_context": [
+            "chorus",
+            "repeated_chorus"
+          ],
+          "reasons": [
+            "context match: chorus, repeated_chorus",
+            "fits minimum bar length (7.0 bars)",
+            "within maximum bar length (7.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "hai_hai",
+          "display_name": "Hai Hai",
+          "category": "rhythm_call",
+          "score": 0.7262,
+          "intensity": 0.65,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Hai! Hai!",
+          "matched_context": [
+            "chorus"
+          ],
+          "reasons": [
+            "context match: chorus",
+            "fits minimum bar length (7.0 bars)",
+            "within maximum bar length (7.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "category": "rhythm_support",
+          "score": 0.6952,
+          "intensity": 0.35,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 32,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Clap on beat or backbeat.",
+          "matched_context": [
+            "chorus"
+          ],
+          "reasons": [
+            "context match: chorus",
+            "fits minimum bar length (7.0 bars)",
+            "within maximum bar length (7.0 bars)"
+          ],
+          "cautions": []
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 152.92,
+      "end": 175.8,
+      "time": "02:32.92 - 02:55.80",
+      "duration_seconds": 22.88,
+      "estimated_bars": 8.0,
+      "source_label": "chorus",
+      "parent_label": "chorus",
+      "segment_confidence": 0.45,
+      "context_tags": [
+        "chorus",
+        "repeated_chorus"
+      ],
+      "source_reason": "No strong internal boundary detected; kept allin1 label: chorus.",
+      "candidates": [
+        {
+          "action_id": "fuwa_fuwa",
+          "display_name": "Fuwa Fuwa",
+          "category": "chorus_call",
+          "score": 0.8111,
+          "intensity": 0.6,
+          "risk": "low",
+          "min_bars": 4,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Fuwa fuwa!",
+          "matched_context": [
+            "chorus",
+            "repeated_chorus"
+          ],
+          "reasons": [
+            "context match: chorus, repeated_chorus",
+            "fits minimum bar length (8.0 bars)",
+            "within maximum bar length (8.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "hai_hai",
+          "display_name": "Hai Hai",
+          "category": "rhythm_call",
+          "score": 0.7262,
+          "intensity": 0.65,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Hai! Hai!",
+          "matched_context": [
+            "chorus"
+          ],
+          "reasons": [
+            "context match: chorus",
+            "fits minimum bar length (8.0 bars)",
+            "within maximum bar length (8.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "category": "rhythm_support",
+          "score": 0.6952,
+          "intensity": 0.35,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 32,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Clap on beat or backbeat.",
+          "matched_context": [
+            "chorus"
+          ],
+          "reasons": [
+            "context match: chorus",
+            "fits minimum bar length (8.0 bars)",
+            "within maximum bar length (8.0 bars)"
+          ],
+          "cautions": []
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 175.8,
+      "end": 203.73,
+      "time": "02:55.80 - 03:23.73",
+      "duration_seconds": 27.93,
+      "estimated_bars": 10.0,
+      "source_label": "inst",
+      "parent_label": "inst",
+      "segment_confidence": 0.45,
+      "context_tags": [
+        "extended_instrumental",
+        "inst",
+        "instrumental_break"
+      ],
+      "source_reason": "No strong internal boundary detected; kept allin1 label: inst.",
+      "candidates": [
+        {
+          "action_id": "oi_oi",
+          "display_name": "Oi Oi",
+          "category": "rhythm_call",
+          "score": 0.7366,
+          "intensity": 0.75,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Oi! Oi!",
+          "matched_context": [
+            "instrumental_break"
+          ],
+          "reasons": [
+            "context match: instrumental_break",
+            "fits minimum bar length (10.0 bars)",
+            "within maximum bar length (10.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "kaho_sanren_mix",
+          "display_name": "Variable Triple MIX",
+          "category": "mix",
+          "score": 0.6604,
+          "intensity": 0.98,
+          "risk": "high",
+          "min_bars": 8,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 8,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "MIX variants chained in three phrases.",
+          "matched_context": [
+            "extended_instrumental"
+          ],
+          "reasons": [
+            "context match: extended_instrumental",
+            "fits minimum bar length (10.0 bars)",
+            "within maximum bar length (10.0 bars)"
+          ],
+          "cautions": [
+            "high-risk call; should be style/profile gated"
+          ]
+        },
+        {
+          "action_id": "gachikoi_koujou",
+          "display_name": "Gachikoi Koujou",
+          "category": "koujou",
+          "score": 0.6542,
+          "intensity": 0.92,
+          "risk": "high",
+          "min_bars": 8,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 8,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "A fixed love/oshi speech shouted in a long gap.",
+          "matched_context": [
+            "instrumental_break"
+          ],
+          "reasons": [
+            "context match: instrumental_break",
+            "fits minimum bar length (10.0 bars)",
+            "within maximum bar length (10.0 bars)"
+          ],
+          "cautions": [
+            "high-risk call; should be style/profile gated"
+          ]
+        },
+        {
+          "action_id": "ainu_mix",
+          "display_name": "Ainu MIX",
+          "category": "mix",
+          "score": 0.6293,
+          "intensity": 0.9,
+          "risk": "medium",
+          "min_bars": 4,
+          "max_bars": 8,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!",
+          "matched_context": [
+            "instrumental_break"
+          ],
+          "reasons": [
+            "context match: instrumental_break"
+          ],
+          "cautions": [
+            "longer than preferred maximum (10.0 > 8.0 bars)",
+            "medium-risk call; verify local live culture"
+          ]
+        },
+        {
+          "action_id": "tiger_fire_activation",
+          "display_name": "Tiger Fire Activation",
+          "category": "mix",
+          "score": 0.6293,
+          "intensity": 0.9,
+          "risk": "medium",
+          "min_bars": 4,
+          "max_bars": 8,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "Tiger! Fire! ...",
+          "matched_context": [
+            "instrumental_break"
+          ],
+          "reasons": [
+            "context match: instrumental_break"
+          ],
+          "cautions": [
+            "longer than preferred maximum (10.0 > 8.0 bars)",
+            "medium-risk call; verify local live culture"
+          ]
+        },
+        {
+          "action_id": "japanese_mix",
+          "display_name": "Japanese MIX",
+          "category": "mix",
+          "score": 0.6272,
+          "intensity": 0.88,
+          "risk": "medium",
+          "min_bars": 4,
+          "max_bars": 8,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "Aaa, mou iccho ikuzo! Tora! Hi! Jinzou! Sen-i! Ama! Shindou! Kasen-tobi-jokyo!",
+          "matched_context": [
+            "instrumental_break"
+          ],
+          "reasons": [
+            "context match: instrumental_break"
+          ],
+          "cautions": [
+            "longer than preferred maximum (10.0 > 8.0 bars)",
+            "medium-risk call; verify local live culture"
+          ]
+        },
+        {
+          "action_id": "standard_mix",
+          "display_name": "Standard MIX",
+          "category": "mix",
+          "score": 0.6241,
+          "intensity": 0.85,
+          "risk": "medium",
+          "min_bars": 4,
+          "max_bars": 8,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "Aaa, yossha ikuzo! Tiger! Fire! Cyber! Fiber! Diver! Viber! Jya Jya!",
+          "matched_context": [
+            "instrumental_break"
+          ],
+          "reasons": [
+            "context match: instrumental_break"
+          ],
+          "cautions": [
+            "longer than preferred maximum (10.0 > 8.0 bars)",
+            "medium-risk call; verify local live culture"
+          ]
+        }
+      ],
+      "chain_candidates": [
+        {
+          "chain_id": "chain_oi_oi_ainu_mix_tiger_fire_activation",
+          "display_name": "Oi Oi -> Ainu MIX -> Tiger Fire Activation",
+          "category": "chain",
+          "score": 0.7423,
+          "risk": "medium",
+          "action_count": 3,
+          "total_preferred_bars": 10.0,
+          "slot_bars": 10.0,
+          "coverage": 1.0,
+          "actions": [
+            {
+              "action_id": "oi_oi",
+              "display_name": "Oi Oi",
+              "category": "rhythm_call",
+              "risk": "low",
+              "preferred_bars": 2.0,
+              "time": "02:55.80 - 03:01.39",
+              "start": 175.8,
+              "end": 181.386,
+              "text": "Oi! Oi!"
+            },
+            {
+              "action_id": "ainu_mix",
+              "display_name": "Ainu MIX",
+              "category": "mix",
+              "risk": "medium",
+              "preferred_bars": 4.0,
+              "time": "03:01.39 - 03:12.56",
+              "start": 181.386,
+              "end": 192.558,
+              "text": "Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!"
+            },
+            {
+              "action_id": "tiger_fire_activation",
+              "display_name": "Tiger Fire Activation",
+              "category": "mix",
+              "risk": "medium",
+              "preferred_bars": 4.0,
+              "time": "03:12.56 - 03:23.73",
+              "start": 192.558,
+              "end": 203.73,
+              "text": "Tiger! Fire! ..."
+            }
+          ],
+          "reasons": [
+            "dynamic chain for extended_instrumental, instrumental_break",
+            "packs 3 atomic actions into 10.0 bars"
+          ],
+          "cautions": []
+        },
+        {
+          "chain_id": "chain_oi_oi_tiger_fire_activation_ainu_mix",
+          "display_name": "Oi Oi -> Tiger Fire Activation -> Ainu MIX",
+          "category": "chain",
+          "score": 0.7423,
+          "risk": "medium",
+          "action_count": 3,
+          "total_preferred_bars": 10.0,
+          "slot_bars": 10.0,
+          "coverage": 1.0,
+          "actions": [
+            {
+              "action_id": "oi_oi",
+              "display_name": "Oi Oi",
+              "category": "rhythm_call",
+              "risk": "low",
+              "preferred_bars": 2.0,
+              "time": "02:55.80 - 03:01.39",
+              "start": 175.8,
+              "end": 181.386,
+              "text": "Oi! Oi!"
+            },
+            {
+              "action_id": "tiger_fire_activation",
+              "display_name": "Tiger Fire Activation",
+              "category": "mix",
+              "risk": "medium",
+              "preferred_bars": 4.0,
+              "time": "03:01.39 - 03:12.56",
+              "start": 181.386,
+              "end": 192.558,
+              "text": "Tiger! Fire! ..."
+            },
+            {
+              "action_id": "ainu_mix",
+              "display_name": "Ainu MIX",
+              "category": "mix",
+              "risk": "medium",
+              "preferred_bars": 4.0,
+              "time": "03:12.56 - 03:23.73",
+              "start": 192.558,
+              "end": 203.73,
+              "text": "Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!"
+            }
+          ],
+          "reasons": [
+            "dynamic chain for extended_instrumental, instrumental_break",
+            "packs 3 atomic actions into 10.0 bars"
+          ],
+          "cautions": []
+        },
+        {
+          "chain_id": "chain_ainu_mix_oi_oi_tiger_fire_activation",
+          "display_name": "Ainu MIX -> Oi Oi -> Tiger Fire Activation",
+          "category": "chain",
+          "score": 0.7423,
+          "risk": "medium",
+          "action_count": 3,
+          "total_preferred_bars": 10.0,
+          "slot_bars": 10.0,
+          "coverage": 1.0,
+          "actions": [
+            {
+              "action_id": "ainu_mix",
+              "display_name": "Ainu MIX",
+              "category": "mix",
+              "risk": "medium",
+              "preferred_bars": 4.0,
+              "time": "02:55.80 - 03:06.97",
+              "start": 175.8,
+              "end": 186.972,
+              "text": "Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!"
+            },
+            {
+              "action_id": "oi_oi",
+              "display_name": "Oi Oi",
+              "category": "rhythm_call",
+              "risk": "low",
+              "preferred_bars": 2.0,
+              "time": "03:06.97 - 03:12.56",
+              "start": 186.972,
+              "end": 192.558,
+              "text": "Oi! Oi!"
+            },
+            {
+              "action_id": "tiger_fire_activation",
+              "display_name": "Tiger Fire Activation",
+              "category": "mix",
+              "risk": "medium",
+              "preferred_bars": 4.0,
+              "time": "03:12.56 - 03:23.73",
+              "start": 192.558,
+              "end": 203.73,
+              "text": "Tiger! Fire! ..."
+            }
+          ],
+          "reasons": [
+            "dynamic chain for extended_instrumental, instrumental_break",
+            "packs 3 atomic actions into 10.0 bars"
+          ],
+          "cautions": []
+        },
+        {
+          "chain_id": "chain_ainu_mix_tiger_fire_activation_oi_oi",
+          "display_name": "Ainu MIX -> Tiger Fire Activation -> Oi Oi",
+          "category": "chain",
+          "score": 0.7423,
+          "risk": "medium",
+          "action_count": 3,
+          "total_preferred_bars": 10.0,
+          "slot_bars": 10.0,
+          "coverage": 1.0,
+          "actions": [
+            {
+              "action_id": "ainu_mix",
+              "display_name": "Ainu MIX",
+              "category": "mix",
+              "risk": "medium",
+              "preferred_bars": 4.0,
+              "time": "02:55.80 - 03:06.97",
+              "start": 175.8,
+              "end": 186.972,
+              "text": "Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!"
+            },
+            {
+              "action_id": "tiger_fire_activation",
+              "display_name": "Tiger Fire Activation",
+              "category": "mix",
+              "risk": "medium",
+              "preferred_bars": 4.0,
+              "time": "03:06.97 - 03:18.14",
+              "start": 186.972,
+              "end": 198.144,
+              "text": "Tiger! Fire! ..."
+            },
+            {
+              "action_id": "oi_oi",
+              "display_name": "Oi Oi",
+              "category": "rhythm_call",
+              "risk": "low",
+              "preferred_bars": 2.0,
+              "time": "03:18.14 - 03:23.73",
+              "start": 198.144,
+              "end": 203.73,
+              "text": "Oi! Oi!"
+            }
+          ],
+          "reasons": [
+            "dynamic chain for extended_instrumental, instrumental_break",
+            "packs 3 atomic actions into 10.0 bars"
+          ],
+          "cautions": []
+        },
+        {
+          "chain_id": "chain_tiger_fire_activation_oi_oi_ainu_mix",
+          "display_name": "Tiger Fire Activation -> Oi Oi -> Ainu MIX",
+          "category": "chain",
+          "score": 0.7423,
+          "risk": "medium",
+          "action_count": 3,
+          "total_preferred_bars": 10.0,
+          "slot_bars": 10.0,
+          "coverage": 1.0,
+          "actions": [
+            {
+              "action_id": "tiger_fire_activation",
+              "display_name": "Tiger Fire Activation",
+              "category": "mix",
+              "risk": "medium",
+              "preferred_bars": 4.0,
+              "time": "02:55.80 - 03:06.97",
+              "start": 175.8,
+              "end": 186.972,
+              "text": "Tiger! Fire! ..."
+            },
+            {
+              "action_id": "oi_oi",
+              "display_name": "Oi Oi",
+              "category": "rhythm_call",
+              "risk": "low",
+              "preferred_bars": 2.0,
+              "time": "03:06.97 - 03:12.56",
+              "start": 186.972,
+              "end": 192.558,
+              "text": "Oi! Oi!"
+            },
+            {
+              "action_id": "ainu_mix",
+              "display_name": "Ainu MIX",
+              "category": "mix",
+              "risk": "medium",
+              "preferred_bars": 4.0,
+              "time": "03:12.56 - 03:23.73",
+              "start": 192.558,
+              "end": 203.73,
+              "text": "Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!"
+            }
+          ],
+          "reasons": [
+            "dynamic chain for extended_instrumental, instrumental_break",
+            "packs 3 atomic actions into 10.0 bars"
+          ],
+          "cautions": []
+        },
+        {
+          "chain_id": "chain_tiger_fire_activation_ainu_mix_oi_oi",
+          "display_name": "Tiger Fire Activation -> Ainu MIX -> Oi Oi",
+          "category": "chain",
+          "score": 0.7423,
+          "risk": "medium",
+          "action_count": 3,
+          "total_preferred_bars": 10.0,
+          "slot_bars": 10.0,
+          "coverage": 1.0,
+          "actions": [
+            {
+              "action_id": "tiger_fire_activation",
+              "display_name": "Tiger Fire Activation",
+              "category": "mix",
+              "risk": "medium",
+              "preferred_bars": 4.0,
+              "time": "02:55.80 - 03:06.97",
+              "start": 175.8,
+              "end": 186.972,
+              "text": "Tiger! Fire! ..."
+            },
+            {
+              "action_id": "ainu_mix",
+              "display_name": "Ainu MIX",
+              "category": "mix",
+              "risk": "medium",
+              "preferred_bars": 4.0,
+              "time": "03:06.97 - 03:18.14",
+              "start": 186.972,
+              "end": 198.144,
+              "text": "Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!"
+            },
+            {
+              "action_id": "oi_oi",
+              "display_name": "Oi Oi",
+              "category": "rhythm_call",
+              "risk": "low",
+              "preferred_bars": 2.0,
+              "time": "03:18.14 - 03:23.73",
+              "start": 198.144,
+              "end": 203.73,
+              "text": "Oi! Oi!"
+            }
+          ],
+          "reasons": [
+            "dynamic chain for extended_instrumental, instrumental_break",
+            "packs 3 atomic actions into 10.0 bars"
+          ],
+          "cautions": []
+        },
+        {
+          "chain_id": "chain_oi_oi_ainu_mix_japanese_mix",
+          "display_name": "Oi Oi -> Ainu MIX -> Japanese MIX",
+          "category": "chain",
+          "score": 0.7419,
+          "risk": "medium",
+          "action_count": 3,
+          "total_preferred_bars": 10.0,
+          "slot_bars": 10.0,
+          "coverage": 1.0,
+          "actions": [
+            {
+              "action_id": "oi_oi",
+              "display_name": "Oi Oi",
+              "category": "rhythm_call",
+              "risk": "low",
+              "preferred_bars": 2.0,
+              "time": "02:55.80 - 03:01.39",
+              "start": 175.8,
+              "end": 181.386,
+              "text": "Oi! Oi!"
+            },
+            {
+              "action_id": "ainu_mix",
+              "display_name": "Ainu MIX",
+              "category": "mix",
+              "risk": "medium",
+              "preferred_bars": 4.0,
+              "time": "03:01.39 - 03:12.56",
+              "start": 181.386,
+              "end": 192.558,
+              "text": "Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!"
+            },
+            {
+              "action_id": "japanese_mix",
+              "display_name": "Japanese MIX",
+              "category": "mix",
+              "risk": "medium",
+              "preferred_bars": 4.0,
+              "time": "03:12.56 - 03:23.73",
+              "start": 192.558,
+              "end": 203.73,
+              "text": "Aaa, mou iccho ikuzo! Tora! Hi! Jinzou! Sen-i! Ama! Shindou! Kasen-tobi-jokyo!"
+            }
+          ],
+          "reasons": [
+            "dynamic chain for extended_instrumental, instrumental_break",
+            "packs 3 atomic actions into 10.0 bars"
+          ],
+          "cautions": []
+        },
+        {
+          "chain_id": "chain_oi_oi_tiger_fire_activation_japanese_mix",
+          "display_name": "Oi Oi -> Tiger Fire Activation -> Japanese MIX",
+          "category": "chain",
+          "score": 0.7419,
+          "risk": "medium",
+          "action_count": 3,
+          "total_preferred_bars": 10.0,
+          "slot_bars": 10.0,
+          "coverage": 1.0,
+          "actions": [
+            {
+              "action_id": "oi_oi",
+              "display_name": "Oi Oi",
+              "category": "rhythm_call",
+              "risk": "low",
+              "preferred_bars": 2.0,
+              "time": "02:55.80 - 03:01.39",
+              "start": 175.8,
+              "end": 181.386,
+              "text": "Oi! Oi!"
+            },
+            {
+              "action_id": "tiger_fire_activation",
+              "display_name": "Tiger Fire Activation",
+              "category": "mix",
+              "risk": "medium",
+              "preferred_bars": 4.0,
+              "time": "03:01.39 - 03:12.56",
+              "start": 181.386,
+              "end": 192.558,
+              "text": "Tiger! Fire! ..."
+            },
+            {
+              "action_id": "japanese_mix",
+              "display_name": "Japanese MIX",
+              "category": "mix",
+              "risk": "medium",
+              "preferred_bars": 4.0,
+              "time": "03:12.56 - 03:23.73",
+              "start": 192.558,
+              "end": 203.73,
+              "text": "Aaa, mou iccho ikuzo! Tora! Hi! Jinzou! Sen-i! Ama! Shindou! Kasen-tobi-jokyo!"
+            }
+          ],
+          "reasons": [
+            "dynamic chain for extended_instrumental, instrumental_break",
+            "packs 3 atomic actions into 10.0 bars"
+          ],
+          "cautions": []
+        }
+      ]
+    },
+    {
+      "start": 203.73,
+      "end": 216.43,
+      "time": "03:23.73 - 03:36.43",
+      "duration_seconds": 12.7,
+      "estimated_bars": 4.0,
+      "source_label": "solo",
+      "parent_label": "solo",
+      "segment_confidence": 0.45,
+      "context_tags": [
+        "emotional_solo",
+        "instrumental_break",
+        "member_focus",
+        "solo"
+      ],
+      "source_reason": "No strong internal boundary detected; kept allin1 label: solo.",
+      "candidates": [
+        {
+          "action_id": "oi_oi",
+          "display_name": "Oi Oi",
+          "category": "rhythm_call",
+          "score": 0.7366,
+          "intensity": 0.75,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Oi! Oi!",
+          "matched_context": [
+            "instrumental_break"
+          ],
+          "reasons": [
+            "context match: instrumental_break",
+            "fits minimum bar length (4.0 bars)",
+            "within maximum bar length (4.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "ainu_mix",
+          "display_name": "Ainu MIX",
+          "category": "mix",
+          "score": 0.7121,
+          "intensity": 0.9,
+          "risk": "medium",
+          "min_bars": 4,
+          "max_bars": 8,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!",
+          "matched_context": [
+            "instrumental_break"
+          ],
+          "reasons": [
+            "context match: instrumental_break",
+            "fits minimum bar length (4.0 bars)",
+            "within maximum bar length (4.0 bars)"
+          ],
+          "cautions": [
+            "medium-risk call; verify local live culture"
+          ]
+        },
+        {
+          "action_id": "tiger_fire_activation",
+          "display_name": "Tiger Fire Activation",
+          "category": "mix",
+          "score": 0.7121,
+          "intensity": 0.9,
+          "risk": "medium",
+          "min_bars": 4,
+          "max_bars": 8,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "Tiger! Fire! ...",
+          "matched_context": [
+            "instrumental_break"
+          ],
+          "reasons": [
+            "context match: instrumental_break",
+            "fits minimum bar length (4.0 bars)",
+            "within maximum bar length (4.0 bars)"
+          ],
+          "cautions": [
+            "medium-risk call; verify local live culture"
+          ]
+        },
+        {
+          "action_id": "japanese_mix",
+          "display_name": "Japanese MIX",
+          "category": "mix",
+          "score": 0.71,
+          "intensity": 0.88,
+          "risk": "medium",
+          "min_bars": 4,
+          "max_bars": 8,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "Aaa, mou iccho ikuzo! Tora! Hi! Jinzou! Sen-i! Ama! Shindou! Kasen-tobi-jokyo!",
+          "matched_context": [
+            "instrumental_break"
+          ],
+          "reasons": [
+            "context match: instrumental_break",
+            "fits minimum bar length (4.0 bars)",
+            "within maximum bar length (4.0 bars)"
+          ],
+          "cautions": [
+            "medium-risk call; verify local live culture"
+          ]
+        },
+        {
+          "action_id": "standard_mix",
+          "display_name": "Standard MIX",
+          "category": "mix",
+          "score": 0.7069,
+          "intensity": 0.85,
+          "risk": "medium",
+          "min_bars": 4,
+          "max_bars": 8,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "Aaa, yossha ikuzo! Tiger! Fire! Cyber! Fiber! Diver! Viber! Jya Jya!",
+          "matched_context": [
+            "instrumental_break"
+          ],
+          "reasons": [
+            "context match: instrumental_break",
+            "fits minimum bar length (4.0 bars)",
+            "within maximum bar length (4.0 bars)"
+          ],
+          "cautions": [
+            "medium-risk call; verify local live culture"
+          ]
+        },
+        {
+          "action_id": "kecha",
+          "display_name": "Kecha",
+          "category": "gesture_support",
+          "score": 0.69,
+          "intensity": 0.3,
+          "risk": "low",
+          "min_bars": 4,
+          "max_bars": 32,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": false,
+            "can_compress": false,
+            "can_extend": true
+          },
+          "typical_text": "Forward-reaching oshi gesture rather than shouted text.",
+          "matched_context": [
+            "emotional_solo"
+          ],
+          "reasons": [
+            "context match: emotional_solo",
+            "fits minimum bar length (4.0 bars)",
+            "within maximum bar length (4.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "name_call",
+          "display_name": "Name Call",
+          "category": "oshi_call",
+          "score": 0.6759,
+          "intensity": 0.55,
+          "risk": "medium",
+          "min_bars": 1,
+          "max_bars": 4,
+          "duration": {
+            "preferred_bars": 1,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": false
+          },
+          "typical_text": "<member_name>!",
+          "matched_context": [
+            "member_focus"
+          ],
+          "reasons": [
+            "context match: member_focus",
+            "fits minimum bar length (4.0 bars)",
+            "within maximum bar length (4.0 bars)"
+          ],
+          "cautions": [
+            "medium-risk call; verify local live culture"
+          ]
+        },
+        {
+          "action_id": "gachikoi_koujou",
+          "display_name": "Gachikoi Koujou",
+          "category": "koujou",
+          "score": 0.4666,
+          "intensity": 0.92,
+          "risk": "high",
+          "min_bars": 8,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 8,
+            "strict_bars": true,
+            "can_compress": false,
+            "can_extend": false
+          },
+          "typical_text": "A fixed love/oshi speech shouted in a long gap.",
+          "matched_context": [
+            "instrumental_break"
+          ],
+          "reasons": [
+            "context match: instrumental_break"
+          ],
+          "cautions": [
+            "shorter than preferred minimum (4.0 < 8.0 bars)",
+            "high-risk call; should be style/profile gated"
+          ]
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 216.43,
+      "end": 229.14,
+      "time": "03:36.43 - 03:49.14",
+      "duration_seconds": 12.71,
+      "estimated_bars": 4.0,
+      "source_label": "verse_subsection",
+      "parent_label": "verse",
+      "segment_confidence": 0.2784,
+      "context_tags": [
+        "mid_energy_vocal",
+        "verse",
+        "verse_subsection"
+      ],
+      "source_reason": "Internal timbre/energy change inside allin1 verse; check as A-melo repeat or smaller verse unit.",
+      "candidates": [
+        {
+          "action_id": "ppph",
+          "display_name": "PPPH",
+          "category": "rhythm_call",
+          "score": 0.7658,
+          "intensity": 0.55,
+          "risk": "low",
+          "min_bars": 4,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Pan-pa-pan, hyu!",
+          "matched_context": [
+            "mid_energy_vocal",
+            "verse"
+          ],
+          "reasons": [
+            "context match: mid_energy_vocal, verse",
+            "fits minimum bar length (4.0 bars)",
+            "within maximum bar length (4.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "category": "rhythm_support",
+          "score": 0.6606,
+          "intensity": 0.35,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 32,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Clap on beat or backbeat.",
+          "matched_context": [
+            "verse"
+          ],
+          "reasons": [
+            "context match: verse",
+            "fits minimum bar length (4.0 bars)",
+            "within maximum bar length (4.0 bars)"
+          ],
+          "cautions": []
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 229.14,
+      "end": 245.64,
+      "time": "03:49.14 - 04:05.64",
+      "duration_seconds": 16.5,
+      "estimated_bars": 6.0,
+      "source_label": "pre_chorus_candidate",
+      "parent_label": "verse",
+      "segment_confidence": 0.2784,
+      "context_tags": [
+        "pre_chorus",
+        "pre_chorus_candidate",
+        "verse"
+      ],
+      "source_reason": "Last verse piece before chorus; check as B-melo/pre-chorus.",
+      "candidates": [
+        {
+          "action_id": "ppph",
+          "display_name": "PPPH",
+          "category": "rhythm_call",
+          "score": 0.7658,
+          "intensity": 0.55,
+          "risk": "low",
+          "min_bars": 4,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Pan-pa-pan, hyu!",
+          "matched_context": [
+            "pre_chorus",
+            "verse"
+          ],
+          "reasons": [
+            "context match: pre_chorus, verse",
+            "fits minimum bar length (6.0 bars)",
+            "within maximum bar length (6.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "category": "rhythm_support",
+          "score": 0.6606,
+          "intensity": 0.35,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 32,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Clap on beat or backbeat.",
+          "matched_context": [
+            "verse"
+          ],
+          "reasons": [
+            "context match: verse",
+            "fits minimum bar length (6.0 bars)",
+            "within maximum bar length (6.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "ietora",
+          "display_name": "Ietora",
+          "category": "call",
+          "score": 0.5131,
+          "intensity": 0.95,
+          "risk": "high",
+          "min_bars": 1,
+          "max_bars": 4,
+          "duration": {
+            "preferred_bars": 1,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": false
+          },
+          "typical_text": "Ie Tiger!",
+          "matched_context": [
+            "pre_chorus"
+          ],
+          "reasons": [
+            "context match: pre_chorus"
+          ],
+          "cautions": [
+            "longer than preferred maximum (6.0 > 4.0 bars)",
+            "high-risk call; should be style/profile gated"
+          ]
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 245.64,
+      "end": 268.48,
+      "time": "04:05.64 - 04:28.48",
+      "duration_seconds": 22.84,
+      "estimated_bars": 8.0,
+      "source_label": "chorus",
+      "parent_label": "chorus",
+      "segment_confidence": 0.45,
+      "context_tags": [
+        "chorus",
+        "repeated_chorus"
+      ],
+      "source_reason": "No strong internal boundary detected; kept allin1 label: chorus.",
+      "candidates": [
+        {
+          "action_id": "fuwa_fuwa",
+          "display_name": "Fuwa Fuwa",
+          "category": "chorus_call",
+          "score": 0.8111,
+          "intensity": 0.6,
+          "risk": "low",
+          "min_bars": 4,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Fuwa fuwa!",
+          "matched_context": [
+            "chorus",
+            "repeated_chorus"
+          ],
+          "reasons": [
+            "context match: chorus, repeated_chorus",
+            "fits minimum bar length (8.0 bars)",
+            "within maximum bar length (8.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "hai_hai",
+          "display_name": "Hai Hai",
+          "category": "rhythm_call",
+          "score": 0.7262,
+          "intensity": 0.65,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Hai! Hai!",
+          "matched_context": [
+            "chorus"
+          ],
+          "reasons": [
+            "context match: chorus",
+            "fits minimum bar length (8.0 bars)",
+            "within maximum bar length (8.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "category": "rhythm_support",
+          "score": 0.6952,
+          "intensity": 0.35,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 32,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Clap on beat or backbeat.",
+          "matched_context": [
+            "chorus"
+          ],
+          "reasons": [
+            "context match: chorus",
+            "fits minimum bar length (8.0 bars)",
+            "within maximum bar length (8.0 bars)"
+          ],
+          "cautions": []
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 268.48,
+      "end": 293.9,
+      "time": "04:28.48 - 04:53.90",
+      "duration_seconds": 25.42,
+      "estimated_bars": 9.0,
+      "source_label": "chorus",
+      "parent_label": "chorus",
+      "segment_confidence": 0.45,
+      "context_tags": [
+        "chorus",
+        "repeated_chorus"
+      ],
+      "source_reason": "No strong internal boundary detected; kept allin1 label: chorus.",
+      "candidates": [
+        {
+          "action_id": "fuwa_fuwa",
+          "display_name": "Fuwa Fuwa",
+          "category": "chorus_call",
+          "score": 0.8111,
+          "intensity": 0.6,
+          "risk": "low",
+          "min_bars": 4,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 4,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Fuwa fuwa!",
+          "matched_context": [
+            "chorus",
+            "repeated_chorus"
+          ],
+          "reasons": [
+            "context match: chorus, repeated_chorus",
+            "fits minimum bar length (9.0 bars)",
+            "within maximum bar length (9.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "hai_hai",
+          "display_name": "Hai Hai",
+          "category": "rhythm_call",
+          "score": 0.7262,
+          "intensity": 0.65,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Hai! Hai!",
+          "matched_context": [
+            "chorus"
+          ],
+          "reasons": [
+            "context match: chorus",
+            "fits minimum bar length (9.0 bars)",
+            "within maximum bar length (9.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "category": "rhythm_support",
+          "score": 0.6952,
+          "intensity": 0.35,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 32,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Clap on beat or backbeat.",
+          "matched_context": [
+            "chorus"
+          ],
+          "reasons": [
+            "context match: chorus",
+            "fits minimum bar length (9.0 bars)",
+            "within maximum bar length (9.0 bars)"
+          ],
+          "cautions": []
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 293.9,
+      "end": 304.08,
+      "time": "04:53.90 - 05:04.08",
+      "duration_seconds": 10.18,
+      "estimated_bars": 3.0,
+      "source_label": "outro",
+      "parent_label": "outro",
+      "segment_confidence": 0.4804,
+      "context_tags": [
+        "high_energy_outro",
+        "outro"
+      ],
+      "source_reason": "Kept allin1 label: outro.",
+      "candidates": [
+        {
+          "action_id": "oi_oi",
+          "display_name": "Oi Oi",
+          "category": "rhythm_call",
+          "score": 0.7431,
+          "intensity": 0.75,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Oi! Oi!",
+          "matched_context": [
+            "high_energy_outro"
+          ],
+          "reasons": [
+            "context match: high_energy_outro",
+            "fits minimum bar length (3.0 bars)",
+            "within maximum bar length (3.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "category": "rhythm_support",
+          "score": 0.7013,
+          "intensity": 0.35,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 32,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Clap on beat or backbeat.",
+          "matched_context": [
+            "outro"
+          ],
+          "reasons": [
+            "context match: outro",
+            "fits minimum bar length (3.0 bars)",
+            "within maximum bar length (3.0 bars)"
+          ],
+          "cautions": []
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 304.08,
+      "end": 310.73,
+      "time": "05:04.08 - 05:10.73",
+      "duration_seconds": 6.65,
+      "estimated_bars": 2.0,
+      "source_label": "outro",
+      "parent_label": "outro",
+      "segment_confidence": 0.4804,
+      "context_tags": [
+        "high_energy_outro",
+        "outro"
+      ],
+      "source_reason": "Kept allin1 label: outro.",
+      "candidates": [
+        {
+          "action_id": "oi_oi",
+          "display_name": "Oi Oi",
+          "category": "rhythm_call",
+          "score": 0.7431,
+          "intensity": 0.75,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 16,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Oi! Oi!",
+          "matched_context": [
+            "high_energy_outro"
+          ],
+          "reasons": [
+            "context match: high_energy_outro",
+            "fits minimum bar length (2.0 bars)",
+            "within maximum bar length (2.0 bars)"
+          ],
+          "cautions": []
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "category": "rhythm_support",
+          "score": 0.7013,
+          "intensity": 0.35,
+          "risk": "low",
+          "min_bars": 2,
+          "max_bars": 32,
+          "duration": {
+            "preferred_bars": 2,
+            "strict_bars": false,
+            "can_compress": true,
+            "can_extend": true
+          },
+          "typical_text": "Clap on beat or backbeat.",
+          "matched_context": [
+            "outro"
+          ],
+          "reasons": [
+            "context match: outro",
+            "fits minimum bar length (2.0 bars)",
+            "within maximum bar length (2.0 bars)"
+          ],
+          "cautions": []
+        }
+      ],
+      "chain_candidates": []
+    },
+    {
+      "start": 310.73,
+      "end": 315.4,
+      "time": "05:10.73 - 05:15.40",
+      "duration_seconds": 4.67,
+      "estimated_bars": 1.84,
+      "source_label": "end",
+      "parent_label": "end",
+      "segment_confidence": 0.55,
+      "context_tags": [
+        "end"
+      ],
+      "source_reason": "Short segment; kept allin1 label: end.",
+      "candidates": [],
+      "chain_candidates": []
+    }
+  ]
+}

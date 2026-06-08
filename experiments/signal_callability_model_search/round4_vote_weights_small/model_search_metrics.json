@@ -1,0 +1,346 @@
+{
+  "results": [
+    {
+      "method": "search_audio_vote_rf1_logreg1_gb1",
+      "candidate": {
+        "method": "search_audio_vote_rf1_logreg1_gb1",
+        "include_audio": true,
+        "include_context": false,
+        "model_kind": "vote_rf1_logreg1_gb1"
+      },
+      "classification": {
+        "accuracy": 0.526741,
+        "macro_f1": 0.51949,
+        "total": 1608,
+        "per_role": {
+          "keepspace": {
+            "precision": 0.537143,
+            "recall": 0.345588,
+            "f1": 0.420582,
+            "support": 272
+          },
+          "rhythmcall": {
+            "precision": 0.442308,
+            "recall": 0.400871,
+            "f1": 0.420571,
+            "support": 459
+          },
+          "mix": {
+            "precision": 0.55698,
+            "recall": 0.599693,
+            "f1": 0.577548,
+            "support": 652
+          },
+          "underground_gei": {
+            "precision": 0.565079,
+            "recall": 0.791111,
+            "f1": 0.659259,
+            "support": 225
+          }
+        },
+        "confusion": {
+          "keepspace": {
+            "keepspace": 94,
+            "rhythmcall": 55,
+            "mix": 89,
+            "underground_gei": 34
+          },
+          "rhythmcall": {
+            "keepspace": 30,
+            "rhythmcall": 184,
+            "mix": 201,
+            "underground_gei": 44
+          },
+          "mix": {
+            "keepspace": 44,
+            "rhythmcall": 158,
+            "mix": 391,
+            "underground_gei": 59
+          },
+          "underground_gei": {
+            "keepspace": 7,
+            "rhythmcall": 19,
+            "mix": 21,
+            "underground_gei": 178
+          }
+        }
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.517635,
+        "macro_role_iou": 0.345801,
+        "role_iou": {
+          "keepspace": 0.246011,
+          "rhythmcall": 0.262928,
+          "mix": 0.398814,
+          "underground_gei": 0.475453
+        },
+        "boundary": {
+          "precision": 0.429688,
+          "recall": 0.522152,
+          "f1": 0.471429,
+          "tp": 165,
+          "fp": 219,
+          "fn": 151,
+          "target_count": 316,
+          "predicted_count": 384,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 170.2,
+            "rhythmcall": 105.98,
+            "mix": 183.38,
+            "underground_gei": 61.17
+          },
+          "rhythmcall": {
+            "keepspace": 56.62,
+            "rhythmcall": 402.34,
+            "mix": 450.86,
+            "underground_gei": 100.56
+          },
+          "mix": {
+            "keepspace": 101.16,
+            "rhythmcall": 370.8,
+            "mix": 856.13,
+            "underground_gei": 132.52
+          },
+          "underground_gei": {
+            "keepspace": 13.33,
+            "rhythmcall": 43.07,
+            "mix": 51.84,
+            "underground_gei": 364.82
+          }
+        }
+      }
+    },
+    {
+      "method": "search_audio_vote_rf2_logreg1_gb1",
+      "candidate": {
+        "method": "search_audio_vote_rf2_logreg1_gb1",
+        "include_audio": true,
+        "include_context": false,
+        "model_kind": "vote_rf2_logreg1_gb1"
+      },
+      "classification": {
+        "accuracy": 0.526119,
+        "macro_f1": 0.5129,
+        "total": 1608,
+        "per_role": {
+          "keepspace": {
+            "precision": 0.590278,
+            "recall": 0.3125,
+            "f1": 0.408654,
+            "support": 272
+          },
+          "rhythmcall": {
+            "precision": 0.454768,
+            "recall": 0.405229,
+            "f1": 0.428571,
+            "support": 459
+          },
+          "mix": {
+            "precision": 0.553221,
+            "recall": 0.605828,
+            "f1": 0.578331,
+            "support": 652
+          },
+          "underground_gei": {
+            "precision": 0.527859,
+            "recall": 0.8,
+            "f1": 0.636042,
+            "support": 225
+          }
+        },
+        "confusion": {
+          "keepspace": {
+            "keepspace": 85,
+            "rhythmcall": 56,
+            "mix": 96,
+            "underground_gei": 35
+          },
+          "rhythmcall": {
+            "keepspace": 20,
+            "rhythmcall": 186,
+            "mix": 199,
+            "underground_gei": 54
+          },
+          "mix": {
+            "keepspace": 31,
+            "rhythmcall": 154,
+            "mix": 395,
+            "underground_gei": 72
+          },
+          "underground_gei": {
+            "keepspace": 8,
+            "rhythmcall": 13,
+            "mix": 24,
+            "underground_gei": 180
+          }
+        }
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.516278,
+        "macro_role_iou": 0.338409,
+        "role_iou": {
+          "keepspace": 0.233184,
+          "rhythmcall": 0.268177,
+          "mix": 0.397218,
+          "underground_gei": 0.455058
+        },
+        "boundary": {
+          "precision": 0.43617,
+          "recall": 0.518987,
+          "f1": 0.473988,
+          "tp": 164,
+          "fp": 212,
+          "fn": 152,
+          "target_count": 316,
+          "predicted_count": 376,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 151.15,
+            "rhythmcall": 108.5,
+            "mix": 198.9,
+            "underground_gei": 62.18
+          },
+          "rhythmcall": {
+            "keepspace": 39.22,
+            "rhythmcall": 404.06,
+            "mix": 444.36,
+            "underground_gei": 122.74
+          },
+          "mix": {
+            "keepspace": 76.03,
+            "rhythmcall": 361.13,
+            "mix": 859.6,
+            "underground_gei": 163.85
+          },
+          "underground_gei": {
+            "keepspace": 12.22,
+            "rhythmcall": 26.68,
+            "mix": 60.18,
+            "underground_gei": 373.98
+          }
+        }
+      }
+    },
+    {
+      "method": "search_audio_vote_rf3_logreg1_gb1",
+      "candidate": {
+        "method": "search_audio_vote_rf3_logreg1_gb1",
+        "include_audio": true,
+        "include_context": false,
+        "model_kind": "vote_rf3_logreg1_gb1"
+      },
+      "classification": {
+        "accuracy": 0.522388,
+        "macro_f1": 0.504346,
+        "total": 1608,
+        "per_role": {
+          "keepspace": {
+            "precision": 0.6,
+            "recall": 0.286765,
+            "f1": 0.38806,
+            "support": 272
+          },
+          "rhythmcall": {
+            "precision": 0.458333,
+            "recall": 0.407407,
+            "f1": 0.431373,
+            "support": 459
+          },
+          "mix": {
+            "precision": 0.553221,
+            "recall": 0.605828,
+            "f1": 0.578331,
+            "support": 652
+          },
+          "underground_gei": {
+            "precision": 0.505618,
+            "recall": 0.8,
+            "f1": 0.619621,
+            "support": 225
+          }
+        },
+        "confusion": {
+          "keepspace": {
+            "keepspace": 78,
+            "rhythmcall": 57,
+            "mix": 96,
+            "underground_gei": 41
+          },
+          "rhythmcall": {
+            "keepspace": 14,
+            "rhythmcall": 187,
+            "mix": 199,
+            "underground_gei": 59
+          },
+          "mix": {
+            "keepspace": 29,
+            "rhythmcall": 152,
+            "mix": 395,
+            "underground_gei": 76
+          },
+          "underground_gei": {
+            "keepspace": 9,
+            "rhythmcall": 12,
+            "mix": 24,
+            "underground_gei": 180
+          }
+        }
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.512367,
+        "macro_role_iou": 0.331128,
+        "role_iou": {
+          "keepspace": 0.220337,
+          "rhythmcall": 0.26872,
+          "mix": 0.395769,
+          "underground_gei": 0.439688
+        },
+        "boundary": {
+          "precision": 0.441096,
+          "recall": 0.509494,
+          "f1": 0.472834,
+          "tp": 161,
+          "fp": 204,
+          "fn": 155,
+          "target_count": 316,
+          "predicted_count": 365,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 139.76,
+            "rhythmcall": 109.61,
+            "mix": 198.26,
+            "underground_gei": 73.1
+          },
+          "rhythmcall": {
+            "keepspace": 26.95,
+            "rhythmcall": 403.76,
+            "mix": 445.79,
+            "underground_gei": 133.88
+          },
+          "mix": {
+            "keepspace": 73.02,
+            "rhythmcall": 357.6,
+            "mix": 856.38,
+            "underground_gei": 173.61
+          },
+          "underground_gei": {
+            "keepspace": 13.6,
+            "rhythmcall": 24.94,
+            "mix": 59.18,
+            "underground_gei": 375.34
+          }
+        }
+      }
+    }
+  ]
+}

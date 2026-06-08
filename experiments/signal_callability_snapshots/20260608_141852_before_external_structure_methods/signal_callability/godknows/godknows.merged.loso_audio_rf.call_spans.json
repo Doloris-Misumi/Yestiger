@@ -1,0 +1,380 @@
+{
+  "song_id": "godknows",
+  "method": "loso_audio_rf",
+  "call_spans": [
+    {
+      "start": 0.0,
+      "end": 2.23,
+      "call_role": "keepspace",
+      "bar_start": 0,
+      "bar_end": 1,
+      "bars": 2,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 2.23,
+      "end": 27.82,
+      "call_role": "mix",
+      "bar_start": 2,
+      "bar_end": 17,
+      "bars": 16,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 27.82,
+      "end": 39.02,
+      "call_role": "rhythmcall",
+      "bar_start": 18,
+      "bar_end": 24,
+      "bars": 7,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 39.02,
+      "end": 40.62,
+      "call_role": "mix",
+      "bar_start": 25,
+      "bar_end": 25,
+      "bars": 1,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 40.62,
+      "end": 58.22,
+      "call_role": "rhythmcall",
+      "bar_start": 26,
+      "bar_end": 36,
+      "bars": 11,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 58.22,
+      "end": 59.82,
+      "call_role": "mix",
+      "bar_start": 37,
+      "bar_end": 37,
+      "bars": 1,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 59.82,
+      "end": 63.01,
+      "call_role": "rhythmcall",
+      "bar_start": 38,
+      "bar_end": 39,
+      "bars": 2,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 63.01,
+      "end": 64.61,
+      "call_role": "mix",
+      "bar_start": 40,
+      "bar_end": 40,
+      "bars": 1,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 64.61,
+      "end": 66.21,
+      "call_role": "rhythmcall",
+      "bar_start": 41,
+      "bar_end": 41,
+      "bars": 1,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 66.21,
+      "end": 93.41,
+      "call_role": "underground_gei",
+      "bar_start": 42,
+      "bar_end": 58,
+      "bars": 17,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 93.41,
+      "end": 95.01,
+      "call_role": "rhythmcall",
+      "bar_start": 59,
+      "bar_end": 59,
+      "bars": 1,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 95.01,
+      "end": 120.61,
+      "call_role": "mix",
+      "bar_start": 60,
+      "bar_end": 75,
+      "bars": 16,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 120.61,
+      "end": 131.82,
+      "call_role": "rhythmcall",
+      "bar_start": 76,
+      "bar_end": 82,
+      "bars": 7,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 131.82,
+      "end": 133.42,
+      "call_role": "mix",
+      "bar_start": 83,
+      "bar_end": 83,
+      "bars": 1,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 133.42,
+      "end": 151.02,
+      "call_role": "rhythmcall",
+      "bar_start": 84,
+      "bar_end": 94,
+      "bars": 11,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 151.02,
+      "end": 159.02,
+      "call_role": "mix",
+      "bar_start": 95,
+      "bar_end": 99,
+      "bars": 5,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 159.02,
+      "end": 167.02,
+      "call_role": "underground_gei",
+      "bar_start": 100,
+      "bar_end": 104,
+      "bars": 5,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 167.02,
+      "end": 173.42,
+      "call_role": "mix",
+      "bar_start": 105,
+      "bar_end": 108,
+      "bars": 4,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 173.42,
+      "end": 176.62,
+      "call_role": "underground_gei",
+      "bar_start": 109,
+      "bar_end": 110,
+      "bars": 2,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 176.62,
+      "end": 184.61,
+      "call_role": "mix",
+      "bar_start": 111,
+      "bar_end": 115,
+      "bars": 5,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 184.61,
+      "end": 186.21,
+      "call_role": "rhythmcall",
+      "bar_start": 116,
+      "bar_end": 116,
+      "bars": 1,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 186.21,
+      "end": 213.42,
+      "call_role": "mix",
+      "bar_start": 117,
+      "bar_end": 133,
+      "bars": 17,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 213.42,
+      "end": 215.03,
+      "call_role": "rhythmcall",
+      "bar_start": 134,
+      "bar_end": 134,
+      "bars": 1,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 215.03,
+      "end": 218.22,
+      "call_role": "mix",
+      "bar_start": 135,
+      "bar_end": 136,
+      "bars": 2,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 218.22,
+      "end": 223.01,
+      "call_role": "underground_gei",
+      "bar_start": 137,
+      "bar_end": 139,
+      "bars": 3,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 223.01,
+      "end": 224.61,
+      "call_role": "mix",
+      "bar_start": 140,
+      "bar_end": 140,
+      "bars": 1,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 224.61,
+      "end": 226.21,
+      "call_role": "underground_gei",
+      "bar_start": 141,
+      "bar_end": 141,
+      "bars": 1,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 226.21,
+      "end": 229.42,
+      "call_role": "mix",
+      "bar_start": 142,
+      "bar_end": 143,
+      "bars": 2,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 229.42,
+      "end": 231.02,
+      "call_role": "underground_gei",
+      "bar_start": 144,
+      "bar_end": 144,
+      "bars": 1,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 231.02,
+      "end": 237.41,
+      "call_role": "mix",
+      "bar_start": 145,
+      "bar_end": 148,
+      "bars": 4,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 237.41,
+      "end": 239.01,
+      "call_role": "underground_gei",
+      "bar_start": 149,
+      "bar_end": 149,
+      "bars": 1,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 239.01,
+      "end": 242.21,
+      "call_role": "mix",
+      "bar_start": 150,
+      "bar_end": 151,
+      "bars": 2,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 242.21,
+      "end": 243.81,
+      "call_role": "underground_gei",
+      "bar_start": 152,
+      "bar_end": 152,
+      "bars": 1,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 243.81,
+      "end": 245.41,
+      "call_role": "rhythmcall",
+      "bar_start": 153,
+      "bar_end": 153,
+      "bars": 1,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 245.41,
+      "end": 271.02,
+      "call_role": "mix",
+      "bar_start": 154,
+      "bar_end": 169,
+      "bars": 16,
+      "method": "loso_audio_rf"
+    },
+    {
+      "start": 271.02,
+      "end": 279.06,
+      "call_role": "keepspace",
+      "bar_start": 170,
+      "bar_end": 174,
+      "bars": 5,
+      "method": "loso_audio_rf"
+    }
+  ],
+  "comparison_to_manual_grid": {
+    "time_weighted_role_accuracy": 0.753601,
+    "macro_role_iou": 0.519936,
+    "role_iou": {
+      "keepspace": 0.243019,
+      "rhythmcall": 0.589575,
+      "mix": 0.730917,
+      "underground_gei": 0.516233
+    },
+    "boundary": {
+      "precision": 0.514286,
+      "recall": 0.72,
+      "f1": 0.6,
+      "tp": 18,
+      "fp": 17,
+      "fn": 7,
+      "target_count": 25,
+      "predicted_count": 35,
+      "tolerance_seconds": 1.6
+    },
+    "target_span_count": 26,
+    "predicted_span_count": 36,
+    "duration_seconds": 279.06,
+    "confusion_duration": {
+      "keepspace": {
+        "keepspace": 10.27,
+        "rhythmcall": 3.2,
+        "mix": 15.99,
+        "underground_gei": 12.8
+      },
+      "rhythmcall": {
+        "keepspace": 0.0,
+        "rhythmcall": 52.82,
+        "mix": 12.79,
+        "underground_gei": 7.99
+      },
+      "mix": {
+        "keepspace": 0.0,
+        "rhythmcall": 12.79,
+        "mix": 121.61,
+        "underground_gei": 3.2
+      },
+      "underground_gei": {
+        "keepspace": 0.0,
+        "rhythmcall": 0.0,
+        "mix": 0.0,
+        "underground_gei": 25.6
+      }
+    }
+  }
+}

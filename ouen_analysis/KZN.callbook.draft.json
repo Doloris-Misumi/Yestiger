@@ -1,0 +1,682 @@
+{
+  "source_candidates": "struct\\KZN.json",
+  "library_version": "0.1.0",
+  "arranger": {
+    "name": "draft_policy_arranger",
+    "description": "Rule-guided draft arrangement over candidate slots. Replaceable by LLM arranger."
+  },
+  "entries": [
+    {
+      "start": 0.0,
+      "end": 10.73,
+      "time": "00:00.00 - 00:10.73",
+      "slot_label": "intro",
+      "source_context_tags": [
+        "intro"
+      ],
+      "estimated_bars": 3.0,
+      "action_id": "standard_mix",
+      "display_name": "Standard MIX",
+      "category": "mix",
+      "typical_text": "Aaa, yossha ikuzo! Tiger! Fire! Cyber! Fiber! Diver! Viber! Jya Jya!",
+      "intensity": 0.85,
+      "risk": "medium",
+      "confidence": 0.5549,
+      "alternatives": [],
+      "notes": [
+        "Selected by policy preference for intro: standard_mix.",
+        "shorter than preferred minimum (3.0 < 4.0 bars)",
+        "medium-risk call; verify local live culture",
+        "Shorter than a full MIX window; use a shortened cue or skip."
+      ]
+    },
+    {
+      "start": 10.73,
+      "end": 31.04,
+      "time": "00:10.73 - 00:31.04",
+      "slot_label": "verse_subsection",
+      "source_context_tags": [
+        "mid_energy_vocal",
+        "verse",
+        "verse_subsection"
+      ],
+      "estimated_bars": 7.0,
+      "action_id": "ppph",
+      "display_name": "PPPH",
+      "category": "rhythm_call",
+      "typical_text": "Pan-pa-pan, hyu!",
+      "intensity": 0.55,
+      "risk": "low",
+      "confidence": 0.8115,
+      "alternatives": [
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.7,
+          "risk": "low"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for verse_subsection: ppph."
+      ]
+    },
+    {
+      "start": 31.04,
+      "end": 46.28,
+      "time": "00:31.04 - 00:46.28",
+      "slot_label": "pre_chorus_build_candidate",
+      "source_context_tags": [
+        "high_tension_gap",
+        "pre_chorus",
+        "pre_chorus_build",
+        "pre_chorus_build_candidate",
+        "verse"
+      ],
+      "estimated_bars": 5.0,
+      "action_id": "ietora",
+      "display_name": "Ietora",
+      "category": "call",
+      "typical_text": "Ie Tiger!",
+      "intensity": 0.95,
+      "risk": "high",
+      "confidence": 0.6979,
+      "alternatives": [
+        {
+          "action_id": "ppph",
+          "display_name": "PPPH",
+          "score": 0.8302,
+          "risk": "low"
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.7161,
+          "risk": "low"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for pre_chorus_build_candidate: ietora.",
+        "longer than preferred maximum (5.0 > 4.0 bars)",
+        "high-risk call; should be style/profile gated",
+        "High-risk action: keep as opt-in until a live-style profile allows it."
+      ]
+    },
+    {
+      "start": 46.28,
+      "end": 66.59,
+      "time": "00:46.28 - 01:06.59",
+      "slot_label": "chorus",
+      "source_context_tags": [
+        "chorus",
+        "repeated_chorus"
+      ],
+      "estimated_bars": 7.0,
+      "action_id": "fuwa_fuwa",
+      "display_name": "Fuwa Fuwa",
+      "category": "chorus_call",
+      "typical_text": "Fuwa fuwa!",
+      "intensity": 0.6,
+      "risk": "low",
+      "confidence": 0.8111,
+      "alternatives": [
+        {
+          "action_id": "hai_hai",
+          "display_name": "Hai Hai",
+          "score": 0.7262,
+          "risk": "low"
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.6952,
+          "risk": "low"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for chorus: fuwa_fuwa."
+      ]
+    },
+    {
+      "start": 66.59,
+      "end": 86.92,
+      "time": "01:06.59 - 01:26.92",
+      "slot_label": "chorus",
+      "source_context_tags": [
+        "chorus",
+        "repeated_chorus"
+      ],
+      "estimated_bars": 7.0,
+      "action_id": "fuwa_fuwa",
+      "display_name": "Fuwa Fuwa",
+      "category": "chorus_call",
+      "typical_text": "Fuwa fuwa!",
+      "intensity": 0.6,
+      "risk": "low",
+      "confidence": 0.8111,
+      "alternatives": [
+        {
+          "action_id": "hai_hai",
+          "display_name": "Hai Hai",
+          "score": 0.7262,
+          "risk": "low"
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.6952,
+          "risk": "low"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for chorus: fuwa_fuwa.",
+        "Continuation of previous chorus call; avoid restarting the pattern abruptly."
+      ]
+    },
+    {
+      "start": 86.92,
+      "end": 97.07,
+      "time": "01:26.92 - 01:37.07",
+      "slot_label": "post_chorus_interlude_candidate",
+      "source_context_tags": [
+        "instrumental_break",
+        "post_chorus_interlude",
+        "post_chorus_interlude_candidate",
+        "reintro",
+        "verse"
+      ],
+      "estimated_bars": 3.0,
+      "action_id": "tiger_fire_activation",
+      "display_name": "Tiger Fire Activation",
+      "category": "mix",
+      "typical_text": "Tiger! Fire! ...",
+      "intensity": 0.9,
+      "risk": "medium",
+      "confidence": 0.6444,
+      "alternatives": [
+        {
+          "action_id": "oi_oi",
+          "display_name": "Oi Oi",
+          "score": 0.72,
+          "risk": "low"
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.6796,
+          "risk": "low"
+        },
+        {
+          "action_id": "japanese_mix",
+          "display_name": "Japanese MIX",
+          "score": 0.6326,
+          "risk": "medium"
+        },
+        {
+          "action_id": "standard_mix",
+          "display_name": "Standard MIX",
+          "score": 0.6296,
+          "risk": "medium"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for post_chorus_interlude_candidate: tiger_fire_activation.",
+        "shorter than preferred minimum (3.0 < 4.0 bars)",
+        "medium-risk call; verify local live culture",
+        "Shorter than a full MIX window; use a shortened cue or skip."
+      ]
+    },
+    {
+      "start": 97.07,
+      "end": 117.4,
+      "time": "01:37.07 - 01:57.40",
+      "slot_label": "verse_subsection",
+      "source_context_tags": [
+        "mid_energy_vocal",
+        "verse",
+        "verse_subsection"
+      ],
+      "estimated_bars": 7.0,
+      "action_id": "ppph",
+      "display_name": "PPPH",
+      "category": "rhythm_call",
+      "typical_text": "Pan-pa-pan, hyu!",
+      "intensity": 0.55,
+      "risk": "low",
+      "confidence": 0.7785,
+      "alternatives": [
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.6715,
+          "risk": "low"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for verse_subsection: ppph."
+      ]
+    },
+    {
+      "start": 117.4,
+      "end": 132.62,
+      "time": "01:57.40 - 02:12.62",
+      "slot_label": "pre_chorus_candidate",
+      "source_context_tags": [
+        "pre_chorus",
+        "pre_chorus_candidate",
+        "verse"
+      ],
+      "estimated_bars": 5.0,
+      "action_id": "ietora",
+      "display_name": "Ietora",
+      "category": "call",
+      "typical_text": "Ie Tiger!",
+      "intensity": 0.95,
+      "risk": "high",
+      "confidence": 0.5336,
+      "alternatives": [
+        {
+          "action_id": "ppph",
+          "display_name": "PPPH",
+          "score": 0.7571,
+          "risk": "low"
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.6531,
+          "risk": "low"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for pre_chorus_candidate: ietora.",
+        "longer than preferred maximum (5.0 > 4.0 bars)",
+        "high-risk call; should be style/profile gated",
+        "High-risk action: keep as opt-in until a live-style profile allows it."
+      ]
+    },
+    {
+      "start": 132.62,
+      "end": 152.92,
+      "time": "02:12.62 - 02:32.92",
+      "slot_label": "chorus",
+      "source_context_tags": [
+        "chorus",
+        "repeated_chorus"
+      ],
+      "estimated_bars": 7.0,
+      "action_id": "fuwa_fuwa",
+      "display_name": "Fuwa Fuwa",
+      "category": "chorus_call",
+      "typical_text": "Fuwa fuwa!",
+      "intensity": 0.6,
+      "risk": "low",
+      "confidence": 0.8111,
+      "alternatives": [
+        {
+          "action_id": "hai_hai",
+          "display_name": "Hai Hai",
+          "score": 0.7262,
+          "risk": "low"
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.6952,
+          "risk": "low"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for chorus: fuwa_fuwa."
+      ]
+    },
+    {
+      "start": 152.92,
+      "end": 175.8,
+      "time": "02:32.92 - 02:55.80",
+      "slot_label": "chorus",
+      "source_context_tags": [
+        "chorus",
+        "repeated_chorus"
+      ],
+      "estimated_bars": 8.0,
+      "action_id": "fuwa_fuwa",
+      "display_name": "Fuwa Fuwa",
+      "category": "chorus_call",
+      "typical_text": "Fuwa fuwa!",
+      "intensity": 0.6,
+      "risk": "low",
+      "confidence": 0.8111,
+      "alternatives": [
+        {
+          "action_id": "hai_hai",
+          "display_name": "Hai Hai",
+          "score": 0.7262,
+          "risk": "low"
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.6952,
+          "risk": "low"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for chorus: fuwa_fuwa.",
+        "Continuation of previous chorus call; avoid restarting the pattern abruptly."
+      ]
+    },
+    {
+      "start": 175.8,
+      "end": 203.73,
+      "time": "02:55.80 - 03:23.73",
+      "slot_label": "inst",
+      "source_context_tags": [
+        "extended_instrumental",
+        "inst",
+        "instrumental_break"
+      ],
+      "estimated_bars": 10.0,
+      "action_id": "standard_mix",
+      "display_name": "Standard MIX",
+      "category": "mix",
+      "typical_text": "Aaa, yossha ikuzo! Tiger! Fire! Cyber! Fiber! Diver! Viber! Jya Jya!",
+      "intensity": 0.85,
+      "risk": "medium",
+      "confidence": 0.6241,
+      "alternatives": [
+        {
+          "action_id": "oi_oi",
+          "display_name": "Oi Oi",
+          "score": 0.7366,
+          "risk": "low"
+        },
+        {
+          "action_id": "kaho_sanren_mix",
+          "display_name": "Variable Triple MIX",
+          "score": 0.6604,
+          "risk": "high"
+        },
+        {
+          "action_id": "gachikoi_koujou",
+          "display_name": "Gachikoi Koujou",
+          "score": 0.6542,
+          "risk": "high"
+        },
+        {
+          "action_id": "ainu_mix",
+          "display_name": "Ainu MIX",
+          "score": 0.6293,
+          "risk": "medium"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for inst: standard_mix.",
+        "longer than preferred maximum (10.0 > 8.0 bars)",
+        "medium-risk call; verify local live culture"
+      ]
+    },
+    {
+      "start": 203.73,
+      "end": 216.43,
+      "time": "03:23.73 - 03:36.43",
+      "slot_label": "solo",
+      "source_context_tags": [
+        "emotional_solo",
+        "instrumental_break",
+        "member_focus",
+        "solo"
+      ],
+      "estimated_bars": 4.0,
+      "action_id": "kecha",
+      "display_name": "Kecha",
+      "category": "gesture_support",
+      "typical_text": "Forward-reaching oshi gesture rather than shouted text.",
+      "intensity": 0.3,
+      "risk": "low",
+      "confidence": 0.69,
+      "alternatives": [
+        {
+          "action_id": "oi_oi",
+          "display_name": "Oi Oi",
+          "score": 0.7366,
+          "risk": "low"
+        },
+        {
+          "action_id": "ainu_mix",
+          "display_name": "Ainu MIX",
+          "score": 0.7121,
+          "risk": "medium"
+        },
+        {
+          "action_id": "tiger_fire_activation",
+          "display_name": "Tiger Fire Activation",
+          "score": 0.7121,
+          "risk": "medium"
+        },
+        {
+          "action_id": "japanese_mix",
+          "display_name": "Japanese MIX",
+          "score": 0.71,
+          "risk": "medium"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for solo: kecha."
+      ]
+    },
+    {
+      "start": 216.43,
+      "end": 229.14,
+      "time": "03:36.43 - 03:49.14",
+      "slot_label": "verse_subsection",
+      "source_context_tags": [
+        "mid_energy_vocal",
+        "verse",
+        "verse_subsection"
+      ],
+      "estimated_bars": 4.0,
+      "action_id": "ppph",
+      "display_name": "PPPH",
+      "category": "rhythm_call",
+      "typical_text": "Pan-pa-pan, hyu!",
+      "intensity": 0.55,
+      "risk": "low",
+      "confidence": 0.7658,
+      "alternatives": [
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.6606,
+          "risk": "low"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for verse_subsection: ppph."
+      ]
+    },
+    {
+      "start": 229.14,
+      "end": 245.64,
+      "time": "03:49.14 - 04:05.64",
+      "slot_label": "pre_chorus_candidate",
+      "source_context_tags": [
+        "pre_chorus",
+        "pre_chorus_candidate",
+        "verse"
+      ],
+      "estimated_bars": 6.0,
+      "action_id": "ietora",
+      "display_name": "Ietora",
+      "category": "call",
+      "typical_text": "Ie Tiger!",
+      "intensity": 0.95,
+      "risk": "high",
+      "confidence": 0.5131,
+      "alternatives": [
+        {
+          "action_id": "ppph",
+          "display_name": "PPPH",
+          "score": 0.7658,
+          "risk": "low"
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.6606,
+          "risk": "low"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for pre_chorus_candidate: ietora.",
+        "longer than preferred maximum (6.0 > 4.0 bars)",
+        "high-risk call; should be style/profile gated",
+        "High-risk action: keep as opt-in until a live-style profile allows it."
+      ]
+    },
+    {
+      "start": 245.64,
+      "end": 268.48,
+      "time": "04:05.64 - 04:28.48",
+      "slot_label": "chorus",
+      "source_context_tags": [
+        "chorus",
+        "repeated_chorus"
+      ],
+      "estimated_bars": 8.0,
+      "action_id": "fuwa_fuwa",
+      "display_name": "Fuwa Fuwa",
+      "category": "chorus_call",
+      "typical_text": "Fuwa fuwa!",
+      "intensity": 0.6,
+      "risk": "low",
+      "confidence": 0.8111,
+      "alternatives": [
+        {
+          "action_id": "hai_hai",
+          "display_name": "Hai Hai",
+          "score": 0.7262,
+          "risk": "low"
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.6952,
+          "risk": "low"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for chorus: fuwa_fuwa."
+      ]
+    },
+    {
+      "start": 268.48,
+      "end": 293.9,
+      "time": "04:28.48 - 04:53.90",
+      "slot_label": "chorus",
+      "source_context_tags": [
+        "chorus",
+        "repeated_chorus"
+      ],
+      "estimated_bars": 9.0,
+      "action_id": "fuwa_fuwa",
+      "display_name": "Fuwa Fuwa",
+      "category": "chorus_call",
+      "typical_text": "Fuwa fuwa!",
+      "intensity": 0.6,
+      "risk": "low",
+      "confidence": 0.8111,
+      "alternatives": [
+        {
+          "action_id": "hai_hai",
+          "display_name": "Hai Hai",
+          "score": 0.7262,
+          "risk": "low"
+        },
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.6952,
+          "risk": "low"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for chorus: fuwa_fuwa.",
+        "Continuation of previous chorus call; avoid restarting the pattern abruptly."
+      ]
+    },
+    {
+      "start": 293.9,
+      "end": 304.08,
+      "time": "04:53.90 - 05:04.08",
+      "slot_label": "outro",
+      "source_context_tags": [
+        "high_energy_outro",
+        "outro"
+      ],
+      "estimated_bars": 3.0,
+      "action_id": "oi_oi",
+      "display_name": "Oi Oi",
+      "category": "rhythm_call",
+      "typical_text": "Oi! Oi!",
+      "intensity": 0.75,
+      "risk": "low",
+      "confidence": 0.7431,
+      "alternatives": [
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.7013,
+          "risk": "low"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for outro: oi_oi."
+      ]
+    },
+    {
+      "start": 304.08,
+      "end": 310.73,
+      "time": "05:04.08 - 05:10.73",
+      "slot_label": "outro",
+      "source_context_tags": [
+        "high_energy_outro",
+        "outro"
+      ],
+      "estimated_bars": 2.0,
+      "action_id": "oi_oi",
+      "display_name": "Oi Oi",
+      "category": "rhythm_call",
+      "typical_text": "Oi! Oi!",
+      "intensity": 0.75,
+      "risk": "low",
+      "confidence": 0.7431,
+      "alternatives": [
+        {
+          "action_id": "clap",
+          "display_name": "Clap",
+          "score": 0.7013,
+          "risk": "low"
+        }
+      ],
+      "notes": [
+        "Selected by policy preference for outro: oi_oi."
+      ]
+    },
+    {
+      "start": 310.73,
+      "end": 315.4,
+      "time": "05:10.73 - 05:15.40",
+      "slot_label": "end",
+      "action_id": "keep_space",
+      "display_name": "Keep Space",
+      "category": "arrangement",
+      "intensity": 0.0,
+      "risk": "low",
+      "confidence": 0.5,
+      "alternatives": [],
+      "notes": [
+        "No suitable call/MIX candidate; keep this section open."
+      ]
+    }
+  ]
+}

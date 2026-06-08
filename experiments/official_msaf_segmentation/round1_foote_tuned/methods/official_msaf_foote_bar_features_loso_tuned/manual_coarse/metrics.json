@@ -1,0 +1,535 @@
+{
+  "target": "manual_coarse",
+  "method": "official_msaf_foote_bar_features_loso_tuned",
+  "group": "03_official_msaf_modules",
+  "candidate": {
+    "method": "official_msaf_foote_bar_features_loso_tuned",
+    "note": "Official MSAF Foote Segmenter, using existing bar-level features to avoid slow MSAF audio preprocessing."
+  },
+  "uses_allin1": false,
+  "uses_manual_training": true,
+  "aggregate": {
+    "precision": 0.510638,
+    "recall": 0.150943,
+    "f1": 0.23301,
+    "tp": 24,
+    "fp": 23,
+    "fn": 135,
+    "target_count": 159,
+    "predicted_count": 47,
+    "mean_tolerance_seconds": 2.285
+  },
+  "per_song": [
+    {
+      "precision": 0.333333,
+      "recall": 0.090909,
+      "f1": 0.142857,
+      "tp": 1,
+      "fp": 2,
+      "fn": 10,
+      "target_count": 11,
+      "predicted_count": 3,
+      "tolerance_seconds": 2.44,
+      "song_id": "dododo",
+      "boundary_indices": [
+        4,
+        53,
+        87
+      ],
+      "selected_training_f1": 0.239583,
+      "selected_method": "official_msaf_foote_timbre_chroma_M6_med5_L16"
+    },
+    {
+      "precision": 0.4,
+      "recall": 0.2,
+      "f1": 0.266667,
+      "tp": 2,
+      "fp": 3,
+      "fn": 8,
+      "target_count": 10,
+      "predicted_count": 5,
+      "tolerance_seconds": 1.6,
+      "song_id": "godknows",
+      "boundary_indices": [
+        30,
+        88,
+        133,
+        152,
+        169
+      ],
+      "selected_training_f1": 0.230366,
+      "selected_method": "official_msaf_foote_timbre_chroma_M6_med5_L16"
+    },
+    {
+      "precision": 0.666667,
+      "recall": 0.222222,
+      "f1": 0.333333,
+      "tp": 2,
+      "fp": 1,
+      "fn": 7,
+      "target_count": 9,
+      "predicted_count": 3,
+      "tolerance_seconds": 2.35,
+      "song_id": "hitoshizuku",
+      "boundary_indices": [
+        7,
+        39,
+        61
+      ],
+      "selected_training_f1": 0.226804,
+      "selected_method": "official_msaf_foote_timbre_chroma_M6_med5_L16"
+    },
+    {
+      "precision": 0.4,
+      "recall": 0.166667,
+      "f1": 0.235294,
+      "tp": 2,
+      "fp": 3,
+      "fn": 10,
+      "target_count": 12,
+      "predicted_count": 5,
+      "tolerance_seconds": 1.38,
+      "song_id": "ishizue_no_hanakanmuri",
+      "boundary_indices": [
+        8,
+        39,
+        61,
+        75,
+        132
+      ],
+      "selected_training_f1": 0.232804,
+      "selected_method": "official_msaf_foote_timbre_chroma_M6_med5_L16"
+    },
+    {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 4,
+      "fn": 11,
+      "target_count": 11,
+      "predicted_count": 4,
+      "tolerance_seconds": 1.4,
+      "song_id": "jibun_restart",
+      "boundary_indices": [
+        79,
+        131,
+        167,
+        201
+      ],
+      "selected_training_f1": 0.251309,
+      "selected_method": "official_msaf_foote_timbre_chroma_M6_med5_L16"
+    },
+    {
+      "precision": 0.5,
+      "recall": 0.166667,
+      "f1": 0.25,
+      "tp": 2,
+      "fp": 2,
+      "fn": 10,
+      "target_count": 12,
+      "predicted_count": 4,
+      "tolerance_seconds": 2.54,
+      "song_id": "kizunamusic",
+      "boundary_indices": [
+        9,
+        52,
+        78,
+        120
+      ],
+      "selected_training_f1": 0.231579,
+      "selected_method": "official_msaf_foote_timbre_chroma_M6_med5_L16"
+    },
+    {
+      "precision": 0.5,
+      "recall": 0.1,
+      "f1": 0.166667,
+      "tp": 1,
+      "fp": 1,
+      "fn": 9,
+      "target_count": 10,
+      "predicted_count": 2,
+      "tolerance_seconds": 2.46,
+      "song_id": "louder",
+      "boundary_indices": [
+        36,
+        58
+      ],
+      "selected_training_f1": 0.237113,
+      "selected_method": "official_msaf_foote_timbre_chroma_M6_med5_L16"
+    },
+    {
+      "precision": 0.666667,
+      "recall": 0.222222,
+      "f1": 0.333333,
+      "tp": 2,
+      "fp": 1,
+      "fn": 7,
+      "target_count": 9,
+      "predicted_count": 3,
+      "tolerance_seconds": 2.53,
+      "song_id": "mayoiuta",
+      "boundary_indices": [
+        8,
+        33,
+        79
+      ],
+      "selected_training_f1": 0.226804,
+      "selected_method": "official_msaf_foote_timbre_chroma_M6_med5_L16"
+    },
+    {
+      "precision": 0.75,
+      "recall": 0.230769,
+      "f1": 0.352941,
+      "tp": 3,
+      "fp": 1,
+      "fn": 10,
+      "target_count": 13,
+      "predicted_count": 4,
+      "tolerance_seconds": 2.38,
+      "song_id": "more_jump_more",
+      "boundary_indices": [
+        9,
+        39,
+        58,
+        72
+      ],
+      "selected_training_f1": 0.222222,
+      "selected_method": "official_msaf_foote_timbre_chroma_M6_med5_L16"
+    },
+    {
+      "precision": 0.333333,
+      "recall": 0.083333,
+      "f1": 0.133333,
+      "tp": 1,
+      "fp": 2,
+      "fn": 11,
+      "target_count": 12,
+      "predicted_count": 3,
+      "tolerance_seconds": 2.55,
+      "song_id": "nijuu_no_niji",
+      "boundary_indices": [
+        14,
+        55,
+        70
+      ],
+      "selected_training_f1": 0.240838,
+      "selected_method": "official_msaf_foote_timbre_chroma_M6_med5_L16"
+    },
+    {
+      "precision": 0.333333,
+      "recall": 0.083333,
+      "f1": 0.133333,
+      "tp": 1,
+      "fp": 2,
+      "fn": 11,
+      "target_count": 12,
+      "predicted_count": 3,
+      "tolerance_seconds": 2.4,
+      "song_id": "poppindream",
+      "boundary_indices": [
+        9,
+        71,
+        93
+      ],
+      "selected_training_f1": 0.240838,
+      "selected_method": "official_msaf_foote_timbre_chroma_M6_med5_L16"
+    },
+    {
+      "precision": 0.75,
+      "recall": 0.230769,
+      "f1": 0.352941,
+      "tp": 3,
+      "fp": 1,
+      "fn": 10,
+      "target_count": 13,
+      "predicted_count": 4,
+      "tolerance_seconds": 2.7,
+      "song_id": "starttruedreams",
+      "boundary_indices": [
+        10,
+        35,
+        65,
+        82
+      ],
+      "selected_training_f1": 0.222222,
+      "selected_method": "official_msaf_foote_timbre_chroma_M6_med5_L16"
+    },
+    {
+      "precision": 1.0,
+      "recall": 0.076923,
+      "f1": 0.142857,
+      "tp": 1,
+      "fp": 0,
+      "fn": 12,
+      "target_count": 13,
+      "predicted_count": 1,
+      "tolerance_seconds": 2.53,
+      "song_id": "teardrops",
+      "boundary_indices": [
+        67
+      ],
+      "selected_training_f1": 0.239583,
+      "selected_method": "official_msaf_foote_timbre_chroma_M6_med5_L16"
+    },
+    {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "tp": 3,
+      "fp": 0,
+      "fn": 9,
+      "target_count": 12,
+      "predicted_count": 3,
+      "tolerance_seconds": 2.73,
+      "song_id": "xiuwaxiuwa",
+      "boundary_indices": [
+        9,
+        77,
+        102
+      ],
+      "selected_training_f1": 0.219895,
+      "selected_method": "official_msaf_foote_timbre_chroma_M6_med5_L16"
+    }
+  ],
+  "selected_candidates": [
+    {
+      "song_id": "dododo",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.239583,
+      "selected_candidate": {
+        "method": "official_msaf_foote_timbre_chroma_M6_med5_L16",
+        "algorithm": "foote",
+        "feature_set": "timbre_chroma",
+        "config": {
+          "M_gaussian": 6,
+          "m_median": 5,
+          "L_peaks": 16,
+          "bound_norm_feats": "min_max"
+        },
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "godknows",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.230366,
+      "selected_candidate": {
+        "method": "official_msaf_foote_timbre_chroma_M6_med5_L16",
+        "algorithm": "foote",
+        "feature_set": "timbre_chroma",
+        "config": {
+          "M_gaussian": 6,
+          "m_median": 5,
+          "L_peaks": 16,
+          "bound_norm_feats": "min_max"
+        },
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "hitoshizuku",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.226804,
+      "selected_candidate": {
+        "method": "official_msaf_foote_timbre_chroma_M6_med5_L16",
+        "algorithm": "foote",
+        "feature_set": "timbre_chroma",
+        "config": {
+          "M_gaussian": 6,
+          "m_median": 5,
+          "L_peaks": 16,
+          "bound_norm_feats": "min_max"
+        },
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "ishizue_no_hanakanmuri",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.232804,
+      "selected_candidate": {
+        "method": "official_msaf_foote_timbre_chroma_M6_med5_L16",
+        "algorithm": "foote",
+        "feature_set": "timbre_chroma",
+        "config": {
+          "M_gaussian": 6,
+          "m_median": 5,
+          "L_peaks": 16,
+          "bound_norm_feats": "min_max"
+        },
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "jibun_restart",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.251309,
+      "selected_candidate": {
+        "method": "official_msaf_foote_timbre_chroma_M6_med5_L16",
+        "algorithm": "foote",
+        "feature_set": "timbre_chroma",
+        "config": {
+          "M_gaussian": 6,
+          "m_median": 5,
+          "L_peaks": 16,
+          "bound_norm_feats": "min_max"
+        },
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "kizunamusic",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.231579,
+      "selected_candidate": {
+        "method": "official_msaf_foote_timbre_chroma_M6_med5_L16",
+        "algorithm": "foote",
+        "feature_set": "timbre_chroma",
+        "config": {
+          "M_gaussian": 6,
+          "m_median": 5,
+          "L_peaks": 16,
+          "bound_norm_feats": "min_max"
+        },
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "louder",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.237113,
+      "selected_candidate": {
+        "method": "official_msaf_foote_timbre_chroma_M6_med5_L16",
+        "algorithm": "foote",
+        "feature_set": "timbre_chroma",
+        "config": {
+          "M_gaussian": 6,
+          "m_median": 5,
+          "L_peaks": 16,
+          "bound_norm_feats": "min_max"
+        },
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "mayoiuta",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.226804,
+      "selected_candidate": {
+        "method": "official_msaf_foote_timbre_chroma_M6_med5_L16",
+        "algorithm": "foote",
+        "feature_set": "timbre_chroma",
+        "config": {
+          "M_gaussian": 6,
+          "m_median": 5,
+          "L_peaks": 16,
+          "bound_norm_feats": "min_max"
+        },
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "more_jump_more",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.222222,
+      "selected_candidate": {
+        "method": "official_msaf_foote_timbre_chroma_M6_med5_L16",
+        "algorithm": "foote",
+        "feature_set": "timbre_chroma",
+        "config": {
+          "M_gaussian": 6,
+          "m_median": 5,
+          "L_peaks": 16,
+          "bound_norm_feats": "min_max"
+        },
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "nijuu_no_niji",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.240838,
+      "selected_candidate": {
+        "method": "official_msaf_foote_timbre_chroma_M6_med5_L16",
+        "algorithm": "foote",
+        "feature_set": "timbre_chroma",
+        "config": {
+          "M_gaussian": 6,
+          "m_median": 5,
+          "L_peaks": 16,
+          "bound_norm_feats": "min_max"
+        },
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "poppindream",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.240838,
+      "selected_candidate": {
+        "method": "official_msaf_foote_timbre_chroma_M6_med5_L16",
+        "algorithm": "foote",
+        "feature_set": "timbre_chroma",
+        "config": {
+          "M_gaussian": 6,
+          "m_median": 5,
+          "L_peaks": 16,
+          "bound_norm_feats": "min_max"
+        },
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "starttruedreams",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.222222,
+      "selected_candidate": {
+        "method": "official_msaf_foote_timbre_chroma_M6_med5_L16",
+        "algorithm": "foote",
+        "feature_set": "timbre_chroma",
+        "config": {
+          "M_gaussian": 6,
+          "m_median": 5,
+          "L_peaks": 16,
+          "bound_norm_feats": "min_max"
+        },
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "teardrops",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.239583,
+      "selected_candidate": {
+        "method": "official_msaf_foote_timbre_chroma_M6_med5_L16",
+        "algorithm": "foote",
+        "feature_set": "timbre_chroma",
+        "config": {
+          "M_gaussian": 6,
+          "m_median": 5,
+          "L_peaks": 16,
+          "bound_norm_feats": "min_max"
+        },
+        "uses_manual_training": true
+      }
+    },
+    {
+      "song_id": "xiuwaxiuwa",
+      "target": "manual_coarse",
+      "selected_training_f1": 0.219895,
+      "selected_candidate": {
+        "method": "official_msaf_foote_timbre_chroma_M6_med5_L16",
+        "algorithm": "foote",
+        "feature_set": "timbre_chroma",
+        "config": {
+          "M_gaussian": 6,
+          "m_median": 5,
+          "L_peaks": 16,
+          "bound_norm_feats": "min_max"
+        },
+        "uses_manual_training": true
+      }
+    }
+  ]
+}

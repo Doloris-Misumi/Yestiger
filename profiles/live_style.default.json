@@ -1,0 +1,15 @@
+{
+  "id": "normal_to_aggressive_idol",
+  "display_name": "Normal to Aggressive Idol Live",
+  "density": "normal_to_aggressive",
+  "allow_high_risk": true,
+  "allow_ietora": true,
+  "allow_chain_mix": true,
+  "allow_gachikoi": false,
+  "preferred_long_instrumental_strategy": "chain_mix_then_transition",
+  "notes": [
+    "Draft profile for validating YesTiger MVP.",
+    "High-risk calls are allowed as candidates, but the arranger should still add cautions.",
+    "Avoid covering dense vocals unless the candidate is a chorus support call."
+  ]
+}

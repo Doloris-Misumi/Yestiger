@@ -1,0 +1,668 @@
+{
+  "song_id": "jibun_restart",
+  "method": "callability_rule",
+  "call_spans": [
+    {
+      "start": 0.0,
+      "end": 24.18,
+      "call_role": "mix",
+      "bar_start": 0,
+      "bar_end": 16,
+      "bars": 17,
+      "method": "callability_rule"
+    },
+    {
+      "start": 24.18,
+      "end": 45.23,
+      "call_role": "rhythmcall",
+      "bar_start": 17,
+      "bar_end": 31,
+      "bars": 15,
+      "method": "callability_rule"
+    },
+    {
+      "start": 45.23,
+      "end": 49.44,
+      "call_role": "mix",
+      "bar_start": 32,
+      "bar_end": 34,
+      "bars": 3,
+      "method": "callability_rule"
+    },
+    {
+      "start": 49.44,
+      "end": 56.46,
+      "call_role": "rhythmcall",
+      "bar_start": 35,
+      "bar_end": 39,
+      "bars": 5,
+      "method": "callability_rule"
+    },
+    {
+      "start": 56.46,
+      "end": 57.86,
+      "call_role": "mix",
+      "bar_start": 40,
+      "bar_end": 40,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 57.86,
+      "end": 64.88,
+      "call_role": "rhythmcall",
+      "bar_start": 41,
+      "bar_end": 45,
+      "bars": 5,
+      "method": "callability_rule"
+    },
+    {
+      "start": 64.88,
+      "end": 66.28,
+      "call_role": "mix",
+      "bar_start": 46,
+      "bar_end": 46,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 66.28,
+      "end": 67.69,
+      "call_role": "rhythmcall",
+      "bar_start": 47,
+      "bar_end": 47,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 67.69,
+      "end": 69.09,
+      "call_role": "underground_gei",
+      "bar_start": 48,
+      "bar_end": 48,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 69.09,
+      "end": 70.49,
+      "call_role": "rhythmcall",
+      "bar_start": 49,
+      "bar_end": 49,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 70.49,
+      "end": 71.9,
+      "call_role": "mix",
+      "bar_start": 50,
+      "bar_end": 50,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 71.9,
+      "end": 73.3,
+      "call_role": "rhythmcall",
+      "bar_start": 51,
+      "bar_end": 51,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 73.3,
+      "end": 74.71,
+      "call_role": "mix",
+      "bar_start": 52,
+      "bar_end": 52,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 74.71,
+      "end": 77.51,
+      "call_role": "rhythmcall",
+      "bar_start": 53,
+      "bar_end": 54,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 77.51,
+      "end": 78.92,
+      "call_role": "mix",
+      "bar_start": 55,
+      "bar_end": 55,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 78.92,
+      "end": 80.32,
+      "call_role": "underground_gei",
+      "bar_start": 56,
+      "bar_end": 56,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 80.32,
+      "end": 95.76,
+      "call_role": "rhythmcall",
+      "bar_start": 57,
+      "bar_end": 67,
+      "bars": 11,
+      "method": "callability_rule"
+    },
+    {
+      "start": 95.76,
+      "end": 98.56,
+      "call_role": "mix",
+      "bar_start": 68,
+      "bar_end": 69,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 98.56,
+      "end": 109.79,
+      "call_role": "rhythmcall",
+      "bar_start": 70,
+      "bar_end": 77,
+      "bars": 8,
+      "method": "callability_rule"
+    },
+    {
+      "start": 109.79,
+      "end": 111.2,
+      "call_role": "underground_gei",
+      "bar_start": 78,
+      "bar_end": 78,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 111.2,
+      "end": 136.46,
+      "call_role": "mix",
+      "bar_start": 79,
+      "bar_end": 96,
+      "bars": 18,
+      "method": "callability_rule"
+    },
+    {
+      "start": 136.46,
+      "end": 153.3,
+      "call_role": "rhythmcall",
+      "bar_start": 97,
+      "bar_end": 108,
+      "bars": 12,
+      "method": "callability_rule"
+    },
+    {
+      "start": 153.3,
+      "end": 160.32,
+      "call_role": "mix",
+      "bar_start": 109,
+      "bar_end": 113,
+      "bars": 5,
+      "method": "callability_rule"
+    },
+    {
+      "start": 160.32,
+      "end": 168.74,
+      "call_role": "rhythmcall",
+      "bar_start": 114,
+      "bar_end": 119,
+      "bars": 6,
+      "method": "callability_rule"
+    },
+    {
+      "start": 168.74,
+      "end": 170.14,
+      "call_role": "mix",
+      "bar_start": 120,
+      "bar_end": 120,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 170.14,
+      "end": 178.57,
+      "call_role": "rhythmcall",
+      "bar_start": 121,
+      "bar_end": 126,
+      "bars": 6,
+      "method": "callability_rule"
+    },
+    {
+      "start": 178.57,
+      "end": 179.97,
+      "call_role": "mix",
+      "bar_start": 127,
+      "bar_end": 127,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 179.97,
+      "end": 181.37,
+      "call_role": "underground_gei",
+      "bar_start": 128,
+      "bar_end": 128,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 181.37,
+      "end": 182.77,
+      "call_role": "mix",
+      "bar_start": 129,
+      "bar_end": 129,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 182.77,
+      "end": 184.18,
+      "call_role": "rhythmcall",
+      "bar_start": 130,
+      "bar_end": 130,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 184.18,
+      "end": 186.98,
+      "call_role": "mix",
+      "bar_start": 131,
+      "bar_end": 132,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 186.98,
+      "end": 189.79,
+      "call_role": "rhythmcall",
+      "bar_start": 133,
+      "bar_end": 134,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 189.79,
+      "end": 192.6,
+      "call_role": "mix",
+      "bar_start": 135,
+      "bar_end": 136,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 192.6,
+      "end": 194.0,
+      "call_role": "underground_gei",
+      "bar_start": 137,
+      "bar_end": 137,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 194.0,
+      "end": 196.81,
+      "call_role": "rhythmcall",
+      "bar_start": 138,
+      "bar_end": 139,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 196.81,
+      "end": 198.22,
+      "call_role": "mix",
+      "bar_start": 140,
+      "bar_end": 140,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 198.22,
+      "end": 199.62,
+      "call_role": "rhythmcall",
+      "bar_start": 141,
+      "bar_end": 141,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 199.62,
+      "end": 201.02,
+      "call_role": "mix",
+      "bar_start": 142,
+      "bar_end": 142,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 201.02,
+      "end": 208.04,
+      "call_role": "rhythmcall",
+      "bar_start": 143,
+      "bar_end": 147,
+      "bars": 5,
+      "method": "callability_rule"
+    },
+    {
+      "start": 208.04,
+      "end": 213.65,
+      "call_role": "mix",
+      "bar_start": 148,
+      "bar_end": 151,
+      "bars": 4,
+      "method": "callability_rule"
+    },
+    {
+      "start": 213.65,
+      "end": 216.46,
+      "call_role": "rhythmcall",
+      "bar_start": 152,
+      "bar_end": 153,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 216.46,
+      "end": 217.86,
+      "call_role": "underground_gei",
+      "bar_start": 154,
+      "bar_end": 154,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 217.86,
+      "end": 222.07,
+      "call_role": "rhythmcall",
+      "bar_start": 155,
+      "bar_end": 157,
+      "bars": 3,
+      "method": "callability_rule"
+    },
+    {
+      "start": 222.07,
+      "end": 224.88,
+      "call_role": "mix",
+      "bar_start": 158,
+      "bar_end": 159,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 224.88,
+      "end": 226.35,
+      "call_role": "rhythmcall",
+      "bar_start": 160,
+      "bar_end": 160,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 226.35,
+      "end": 231.91,
+      "call_role": "mix",
+      "bar_start": 161,
+      "bar_end": 162,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 231.91,
+      "end": 246.12,
+      "call_role": "rhythmcall",
+      "bar_start": 163,
+      "bar_end": 167,
+      "bars": 5,
+      "method": "callability_rule"
+    },
+    {
+      "start": 246.12,
+      "end": 251.55,
+      "call_role": "mix",
+      "bar_start": 168,
+      "bar_end": 169,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 251.55,
+      "end": 292.26,
+      "call_role": "rhythmcall",
+      "bar_start": 170,
+      "bar_end": 184,
+      "bars": 15,
+      "method": "callability_rule"
+    },
+    {
+      "start": 292.26,
+      "end": 296.46,
+      "call_role": "mix",
+      "bar_start": 185,
+      "bar_end": 187,
+      "bars": 3,
+      "method": "callability_rule"
+    },
+    {
+      "start": 296.46,
+      "end": 297.87,
+      "call_role": "rhythmcall",
+      "bar_start": 188,
+      "bar_end": 188,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 297.87,
+      "end": 299.27,
+      "call_role": "mix",
+      "bar_start": 189,
+      "bar_end": 189,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 299.27,
+      "end": 300.67,
+      "call_role": "rhythmcall",
+      "bar_start": 190,
+      "bar_end": 190,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 300.67,
+      "end": 303.48,
+      "call_role": "mix",
+      "bar_start": 191,
+      "bar_end": 192,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 303.48,
+      "end": 306.28,
+      "call_role": "rhythmcall",
+      "bar_start": 193,
+      "bar_end": 194,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 306.28,
+      "end": 307.69,
+      "call_role": "mix",
+      "bar_start": 195,
+      "bar_end": 195,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 307.69,
+      "end": 309.09,
+      "call_role": "rhythmcall",
+      "bar_start": 196,
+      "bar_end": 196,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 309.09,
+      "end": 310.49,
+      "call_role": "mix",
+      "bar_start": 197,
+      "bar_end": 197,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 310.49,
+      "end": 311.9,
+      "call_role": "rhythmcall",
+      "bar_start": 198,
+      "bar_end": 198,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 311.9,
+      "end": 313.31,
+      "call_role": "underground_gei",
+      "bar_start": 199,
+      "bar_end": 199,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 313.31,
+      "end": 317.51,
+      "call_role": "rhythmcall",
+      "bar_start": 200,
+      "bar_end": 202,
+      "bars": 3,
+      "method": "callability_rule"
+    },
+    {
+      "start": 317.51,
+      "end": 324.53,
+      "call_role": "underground_gei",
+      "bar_start": 203,
+      "bar_end": 207,
+      "bars": 5,
+      "method": "callability_rule"
+    },
+    {
+      "start": 324.53,
+      "end": 325.94,
+      "call_role": "rhythmcall",
+      "bar_start": 208,
+      "bar_end": 208,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 325.94,
+      "end": 335.76,
+      "call_role": "underground_gei",
+      "bar_start": 209,
+      "bar_end": 215,
+      "bars": 7,
+      "method": "callability_rule"
+    },
+    {
+      "start": 335.76,
+      "end": 339.97,
+      "call_role": "mix",
+      "bar_start": 216,
+      "bar_end": 218,
+      "bars": 3,
+      "method": "callability_rule"
+    },
+    {
+      "start": 339.97,
+      "end": 344.17,
+      "call_role": "rhythmcall",
+      "bar_start": 219,
+      "bar_end": 221,
+      "bars": 3,
+      "method": "callability_rule"
+    },
+    {
+      "start": 344.17,
+      "end": 346.97,
+      "call_role": "mix",
+      "bar_start": 222,
+      "bar_end": 223,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 346.97,
+      "end": 347.66,
+      "call_role": "keepspace",
+      "bar_start": 224,
+      "bar_end": 224,
+      "bars": 1,
+      "method": "callability_rule"
+    }
+  ],
+  "comparison_to_manual_grid": {
+    "time_weighted_role_accuracy": 0.232152,
+    "macro_role_iou": 0.095965,
+    "role_iou": {
+      "keepspace": 0.005137,
+      "rhythmcall": 0.229061,
+      "mix": 0.1088,
+      "underground_gei": 0.040861
+    },
+    "boundary": {
+      "precision": 0.432836,
+      "recall": 0.58,
+      "f1": 0.495726,
+      "tp": 29,
+      "fp": 38,
+      "fn": 21,
+      "target_count": 50,
+      "predicted_count": 67,
+      "tolerance_seconds": 1.4
+    },
+    "target_span_count": 51,
+    "predicted_span_count": 68,
+    "duration_seconds": 347.66,
+    "confusion_duration": {
+      "keepspace": {
+        "keepspace": 0.69,
+        "rhythmcall": 84.44,
+        "mix": 47.78,
+        "underground_gei": 1.4
+      },
+      "rhythmcall": {
+        "keepspace": 0.0,
+        "rhythmcall": 61.78,
+        "mix": 47.71,
+        "underground_gei": 22.45
+      },
+      "mix": {
+        "keepspace": 0.0,
+        "rhythmcall": 21.06,
+        "mix": 15.43,
+        "underground_gei": 0.0
+      },
+      "underground_gei": {
+        "keepspace": 0.0,
+        "rhythmcall": 32.27,
+        "mix": 9.84,
+        "underground_gei": 2.81
+      }
+    }
+  }
+}

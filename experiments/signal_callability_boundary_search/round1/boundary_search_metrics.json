@@ -1,0 +1,6258 @@
+{
+  "results": [
+    {
+      "method": "loso_audio_rf__topk_struct_novelty_len_scale1p1",
+      "candidate": {
+        "method": "loso_audio_rf__topk_struct_novelty_len_scale1p1",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "struct_novelty_len",
+        "rate_scale": 1.1
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.492666,
+        "macro_role_iou": 0.307161,
+        "role_iou": {
+          "keepspace": 0.210292,
+          "rhythmcall": 0.272563,
+          "mix": 0.384467,
+          "underground_gei": 0.36132
+        },
+        "boundary": {
+          "precision": 0.49226,
+          "recall": 0.503165,
+          "f1": 0.497653,
+          "tp": 159,
+          "fp": 164,
+          "fn": 157,
+          "target_count": 316,
+          "predicted_count": 323,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 139.84,
+            "rhythmcall": 90.72,
+            "mix": 192.28,
+            "underground_gei": 97.89
+          },
+          "rhythmcall": {
+            "keepspace": 20.37,
+            "rhythmcall": 394.63,
+            "mix": 400.33,
+            "underground_gei": 195.05
+          },
+          "mix": {
+            "keepspace": 89.53,
+            "rhythmcall": 327.57,
+            "mix": 812.14,
+            "underground_gei": 231.37
+          },
+          "underground_gei": {
+            "keepspace": 34.35,
+            "rhythmcall": 19.18,
+            "mix": 59.16,
+            "underground_gei": 360.37
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_call_window_scale1p1",
+      "candidate": {
+        "method": "loso_audio_rf__topk_call_window_scale1p1",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "call_window",
+        "rate_scale": 1.1
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.489151,
+        "macro_role_iou": 0.305801,
+        "role_iou": {
+          "keepspace": 0.210292,
+          "rhythmcall": 0.272581,
+          "mix": 0.377385,
+          "underground_gei": 0.362947
+        },
+        "boundary": {
+          "precision": 0.486154,
+          "recall": 0.5,
+          "f1": 0.49298,
+          "tp": 158,
+          "fp": 167,
+          "fn": 158,
+          "target_count": 316,
+          "predicted_count": 325,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 139.84,
+            "rhythmcall": 98.32,
+            "mix": 184.68,
+            "underground_gei": 97.89
+          },
+          "rhythmcall": {
+            "keepspace": 20.37,
+            "rhythmcall": 403.84,
+            "mix": 390.89,
+            "underground_gei": 195.28
+          },
+          "mix": {
+            "keepspace": 89.53,
+            "rhythmcall": 353.66,
+            "mix": 790.75,
+            "underground_gei": 226.67
+          },
+          "underground_gei": {
+            "keepspace": 34.35,
+            "rhythmcall": 19.18,
+            "mix": 59.16,
+            "underground_gei": 360.37
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_struct_novelty_len_scale1p0",
+      "candidate": {
+        "method": "loso_audio_rf__topk_struct_novelty_len_scale1p0",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "struct_novelty_len",
+        "rate_scale": 1.0
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.503409,
+        "macro_role_iou": 0.315607,
+        "role_iou": {
+          "keepspace": 0.214432,
+          "rhythmcall": 0.283359,
+          "mix": 0.396229,
+          "underground_gei": 0.368407
+        },
+        "boundary": {
+          "precision": 0.5,
+          "recall": 0.481013,
+          "f1": 0.490323,
+          "tp": 152,
+          "fp": 152,
+          "fn": 164,
+          "target_count": 316,
+          "predicted_count": 304,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 139.84,
+            "rhythmcall": 90.72,
+            "mix": 192.48,
+            "underground_gei": 97.69
+          },
+          "rhythmcall": {
+            "keepspace": 10.23,
+            "rhythmcall": 409.44,
+            "mix": 363.17,
+            "underground_gei": 227.54
+          },
+          "mix": {
+            "keepspace": 86.83,
+            "rhythmcall": 324.67,
+            "mix": 814.33,
+            "underground_gei": 234.78
+          },
+          "underground_gei": {
+            "keepspace": 34.35,
+            "rhythmcall": 19.18,
+            "mix": 38.94,
+            "underground_gei": 380.59
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_call_window_scale1p0",
+      "candidate": {
+        "method": "loso_audio_rf__topk_call_window_scale1p0",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "call_window",
+        "rate_scale": 1.0
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.506113,
+        "macro_role_iou": 0.317878,
+        "role_iou": {
+          "keepspace": 0.21201,
+          "rhythmcall": 0.284959,
+          "mix": 0.398581,
+          "underground_gei": 0.375962
+        },
+        "boundary": {
+          "precision": 0.498339,
+          "recall": 0.474684,
+          "f1": 0.486224,
+          "tp": 150,
+          "fp": 151,
+          "fn": 166,
+          "target_count": 316,
+          "predicted_count": 301,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 139.84,
+            "rhythmcall": 92.13,
+            "mix": 191.07,
+            "underground_gei": 97.69
+          },
+          "rhythmcall": {
+            "keepspace": 7.47,
+            "rhythmcall": 410.11,
+            "mix": 374.28,
+            "underground_gei": 218.52
+          },
+          "mix": {
+            "keepspace": 97.04,
+            "rhythmcall": 317.5,
+            "mix": 823.03,
+            "underground_gei": 223.04
+          },
+          "underground_gei": {
+            "keepspace": 34.35,
+            "rhythmcall": 19.18,
+            "mix": 38.94,
+            "underground_gei": 380.59
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_struct_novelty_len_scale1p25",
+      "candidate": {
+        "method": "loso_audio_rf__topk_struct_novelty_len_scale1p25",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "struct_novelty_len",
+        "rate_scale": 1.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.491771,
+        "macro_role_iou": 0.309366,
+        "role_iou": {
+          "keepspace": 0.216383,
+          "rhythmcall": 0.269918,
+          "mix": 0.374996,
+          "underground_gei": 0.376167
+        },
+        "boundary": {
+          "precision": 0.453782,
+          "recall": 0.512658,
+          "f1": 0.481426,
+          "tp": 162,
+          "fp": 195,
+          "fn": 154,
+          "target_count": 316,
+          "predicted_count": 357,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 139.84,
+            "rhythmcall": 95.6,
+            "mix": 184.67,
+            "underground_gei": 100.62
+          },
+          "rhythmcall": {
+            "keepspace": 17.82,
+            "rhythmcall": 396.65,
+            "mix": 396.46,
+            "underground_gei": 199.45
+          },
+          "mix": {
+            "keepspace": 87.77,
+            "rhythmcall": 344.36,
+            "mix": 784.96,
+            "underground_gei": 243.52
+          },
+          "underground_gei": {
+            "keepspace": 19.94,
+            "rhythmcall": 19.18,
+            "mix": 51.51,
+            "underground_gei": 382.43
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_novelty_scale1p1",
+      "candidate": {
+        "method": "loso_audio_rf__topk_novelty_scale1p1",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "novelty",
+        "rate_scale": 1.1
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.492574,
+        "macro_role_iou": 0.308802,
+        "role_iou": {
+          "keepspace": 0.212043,
+          "rhythmcall": 0.292318,
+          "mix": 0.370524,
+          "underground_gei": 0.360321
+        },
+        "boundary": {
+          "precision": 0.475309,
+          "recall": 0.487342,
+          "f1": 0.48125,
+          "tp": 154,
+          "fp": 170,
+          "fn": 162,
+          "target_count": 316,
+          "predicted_count": 324,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 139.84,
+            "rhythmcall": 80.74,
+            "mix": 204.61,
+            "underground_gei": 95.54
+          },
+          "rhythmcall": {
+            "keepspace": 17.82,
+            "rhythmcall": 423.04,
+            "mix": 345.46,
+            "underground_gei": 224.06
+          },
+          "mix": {
+            "keepspace": 92.11,
+            "rhythmcall": 336.89,
+            "mix": 760.47,
+            "underground_gei": 271.14
+          },
+          "underground_gei": {
+            "keepspace": 28.83,
+            "rhythmcall": 19.18,
+            "mix": 41.74,
+            "underground_gei": 383.31
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_call_window_scale1p25",
+      "candidate": {
+        "method": "loso_audio_rf__topk_call_window_scale1p25",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "call_window",
+        "rate_scale": 1.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.493633,
+        "macro_role_iou": 0.3109,
+        "role_iou": {
+          "keepspace": 0.216847,
+          "rhythmcall": 0.269918,
+          "mix": 0.377418,
+          "underground_gei": 0.379416
+        },
+        "boundary": {
+          "precision": 0.452514,
+          "recall": 0.512658,
+          "f1": 0.480712,
+          "tp": 162,
+          "fp": 196,
+          "fn": 154,
+          "target_count": 316,
+          "predicted_count": 358,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 139.84,
+            "rhythmcall": 95.6,
+            "mix": 184.67,
+            "underground_gei": 100.62
+          },
+          "rhythmcall": {
+            "keepspace": 17.82,
+            "rhythmcall": 396.65,
+            "mix": 396.46,
+            "underground_gei": 199.45
+          },
+          "mix": {
+            "keepspace": 87.77,
+            "rhythmcall": 344.36,
+            "mix": 790.03,
+            "underground_gei": 238.45
+          },
+          "underground_gei": {
+            "keepspace": 18.56,
+            "rhythmcall": 19.18,
+            "mix": 51.51,
+            "underground_gei": 383.81
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_struct_novelty_scale1p0",
+      "candidate": {
+        "method": "loso_audio_rf__topk_struct_novelty_scale1p0",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "struct_novelty",
+        "rate_scale": 1.0
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.499743,
+        "macro_role_iou": 0.313313,
+        "role_iou": {
+          "keepspace": 0.214459,
+          "rhythmcall": 0.308867,
+          "mix": 0.378733,
+          "underground_gei": 0.351194
+        },
+        "boundary": {
+          "precision": 0.494949,
+          "recall": 0.46519,
+          "f1": 0.479608,
+          "tp": 147,
+          "fp": 150,
+          "fn": 169,
+          "target_count": 316,
+          "predicted_count": 297,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 139.84,
+            "rhythmcall": 88.34,
+            "mix": 188.8,
+            "underground_gei": 103.75
+          },
+          "rhythmcall": {
+            "keepspace": 10.15,
+            "rhythmcall": 447.35,
+            "mix": 345.8,
+            "underground_gei": 207.08
+          },
+          "mix": {
+            "keepspace": 89.6,
+            "rhythmcall": 330.46,
+            "mix": 776.16,
+            "underground_gei": 264.39
+          },
+          "underground_gei": {
+            "keepspace": 31.58,
+            "rhythmcall": 19.18,
+            "mix": 54.15,
+            "underground_gei": 368.15
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__raw",
+      "candidate": {
+        "method": "loso_audio_rf__raw",
+        "base_method": "loso_audio_rf",
+        "decoder": "raw"
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.501019,
+        "macro_role_iou": 0.315826,
+        "role_iou": {
+          "keepspace": 0.220086,
+          "rhythmcall": 0.273486,
+          "mix": 0.389302,
+          "underground_gei": 0.380429
+        },
+        "boundary": {
+          "precision": 0.431472,
+          "recall": 0.537975,
+          "f1": 0.478873,
+          "tp": 170,
+          "fp": 224,
+          "fn": 146,
+          "target_count": 316,
+          "predicted_count": 394,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 142.2,
+            "rhythmcall": 85.45,
+            "mix": 194.99,
+            "underground_gei": 98.09
+          },
+          "rhythmcall": {
+            "keepspace": 17.82,
+            "rhythmcall": 396.29,
+            "mix": 399.19,
+            "underground_gei": 197.08
+          },
+          "mix": {
+            "keepspace": 85.23,
+            "rhythmcall": 330.11,
+            "mix": 819.15,
+            "underground_gei": 226.12
+          },
+          "underground_gei": {
+            "keepspace": 22.33,
+            "rhythmcall": 23.09,
+            "mix": 49.36,
+            "underground_gei": 378.28
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_len_0p25",
+      "candidate": {
+        "method": "loso_audio_rf__thr_len_0p25",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "len",
+        "threshold": 0.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.501019,
+        "macro_role_iou": 0.315826,
+        "role_iou": {
+          "keepspace": 0.220086,
+          "rhythmcall": 0.273486,
+          "mix": 0.389302,
+          "underground_gei": 0.380429
+        },
+        "boundary": {
+          "precision": 0.431472,
+          "recall": 0.537975,
+          "f1": 0.478873,
+          "tp": 170,
+          "fp": 224,
+          "fn": 146,
+          "target_count": 316,
+          "predicted_count": 394,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 142.2,
+            "rhythmcall": 85.45,
+            "mix": 194.99,
+            "underground_gei": 98.09
+          },
+          "rhythmcall": {
+            "keepspace": 17.82,
+            "rhythmcall": 396.29,
+            "mix": 399.19,
+            "underground_gei": 197.08
+          },
+          "mix": {
+            "keepspace": 85.23,
+            "rhythmcall": 330.11,
+            "mix": 819.15,
+            "underground_gei": 226.12
+          },
+          "underground_gei": {
+            "keepspace": 22.33,
+            "rhythmcall": 23.09,
+            "mix": 49.36,
+            "underground_gei": 378.28
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_struct_novelty_scale1p1",
+      "candidate": {
+        "method": "loso_audio_rf__topk_struct_novelty_scale1p1",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "struct_novelty",
+        "rate_scale": 1.1
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.494026,
+        "macro_role_iou": 0.310005,
+        "role_iou": {
+          "keepspace": 0.211229,
+          "rhythmcall": 0.297212,
+          "mix": 0.371258,
+          "underground_gei": 0.360321
+        },
+        "boundary": {
+          "precision": 0.473684,
+          "recall": 0.484177,
+          "f1": 0.478873,
+          "tp": 153,
+          "fp": 170,
+          "fn": 163,
+          "target_count": 316,
+          "predicted_count": 323,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 139.84,
+            "rhythmcall": 88.34,
+            "mix": 197.01,
+            "underground_gei": 95.54
+          },
+          "rhythmcall": {
+            "keepspace": 17.82,
+            "rhythmcall": 433.13,
+            "mix": 335.37,
+            "underground_gei": 224.06
+          },
+          "mix": {
+            "keepspace": 94.65,
+            "rhythmcall": 339.41,
+            "mix": 755.41,
+            "underground_gei": 271.14
+          },
+          "underground_gei": {
+            "keepspace": 28.83,
+            "rhythmcall": 19.18,
+            "mix": 41.74,
+            "underground_gei": 383.31
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_novelty_scale1p0",
+      "candidate": {
+        "method": "loso_audio_rf__topk_novelty_scale1p0",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "novelty",
+        "rate_scale": 1.0
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.501965,
+        "macro_role_iou": 0.316273,
+        "role_iou": {
+          "keepspace": 0.212811,
+          "rhythmcall": 0.302799,
+          "mix": 0.378466,
+          "underground_gei": 0.371015
+        },
+        "boundary": {
+          "precision": 0.49,
+          "recall": 0.46519,
+          "f1": 0.477273,
+          "tp": 147,
+          "fp": 153,
+          "fn": 169,
+          "target_count": 316,
+          "predicted_count": 300,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 139.84,
+            "rhythmcall": 80.74,
+            "mix": 201.43,
+            "underground_gei": 98.72
+          },
+          "rhythmcall": {
+            "keepspace": 10.15,
+            "rhythmcall": 434.68,
+            "mix": 363.54,
+            "underground_gei": 202.01
+          },
+          "mix": {
+            "keepspace": 94.65,
+            "rhythmcall": 325.24,
+            "mix": 781.37,
+            "underground_gei": 259.35
+          },
+          "underground_gei": {
+            "keepspace": 31.58,
+            "rhythmcall": 19.18,
+            "mix": 38.99,
+            "underground_gei": 383.31
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_struct_novelty_len_scale0p9",
+      "candidate": {
+        "method": "loso_audio_rf__topk_struct_novelty_len_scale0p9",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "struct_novelty_len",
+        "rate_scale": 0.9
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.494332,
+        "macro_role_iou": 0.307398,
+        "role_iou": {
+          "keepspace": 0.212494,
+          "rhythmcall": 0.272524,
+          "mix": 0.392383,
+          "underground_gei": 0.352193
+        },
+        "boundary": {
+          "precision": 0.514706,
+          "recall": 0.443038,
+          "f1": 0.47619,
+          "tp": 140,
+          "fp": 132,
+          "fn": 176,
+          "target_count": 316,
+          "predicted_count": 272,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 139.84,
+            "rhythmcall": 90.8,
+            "mix": 176.63,
+            "underground_gei": 113.46
+          },
+          "rhythmcall": {
+            "keepspace": 10.23,
+            "rhythmcall": 392.04,
+            "mix": 363.36,
+            "underground_gei": 244.75
+          },
+          "mix": {
+            "keepspace": 92.78,
+            "rhythmcall": 318.19,
+            "mix": 800.28,
+            "underground_gei": 249.36
+          },
+          "underground_gei": {
+            "keepspace": 34.35,
+            "rhythmcall": 19.18,
+            "mix": 38.94,
+            "underground_gei": 380.59
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_call_window_scale0p9",
+      "candidate": {
+        "method": "loso_audio_rf__topk_call_window_scale0p9",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "call_window",
+        "rate_scale": 0.9
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.496848,
+        "macro_role_iou": 0.309141,
+        "role_iou": {
+          "keepspace": 0.212393,
+          "rhythmcall": 0.281141,
+          "mix": 0.394655,
+          "underground_gei": 0.348377
+        },
+        "boundary": {
+          "precision": 0.512821,
+          "recall": 0.443038,
+          "f1": 0.475382,
+          "tp": 140,
+          "fp": 133,
+          "fn": 176,
+          "target_count": 316,
+          "predicted_count": 273,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 142.66,
+            "rhythmcall": 87.98,
+            "mix": 176.63,
+            "underground_gei": 113.46
+          },
+          "rhythmcall": {
+            "keepspace": 7.47,
+            "rhythmcall": 404.07,
+            "mix": 378.02,
+            "underground_gei": 220.82
+          },
+          "mix": {
+            "keepspace": 92.58,
+            "rhythmcall": 319.71,
+            "mix": 810.7,
+            "underground_gei": 237.62
+          },
+          "underground_gei": {
+            "keepspace": 50.9,
+            "rhythmcall": 19.18,
+            "mix": 38.94,
+            "underground_gei": 364.04
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_len_scale1p25",
+      "candidate": {
+        "method": "loso_audio_rf__topk_len_scale1p25",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "len",
+        "rate_scale": 1.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.485742,
+        "macro_role_iou": 0.301692,
+        "role_iou": {
+          "keepspace": 0.199306,
+          "rhythmcall": 0.265064,
+          "mix": 0.374257,
+          "underground_gei": 0.368141
+        },
+        "boundary": {
+          "precision": 0.441989,
+          "recall": 0.506329,
+          "f1": 0.471976,
+          "tp": 160,
+          "fp": 202,
+          "fn": 156,
+          "target_count": 316,
+          "predicted_count": 362,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 128.64,
+            "rhythmcall": 96.39,
+            "mix": 184.6,
+            "underground_gei": 111.1
+          },
+          "rhythmcall": {
+            "keepspace": 17.82,
+            "rhythmcall": 391.78,
+            "mix": 396.64,
+            "underground_gei": 204.14
+          },
+          "mix": {
+            "keepspace": 87.32,
+            "rhythmcall": 352.11,
+            "mix": 785.66,
+            "underground_gei": 235.52
+          },
+          "underground_gei": {
+            "keepspace": 19.57,
+            "rhythmcall": 19.18,
+            "mix": 57.4,
+            "underground_gei": 376.91
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_novelty_scale0p9",
+      "candidate": {
+        "method": "loso_audio_rf__topk_novelty_scale0p9",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "novelty",
+        "rate_scale": 0.9
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.499706,
+        "macro_role_iou": 0.310783,
+        "role_iou": {
+          "keepspace": 0.198907,
+          "rhythmcall": 0.31035,
+          "mix": 0.381682,
+          "underground_gei": 0.352192
+        },
+        "boundary": {
+          "precision": 0.513011,
+          "recall": 0.436709,
+          "f1": 0.471795,
+          "tp": 138,
+          "fp": 131,
+          "fn": 178,
+          "target_count": 316,
+          "predicted_count": 269,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 132.12,
+            "rhythmcall": 84.66,
+            "mix": 204.94,
+            "underground_gei": 99.01
+          },
+          "rhythmcall": {
+            "keepspace": 10.15,
+            "rhythmcall": 442.96,
+            "mix": 371.44,
+            "underground_gei": 185.83
+          },
+          "mix": {
+            "keepspace": 101.77,
+            "rhythmcall": 313.07,
+            "mix": 804.33,
+            "underground_gei": 241.44
+          },
+          "underground_gei": {
+            "keepspace": 31.58,
+            "rhythmcall": 19.18,
+            "mix": 70.34,
+            "underground_gei": 351.96
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_struct_novelty_scale0p9",
+      "candidate": {
+        "method": "loso_audio_rf__topk_struct_novelty_scale0p9",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "struct_novelty",
+        "rate_scale": 0.9
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.503394,
+        "macro_role_iou": 0.313411,
+        "role_iou": {
+          "keepspace": 0.200431,
+          "rhythmcall": 0.315185,
+          "mix": 0.386667,
+          "underground_gei": 0.351363
+        },
+        "boundary": {
+          "precision": 0.513011,
+          "recall": 0.436709,
+          "f1": 0.471795,
+          "tp": 138,
+          "fp": 131,
+          "fn": 178,
+          "target_count": 316,
+          "predicted_count": 269,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 132.12,
+            "rhythmcall": 92.26,
+            "mix": 194.82,
+            "underground_gei": 101.53
+          },
+          "rhythmcall": {
+            "keepspace": 10.15,
+            "rhythmcall": 453.05,
+            "mix": 361.35,
+            "underground_gei": 185.83
+          },
+          "mix": {
+            "keepspace": 96.72,
+            "rhythmcall": 315.59,
+            "mix": 807.02,
+            "underground_gei": 241.28
+          },
+          "underground_gei": {
+            "keepspace": 31.58,
+            "rhythmcall": 19.18,
+            "mix": 70.34,
+            "underground_gei": 351.96
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__raw",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__raw",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "raw"
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.517635,
+        "macro_role_iou": 0.345801,
+        "role_iou": {
+          "keepspace": 0.246011,
+          "rhythmcall": 0.262928,
+          "mix": 0.398814,
+          "underground_gei": 0.475453
+        },
+        "boundary": {
+          "precision": 0.429688,
+          "recall": 0.522152,
+          "f1": 0.471429,
+          "tp": 165,
+          "fp": 219,
+          "fn": 151,
+          "target_count": 316,
+          "predicted_count": 384,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 170.2,
+            "rhythmcall": 105.98,
+            "mix": 183.38,
+            "underground_gei": 61.17
+          },
+          "rhythmcall": {
+            "keepspace": 56.62,
+            "rhythmcall": 402.34,
+            "mix": 450.86,
+            "underground_gei": 100.56
+          },
+          "mix": {
+            "keepspace": 101.16,
+            "rhythmcall": 370.8,
+            "mix": 856.13,
+            "underground_gei": 132.52
+          },
+          "underground_gei": {
+            "keepspace": 13.33,
+            "rhythmcall": 43.07,
+            "mix": 51.84,
+            "underground_gei": 364.82
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_len_0p25",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_len_0p25",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "len",
+        "threshold": 0.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.517635,
+        "macro_role_iou": 0.345801,
+        "role_iou": {
+          "keepspace": 0.246011,
+          "rhythmcall": 0.262928,
+          "mix": 0.398814,
+          "underground_gei": 0.475453
+        },
+        "boundary": {
+          "precision": 0.429688,
+          "recall": 0.522152,
+          "f1": 0.471429,
+          "tp": 165,
+          "fp": 219,
+          "fn": 151,
+          "target_count": 316,
+          "predicted_count": 384,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 170.2,
+            "rhythmcall": 105.98,
+            "mix": 183.38,
+            "underground_gei": 61.17
+          },
+          "rhythmcall": {
+            "keepspace": 56.62,
+            "rhythmcall": 402.34,
+            "mix": 450.86,
+            "underground_gei": 100.56
+          },
+          "mix": {
+            "keepspace": 101.16,
+            "rhythmcall": 370.8,
+            "mix": 856.13,
+            "underground_gei": 132.52
+          },
+          "underground_gei": {
+            "keepspace": 13.33,
+            "rhythmcall": 43.07,
+            "mix": 51.84,
+            "underground_gei": 364.82
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_novelty_scale1p25",
+      "candidate": {
+        "method": "loso_audio_rf__topk_novelty_scale1p25",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "novelty",
+        "rate_scale": 1.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.492935,
+        "macro_role_iou": 0.308521,
+        "role_iou": {
+          "keepspace": 0.211028,
+          "rhythmcall": 0.285124,
+          "mix": 0.378078,
+          "underground_gei": 0.359852
+        },
+        "boundary": {
+          "precision": 0.442577,
+          "recall": 0.5,
+          "f1": 0.469539,
+          "tp": 158,
+          "fp": 199,
+          "fn": 158,
+          "target_count": 316,
+          "predicted_count": 357,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 139.84,
+            "rhythmcall": 95.6,
+            "mix": 189.71,
+            "underground_gei": 95.58
+          },
+          "rhythmcall": {
+            "keepspace": 17.82,
+            "rhythmcall": 420.39,
+            "mix": 370.92,
+            "underground_gei": 201.25
+          },
+          "mix": {
+            "keepspace": 85.23,
+            "rhythmcall": 346.72,
+            "mix": 781.8,
+            "underground_gei": 246.86
+          },
+          "underground_gei": {
+            "keepspace": 38.88,
+            "rhythmcall": 21.71,
+            "mix": 46.59,
+            "underground_gei": 365.88
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_call_window_scale1p25",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_call_window_scale1p25",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "call_window",
+        "rate_scale": 1.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.515118,
+        "macro_role_iou": 0.342233,
+        "role_iou": {
+          "keepspace": 0.241185,
+          "rhythmcall": 0.264449,
+          "mix": 0.398131,
+          "underground_gei": 0.465167
+        },
+        "boundary": {
+          "precision": 0.452663,
+          "recall": 0.484177,
+          "f1": 0.46789,
+          "tp": 153,
+          "fp": 185,
+          "fn": 163,
+          "target_count": 316,
+          "predicted_count": 338,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 168.61,
+            "rhythmcall": 113.58,
+            "mix": 175.78,
+            "underground_gei": 62.76
+          },
+          "rhythmcall": {
+            "keepspace": 56.6,
+            "rhythmcall": 407.55,
+            "mix": 437.48,
+            "underground_gei": 108.75
+          },
+          "mix": {
+            "keepspace": 105.94,
+            "rhythmcall": 374.07,
+            "mix": 846.31,
+            "underground_gei": 134.29
+          },
+          "underground_gei": {
+            "keepspace": 15.82,
+            "rhythmcall": 43.1,
+            "mix": 51.84,
+            "underground_gei": 362.3
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_struct_novelty_scale1p25",
+      "candidate": {
+        "method": "loso_audio_rf__topk_struct_novelty_scale1p25",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "struct_novelty",
+        "rate_scale": 1.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.49174,
+        "macro_role_iou": 0.307904,
+        "role_iou": {
+          "keepspace": 0.212681,
+          "rhythmcall": 0.285124,
+          "mix": 0.374671,
+          "underground_gei": 0.35914
+        },
+        "boundary": {
+          "precision": 0.439776,
+          "recall": 0.496835,
+          "f1": 0.466568,
+          "tp": 157,
+          "fp": 200,
+          "fn": 159,
+          "target_count": 316,
+          "predicted_count": 357,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 139.84,
+            "rhythmcall": 95.6,
+            "mix": 189.71,
+            "underground_gei": 95.58
+          },
+          "rhythmcall": {
+            "keepspace": 17.82,
+            "rhythmcall": 420.39,
+            "mix": 380.43,
+            "underground_gei": 191.74
+          },
+          "mix": {
+            "keepspace": 85.23,
+            "rhythmcall": 346.72,
+            "mix": 781.8,
+            "underground_gei": 246.86
+          },
+          "underground_gei": {
+            "keepspace": 33.73,
+            "rhythmcall": 21.71,
+            "mix": 55.88,
+            "underground_gei": 361.74
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_novelty_scale1p25",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_novelty_scale1p25",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "novelty",
+        "rate_scale": 1.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.523872,
+        "macro_role_iou": 0.347755,
+        "role_iou": {
+          "keepspace": 0.241791,
+          "rhythmcall": 0.267909,
+          "mix": 0.413746,
+          "underground_gei": 0.467576
+        },
+        "boundary": {
+          "precision": 0.452381,
+          "recall": 0.481013,
+          "f1": 0.466258,
+          "tp": 152,
+          "fp": 184,
+          "fn": 164,
+          "target_count": 316,
+          "predicted_count": 336,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 162.89,
+            "rhythmcall": 113.58,
+            "mix": 183.93,
+            "underground_gei": 60.33
+          },
+          "rhythmcall": {
+            "keepspace": 45.16,
+            "rhythmcall": 414.78,
+            "mix": 441.19,
+            "underground_gei": 109.25
+          },
+          "mix": {
+            "keepspace": 94.46,
+            "rhythmcall": 369.38,
+            "mix": 884.41,
+            "underground_gei": 112.36
+          },
+          "underground_gei": {
+            "keepspace": 13.33,
+            "rhythmcall": 54.87,
+            "mix": 51.84,
+            "underground_gei": 353.02
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_scale1p25",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_scale1p25",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "struct_novelty",
+        "rate_scale": 1.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.523407,
+        "macro_role_iou": 0.347423,
+        "role_iou": {
+          "keepspace": 0.241215,
+          "rhythmcall": 0.267909,
+          "mix": 0.412992,
+          "underground_gei": 0.467576
+        },
+        "boundary": {
+          "precision": 0.451039,
+          "recall": 0.481013,
+          "f1": 0.465544,
+          "tp": 152,
+          "fp": 185,
+          "fn": 164,
+          "target_count": 316,
+          "predicted_count": 337,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 162.89,
+            "rhythmcall": 113.58,
+            "mix": 183.93,
+            "underground_gei": 60.33
+          },
+          "rhythmcall": {
+            "keepspace": 45.16,
+            "rhythmcall": 414.78,
+            "mix": 441.19,
+            "underground_gei": 109.25
+          },
+          "mix": {
+            "keepspace": 96.07,
+            "rhythmcall": 369.38,
+            "mix": 882.8,
+            "underground_gei": 112.36
+          },
+          "underground_gei": {
+            "keepspace": 13.33,
+            "rhythmcall": 54.87,
+            "mix": 51.84,
+            "underground_gei": 353.02
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_len_scale1p25",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_len_scale1p25",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "struct_novelty_len",
+        "rate_scale": 1.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.514405,
+        "macro_role_iou": 0.340995,
+        "role_iou": {
+          "keepspace": 0.241185,
+          "rhythmcall": 0.262846,
+          "mix": 0.399007,
+          "underground_gei": 0.460941
+        },
+        "boundary": {
+          "precision": 0.451039,
+          "recall": 0.481013,
+          "f1": 0.465544,
+          "tp": 152,
+          "fp": 185,
+          "fn": 164,
+          "target_count": 316,
+          "predicted_count": 337,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 168.61,
+            "rhythmcall": 113.58,
+            "mix": 175.78,
+            "underground_gei": 62.76
+          },
+          "rhythmcall": {
+            "keepspace": 56.6,
+            "rhythmcall": 405.08,
+            "mix": 432.81,
+            "underground_gei": 115.89
+          },
+          "mix": {
+            "keepspace": 105.94,
+            "rhythmcall": 374.07,
+            "mix": 846.31,
+            "underground_gei": 134.29
+          },
+          "underground_gei": {
+            "keepspace": 15.82,
+            "rhythmcall": 43.1,
+            "mix": 51.84,
+            "underground_gei": 362.3
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_struct_novelty_len_scale0p75",
+      "candidate": {
+        "method": "loso_audio_rf__topk_struct_novelty_len_scale0p75",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "struct_novelty_len",
+        "rate_scale": 0.75
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.482458,
+        "macro_role_iou": 0.299094,
+        "role_iou": {
+          "keepspace": 0.218305,
+          "rhythmcall": 0.246862,
+          "mix": 0.389598,
+          "underground_gei": 0.341612
+        },
+        "boundary": {
+          "precision": 0.552632,
+          "recall": 0.398734,
+          "f1": 0.463235,
+          "tp": 126,
+          "fp": 102,
+          "fn": 190,
+          "target_count": 316,
+          "predicted_count": 228,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 146.43,
+            "rhythmcall": 103.81,
+            "mix": 152.83,
+            "underground_gei": 117.66
+          },
+          "rhythmcall": {
+            "keepspace": 13.19,
+            "rhythmcall": 363.61,
+            "mix": 385.48,
+            "underground_gei": 248.1
+          },
+          "mix": {
+            "keepspace": 85.94,
+            "rhythmcall": 342.02,
+            "mix": 793.23,
+            "underground_gei": 239.42
+          },
+          "underground_gei": {
+            "keepspace": 50.9,
+            "rhythmcall": 16.72,
+            "mix": 37.1,
+            "underground_gei": 368.34
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_len_scale1p1",
+      "candidate": {
+        "method": "loso_audio_rf__topk_len_scale1p1",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "len",
+        "rate_scale": 1.1
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.481754,
+        "macro_role_iou": 0.295023,
+        "role_iou": {
+          "keepspace": 0.186084,
+          "rhythmcall": 0.255813,
+          "mix": 0.382169,
+          "underground_gei": 0.356026
+        },
+        "boundary": {
+          "precision": 0.454268,
+          "recall": 0.471519,
+          "f1": 0.462733,
+          "tp": 149,
+          "fp": 179,
+          "fn": 167,
+          "target_count": 316,
+          "predicted_count": 328,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 124.47,
+            "rhythmcall": 93.87,
+            "mix": 198.89,
+            "underground_gei": 103.5
+          },
+          "rhythmcall": {
+            "keepspace": 33.13,
+            "rhythmcall": 371.64,
+            "mix": 405.49,
+            "underground_gei": 200.12
+          },
+          "mix": {
+            "keepspace": 83.05,
+            "rhythmcall": 329.35,
+            "mix": 812.69,
+            "underground_gei": 235.52
+          },
+          "underground_gei": {
+            "keepspace": 31.98,
+            "rhythmcall": 19.18,
+            "mix": 61.53,
+            "underground_gei": 360.37
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_len_scale1p25",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_len_scale1p25",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "len",
+        "rate_scale": 1.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.515816,
+        "macro_role_iou": 0.344785,
+        "role_iou": {
+          "keepspace": 0.234667,
+          "rhythmcall": 0.26469,
+          "mix": 0.395687,
+          "underground_gei": 0.484097
+        },
+        "boundary": {
+          "precision": 0.445748,
+          "recall": 0.481013,
+          "f1": 0.462709,
+          "tp": 152,
+          "fp": 189,
+          "fn": 164,
+          "target_count": 316,
+          "predicted_count": 341,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 164.98,
+            "rhythmcall": 104.38,
+            "mix": 196.6,
+            "underground_gei": 54.77
+          },
+          "rhythmcall": {
+            "keepspace": 61.4,
+            "rhythmcall": 406.14,
+            "mix": 442.27,
+            "underground_gei": 100.57
+          },
+          "mix": {
+            "keepspace": 107.58,
+            "rhythmcall": 376.57,
+            "mix": 851.25,
+            "underground_gei": 125.21
+          },
+          "underground_gei": {
+            "keepspace": 13.33,
+            "rhythmcall": 43.07,
+            "mix": 51.84,
+            "underground_gei": 364.82
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_novelty_scale1p1",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_novelty_scale1p1",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "novelty",
+        "rate_scale": 1.1
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.512197,
+        "macro_role_iou": 0.337394,
+        "role_iou": {
+          "keepspace": 0.24123,
+          "rhythmcall": 0.266024,
+          "mix": 0.394382,
+          "underground_gei": 0.447938
+        },
+        "boundary": {
+          "precision": 0.466019,
+          "recall": 0.455696,
+          "f1": 0.4608,
+          "tp": 144,
+          "fp": 165,
+          "fn": 172,
+          "target_count": 316,
+          "predicted_count": 309,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 160.36,
+            "rhythmcall": 105.98,
+            "mix": 191.63,
+            "underground_gei": 62.76
+          },
+          "rhythmcall": {
+            "keepspace": 45.16,
+            "rhythmcall": 412.31,
+            "mix": 446.11,
+            "underground_gei": 106.8
+          },
+          "mix": {
+            "keepspace": 88.06,
+            "rhythmcall": 376.15,
+            "mix": 847.37,
+            "underground_gei": 149.03
+          },
+          "underground_gei": {
+            "keepspace": 10.81,
+            "rhythmcall": 57.39,
+            "mix": 50.25,
+            "underground_gei": 354.61
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_scale1p1",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_scale1p1",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "struct_novelty",
+        "rate_scale": 1.1
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.512921,
+        "macro_role_iou": 0.33817,
+        "role_iou": {
+          "keepspace": 0.240312,
+          "rhythmcall": 0.270329,
+          "mix": 0.394099,
+          "underground_gei": 0.447938
+        },
+        "boundary": {
+          "precision": 0.466019,
+          "recall": 0.455696,
+          "f1": 0.4608,
+          "tp": 144,
+          "fp": 165,
+          "fn": 172,
+          "target_count": 316,
+          "predicted_count": 309,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 160.36,
+            "rhythmcall": 113.58,
+            "mix": 184.03,
+            "underground_gei": 62.76
+          },
+          "rhythmcall": {
+            "keepspace": 45.16,
+            "rhythmcall": 422.4,
+            "mix": 436.02,
+            "underground_gei": 106.8
+          },
+          "mix": {
+            "keepspace": 90.6,
+            "rhythmcall": 381.19,
+            "mix": 839.79,
+            "underground_gei": 149.03
+          },
+          "underground_gei": {
+            "keepspace": 10.81,
+            "rhythmcall": 57.39,
+            "mix": 50.25,
+            "underground_gei": 354.61
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_len_scale0p9",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_len_scale0p9",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "struct_novelty_len",
+        "rate_scale": 0.9
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.512076,
+        "macro_role_iou": 0.338955,
+        "role_iou": {
+          "keepspace": 0.241145,
+          "rhythmcall": 0.2597,
+          "mix": 0.394558,
+          "underground_gei": 0.460419
+        },
+        "boundary": {
+          "precision": 0.501887,
+          "recall": 0.420886,
+          "f1": 0.457831,
+          "tp": 133,
+          "fp": 132,
+          "fn": 183,
+          "target_count": 316,
+          "predicted_count": 265,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 164.48,
+            "rhythmcall": 113.41,
+            "mix": 183.1,
+            "underground_gei": 59.74
+          },
+          "rhythmcall": {
+            "keepspace": 55.07,
+            "rhythmcall": 399.79,
+            "mix": 444.28,
+            "underground_gei": 111.24
+          },
+          "mix": {
+            "keepspace": 95.47,
+            "rhythmcall": 369.94,
+            "mix": 843.66,
+            "underground_gei": 151.54
+          },
+          "underground_gei": {
+            "keepspace": 10.81,
+            "rhythmcall": 45.7,
+            "mix": 50.25,
+            "underground_gei": 366.3
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_len_scale1p0",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_len_scale1p0",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "struct_novelty_len",
+        "rate_scale": 1.0
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.509516,
+        "macro_role_iou": 0.335914,
+        "role_iou": {
+          "keepspace": 0.223914,
+          "rhythmcall": 0.267068,
+          "mix": 0.395809,
+          "underground_gei": 0.456866
+        },
+        "boundary": {
+          "precision": 0.476027,
+          "recall": 0.439873,
+          "f1": 0.457237,
+          "tp": 139,
+          "fp": 153,
+          "fn": 177,
+          "target_count": 316,
+          "predicted_count": 292,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 161.95,
+            "rhythmcall": 113.41,
+            "mix": 185.63,
+            "underground_gei": 59.74
+          },
+          "rhythmcall": {
+            "keepspace": 66.3,
+            "rhythmcall": 415.67,
+            "mix": 434.21,
+            "underground_gei": 94.2
+          },
+          "mix": {
+            "keepspace": 105.93,
+            "rhythmcall": 384.52,
+            "mix": 843.35,
+            "underground_gei": 126.81
+          },
+          "underground_gei": {
+            "keepspace": 30.31,
+            "rhythmcall": 48.11,
+            "mix": 50.25,
+            "underground_gei": 344.39
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_call_window_scale1p0",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_call_window_scale1p0",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "call_window",
+        "rate_scale": 1.0
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.508318,
+        "macro_role_iou": 0.334931,
+        "role_iou": {
+          "keepspace": 0.223901,
+          "rhythmcall": 0.269047,
+          "mix": 0.392964,
+          "underground_gei": 0.453814
+        },
+        "boundary": {
+          "precision": 0.476027,
+          "recall": 0.439873,
+          "f1": 0.457237,
+          "tp": 139,
+          "fp": 153,
+          "fn": 177,
+          "target_count": 316,
+          "predicted_count": 292,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 161.95,
+            "rhythmcall": 113.41,
+            "mix": 185.63,
+            "underground_gei": 59.74
+          },
+          "rhythmcall": {
+            "keepspace": 63.78,
+            "rhythmcall": 420.47,
+            "mix": 426.86,
+            "underground_gei": 99.27
+          },
+          "mix": {
+            "keepspace": 108.49,
+            "rhythmcall": 390.91,
+            "mix": 834.4,
+            "underground_gei": 126.81
+          },
+          "underground_gei": {
+            "keepspace": 30.31,
+            "rhythmcall": 48.11,
+            "mix": 50.25,
+            "underground_gei": 344.39
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_len_scale1p1",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_len_scale1p1",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "struct_novelty_len",
+        "rate_scale": 1.1
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.503602,
+        "macro_role_iou": 0.329907,
+        "role_iou": {
+          "keepspace": 0.226116,
+          "rhythmcall": 0.256909,
+          "mix": 0.392909,
+          "underground_gei": 0.443693
+        },
+        "boundary": {
+          "precision": 0.459807,
+          "recall": 0.452532,
+          "f1": 0.45614,
+          "tp": 143,
+          "fp": 168,
+          "fn": 173,
+          "target_count": 316,
+          "predicted_count": 311,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 163.55,
+            "rhythmcall": 113.58,
+            "mix": 180.84,
+            "underground_gei": 62.76
+          },
+          "rhythmcall": {
+            "keepspace": 63.78,
+            "rhythmcall": 398.62,
+            "mix": 441.9,
+            "underground_gei": 106.08
+          },
+          "mix": {
+            "keepspace": 108.48,
+            "rhythmcall": 379.53,
+            "mix": 838.31,
+            "underground_gei": 134.29
+          },
+          "underground_gei": {
+            "keepspace": 30.31,
+            "rhythmcall": 48.11,
+            "mix": 50.25,
+            "underground_gei": 344.39
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_call_window_scale0p75",
+      "candidate": {
+        "method": "loso_audio_rf__topk_call_window_scale0p75",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "call_window",
+        "rate_scale": 0.75
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.489644,
+        "macro_role_iou": 0.307061,
+        "role_iou": {
+          "keepspace": 0.220897,
+          "rhythmcall": 0.258188,
+          "mix": 0.383743,
+          "underground_gei": 0.365417
+        },
+        "boundary": {
+          "precision": 0.54386,
+          "recall": 0.392405,
+          "f1": 0.455882,
+          "tp": 124,
+          "fp": 104,
+          "fn": 192,
+          "target_count": 316,
+          "predicted_count": 228,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 145.03,
+            "rhythmcall": 103.8,
+            "mix": 156.74,
+            "underground_gei": 115.16
+          },
+          "rhythmcall": {
+            "keepspace": 3.36,
+            "rhythmcall": 381.0,
+            "mix": 385.51,
+            "underground_gei": 240.51
+          },
+          "mix": {
+            "keepspace": 100.88,
+            "rhythmcall": 344.77,
+            "mix": 782.82,
+            "underground_gei": 232.14
+          },
+          "underground_gei": {
+            "keepspace": 31.58,
+            "rhythmcall": 16.72,
+            "mix": 37.1,
+            "underground_gei": 387.66
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_call_window_scale1p1",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_call_window_scale1p1",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "call_window",
+        "rate_scale": 1.1
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.504113,
+        "macro_role_iou": 0.330253,
+        "role_iou": {
+          "keepspace": 0.224693,
+          "rhythmcall": 0.260494,
+          "mix": 0.392134,
+          "underground_gei": 0.443693
+        },
+        "boundary": {
+          "precision": 0.458333,
+          "recall": 0.452532,
+          "f1": 0.455414,
+          "tp": 143,
+          "fp": 169,
+          "fn": 173,
+          "target_count": 316,
+          "predicted_count": 312,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 161.95,
+            "rhythmcall": 113.58,
+            "mix": 182.44,
+            "underground_gei": 62.76
+          },
+          "rhythmcall": {
+            "keepspace": 63.78,
+            "rhythmcall": 405.85,
+            "mix": 434.67,
+            "underground_gei": 106.08
+          },
+          "mix": {
+            "keepspace": 105.94,
+            "rhythmcall": 385.93,
+            "mix": 834.45,
+            "underground_gei": 134.29
+          },
+          "underground_gei": {
+            "keepspace": 30.31,
+            "rhythmcall": 48.11,
+            "mix": 50.25,
+            "underground_gei": 344.39
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_len_scale1p1",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_len_scale1p1",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "len",
+        "rate_scale": 1.1
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.486221,
+        "macro_role_iou": 0.318202,
+        "role_iou": {
+          "keepspace": 0.242066,
+          "rhythmcall": 0.247679,
+          "mix": 0.360009,
+          "underground_gei": 0.423053
+        },
+        "boundary": {
+          "precision": 0.446203,
+          "recall": 0.446203,
+          "f1": 0.446203,
+          "tp": 141,
+          "fp": 175,
+          "fn": 175,
+          "target_count": 316,
+          "predicted_count": 316,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 169.11,
+            "rhythmcall": 109.14,
+            "mix": 163.62,
+            "underground_gei": 78.86
+          },
+          "rhythmcall": {
+            "keepspace": 58.88,
+            "rhythmcall": 387.04,
+            "mix": 445.21,
+            "underground_gei": 119.25
+          },
+          "mix": {
+            "keepspace": 105.67,
+            "rhythmcall": 400.08,
+            "mix": 763.68,
+            "underground_gei": 191.18
+          },
+          "underground_gei": {
+            "keepspace": 13.33,
+            "rhythmcall": 43.07,
+            "mix": 51.84,
+            "underground_gei": 364.82
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_scale1p0",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_scale1p0",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "struct_novelty",
+        "rate_scale": 1.0
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.508711,
+        "macro_role_iou": 0.328149,
+        "role_iou": {
+          "keepspace": 0.227427,
+          "rhythmcall": 0.280549,
+          "mix": 0.397619,
+          "underground_gei": 0.407
+        },
+        "boundary": {
+          "precision": 0.462329,
+          "recall": 0.427215,
+          "f1": 0.444079,
+          "tp": 135,
+          "fp": 157,
+          "fn": 181,
+          "target_count": 316,
+          "predicted_count": 292,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 157.83,
+            "rhythmcall": 118.86,
+            "mix": 176.18,
+            "underground_gei": 67.86
+          },
+          "rhythmcall": {
+            "keepspace": 52.34,
+            "rhythmcall": 435.05,
+            "mix": 396.39,
+            "underground_gei": 126.6
+          },
+          "mix": {
+            "keepspace": 90.6,
+            "rhythmcall": 379.38,
+            "mix": 834.44,
+            "underground_gei": 156.19
+          },
+          "underground_gei": {
+            "keepspace": 30.31,
+            "rhythmcall": 42.09,
+            "mix": 65.41,
+            "underground_gei": 335.25
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_call_window_scale0p9",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_call_window_scale0p9",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "call_window",
+        "rate_scale": 0.9
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.504629,
+        "macro_role_iou": 0.329339,
+        "role_iou": {
+          "keepspace": 0.230749,
+          "rhythmcall": 0.263705,
+          "mix": 0.393366,
+          "underground_gei": 0.429536
+        },
+        "boundary": {
+          "precision": 0.486792,
+          "recall": 0.408228,
+          "f1": 0.444062,
+          "tp": 129,
+          "fp": 136,
+          "fn": 187,
+          "target_count": 316,
+          "predicted_count": 265,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 164.48,
+            "rhythmcall": 110.21,
+            "mix": 184.7,
+            "underground_gei": 61.34
+          },
+          "rhythmcall": {
+            "keepspace": 66.3,
+            "rhythmcall": 411.09,
+            "mix": 428.85,
+            "underground_gei": 104.14
+          },
+          "mix": {
+            "keepspace": 95.47,
+            "rhythmcall": 383.0,
+            "mix": 835.67,
+            "underground_gei": 146.47
+          },
+          "underground_gei": {
+            "keepspace": 30.31,
+            "rhythmcall": 55.31,
+            "mix": 50.25,
+            "underground_gei": 337.19
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_scale0p9",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_scale0p9",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "struct_novelty",
+        "rate_scale": 0.9
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.503934,
+        "macro_role_iou": 0.326305,
+        "role_iou": {
+          "keepspace": 0.240698,
+          "rhythmcall": 0.294685,
+          "mix": 0.385274,
+          "underground_gei": 0.384564
+        },
+        "boundary": {
+          "precision": 0.484962,
+          "recall": 0.408228,
+          "f1": 0.443299,
+          "tp": 129,
+          "fp": 137,
+          "fn": 187,
+          "target_count": 316,
+          "predicted_count": 266,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 175.96,
+            "rhythmcall": 121.27,
+            "mix": 156.57,
+            "underground_gei": 66.93
+          },
+          "rhythmcall": {
+            "keepspace": 75.4,
+            "rhythmcall": 470.98,
+            "mix": 343.58,
+            "underground_gei": 120.42
+          },
+          "mix": {
+            "keepspace": 104.6,
+            "rhythmcall": 407.71,
+            "mix": 780.63,
+            "underground_gei": 167.67
+          },
+          "underground_gei": {
+            "keepspace": 30.31,
+            "rhythmcall": 58.89,
+            "mix": 65.41,
+            "underground_gei": 318.45
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_novelty_scale1p0",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_novelty_scale1p0",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "novelty",
+        "rate_scale": 1.0
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.516581,
+        "macro_role_iou": 0.339691,
+        "role_iou": {
+          "keepspace": 0.241469,
+          "rhythmcall": 0.276582,
+          "mix": 0.401254,
+          "underground_gei": 0.439457
+        },
+        "boundary": {
+          "precision": 0.459184,
+          "recall": 0.427215,
+          "f1": 0.442623,
+          "tp": 135,
+          "fp": 159,
+          "fn": 181,
+          "target_count": 316,
+          "predicted_count": 294,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 168.35,
+            "rhythmcall": 111.26,
+            "mix": 186.28,
+            "underground_gei": 54.84
+          },
+          "rhythmcall": {
+            "keepspace": 55.55,
+            "rhythmcall": 424.96,
+            "mix": 411.55,
+            "underground_gei": 118.32
+          },
+          "mix": {
+            "keepspace": 90.6,
+            "rhythmcall": 372.74,
+            "mix": 846.12,
+            "underground_gei": 151.15
+          },
+          "underground_gei": {
+            "keepspace": 30.31,
+            "rhythmcall": 42.09,
+            "mix": 50.25,
+            "underground_gei": 350.41
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_struct_novelty_scale0p75",
+      "candidate": {
+        "method": "loso_audio_rf__topk_struct_novelty_scale0p75",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "struct_novelty",
+        "rate_scale": 0.75
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.514696,
+        "macro_role_iou": 0.321132,
+        "role_iou": {
+          "keepspace": 0.213345,
+          "rhythmcall": 0.319072,
+          "mix": 0.410546,
+          "underground_gei": 0.341565
+        },
+        "boundary": {
+          "precision": 0.533632,
+          "recall": 0.376582,
+          "f1": 0.441558,
+          "tp": 119,
+          "fp": 104,
+          "fn": 197,
+          "target_count": 316,
+          "predicted_count": 223,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 132.12,
+            "rhythmcall": 94.45,
+            "mix": 176.78,
+            "underground_gei": 117.38
+          },
+          "rhythmcall": {
+            "keepspace": 10.23,
+            "rhythmcall": 461.05,
+            "mix": 277.26,
+            "underground_gei": 261.84
+          },
+          "mix": {
+            "keepspace": 78.81,
+            "rhythmcall": 326.49,
+            "mix": 817.96,
+            "underground_gei": 237.35
+          },
+          "underground_gei": {
+            "keepspace": 9.51,
+            "rhythmcall": 13.65,
+            "mix": 77.72,
+            "underground_gei": 372.18
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_novelty_scale0p75",
+      "candidate": {
+        "method": "loso_audio_rf__topk_novelty_scale0p75",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "novelty",
+        "rate_scale": 0.75
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.502909,
+        "macro_role_iou": 0.3116,
+        "role_iou": {
+          "keepspace": 0.213462,
+          "rhythmcall": 0.30591,
+          "mix": 0.395198,
+          "underground_gei": 0.331831
+        },
+        "boundary": {
+          "precision": 0.531532,
+          "recall": 0.373418,
+          "f1": 0.438662,
+          "tp": 118,
+          "fp": 104,
+          "fn": 198,
+          "target_count": 316,
+          "predicted_count": 222,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 132.12,
+            "rhythmcall": 94.46,
+            "mix": 189.62,
+            "underground_gei": 104.53
+          },
+          "rhythmcall": {
+            "keepspace": 6.07,
+            "rhythmcall": 437.73,
+            "mix": 328.41,
+            "underground_gei": 238.17
+          },
+          "mix": {
+            "keepspace": 82.63,
+            "rhythmcall": 312.42,
+            "mix": 820.66,
+            "underground_gei": 244.9
+          },
+          "underground_gei": {
+            "keepspace": 9.51,
+            "rhythmcall": 13.65,
+            "mix": 97.94,
+            "underground_gei": 351.96
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_novelty_scale0p9",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_novelty_scale0p9",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "novelty",
+        "rate_scale": 0.9
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.505576,
+        "macro_role_iou": 0.329663,
+        "role_iou": {
+          "keepspace": 0.237798,
+          "rhythmcall": 0.29067,
+          "mix": 0.383523,
+          "underground_gei": 0.406663
+        },
+        "boundary": {
+          "precision": 0.479245,
+          "recall": 0.401899,
+          "f1": 0.437177,
+          "tp": 127,
+          "fp": 138,
+          "fn": 189,
+          "target_count": 316,
+          "predicted_count": 265,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 172.76,
+            "rhythmcall": 113.67,
+            "mix": 174.44,
+            "underground_gei": 59.86
+          },
+          "rhythmcall": {
+            "keepspace": 72.2,
+            "rhythmcall": 460.89,
+            "mix": 360.08,
+            "underground_gei": 117.21
+          },
+          "mix": {
+            "keepspace": 103.26,
+            "rhythmcall": 402.67,
+            "mix": 784.45,
+            "underground_gei": 170.23
+          },
+          "underground_gei": {
+            "keepspace": 30.31,
+            "rhythmcall": 58.89,
+            "mix": 50.25,
+            "underground_gei": 333.61
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_call_window_scale0p75",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_call_window_scale0p75",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "call_window",
+        "rate_scale": 0.75
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.50265,
+        "macro_role_iou": 0.331752,
+        "role_iou": {
+          "keepspace": 0.233642,
+          "rhythmcall": 0.268456,
+          "mix": 0.378791,
+          "underground_gei": 0.44612
+        },
+        "boundary": {
+          "precision": 0.519651,
+          "recall": 0.376582,
+          "f1": 0.436697,
+          "tp": 119,
+          "fp": 110,
+          "fn": 197,
+          "target_count": 316,
+          "predicted_count": 229,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 167.29,
+            "rhythmcall": 102.34,
+            "mix": 193.62,
+            "underground_gei": 57.48
+          },
+          "rhythmcall": {
+            "keepspace": 71.4,
+            "rhythmcall": 419.89,
+            "mix": 417.59,
+            "underground_gei": 101.5
+          },
+          "mix": {
+            "keepspace": 73.38,
+            "rhythmcall": 429.63,
+            "mix": 803.82,
+            "underground_gei": 153.78
+          },
+          "underground_gei": {
+            "keepspace": 50.5,
+            "rhythmcall": 21.74,
+            "mix": 50.25,
+            "underground_gei": 350.57
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_len_scale0p75",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_len_scale0p75",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "struct_novelty_len",
+        "rate_scale": 0.75
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.50611,
+        "macro_role_iou": 0.336937,
+        "role_iou": {
+          "keepspace": 0.242578,
+          "rhythmcall": 0.268239,
+          "mix": 0.374798,
+          "underground_gei": 0.462131
+        },
+        "boundary": {
+          "precision": 0.519824,
+          "recall": 0.373418,
+          "f1": 0.434622,
+          "tp": 118,
+          "fp": 109,
+          "fn": 198,
+          "target_count": 316,
+          "predicted_count": 227,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 164.48,
+            "rhythmcall": 103.75,
+            "mix": 193.62,
+            "underground_gei": 58.88
+          },
+          "rhythmcall": {
+            "keepspace": 47.25,
+            "rhythmcall": 419.58,
+            "mix": 428.48,
+            "underground_gei": 115.07
+          },
+          "mix": {
+            "keepspace": 79.07,
+            "rhythmcall": 428.33,
+            "mix": 799.43,
+            "underground_gei": 153.78
+          },
+          "underground_gei": {
+            "keepspace": 31.0,
+            "rhythmcall": 21.74,
+            "mix": 50.25,
+            "underground_gei": 370.07
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_len_scale1p0",
+      "candidate": {
+        "method": "loso_audio_rf__topk_len_scale1p0",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "len",
+        "rate_scale": 1.0
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.462624,
+        "macro_role_iou": 0.282874,
+        "role_iou": {
+          "keepspace": 0.19563,
+          "rhythmcall": 0.250635,
+          "mix": 0.357866,
+          "underground_gei": 0.327365
+        },
+        "boundary": {
+          "precision": 0.441176,
+          "recall": 0.427215,
+          "f1": 0.434084,
+          "tp": 135,
+          "fp": 171,
+          "fn": 181,
+          "target_count": 316,
+          "predicted_count": 306,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 139.03,
+            "rhythmcall": 81.24,
+            "mix": 163.34,
+            "underground_gei": 137.12
+          },
+          "rhythmcall": {
+            "keepspace": 42.64,
+            "rhythmcall": 361.05,
+            "mix": 389.15,
+            "underground_gei": 217.54
+          },
+          "mix": {
+            "keepspace": 115.33,
+            "rhythmcall": 329.74,
+            "mix": 742.44,
+            "underground_gei": 273.1
+          },
+          "underground_gei": {
+            "keepspace": 31.98,
+            "rhythmcall": 19.18,
+            "mix": 61.53,
+            "underground_gei": 360.37
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_len_scale0p9",
+      "candidate": {
+        "method": "loso_audio_rf__topk_len_scale0p9",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "len",
+        "rate_scale": 0.9
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.459544,
+        "macro_role_iou": 0.277554,
+        "role_iou": {
+          "keepspace": 0.184317,
+          "rhythmcall": 0.250654,
+          "mix": 0.364332,
+          "underground_gei": 0.310914
+        },
+        "boundary": {
+          "precision": 0.461818,
+          "recall": 0.401899,
+          "f1": 0.42978,
+          "tp": 127,
+          "fp": 148,
+          "fn": 189,
+          "target_count": 316,
+          "predicted_count": 275,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 123.0,
+            "rhythmcall": 82.07,
+            "mix": 156.16,
+            "underground_gei": 159.5
+          },
+          "rhythmcall": {
+            "keepspace": 30.45,
+            "rhythmcall": 367.84,
+            "mix": 322.68,
+            "underground_gei": 289.41
+          },
+          "mix": {
+            "keepspace": 81.8,
+            "rhythmcall": 355.89,
+            "mix": 720.79,
+            "underground_gei": 302.13
+          },
+          "underground_gei": {
+            "keepspace": 34.35,
+            "rhythmcall": 19.18,
+            "mix": 38.94,
+            "underground_gei": 380.59
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_novelty_scale0p75",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_novelty_scale0p75",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "novelty",
+        "rate_scale": 0.75
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.511755,
+        "macro_role_iou": 0.326244,
+        "role_iou": {
+          "keepspace": 0.245942,
+          "rhythmcall": 0.281205,
+          "mix": 0.419478,
+          "underground_gei": 0.358349
+        },
+        "boundary": {
+          "precision": 0.511013,
+          "recall": 0.367089,
+          "f1": 0.427256,
+          "tp": 116,
+          "fp": 111,
+          "fn": 200,
+          "target_count": 316,
+          "predicted_count": 227,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 175.29,
+            "rhythmcall": 109.94,
+            "mix": 178.14,
+            "underground_gei": 57.36
+          },
+          "rhythmcall": {
+            "keepspace": 71.76,
+            "rhythmcall": 427.57,
+            "mix": 340.64,
+            "underground_gei": 170.41
+          },
+          "mix": {
+            "keepspace": 69.74,
+            "rhythmcall": 333.97,
+            "mix": 842.17,
+            "underground_gei": 214.73
+          },
+          "underground_gei": {
+            "keepspace": 50.5,
+            "rhythmcall": 66.2,
+            "mix": 28.27,
+            "underground_gei": 328.09
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_scale0p75",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_struct_novelty_scale0p75",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "struct_novelty",
+        "rate_scale": 0.75
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.520616,
+        "macro_role_iou": 0.334567,
+        "role_iou": {
+          "keepspace": 0.259279,
+          "rhythmcall": 0.294282,
+          "mix": 0.4227,
+          "underground_gei": 0.362007
+        },
+        "boundary": {
+          "precision": 0.511013,
+          "recall": 0.367089,
+          "f1": 0.427256,
+          "tp": 116,
+          "fp": 111,
+          "fn": 200,
+          "target_count": 316,
+          "predicted_count": 227,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 178.49,
+            "rhythmcall": 115.94,
+            "mix": 157.77,
+            "underground_gei": 68.53
+          },
+          "rhythmcall": {
+            "keepspace": 67.85,
+            "rhythmcall": 447.88,
+            "mix": 344.2,
+            "underground_gei": 150.45
+          },
+          "mix": {
+            "keepspace": 68.83,
+            "rhythmcall": 329.42,
+            "mix": 850.08,
+            "underground_gei": 212.28
+          },
+          "underground_gei": {
+            "keepspace": 31.0,
+            "rhythmcall": 66.2,
+            "mix": 48.49,
+            "underground_gei": 327.37
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__topk_len_scale0p75",
+      "candidate": {
+        "method": "loso_audio_rf__topk_len_scale0p75",
+        "base_method": "loso_audio_rf",
+        "decoder": "topk",
+        "score_mode": "len",
+        "rate_scale": 0.75
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.469975,
+        "macro_role_iou": 0.285889,
+        "role_iou": {
+          "keepspace": 0.186096,
+          "rhythmcall": 0.266262,
+          "mix": 0.367674,
+          "underground_gei": 0.323525
+        },
+        "boundary": {
+          "precision": 0.50431,
+          "recall": 0.370253,
+          "f1": 0.427007,
+          "tp": 117,
+          "fp": 115,
+          "fn": 199,
+          "target_count": 316,
+          "predicted_count": 232,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 123.0,
+            "rhythmcall": 89.46,
+            "mix": 176.72,
+            "underground_gei": 131.55
+          },
+          "rhythmcall": {
+            "keepspace": 30.45,
+            "rhythmcall": 396.11,
+            "mix": 346.76,
+            "underground_gei": 237.06
+          },
+          "mix": {
+            "keepspace": 75.42,
+            "rhythmcall": 353.45,
+            "mix": 743.79,
+            "underground_gei": 287.95
+          },
+          "underground_gei": {
+            "keepspace": 34.35,
+            "rhythmcall": 34.38,
+            "mix": 38.87,
+            "underground_gei": 365.46
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_len_scale1p0",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_len_scale1p0",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "len",
+        "rate_scale": 1.0
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.510555,
+        "macro_role_iou": 0.33896,
+        "role_iou": {
+          "keepspace": 0.241579,
+          "rhythmcall": 0.253807,
+          "mix": 0.391858,
+          "underground_gei": 0.468595
+        },
+        "boundary": {
+          "precision": 0.434783,
+          "recall": 0.411392,
+          "f1": 0.422764,
+          "tp": 130,
+          "fp": 169,
+          "fn": 186,
+          "target_count": 316,
+          "predicted_count": 299,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 169.11,
+            "rhythmcall": 94.11,
+            "mix": 200.3,
+            "underground_gei": 57.21
+          },
+          "rhythmcall": {
+            "keepspace": 58.05,
+            "rhythmcall": 382.05,
+            "mix": 464.01,
+            "underground_gei": 106.27
+          },
+          "mix": {
+            "keepspace": 107.91,
+            "rhythmcall": 357.72,
+            "mix": 852.98,
+            "underground_gei": 142.0
+          },
+          "underground_gei": {
+            "keepspace": 13.33,
+            "rhythmcall": 43.07,
+            "mix": 51.84,
+            "underground_gei": 364.82
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_len_scale0p9",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_len_scale0p9",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "len",
+        "rate_scale": 0.9
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.509926,
+        "macro_role_iou": 0.338563,
+        "role_iou": {
+          "keepspace": 0.233936,
+          "rhythmcall": 0.255559,
+          "mix": 0.391678,
+          "underground_gei": 0.47308
+        },
+        "boundary": {
+          "precision": 0.450909,
+          "recall": 0.392405,
+          "f1": 0.419628,
+          "tp": 124,
+          "fp": 151,
+          "fn": 192,
+          "target_count": 316,
+          "predicted_count": 275,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 169.11,
+            "rhythmcall": 86.73,
+            "mix": 210.14,
+            "underground_gei": 54.75
+          },
+          "rhythmcall": {
+            "keepspace": 76.72,
+            "rhythmcall": 383.21,
+            "mix": 446.64,
+            "underground_gei": 103.81
+          },
+          "mix": {
+            "keepspace": 112.11,
+            "rhythmcall": 359.32,
+            "mix": 849.64,
+            "underground_gei": 139.54
+          },
+          "underground_gei": {
+            "keepspace": 13.33,
+            "rhythmcall": 43.07,
+            "mix": 51.84,
+            "underground_gei": 364.82
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_call_window_0p25",
+      "candidate": {
+        "method": "loso_audio_rf__thr_call_window_0p25",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "call_window",
+        "threshold": 0.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.478452,
+        "macro_role_iou": 0.296349,
+        "role_iou": {
+          "keepspace": 0.210461,
+          "rhythmcall": 0.261194,
+          "mix": 0.372666,
+          "underground_gei": 0.341074
+        },
+        "boundary": {
+          "precision": 0.593023,
+          "recall": 0.322785,
+          "f1": 0.418033,
+          "tp": 102,
+          "fp": 70,
+          "fn": 214,
+          "target_count": 316,
+          "predicted_count": 172,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 134.63,
+            "rhythmcall": 93.84,
+            "mix": 166.38,
+            "underground_gei": 125.88
+          },
+          "rhythmcall": {
+            "keepspace": 0.56,
+            "rhythmcall": 394.86,
+            "mix": 364.29,
+            "underground_gei": 250.67
+          },
+          "mix": {
+            "keepspace": 86.82,
+            "rhythmcall": 373.01,
+            "mix": 754.44,
+            "underground_gei": 246.34
+          },
+          "underground_gei": {
+            "keepspace": 31.58,
+            "rhythmcall": 34.52,
+            "mix": 33.16,
+            "underground_gei": 373.8
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_call_window_0p65",
+      "candidate": {
+        "method": "loso_audio_rf__thr_call_window_0p65",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "call_window",
+        "threshold": 0.65
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.420047,
+        "macro_role_iou": 0.234894,
+        "role_iou": {
+          "keepspace": 0.167968,
+          "rhythmcall": 0.159756,
+          "mix": 0.362184,
+          "underground_gei": 0.249669
+        },
+        "boundary": {
+          "precision": 0.495652,
+          "recall": 0.360759,
+          "f1": 0.417582,
+          "tp": 114,
+          "fp": 116,
+          "fn": 202,
+          "target_count": 316,
+          "predicted_count": 230,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 95.75,
+            "rhythmcall": 117.27,
+            "mix": 239.89,
+            "underground_gei": 67.82
+          },
+          "rhythmcall": {
+            "keepspace": 4.64,
+            "rhythmcall": 235.51,
+            "mix": 527.05,
+            "underground_gei": 243.18
+          },
+          "mix": {
+            "keepspace": 37.54,
+            "rhythmcall": 295.03,
+            "mix": 861.91,
+            "underground_gei": 266.13
+          },
+          "underground_gei": {
+            "keepspace": 7.14,
+            "rhythmcall": 51.51,
+            "mix": 152.21,
+            "underground_gei": 262.2
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_struct_novelty_len_0p25",
+      "candidate": {
+        "method": "loso_audio_rf__thr_struct_novelty_len_0p25",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty_len",
+        "threshold": 0.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.468962,
+        "macro_role_iou": 0.288915,
+        "role_iou": {
+          "keepspace": 0.207149,
+          "rhythmcall": 0.249789,
+          "mix": 0.363915,
+          "underground_gei": 0.334805
+        },
+        "boundary": {
+          "precision": 0.60241,
+          "recall": 0.316456,
+          "f1": 0.414938,
+          "tp": 100,
+          "fp": 66,
+          "fn": 216,
+          "target_count": 316,
+          "predicted_count": 166,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 133.52,
+            "rhythmcall": 94.95,
+            "mix": 169.66,
+            "underground_gei": 122.6
+          },
+          "rhythmcall": {
+            "keepspace": 0.56,
+            "rhythmcall": 376.61,
+            "mix": 372.54,
+            "underground_gei": 260.67
+          },
+          "mix": {
+            "keepspace": 91.69,
+            "rhythmcall": 367.86,
+            "mix": 740.92,
+            "underground_gei": 260.14
+          },
+          "underground_gei": {
+            "keepspace": 31.58,
+            "rhythmcall": 34.52,
+            "mix": 33.16,
+            "underground_gei": 373.8
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__minrun2",
+      "candidate": {
+        "method": "loso_audio_rf__minrun2",
+        "base_method": "loso_audio_rf",
+        "decoder": "minrun",
+        "min_bars": 2
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.493544,
+        "macro_role_iou": 0.304333,
+        "role_iou": {
+          "keepspace": 0.193354,
+          "rhythmcall": 0.254841,
+          "mix": 0.392282,
+          "underground_gei": 0.376853
+        },
+        "boundary": {
+          "precision": 0.554945,
+          "recall": 0.31962,
+          "f1": 0.405622,
+          "tp": 101,
+          "fp": 81,
+          "fn": 215,
+          "target_count": 316,
+          "predicted_count": 182,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 121.26,
+            "rhythmcall": 87.95,
+            "mix": 205.55,
+            "underground_gei": 105.97
+          },
+          "rhythmcall": {
+            "keepspace": 21.18,
+            "rhythmcall": 365.06,
+            "mix": 415.7,
+            "underground_gei": 208.44
+          },
+          "mix": {
+            "keepspace": 61.91,
+            "rhythmcall": 321.42,
+            "mix": 836.02,
+            "underground_gei": 241.26
+          },
+          "underground_gei": {
+            "keepspace": 23.32,
+            "rhythmcall": 12.75,
+            "mix": 49.31,
+            "underground_gei": 387.68
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_call_window_0p25",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_call_window_0p25",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "call_window",
+        "threshold": 0.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.493379,
+        "macro_role_iou": 0.324279,
+        "role_iou": {
+          "keepspace": 0.231216,
+          "rhythmcall": 0.261528,
+          "mix": 0.367373,
+          "underground_gei": 0.437001
+        },
+        "boundary": {
+          "precision": 0.579882,
+          "recall": 0.310127,
+          "f1": 0.404124,
+          "tp": 98,
+          "fp": 71,
+          "fn": 218,
+          "target_count": 316,
+          "predicted_count": 169,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 156.05,
+            "rhythmcall": 130.24,
+            "mix": 165.76,
+            "underground_gei": 68.68
+          },
+          "rhythmcall": {
+            "keepspace": 41.35,
+            "rhythmcall": 425.42,
+            "mix": 412.47,
+            "underground_gei": 131.14
+          },
+          "mix": {
+            "keepspace": 90.08,
+            "rhythmcall": 464.31,
+            "mix": 777.82,
+            "underground_gei": 128.4
+          },
+          "underground_gei": {
+            "keepspace": 22.75,
+            "rhythmcall": 21.74,
+            "mix": 78.41,
+            "underground_gei": 350.16
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_len_0p25",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_len_0p25",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty_len",
+        "threshold": 0.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.503094,
+        "macro_role_iou": 0.337757,
+        "role_iou": {
+          "keepspace": 0.240354,
+          "rhythmcall": 0.26396,
+          "mix": 0.372326,
+          "underground_gei": 0.474388
+        },
+        "boundary": {
+          "precision": 0.585366,
+          "recall": 0.303797,
+          "f1": 0.4,
+          "tp": 96,
+          "fp": 68,
+          "fn": 220,
+          "target_count": 316,
+          "predicted_count": 164,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 157.16,
+            "rhythmcall": 138.73,
+            "mix": 177.23,
+            "underground_gei": 47.61
+          },
+          "rhythmcall": {
+            "keepspace": 40.52,
+            "rhythmcall": 431.1,
+            "mix": 445.0,
+            "underground_gei": 93.76
+          },
+          "mix": {
+            "keepspace": 69.87,
+            "rhythmcall": 462.35,
+            "mix": 804.69,
+            "underground_gei": 123.7
+          },
+          "underground_gei": {
+            "keepspace": 22.75,
+            "rhythmcall": 21.74,
+            "mix": 78.41,
+            "underground_gei": 350.16
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_call_window_0p65",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_call_window_0p65",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "call_window",
+        "threshold": 0.65
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.481517,
+        "macro_role_iou": 0.295147,
+        "role_iou": {
+          "keepspace": 0.197619,
+          "rhythmcall": 0.189042,
+          "mix": 0.408259,
+          "underground_gei": 0.385667
+        },
+        "boundary": {
+          "precision": 0.442688,
+          "recall": 0.35443,
+          "f1": 0.393673,
+          "tp": 112,
+          "fp": 141,
+          "fn": 204,
+          "target_count": 316,
+          "predicted_count": 253,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 125.99,
+            "rhythmcall": 139.68,
+            "mix": 173.93,
+            "underground_gei": 81.13
+          },
+          "rhythmcall": {
+            "keepspace": 38.35,
+            "rhythmcall": 281.72,
+            "mix": 562.17,
+            "underground_gei": 128.14
+          },
+          "mix": {
+            "keepspace": 73.38,
+            "rhythmcall": 302.98,
+            "mix": 943.02,
+            "underground_gei": 141.23
+          },
+          "underground_gei": {
+            "keepspace": 5.08,
+            "rhythmcall": 37.21,
+            "mix": 113.15,
+            "underground_gei": 317.62
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__topk_len_scale0p75",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__topk_len_scale0p75",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "topk",
+        "score_mode": "len",
+        "rate_scale": 0.75
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.504035,
+        "macro_role_iou": 0.332154,
+        "role_iou": {
+          "keepspace": 0.243669,
+          "rhythmcall": 0.252158,
+          "mix": 0.382357,
+          "underground_gei": 0.450432
+        },
+        "boundary": {
+          "precision": 0.461538,
+          "recall": 0.341772,
+          "f1": 0.392727,
+          "tp": 108,
+          "fp": 126,
+          "fn": 208,
+          "target_count": 316,
+          "predicted_count": 234,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 170.22,
+            "rhythmcall": 83.39,
+            "mix": 206.38,
+            "underground_gei": 60.74
+          },
+          "rhythmcall": {
+            "keepspace": 60.04,
+            "rhythmcall": 374.76,
+            "mix": 469.08,
+            "underground_gei": 106.5
+          },
+          "mix": {
+            "keepspace": 104.23,
+            "rhythmcall": 351.86,
+            "mix": 837.95,
+            "underground_gei": 166.57
+          },
+          "underground_gei": {
+            "keepspace": 13.57,
+            "rhythmcall": 40.58,
+            "mix": 55.47,
+            "underground_gei": 363.44
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_struct_novelty_0p65",
+      "candidate": {
+        "method": "loso_audio_rf__thr_struct_novelty_0p65",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty",
+        "threshold": 0.65
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.3915,
+        "macro_role_iou": 0.204223,
+        "role_iou": {
+          "keepspace": 0.150628,
+          "rhythmcall": 0.144686,
+          "mix": 0.355907,
+          "underground_gei": 0.16567
+        },
+        "boundary": {
+          "precision": 0.458515,
+          "recall": 0.332278,
+          "f1": 0.385321,
+          "tp": 105,
+          "fp": 124,
+          "fn": 211,
+          "target_count": 316,
+          "predicted_count": 229,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 93.84,
+            "rhythmcall": 82.41,
+            "mix": 254.06,
+            "underground_gei": 90.42
+          },
+          "rhythmcall": {
+            "keepspace": 9.59,
+            "rhythmcall": 191.6,
+            "mix": 533.88,
+            "underground_gei": 275.31
+          },
+          "mix": {
+            "keepspace": 70.34,
+            "rhythmcall": 195.59,
+            "mix": 879.91,
+            "underground_gei": 314.77
+          },
+          "underground_gei": {
+            "keepspace": 22.33,
+            "rhythmcall": 35.87,
+            "mix": 223.75,
+            "underground_gei": 191.11
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__minrun2",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__minrun2",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "minrun",
+        "min_bars": 2
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.504909,
+        "macro_role_iou": 0.332698,
+        "role_iou": {
+          "keepspace": 0.23515,
+          "rhythmcall": 0.251261,
+          "mix": 0.386936,
+          "underground_gei": 0.457445
+        },
+        "boundary": {
+          "precision": 0.575949,
+          "recall": 0.287975,
+          "f1": 0.383966,
+          "tp": 91,
+          "fp": 67,
+          "fn": 225,
+          "target_count": 316,
+          "predicted_count": 158,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 159.26,
+            "rhythmcall": 103.1,
+            "mix": 194.65,
+            "underground_gei": 63.72
+          },
+          "rhythmcall": {
+            "keepspace": 51.06,
+            "rhythmcall": 384.92,
+            "mix": 464.56,
+            "underground_gei": 109.84
+          },
+          "mix": {
+            "keepspace": 97.21,
+            "rhythmcall": 376.54,
+            "mix": 844.14,
+            "underground_gei": 142.72
+          },
+          "underground_gei": {
+            "keepspace": 8.27,
+            "rhythmcall": 41.93,
+            "mix": 61.78,
+            "underground_gei": 361.08
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_struct_novelty_0p25",
+      "candidate": {
+        "method": "loso_audio_rf__thr_struct_novelty_0p25",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty",
+        "threshold": 0.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.421796,
+        "macro_role_iou": 0.25415,
+        "role_iou": {
+          "keepspace": 0.194261,
+          "rhythmcall": 0.281994,
+          "mix": 0.289234,
+          "underground_gei": 0.25111
+        },
+        "boundary": {
+          "precision": 0.704348,
+          "recall": 0.256329,
+          "f1": 0.37587,
+          "tp": 81,
+          "fp": 34,
+          "fn": 235,
+          "target_count": 316,
+          "predicted_count": 115,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 125.57,
+            "rhythmcall": 131.2,
+            "mix": 132.86,
+            "underground_gei": 131.1
+          },
+          "rhythmcall": {
+            "keepspace": 0.56,
+            "rhythmcall": 428.67,
+            "mix": 348.49,
+            "underground_gei": 232.66
+          },
+          "mix": {
+            "keepspace": 115.6,
+            "rhythmcall": 336.82,
+            "mix": 592.73,
+            "underground_gei": 415.46
+          },
+          "underground_gei": {
+            "keepspace": 9.51,
+            "rhythmcall": 41.74,
+            "mix": 107.35,
+            "underground_gei": 314.46
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_novelty_0p25",
+      "candidate": {
+        "method": "loso_audio_rf__thr_novelty_0p25",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "novelty",
+        "threshold": 0.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.432368,
+        "macro_role_iou": 0.253022,
+        "role_iou": {
+          "keepspace": 0.207883,
+          "rhythmcall": 0.220442,
+          "mix": 0.349402,
+          "underground_gei": 0.234362
+        },
+        "boundary": {
+          "precision": 0.602941,
+          "recall": 0.259494,
+          "f1": 0.362832,
+          "tp": 82,
+          "fp": 54,
+          "fn": 234,
+          "target_count": 316,
+          "predicted_count": 136,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 135.02,
+            "rhythmcall": 80.75,
+            "mix": 216.35,
+            "underground_gei": 88.61
+          },
+          "rhythmcall": {
+            "keepspace": 0.56,
+            "rhythmcall": 309.04,
+            "mix": 460.46,
+            "underground_gei": 240.32
+          },
+          "mix": {
+            "keepspace": 78.54,
+            "rhythmcall": 284.75,
+            "mix": 795.25,
+            "underground_gei": 302.07
+          },
+          "underground_gei": {
+            "keepspace": 49.67,
+            "rhythmcall": 26.03,
+            "mix": 138.61,
+            "underground_gei": 258.75
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_struct_novelty_len_0p35",
+      "candidate": {
+        "method": "loso_audio_rf__thr_struct_novelty_len_0p35",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty_len",
+        "threshold": 0.35
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.446317,
+        "macro_role_iou": 0.268655,
+        "role_iou": {
+          "keepspace": 0.178269,
+          "rhythmcall": 0.23543,
+          "mix": 0.347301,
+          "underground_gei": 0.313618
+        },
+        "boundary": {
+          "precision": 0.669565,
+          "recall": 0.243671,
+          "f1": 0.357309,
+          "tp": 77,
+          "fp": 38,
+          "fn": 239,
+          "target_count": 316,
+          "predicted_count": 115,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 119.46,
+            "rhythmcall": 81.99,
+            "mix": 153.75,
+            "underground_gei": 165.53
+          },
+          "rhythmcall": {
+            "keepspace": 23.54,
+            "rhythmcall": 356.13,
+            "mix": 344.67,
+            "underground_gei": 286.04
+          },
+          "mix": {
+            "keepspace": 116.33,
+            "rhythmcall": 368.83,
+            "mix": 691.89,
+            "underground_gei": 283.56
+          },
+          "underground_gei": {
+            "keepspace": 9.51,
+            "rhythmcall": 51.48,
+            "mix": 33.16,
+            "underground_gei": 378.91
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__minrun3",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__minrun3",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "minrun",
+        "min_bars": 3
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.507683,
+        "macro_role_iou": 0.333445,
+        "role_iou": {
+          "keepspace": 0.226206,
+          "rhythmcall": 0.255475,
+          "mix": 0.391459,
+          "underground_gei": 0.460638
+        },
+        "boundary": {
+          "precision": 0.593985,
+          "recall": 0.25,
+          "f1": 0.351893,
+          "tp": 79,
+          "fp": 54,
+          "fn": 237,
+          "target_count": 316,
+          "predicted_count": 133,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 153.51,
+            "rhythmcall": 105.19,
+            "mix": 203.23,
+            "underground_gei": 58.8
+          },
+          "rhythmcall": {
+            "keepspace": 52.46,
+            "rhythmcall": 389.14,
+            "mix": 459.23,
+            "underground_gei": 109.55
+          },
+          "mix": {
+            "keepspace": 97.17,
+            "rhythmcall": 365.7,
+            "mix": 855.28,
+            "underground_gei": 142.46
+          },
+          "underground_gei": {
+            "keepspace": 8.27,
+            "rhythmcall": 41.93,
+            "mix": 61.78,
+            "underground_gei": 361.08
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_len_0p65",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_len_0p65",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty_len",
+        "threshold": 0.65
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.397994,
+        "macro_role_iou": 0.227053,
+        "role_iou": {
+          "keepspace": 0.13544,
+          "rhythmcall": 0.238686,
+          "mix": 0.310436,
+          "underground_gei": 0.223651
+        },
+        "boundary": {
+          "precision": 0.450495,
+          "recall": 0.287975,
+          "f1": 0.351351,
+          "tp": 91,
+          "fp": 111,
+          "fn": 225,
+          "target_count": 316,
+          "predicted_count": 202,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 105.42,
+            "rhythmcall": 226.9,
+            "mix": 126.75,
+            "underground_gei": 61.66
+          },
+          "rhythmcall": {
+            "keepspace": 56.85,
+            "rhythmcall": 416.09,
+            "mix": 385.04,
+            "underground_gei": 152.4
+          },
+          "mix": {
+            "keepspace": 160.36,
+            "rhythmcall": 388.67,
+            "mix": 643.91,
+            "underground_gei": 267.67
+          },
+          "underground_gei": {
+            "keepspace": 40.41,
+            "rhythmcall": 117.3,
+            "mix": 101.81,
+            "underground_gei": 213.54
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_struct_novelty_0p35",
+      "candidate": {
+        "method": "loso_audio_rf__thr_struct_novelty_0p35",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty",
+        "threshold": 0.35
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.374587,
+        "macro_role_iou": 0.218242,
+        "role_iou": {
+          "keepspace": 0.165005,
+          "rhythmcall": 0.245534,
+          "mix": 0.255592,
+          "underground_gei": 0.206836
+        },
+        "boundary": {
+          "precision": 0.747368,
+          "recall": 0.224684,
+          "f1": 0.345499,
+          "tp": 71,
+          "fp": 24,
+          "fn": 245,
+          "target_count": 316,
+          "predicted_count": 95,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 112.7,
+            "rhythmcall": 131.07,
+            "mix": 129.58,
+            "underground_gei": 147.38
+          },
+          "rhythmcall": {
+            "keepspace": 0.56,
+            "rhythmcall": 394.19,
+            "mix": 367.59,
+            "underground_gei": 248.04
+          },
+          "mix": {
+            "keepspace": 124.61,
+            "rhythmcall": 379.89,
+            "mix": 521.43,
+            "underground_gei": 434.68
+          },
+          "underground_gei": {
+            "keepspace": 37.11,
+            "rhythmcall": 84.1,
+            "mix": 82.31,
+            "underground_gei": 269.54
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_call_window_0p35",
+      "candidate": {
+        "method": "loso_audio_rf__thr_call_window_0p35",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "call_window",
+        "threshold": 0.35
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.44277,
+        "macro_role_iou": 0.264798,
+        "role_iou": {
+          "keepspace": 0.176077,
+          "rhythmcall": 0.225256,
+          "mix": 0.352235,
+          "underground_gei": 0.305622
+        },
+        "boundary": {
+          "precision": 0.663636,
+          "recall": 0.231013,
+          "f1": 0.342723,
+          "tp": 73,
+          "fp": 37,
+          "fn": 243,
+          "target_count": 316,
+          "predicted_count": 110,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 120.84,
+            "rhythmcall": 68.35,
+            "mix": 176.75,
+            "underground_gei": 154.79
+          },
+          "rhythmcall": {
+            "keepspace": 26.26,
+            "rhythmcall": 337.05,
+            "mix": 337.04,
+            "underground_gei": 310.03
+          },
+          "mix": {
+            "keepspace": 129.79,
+            "rhythmcall": 366.09,
+            "mix": 712.48,
+            "underground_gei": 252.25
+          },
+          "underground_gei": {
+            "keepspace": 9.51,
+            "rhythmcall": 51.48,
+            "mix": 48.34,
+            "underground_gei": 363.73
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_novelty_0p25",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_novelty_0p25",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "novelty",
+        "threshold": 0.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.474691,
+        "macro_role_iou": 0.299337,
+        "role_iou": {
+          "keepspace": 0.225878,
+          "rhythmcall": 0.259986,
+          "mix": 0.368989,
+          "underground_gei": 0.342497
+        },
+        "boundary": {
+          "precision": 0.637931,
+          "recall": 0.234177,
+          "f1": 0.342593,
+          "tp": 74,
+          "fp": 42,
+          "fn": 242,
+          "target_count": 316,
+          "predicted_count": 116,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 158.6,
+            "rhythmcall": 171.32,
+            "mix": 126.56,
+            "underground_gei": 64.25
+          },
+          "rhythmcall": {
+            "keepspace": 83.75,
+            "rhythmcall": 437.76,
+            "mix": 394.57,
+            "underground_gei": 94.3
+          },
+          "mix": {
+            "keepspace": 95.11,
+            "rhythmcall": 419.27,
+            "mix": 772.52,
+            "underground_gei": 173.71
+          },
+          "underground_gei": {
+            "keepspace": 2.56,
+            "rhythmcall": 82.81,
+            "mix": 111.87,
+            "underground_gei": 275.82
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_0p25",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_0p25",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty",
+        "threshold": 0.25
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.446894,
+        "macro_role_iou": 0.277263,
+        "role_iou": {
+          "keepspace": 0.197711,
+          "rhythmcall": 0.248775,
+          "mix": 0.330566,
+          "underground_gei": 0.332001
+        },
+        "boundary": {
+          "precision": 0.657658,
+          "recall": 0.231013,
+          "f1": 0.34192,
+          "tp": 73,
+          "fp": 38,
+          "fn": 243,
+          "target_count": 316,
+          "predicted_count": 111,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 134.59,
+            "rhythmcall": 174.48,
+            "mix": 174.33,
+            "underground_gei": 37.33
+          },
+          "rhythmcall": {
+            "keepspace": 59.85,
+            "rhythmcall": 429.42,
+            "mix": 417.71,
+            "underground_gei": 103.4
+          },
+          "mix": {
+            "keepspace": 77.41,
+            "rhythmcall": 462.9,
+            "mix": 711.17,
+            "underground_gei": 209.13
+          },
+          "underground_gei": {
+            "keepspace": 22.75,
+            "rhythmcall": 78.38,
+            "mix": 98.72,
+            "underground_gei": 273.21
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_novelty_0p65",
+      "candidate": {
+        "method": "loso_audio_rf__thr_novelty_0p65",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "novelty",
+        "threshold": 0.65
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.407599,
+        "macro_role_iou": 0.219536,
+        "role_iou": {
+          "keepspace": 0.151466,
+          "rhythmcall": 0.207931,
+          "mix": 0.34631,
+          "underground_gei": 0.172436
+        },
+        "boundary": {
+          "precision": 0.429268,
+          "recall": 0.278481,
+          "f1": 0.337812,
+          "tp": 88,
+          "fp": 117,
+          "fn": 228,
+          "target_count": 316,
+          "predicted_count": 205,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 94.41,
+            "rhythmcall": 103.37,
+            "mix": 268.1,
+            "underground_gei": 54.85
+          },
+          "rhythmcall": {
+            "keepspace": 10.15,
+            "rhythmcall": 304.54,
+            "mix": 491.1,
+            "underground_gei": 204.59
+          },
+          "mix": {
+            "keepspace": 70.1,
+            "rhythmcall": 279.93,
+            "mix": 840.39,
+            "underground_gei": 270.19
+          },
+          "underground_gei": {
+            "keepspace": 22.33,
+            "rhythmcall": 70.94,
+            "mix": 206.89,
+            "underground_gei": 172.9
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_len_0p35",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_len_0p35",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty_len",
+        "threshold": 0.35
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.503605,
+        "macro_role_iou": 0.341272,
+        "role_iou": {
+          "keepspace": 0.274284,
+          "rhythmcall": 0.253698,
+          "mix": 0.368724,
+          "underground_gei": 0.46838
+        },
+        "boundary": {
+          "precision": 0.596774,
+          "recall": 0.234177,
+          "f1": 0.336364,
+          "tp": 74,
+          "fp": 50,
+          "fn": 242,
+          "target_count": 316,
+          "predicted_count": 124,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 166.15,
+            "rhythmcall": 123.83,
+            "mix": 157.15,
+            "underground_gei": 73.6
+          },
+          "rhythmcall": {
+            "keepspace": 36.44,
+            "rhythmcall": 418.11,
+            "mix": 442.07,
+            "underground_gei": 113.76
+          },
+          "mix": {
+            "keepspace": 48.59,
+            "rhythmcall": 485.37,
+            "mix": 784.9,
+            "underground_gei": 141.75
+          },
+          "underground_gei": {
+            "keepspace": 0.0,
+            "rhythmcall": 28.48,
+            "mix": 68.86,
+            "underground_gei": 375.72
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__minrun3",
+      "candidate": {
+        "method": "loso_audio_rf__minrun3",
+        "base_method": "loso_audio_rf",
+        "decoder": "minrun",
+        "min_bars": 3
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.488227,
+        "macro_role_iou": 0.297168,
+        "role_iou": {
+          "keepspace": 0.182395,
+          "rhythmcall": 0.244648,
+          "mix": 0.391094,
+          "underground_gei": 0.370536
+        },
+        "boundary": {
+          "precision": 0.554745,
+          "recall": 0.240506,
+          "f1": 0.335541,
+          "tp": 76,
+          "fp": 61,
+          "fn": 240,
+          "target_count": 316,
+          "predicted_count": 137,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 110.67,
+            "rhythmcall": 84.29,
+            "mix": 214.81,
+            "underground_gei": 110.96
+          },
+          "rhythmcall": {
+            "keepspace": 18.5,
+            "rhythmcall": 348.57,
+            "mix": 431.29,
+            "underground_gei": 212.02
+          },
+          "mix": {
+            "keepspace": 41.46,
+            "rhythmcall": 319.91,
+            "mix": 842.13,
+            "underground_gei": 257.11
+          },
+          "underground_gei": {
+            "keepspace": 26.07,
+            "rhythmcall": 10.2,
+            "mix": 46.56,
+            "underground_gei": 390.23
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_call_window_0p35",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_call_window_0p35",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "call_window",
+        "threshold": 0.35
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.524126,
+        "macro_role_iou": 0.339337,
+        "role_iou": {
+          "keepspace": 0.267711,
+          "rhythmcall": 0.273122,
+          "mix": 0.419441,
+          "underground_gei": 0.397074
+        },
+        "boundary": {
+          "precision": 0.603448,
+          "recall": 0.221519,
+          "f1": 0.324074,
+          "tp": 70,
+          "fp": 46,
+          "fn": 246,
+          "target_count": 316,
+          "predicted_count": 116,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 163.4,
+            "rhythmcall": 96.52,
+            "mix": 173.87,
+            "underground_gei": 86.94
+          },
+          "rhythmcall": {
+            "keepspace": 38.5,
+            "rhythmcall": 402.47,
+            "mix": 405.84,
+            "underground_gei": 163.57
+          },
+          "mix": {
+            "keepspace": 51.13,
+            "rhythmcall": 326.53,
+            "mix": 883.67,
+            "underground_gei": 199.28
+          },
+          "underground_gei": {
+            "keepspace": 0.0,
+            "rhythmcall": 40.16,
+            "mix": 66.46,
+            "underground_gei": 366.44
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_len_0p35",
+      "candidate": {
+        "method": "loso_audio_rf__thr_len_0p35",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "len",
+        "threshold": 0.35
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.423819,
+        "macro_role_iou": 0.243564,
+        "role_iou": {
+          "keepspace": 0.156556,
+          "rhythmcall": 0.212935,
+          "mix": 0.354037,
+          "underground_gei": 0.250728
+        },
+        "boundary": {
+          "precision": 0.559055,
+          "recall": 0.224684,
+          "f1": 0.320542,
+          "tp": 71,
+          "fp": 56,
+          "fn": 245,
+          "target_count": 316,
+          "predicted_count": 127,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 103.46,
+            "rhythmcall": 72.24,
+            "mix": 206.24,
+            "underground_gei": 138.79
+          },
+          "rhythmcall": {
+            "keepspace": 28.03,
+            "rhythmcall": 325.87,
+            "mix": 400.14,
+            "underground_gei": 256.34
+          },
+          "mix": {
+            "keepspace": 77.74,
+            "rhythmcall": 352.1,
+            "mix": 751.38,
+            "underground_gei": 279.39
+          },
+          "underground_gei": {
+            "keepspace": 34.35,
+            "rhythmcall": 95.65,
+            "mix": 55.33,
+            "underground_gei": 287.73
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_len_0p45",
+      "candidate": {
+        "method": "loso_audio_rf__thr_len_0p45",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "len",
+        "threshold": 0.45
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.423819,
+        "macro_role_iou": 0.243564,
+        "role_iou": {
+          "keepspace": 0.156556,
+          "rhythmcall": 0.212935,
+          "mix": 0.354037,
+          "underground_gei": 0.250728
+        },
+        "boundary": {
+          "precision": 0.559055,
+          "recall": 0.224684,
+          "f1": 0.320542,
+          "tp": 71,
+          "fp": 56,
+          "fn": 245,
+          "target_count": 316,
+          "predicted_count": 127,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 103.46,
+            "rhythmcall": 72.24,
+            "mix": 206.24,
+            "underground_gei": 138.79
+          },
+          "rhythmcall": {
+            "keepspace": 28.03,
+            "rhythmcall": 325.87,
+            "mix": 400.14,
+            "underground_gei": 256.34
+          },
+          "mix": {
+            "keepspace": 77.74,
+            "rhythmcall": 352.1,
+            "mix": 751.38,
+            "underground_gei": 279.39
+          },
+          "underground_gei": {
+            "keepspace": 34.35,
+            "rhythmcall": 95.65,
+            "mix": 55.33,
+            "underground_gei": 287.73
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_0p35",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_0p35",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty",
+        "threshold": 0.35
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.438735,
+        "macro_role_iou": 0.262229,
+        "role_iou": {
+          "keepspace": 0.166329,
+          "rhythmcall": 0.242726,
+          "mix": 0.33473,
+          "underground_gei": 0.305132
+        },
+        "boundary": {
+          "precision": 0.691489,
+          "recall": 0.205696,
+          "f1": 0.317073,
+          "tp": 65,
+          "fp": 29,
+          "fn": 251,
+          "target_count": 316,
+          "predicted_count": 94,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 108.48,
+            "rhythmcall": 151.17,
+            "mix": 186.57,
+            "underground_gei": 74.51
+          },
+          "rhythmcall": {
+            "keepspace": 50.27,
+            "rhythmcall": 401.77,
+            "mix": 390.05,
+            "underground_gei": 168.29
+          },
+          "mix": {
+            "keepspace": 61.01,
+            "rhythmcall": 437.37,
+            "mix": 716.44,
+            "underground_gei": 245.79
+          },
+          "underground_gei": {
+            "keepspace": 20.19,
+            "rhythmcall": 56.32,
+            "mix": 103.12,
+            "underground_gei": 293.43
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_novelty_0p65",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_novelty_0p65",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "novelty",
+        "threshold": 0.65
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.440146,
+        "macro_role_iou": 0.231226,
+        "role_iou": {
+          "keepspace": 0.180437,
+          "rhythmcall": 0.143174,
+          "mix": 0.39511,
+          "underground_gei": 0.206183
+        },
+        "boundary": {
+          "precision": 0.431694,
+          "recall": 0.25,
+          "f1": 0.316633,
+          "tp": 79,
+          "fp": 104,
+          "fn": 237,
+          "target_count": 316,
+          "predicted_count": 183,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 111.05,
+            "rhythmcall": 62.89,
+            "mix": 318.68,
+            "underground_gei": 28.11
+          },
+          "rhythmcall": {
+            "keepspace": 26.84,
+            "rhythmcall": 201.64,
+            "mix": 719.53,
+            "underground_gei": 62.37
+          },
+          "mix": {
+            "keepspace": 65.36,
+            "rhythmcall": 227.79,
+            "mix": 1077.6,
+            "underground_gei": 89.86
+          },
+          "underground_gei": {
+            "keepspace": 2.52,
+            "rhythmcall": 107.3,
+            "mix": 228.52,
+            "underground_gei": 134.72
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_0p65",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_0p65",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty",
+        "threshold": 0.65
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.436412,
+        "macro_role_iou": 0.226141,
+        "role_iou": {
+          "keepspace": 0.181212,
+          "rhythmcall": 0.146307,
+          "mix": 0.393004,
+          "underground_gei": 0.18404
+        },
+        "boundary": {
+          "precision": 0.411458,
+          "recall": 0.25,
+          "f1": 0.311024,
+          "tp": 79,
+          "fp": 113,
+          "fn": 237,
+          "target_count": 316,
+          "predicted_count": 192,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 121.43,
+            "rhythmcall": 48.29,
+            "mix": 329.29,
+            "underground_gei": 21.72
+          },
+          "rhythmcall": {
+            "keepspace": 52.39,
+            "rhythmcall": 195.81,
+            "mix": 669.91,
+            "underground_gei": 92.27
+          },
+          "mix": {
+            "keepspace": 65.88,
+            "rhythmcall": 221.0,
+            "mix": 1067.18,
+            "underground_gei": 106.55
+          },
+          "underground_gei": {
+            "keepspace": 31.1,
+            "rhythmcall": 58.68,
+            "mix": 255.63,
+            "underground_gei": 127.65
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__minrun4",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__minrun4",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "minrun",
+        "min_bars": 4
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.495671,
+        "macro_role_iou": 0.318643,
+        "role_iou": {
+          "keepspace": 0.199215,
+          "rhythmcall": 0.252324,
+          "mix": 0.378646,
+          "underground_gei": 0.444386
+        },
+        "boundary": {
+          "precision": 0.609524,
+          "recall": 0.202532,
+          "f1": 0.304038,
+          "tp": 64,
+          "fp": 41,
+          "fn": 252,
+          "target_count": 316,
+          "predicted_count": 105,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 130.89,
+            "rhythmcall": 108.82,
+            "mix": 225.58,
+            "underground_gei": 55.44
+          },
+          "rhythmcall": {
+            "keepspace": 43.75,
+            "rhythmcall": 383.74,
+            "mix": 470.04,
+            "underground_gei": 112.85
+          },
+          "mix": {
+            "keepspace": 84.28,
+            "rhythmcall": 360.0,
+            "mix": 838.91,
+            "underground_gei": 177.42
+          },
+          "underground_gei": {
+            "keepspace": 8.27,
+            "rhythmcall": 41.62,
+            "mix": 59.32,
+            "underground_gei": 363.85
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_struct_novelty_0p55",
+      "candidate": {
+        "method": "loso_audio_rf__thr_struct_novelty_0p55",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty",
+        "threshold": 0.55
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.363276,
+        "macro_role_iou": 0.195426,
+        "role_iou": {
+          "keepspace": 0.121982,
+          "rhythmcall": 0.186917,
+          "mix": 0.304788,
+          "underground_gei": 0.168017
+        },
+        "boundary": {
+          "precision": 0.55,
+          "recall": 0.208861,
+          "f1": 0.302752,
+          "tp": 66,
+          "fp": 54,
+          "fn": 250,
+          "target_count": 316,
+          "predicted_count": 120,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 76.8,
+            "rhythmcall": 136.5,
+            "mix": 218.73,
+            "underground_gei": 88.7
+          },
+          "rhythmcall": {
+            "keepspace": 4.08,
+            "rhythmcall": 306.42,
+            "mix": 426.33,
+            "underground_gei": 273.55
+          },
+          "mix": {
+            "keepspace": 47.98,
+            "rhythmcall": 390.55,
+            "mix": 677.15,
+            "underground_gei": 344.93
+          },
+          "underground_gei": {
+            "keepspace": 56.81,
+            "rhythmcall": 101.91,
+            "mix": 116.04,
+            "underground_gei": 198.3
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_len_0p35",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_len_0p35",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "len",
+        "threshold": 0.35
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.443942,
+        "macro_role_iou": 0.276015,
+        "role_iou": {
+          "keepspace": 0.240866,
+          "rhythmcall": 0.192282,
+          "mix": 0.344935,
+          "underground_gei": 0.325979
+        },
+        "boundary": {
+          "precision": 0.568807,
+          "recall": 0.196203,
+          "f1": 0.291765,
+          "tp": 62,
+          "fp": 47,
+          "fn": 254,
+          "target_count": 316,
+          "predicted_count": 109,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 169.16,
+            "rhythmcall": 81.36,
+            "mix": 199.54,
+            "underground_gei": 70.67
+          },
+          "rhythmcall": {
+            "keepspace": 91.97,
+            "rhythmcall": 292.15,
+            "mix": 492.09,
+            "underground_gei": 134.17
+          },
+          "mix": {
+            "keepspace": 89.6,
+            "rhythmcall": 385.48,
+            "mix": 793.16,
+            "underground_gei": 192.37
+          },
+          "underground_gei": {
+            "keepspace": 0.0,
+            "rhythmcall": 42.16,
+            "mix": 147.21,
+            "underground_gei": 283.69
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_len_0p45",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_len_0p45",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "len",
+        "threshold": 0.45
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.443942,
+        "macro_role_iou": 0.276015,
+        "role_iou": {
+          "keepspace": 0.240866,
+          "rhythmcall": 0.192282,
+          "mix": 0.344935,
+          "underground_gei": 0.325979
+        },
+        "boundary": {
+          "precision": 0.568807,
+          "recall": 0.196203,
+          "f1": 0.291765,
+          "tp": 62,
+          "fp": 47,
+          "fn": 254,
+          "target_count": 316,
+          "predicted_count": 109,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 169.16,
+            "rhythmcall": 81.36,
+            "mix": 199.54,
+            "underground_gei": 70.67
+          },
+          "rhythmcall": {
+            "keepspace": 91.97,
+            "rhythmcall": 292.15,
+            "mix": 492.09,
+            "underground_gei": 134.17
+          },
+          "mix": {
+            "keepspace": 89.6,
+            "rhythmcall": 385.48,
+            "mix": 793.16,
+            "underground_gei": 192.37
+          },
+          "underground_gei": {
+            "keepspace": 0.0,
+            "rhythmcall": 42.16,
+            "mix": 147.21,
+            "underground_gei": 283.69
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__minrun4",
+      "candidate": {
+        "method": "loso_audio_rf__minrun4",
+        "base_method": "loso_audio_rf",
+        "decoder": "minrun",
+        "min_bars": 4
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.479958,
+        "macro_role_iou": 0.281916,
+        "role_iou": {
+          "keepspace": 0.132429,
+          "rhythmcall": 0.244271,
+          "mix": 0.390254,
+          "underground_gei": 0.36071
+        },
+        "boundary": {
+          "precision": 0.538462,
+          "recall": 0.199367,
+          "f1": 0.290993,
+          "tp": 63,
+          "fp": 54,
+          "fn": 253,
+          "target_count": 316,
+          "predicted_count": 117,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 78.61,
+            "rhythmcall": 87.75,
+            "mix": 230.59,
+            "underground_gei": 123.78
+          },
+          "rhythmcall": {
+            "keepspace": 10.23,
+            "rhythmcall": 346.97,
+            "mix": 432.98,
+            "underground_gei": 220.2
+          },
+          "mix": {
+            "keepspace": 36.57,
+            "rhythmcall": 312.1,
+            "mix": 847.14,
+            "underground_gei": 264.8
+          },
+          "underground_gei": {
+            "keepspace": 26.07,
+            "rhythmcall": 10.2,
+            "mix": 46.56,
+            "underground_gei": 390.23
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_struct_novelty_len_0p65",
+      "candidate": {
+        "method": "loso_audio_rf__thr_struct_novelty_len_0p65",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty_len",
+        "threshold": 0.65
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.36895,
+        "macro_role_iou": 0.183745,
+        "role_iou": {
+          "keepspace": 0.09092,
+          "rhythmcall": 0.19346,
+          "mix": 0.329651,
+          "underground_gei": 0.120948
+        },
+        "boundary": {
+          "precision": 0.59,
+          "recall": 0.186709,
+          "f1": 0.283654,
+          "tp": 59,
+          "fp": 41,
+          "fn": 257,
+          "target_count": 316,
+          "predicted_count": 100,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 54.28,
+            "rhythmcall": 200.81,
+            "mix": 202.71,
+            "underground_gei": 62.93
+          },
+          "rhythmcall": {
+            "keepspace": 22.98,
+            "rhythmcall": 350.97,
+            "mix": 440.0,
+            "underground_gei": 196.43
+          },
+          "mix": {
+            "keepspace": 53.3,
+            "rhythmcall": 445.29,
+            "mix": 760.07,
+            "underground_gei": 201.95
+          },
+          "underground_gei": {
+            "keepspace": 0.0,
+            "rhythmcall": 157.69,
+            "mix": 202.36,
+            "underground_gei": 113.01
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_novelty_0p55",
+      "candidate": {
+        "method": "loso_audio_rf__thr_novelty_0p55",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "novelty",
+        "threshold": 0.55
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.388079,
+        "macro_role_iou": 0.203452,
+        "role_iou": {
+          "keepspace": 0.160754,
+          "rhythmcall": 0.18384,
+          "mix": 0.339744,
+          "underground_gei": 0.12947
+        },
+        "boundary": {
+          "precision": 0.430556,
+          "recall": 0.196203,
+          "f1": 0.269565,
+          "tp": 62,
+          "fp": 82,
+          "fn": 254,
+          "target_count": 316,
+          "predicted_count": 144,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 112.2,
+            "rhythmcall": 113.08,
+            "mix": 255.92,
+            "underground_gei": 39.53
+          },
+          "rhythmcall": {
+            "keepspace": 46.62,
+            "rhythmcall": 270.85,
+            "mix": 513.71,
+            "underground_gei": 179.2
+          },
+          "mix": {
+            "keepspace": 108.28,
+            "rhythmcall": 261.92,
+            "mix": 839.51,
+            "underground_gei": 250.9
+          },
+          "underground_gei": {
+            "keepspace": 22.33,
+            "rhythmcall": 87.91,
+            "mix": 240.77,
+            "underground_gei": 122.05
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_struct_novelty_0p45",
+      "candidate": {
+        "method": "loso_audio_rf__thr_struct_novelty_0p45",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty",
+        "threshold": 0.45
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.388088,
+        "macro_role_iou": 0.210014,
+        "role_iou": {
+          "keepspace": 0.122771,
+          "rhythmcall": 0.204854,
+          "mix": 0.331355,
+          "underground_gei": 0.181078
+        },
+        "boundary": {
+          "precision": 0.769231,
+          "recall": 0.158228,
+          "f1": 0.262467,
+          "tp": 50,
+          "fp": 15,
+          "fn": 266,
+          "target_count": 316,
+          "predicted_count": 65,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 83.5,
+            "rhythmcall": 154.03,
+            "mix": 176.59,
+            "underground_gei": 106.61
+          },
+          "rhythmcall": {
+            "keepspace": 12.75,
+            "rhythmcall": 338.08,
+            "mix": 432.06,
+            "underground_gei": 227.49
+          },
+          "mix": {
+            "keepspace": 96.98,
+            "rhythmcall": 401.35,
+            "mix": 735.91,
+            "underground_gei": 226.37
+          },
+          "underground_gei": {
+            "keepspace": 49.67,
+            "rhythmcall": 84.59,
+            "mix": 151.65,
+            "underground_gei": 187.15
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_struct_novelty_len_0p45",
+      "candidate": {
+        "method": "loso_audio_rf__thr_struct_novelty_len_0p45",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty_len",
+        "threshold": 0.45
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.369671,
+        "macro_role_iou": 0.206116,
+        "role_iou": {
+          "keepspace": 0.146072,
+          "rhythmcall": 0.203165,
+          "mix": 0.29829,
+          "underground_gei": 0.176937
+        },
+        "boundary": {
+          "precision": 0.753846,
+          "recall": 0.155063,
+          "f1": 0.257218,
+          "tp": 49,
+          "fp": 16,
+          "fn": 267,
+          "target_count": 316,
+          "predicted_count": 65,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 108.47,
+            "rhythmcall": 100.0,
+            "mix": 199.01,
+            "underground_gei": 113.25
+          },
+          "rhythmcall": {
+            "keepspace": 40.22,
+            "rhythmcall": 326.74,
+            "mix": 386.22,
+            "underground_gei": 257.2
+          },
+          "mix": {
+            "keepspace": 154.03,
+            "rhythmcall": 367.75,
+            "mix": 644.25,
+            "underground_gei": 294.58
+          },
+          "underground_gei": {
+            "keepspace": 27.6,
+            "rhythmcall": 130.12,
+            "mix": 113.97,
+            "underground_gei": 201.37
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_0p55",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_0p55",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty",
+        "threshold": 0.55
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.425617,
+        "macro_role_iou": 0.234639,
+        "role_iou": {
+          "keepspace": 0.168115,
+          "rhythmcall": 0.18099,
+          "mix": 0.36244,
+          "underground_gei": 0.227011
+        },
+        "boundary": {
+          "precision": 0.486726,
+          "recall": 0.174051,
+          "f1": 0.25641,
+          "tp": 55,
+          "fp": 58,
+          "fn": 261,
+          "target_count": 316,
+          "predicted_count": 113,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 99.25,
+            "rhythmcall": 98.74,
+            "mix": 278.68,
+            "underground_gei": 44.06
+          },
+          "rhythmcall": {
+            "keepspace": 34.17,
+            "rhythmcall": 287.49,
+            "mix": 578.97,
+            "underground_gei": 109.75
+          },
+          "mix": {
+            "keepspace": 35.47,
+            "rhythmcall": 396.42,
+            "mix": 921.22,
+            "underground_gei": 107.5
+          },
+          "underground_gei": {
+            "keepspace": 0.0,
+            "rhythmcall": 82.89,
+            "mix": 223.46,
+            "underground_gei": 166.71
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_novelty_0p35",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_novelty_0p35",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "novelty",
+        "threshold": 0.35
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.420849,
+        "macro_role_iou": 0.241049,
+        "role_iou": {
+          "keepspace": 0.182254,
+          "rhythmcall": 0.196926,
+          "mix": 0.363588,
+          "underground_gei": 0.221427
+        },
+        "boundary": {
+          "precision": 0.451613,
+          "recall": 0.177215,
+          "f1": 0.254545,
+          "tp": 56,
+          "fp": 68,
+          "fn": 260,
+          "target_count": 316,
+          "predicted_count": 124,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 119.81,
+            "rhythmcall": 130.2,
+            "mix": 149.37,
+            "underground_gei": 121.35
+          },
+          "rhythmcall": {
+            "keepspace": 51.89,
+            "rhythmcall": 321.07,
+            "mix": 417.89,
+            "underground_gei": 219.53
+          },
+          "mix": {
+            "keepspace": 82.2,
+            "rhythmcall": 406.94,
+            "mix": 798.81,
+            "underground_gei": 172.66
+          },
+          "underground_gei": {
+            "keepspace": 2.56,
+            "rhythmcall": 82.89,
+            "mix": 169.15,
+            "underground_gei": 218.46
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_call_window_0p45",
+      "candidate": {
+        "method": "loso_audio_rf__thr_call_window_0p45",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "call_window",
+        "threshold": 0.45
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.369022,
+        "macro_role_iou": 0.203207,
+        "role_iou": {
+          "keepspace": 0.168963,
+          "rhythmcall": 0.187289,
+          "mix": 0.318417,
+          "underground_gei": 0.138158
+        },
+        "boundary": {
+          "precision": 0.774194,
+          "recall": 0.151899,
+          "f1": 0.253968,
+          "tp": 48,
+          "fp": 14,
+          "fn": 268,
+          "target_count": 316,
+          "predicted_count": 62,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 119.07,
+            "rhythmcall": 102.4,
+            "mix": 201.61,
+            "underground_gei": 97.65
+          },
+          "rhythmcall": {
+            "keepspace": 17.24,
+            "rhythmcall": 297.16,
+            "mix": 412.47,
+            "underground_gei": 283.51
+          },
+          "mix": {
+            "keepspace": 117.07,
+            "rhythmcall": 343.74,
+            "mix": 703.38,
+            "underground_gei": 296.42
+          },
+          "underground_gei": {
+            "keepspace": 49.67,
+            "rhythmcall": 130.12,
+            "mix": 134.3,
+            "underground_gei": 158.97
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_0p45",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_0p45",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty",
+        "threshold": 0.45
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.452211,
+        "macro_role_iou": 0.267134,
+        "role_iou": {
+          "keepspace": 0.155209,
+          "rhythmcall": 0.244291,
+          "mix": 0.365353,
+          "underground_gei": 0.303684
+        },
+        "boundary": {
+          "precision": 0.723077,
+          "recall": 0.148734,
+          "f1": 0.246719,
+          "tp": 47,
+          "fp": 18,
+          "fn": 269,
+          "target_count": 316,
+          "predicted_count": 65,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 104.65,
+            "rhythmcall": 161.43,
+            "mix": 158.6,
+            "underground_gei": 96.05
+          },
+          "rhythmcall": {
+            "keepspace": 52.95,
+            "rhythmcall": 381.89,
+            "mix": 399.01,
+            "underground_gei": 176.53
+          },
+          "mix": {
+            "keepspace": 100.57,
+            "rhythmcall": 330.48,
+            "mix": 777.19,
+            "underground_gei": 252.37
+          },
+          "underground_gei": {
+            "keepspace": 0.0,
+            "rhythmcall": 60.97,
+            "mix": 109.01,
+            "underground_gei": 303.08
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_novelty_0p35",
+      "candidate": {
+        "method": "loso_audio_rf__thr_novelty_0p35",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "novelty",
+        "threshold": 0.35
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.36828,
+        "macro_role_iou": 0.197947,
+        "role_iou": {
+          "keepspace": 0.205525,
+          "rhythmcall": 0.175832,
+          "mix": 0.308766,
+          "underground_gei": 0.101666
+        },
+        "boundary": {
+          "precision": 0.681159,
+          "recall": 0.148734,
+          "f1": 0.244156,
+          "tp": 47,
+          "fp": 22,
+          "fn": 269,
+          "target_count": 316,
+          "predicted_count": 69,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 115.16,
+            "rhythmcall": 90.96,
+            "mix": 280.78,
+            "underground_gei": 33.83
+          },
+          "rhythmcall": {
+            "keepspace": 0.56,
+            "rhythmcall": 276.66,
+            "mix": 529.57,
+            "underground_gei": 203.59
+          },
+          "mix": {
+            "keepspace": 39.03,
+            "rhythmcall": 369.03,
+            "mix": 784.73,
+            "underground_gei": 267.82
+          },
+          "underground_gei": {
+            "keepspace": 0.0,
+            "rhythmcall": 103.06,
+            "mix": 270.54,
+            "underground_gei": 99.46
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_len_0p55",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_len_0p55",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty_len",
+        "threshold": 0.55
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.398351,
+        "macro_role_iou": 0.2376,
+        "role_iou": {
+          "keepspace": 0.223125,
+          "rhythmcall": 0.174234,
+          "mix": 0.309971,
+          "underground_gei": 0.243068
+        },
+        "boundary": {
+          "precision": 0.424,
+          "recall": 0.167722,
+          "f1": 0.240363,
+          "tp": 53,
+          "fp": 72,
+          "fn": 263,
+          "target_count": 316,
+          "predicted_count": 125,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 196.87,
+            "rhythmcall": 77.41,
+            "mix": 172.89,
+            "underground_gei": 73.56
+          },
+          "rhythmcall": {
+            "keepspace": 145.37,
+            "rhythmcall": 253.85,
+            "mix": 463.97,
+            "underground_gei": 147.19
+          },
+          "mix": {
+            "keepspace": 175.82,
+            "rhythmcall": 307.47,
+            "mix": 691.32,
+            "underground_gei": 286.0
+          },
+          "underground_gei": {
+            "keepspace": 40.41,
+            "rhythmcall": 61.69,
+            "mix": 132.8,
+            "underground_gei": 238.16
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_len_0p55",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_len_0p55",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "len",
+        "threshold": 0.55
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.405047,
+        "macro_role_iou": 0.236813,
+        "role_iou": {
+          "keepspace": 0.168412,
+          "rhythmcall": 0.164299,
+          "mix": 0.322232,
+          "underground_gei": 0.292309
+        },
+        "boundary": {
+          "precision": 0.551282,
+          "recall": 0.136076,
+          "f1": 0.218274,
+          "tp": 43,
+          "fp": 35,
+          "fn": 273,
+          "target_count": 316,
+          "predicted_count": 78,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 123.52,
+            "rhythmcall": 73.05,
+            "mix": 260.98,
+            "underground_gei": 63.18
+          },
+          "rhythmcall": {
+            "keepspace": 43.96,
+            "rhythmcall": 249.24,
+            "mix": 584.17,
+            "underground_gei": 133.01
+          },
+          "mix": {
+            "keepspace": 128.34,
+            "rhythmcall": 381.89,
+            "mix": 787.36,
+            "underground_gei": 163.02
+          },
+          "underground_gei": {
+            "keepspace": 40.41,
+            "rhythmcall": 51.67,
+            "mix": 137.7,
+            "underground_gei": 243.28
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_len_0p65",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_len_0p65",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "len",
+        "threshold": 0.65
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.405047,
+        "macro_role_iou": 0.236813,
+        "role_iou": {
+          "keepspace": 0.168412,
+          "rhythmcall": 0.164299,
+          "mix": 0.322232,
+          "underground_gei": 0.292309
+        },
+        "boundary": {
+          "precision": 0.551282,
+          "recall": 0.136076,
+          "f1": 0.218274,
+          "tp": 43,
+          "fp": 35,
+          "fn": 273,
+          "target_count": 316,
+          "predicted_count": 78,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 123.52,
+            "rhythmcall": 73.05,
+            "mix": 260.98,
+            "underground_gei": 63.18
+          },
+          "rhythmcall": {
+            "keepspace": 43.96,
+            "rhythmcall": 249.24,
+            "mix": 584.17,
+            "underground_gei": 133.01
+          },
+          "mix": {
+            "keepspace": 128.34,
+            "rhythmcall": 381.89,
+            "mix": 787.36,
+            "underground_gei": 163.02
+          },
+          "underground_gei": {
+            "keepspace": 40.41,
+            "rhythmcall": 51.67,
+            "mix": 137.7,
+            "underground_gei": 243.28
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_len_0p45",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_struct_novelty_len_0p45",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty_len",
+        "threshold": 0.45
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.44141,
+        "macro_role_iou": 0.24478,
+        "role_iou": {
+          "keepspace": 0.169992,
+          "rhythmcall": 0.167103,
+          "mix": 0.380468,
+          "underground_gei": 0.261558
+        },
+        "boundary": {
+          "precision": 0.683333,
+          "recall": 0.129747,
+          "f1": 0.218085,
+          "tp": 41,
+          "fp": 19,
+          "fn": 275,
+          "target_count": 316,
+          "predicted_count": 60,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 97.13,
+            "rhythmcall": 90.07,
+            "mix": 267.6,
+            "underground_gei": 65.93
+          },
+          "rhythmcall": {
+            "keepspace": 22.96,
+            "rhythmcall": 237.51,
+            "mix": 641.99,
+            "underground_gei": 107.92
+          },
+          "mix": {
+            "keepspace": 27.69,
+            "rhythmcall": 253.66,
+            "mix": 971.1,
+            "underground_gei": 208.16
+          },
+          "underground_gei": {
+            "keepspace": 0.0,
+            "rhythmcall": 67.23,
+            "mix": 182.18,
+            "underground_gei": 223.65
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_struct_novelty_len_0p55",
+      "candidate": {
+        "method": "loso_audio_rf__thr_struct_novelty_len_0p55",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "struct_novelty_len",
+        "threshold": 0.55
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.334168,
+        "macro_role_iou": 0.17085,
+        "role_iou": {
+          "keepspace": 0.098155,
+          "rhythmcall": 0.158067,
+          "mix": 0.300516,
+          "underground_gei": 0.126661
+        },
+        "boundary": {
+          "precision": 0.575342,
+          "recall": 0.132911,
+          "f1": 0.215938,
+          "tp": 42,
+          "fp": 31,
+          "fn": 274,
+          "target_count": 316,
+          "predicted_count": 73,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 58.14,
+            "rhythmcall": 103.25,
+            "mix": 220.86,
+            "underground_gei": 138.48
+          },
+          "rhythmcall": {
+            "keepspace": 22.98,
+            "rhythmcall": 238.15,
+            "mix": 416.42,
+            "underground_gei": 332.83
+          },
+          "mix": {
+            "keepspace": 48.62,
+            "rhythmcall": 278.19,
+            "mix": 685.08,
+            "underground_gei": 448.72
+          },
+          "underground_gei": {
+            "keepspace": 0.0,
+            "rhythmcall": 114.82,
+            "mix": 181.79,
+            "underground_gei": 176.45
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_call_window_0p55",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_call_window_0p55",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "call_window",
+        "threshold": 0.55
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.397936,
+        "macro_role_iou": 0.230529,
+        "role_iou": {
+          "keepspace": 0.221867,
+          "rhythmcall": 0.142454,
+          "mix": 0.330373,
+          "underground_gei": 0.22742
+        },
+        "boundary": {
+          "precision": 0.436893,
+          "recall": 0.142405,
+          "f1": 0.214797,
+          "tp": 45,
+          "fp": 58,
+          "fn": 271,
+          "target_count": 316,
+          "predicted_count": 103,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 195.76,
+            "rhythmcall": 72.48,
+            "mix": 178.93,
+            "underground_gei": 73.56
+          },
+          "rhythmcall": {
+            "keepspace": 145.37,
+            "rhythmcall": 197.43,
+            "mix": 529.91,
+            "underground_gei": 137.67
+          },
+          "mix": {
+            "keepspace": 175.82,
+            "rhythmcall": 241.37,
+            "mix": 767.11,
+            "underground_gei": 276.31
+          },
+          "underground_gei": {
+            "keepspace": 40.41,
+            "rhythmcall": 61.69,
+            "mix": 152.5,
+            "underground_gei": 218.46
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_novelty_0p45",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_novelty_0p45",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "novelty",
+        "threshold": 0.45
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.406692,
+        "macro_role_iou": 0.206633,
+        "role_iou": {
+          "keepspace": 0.143289,
+          "rhythmcall": 0.150318,
+          "mix": 0.368448,
+          "underground_gei": 0.164477
+        },
+        "boundary": {
+          "precision": 0.427184,
+          "recall": 0.139241,
+          "f1": 0.210024,
+          "tp": 44,
+          "fp": 59,
+          "fn": 272,
+          "target_count": 316,
+          "predicted_count": 103,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 89.55,
+            "rhythmcall": 96.63,
+            "mix": 277.18,
+            "underground_gei": 57.37
+          },
+          "rhythmcall": {
+            "keepspace": 51.97,
+            "rhythmcall": 219.38,
+            "mix": 626.21,
+            "underground_gei": 112.82
+          },
+          "mix": {
+            "keepspace": 32.76,
+            "rhythmcall": 291.6,
+            "mix": 966.44,
+            "underground_gei": 169.81
+          },
+          "underground_gei": {
+            "keepspace": 19.5,
+            "rhythmcall": 60.83,
+            "mix": 259.0,
+            "underground_gei": 133.73
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_call_window_0p45",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_call_window_0p45",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "call_window",
+        "threshold": 0.45
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.410009,
+        "macro_role_iou": 0.22515,
+        "role_iou": {
+          "keepspace": 0.141232,
+          "rhythmcall": 0.152104,
+          "mix": 0.344084,
+          "underground_gei": 0.263179
+        },
+        "boundary": {
+          "precision": 0.685185,
+          "recall": 0.117089,
+          "f1": 0.2,
+          "tp": 37,
+          "fp": 17,
+          "fn": 279,
+          "target_count": 316,
+          "predicted_count": 54,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 101.95,
+            "rhythmcall": 88.01,
+            "mix": 282.44,
+            "underground_gei": 48.33
+          },
+          "rhythmcall": {
+            "keepspace": 43.19,
+            "rhythmcall": 203.99,
+            "mix": 662.77,
+            "underground_gei": 100.43
+          },
+          "mix": {
+            "keepspace": 117.53,
+            "rhythmcall": 203.1,
+            "mix": 883.5,
+            "underground_gei": 256.48
+          },
+          "underground_gei": {
+            "keepspace": 40.41,
+            "rhythmcall": 39.63,
+            "mix": 161.87,
+            "underground_gei": 231.15
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_len_0p55",
+      "candidate": {
+        "method": "loso_audio_rf__thr_len_0p55",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "len",
+        "threshold": 0.55
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.350126,
+        "macro_role_iou": 0.187146,
+        "role_iou": {
+          "keepspace": 0.113044,
+          "rhythmcall": 0.147209,
+          "mix": 0.296599,
+          "underground_gei": 0.191734
+        },
+        "boundary": {
+          "precision": 0.567164,
+          "recall": 0.120253,
+          "f1": 0.198433,
+          "tp": 38,
+          "fp": 29,
+          "fn": 278,
+          "target_count": 316,
+          "predicted_count": 67,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 82.33,
+            "rhythmcall": 62.43,
+            "mix": 275.85,
+            "underground_gei": 100.12
+          },
+          "rhythmcall": {
+            "keepspace": 37.62,
+            "rhythmcall": 215.32,
+            "mix": 447.23,
+            "underground_gei": 310.21
+          },
+          "mix": {
+            "keepspace": 125.81,
+            "rhythmcall": 299.26,
+            "mix": 677.42,
+            "underground_gei": 358.12
+          },
+          "underground_gei": {
+            "keepspace": 44.14,
+            "rhythmcall": 90.61,
+            "mix": 100.27,
+            "underground_gei": 238.04
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_len_0p65",
+      "candidate": {
+        "method": "loso_audio_rf__thr_len_0p65",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "len",
+        "threshold": 0.65
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.350126,
+        "macro_role_iou": 0.187146,
+        "role_iou": {
+          "keepspace": 0.113044,
+          "rhythmcall": 0.147209,
+          "mix": 0.296599,
+          "underground_gei": 0.191734
+        },
+        "boundary": {
+          "precision": 0.567164,
+          "recall": 0.120253,
+          "f1": 0.198433,
+          "tp": 38,
+          "fp": 29,
+          "fn": 278,
+          "target_count": 316,
+          "predicted_count": 67,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 82.33,
+            "rhythmcall": 62.43,
+            "mix": 275.85,
+            "underground_gei": 100.12
+          },
+          "rhythmcall": {
+            "keepspace": 37.62,
+            "rhythmcall": 215.32,
+            "mix": 447.23,
+            "underground_gei": 310.21
+          },
+          "mix": {
+            "keepspace": 125.81,
+            "rhythmcall": 299.26,
+            "mix": 677.42,
+            "underground_gei": 358.12
+          },
+          "underground_gei": {
+            "keepspace": 44.14,
+            "rhythmcall": 90.61,
+            "mix": 100.27,
+            "underground_gei": 238.04
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_call_window_0p55",
+      "candidate": {
+        "method": "loso_audio_rf__thr_call_window_0p55",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "call_window",
+        "threshold": 0.55
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.327773,
+        "macro_role_iou": 0.16931,
+        "role_iou": {
+          "keepspace": 0.12154,
+          "rhythmcall": 0.16121,
+          "mix": 0.284598,
+          "underground_gei": 0.10989
+        },
+        "boundary": {
+          "precision": 0.550725,
+          "recall": 0.120253,
+          "f1": 0.197403,
+          "tp": 38,
+          "fp": 31,
+          "fn": 278,
+          "target_count": 316,
+          "predicted_count": 69,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 76.18,
+            "rhythmcall": 123.51,
+            "mix": 217.18,
+            "underground_gei": 103.86
+          },
+          "rhythmcall": {
+            "keepspace": 25.44,
+            "rhythmcall": 256.28,
+            "mix": 446.39,
+            "underground_gei": 282.27
+          },
+          "mix": {
+            "keepspace": 80.62,
+            "rhythmcall": 341.02,
+            "mix": 668.02,
+            "underground_gei": 370.95
+          },
+          "underground_gei": {
+            "keepspace": 0.0,
+            "rhythmcall": 114.82,
+            "mix": 223.06,
+            "underground_gei": 135.18
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_rf__thr_novelty_0p45",
+      "candidate": {
+        "method": "loso_audio_rf__thr_novelty_0p45",
+        "base_method": "loso_audio_rf",
+        "decoder": "threshold",
+        "score_mode": "novelty",
+        "threshold": 0.45
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.388062,
+        "macro_role_iou": 0.19765,
+        "role_iou": {
+          "keepspace": 0.175193,
+          "rhythmcall": 0.187063,
+          "mix": 0.342786,
+          "underground_gei": 0.085557
+        },
+        "boundary": {
+          "precision": 0.738095,
+          "recall": 0.098101,
+          "f1": 0.173184,
+          "tp": 31,
+          "fp": 11,
+          "fn": 285,
+          "target_count": 316,
+          "predicted_count": 42,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 115.89,
+            "rhythmcall": 125.02,
+            "mix": 272.55,
+            "underground_gei": 7.27
+          },
+          "rhythmcall": {
+            "keepspace": 10.66,
+            "rhythmcall": 271.9,
+            "mix": 546.27,
+            "underground_gei": 181.55
+          },
+          "mix": {
+            "keepspace": 80.44,
+            "rhythmcall": 258.03,
+            "mix": 879.36,
+            "underground_gei": 242.78
+          },
+          "underground_gei": {
+            "keepspace": 49.67,
+            "rhythmcall": 60.09,
+            "mix": 285.9,
+            "underground_gei": 77.4
+          }
+        }
+      }
+    },
+    {
+      "method": "loso_audio_vote_rf1_logreg1_gb1__thr_novelty_0p55",
+      "candidate": {
+        "method": "loso_audio_vote_rf1_logreg1_gb1__thr_novelty_0p55",
+        "base_method": "loso_audio_vote_rf1_logreg1_gb1",
+        "decoder": "threshold",
+        "score_mode": "novelty",
+        "threshold": 0.55
+      },
+      "merged": {
+        "time_weighted_role_accuracy": 0.381358,
+        "macro_role_iou": 0.176158,
+        "role_iou": {
+          "keepspace": 0.148623,
+          "rhythmcall": 0.095705,
+          "mix": 0.370624,
+          "underground_gei": 0.089682
+        },
+        "boundary": {
+          "precision": 0.375,
+          "recall": 0.10443,
+          "f1": 0.163366,
+          "tp": 33,
+          "fp": 55,
+          "fn": 283,
+          "target_count": 316,
+          "predicted_count": 88,
+          "mean_tolerance_seconds": 2.285
+        },
+        "duration_seconds": 3464.78,
+        "confusion_duration": {
+          "keepspace": {
+            "keepspace": 103.11,
+            "rhythmcall": 71.31,
+            "mix": 312.02,
+            "underground_gei": 34.29
+          },
+          "rhythmcall": {
+            "keepspace": 88.95,
+            "rhythmcall": 140.37,
+            "mix": 706.14,
+            "underground_gei": 74.92
+          },
+          "mix": {
+            "keepspace": 64.59,
+            "rhythmcall": 252.44,
+            "mix": 1014.0,
+            "underground_gei": 129.58
+          },
+          "underground_gei": {
+            "keepspace": 19.5,
+            "rhythmcall": 132.56,
+            "mix": 257.16,
+            "underground_gei": 63.84
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,451 @@
+{
+  "summary": "LLM arrangement normalized for all candidate slots.",
+  "entries": [
+    {
+      "start": 0.0,
+      "end": 10.73,
+      "time": "00:00.00 - 00:10.73",
+      "slot_label": "intro",
+      "arrangement_type": "single",
+      "primary_action_id": "standard_mix",
+      "display_name": "Standard MIX",
+      "intensity": 0.5,
+      "risk": "medium",
+      "instructions": [
+        "Standard MIX: Aaa, yossha ikuzo! Tiger! Fire! Cyber! Fiber! Diver! Viber! Jya Jya!"
+      ],
+      "sub_actions": [],
+      "alternatives": [],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 10.73,
+      "end": 31.04,
+      "time": "00:10.73 - 00:31.04",
+      "slot_label": "verse_subsection",
+      "arrangement_type": "single",
+      "primary_action_id": "ppph",
+      "display_name": "PPPH",
+      "intensity": 0.5,
+      "risk": "low",
+      "instructions": [
+        "PPPH: Pan-pa-pan, hyu!"
+      ],
+      "sub_actions": [],
+      "alternatives": [
+        "clap"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 31.04,
+      "end": 46.28,
+      "time": "00:31.04 - 00:46.28",
+      "slot_label": "pre_chorus_build_candidate",
+      "arrangement_type": "single",
+      "primary_action_id": "ietora",
+      "display_name": "Ietora",
+      "intensity": 0.5,
+      "risk": "high",
+      "instructions": [
+        "Ietora: Ie Tiger!"
+      ],
+      "sub_actions": [],
+      "alternatives": [
+        "ppph",
+        "clap"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 46.28,
+      "end": 66.59,
+      "time": "00:46.28 - 01:06.59",
+      "slot_label": "chorus",
+      "arrangement_type": "single",
+      "primary_action_id": "fuwa_fuwa",
+      "display_name": "Fuwa Fuwa",
+      "intensity": 0.5,
+      "risk": "low",
+      "instructions": [
+        "Fuwa Fuwa: Fuwa fuwa!"
+      ],
+      "sub_actions": [],
+      "alternatives": [
+        "hai_hai",
+        "clap"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 66.59,
+      "end": 86.92,
+      "time": "01:06.59 - 01:26.92",
+      "slot_label": "chorus",
+      "arrangement_type": "single",
+      "primary_action_id": "fuwa_fuwa",
+      "display_name": "Fuwa Fuwa",
+      "intensity": 0.5,
+      "risk": "low",
+      "instructions": [
+        "Fuwa Fuwa: Fuwa fuwa!"
+      ],
+      "sub_actions": [],
+      "alternatives": [
+        "hai_hai",
+        "clap"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 86.92,
+      "end": 97.07,
+      "time": "01:26.92 - 01:37.07",
+      "slot_label": "post_chorus_interlude_candidate",
+      "arrangement_type": "chain",
+      "primary_action_id": "keep_space",
+      "display_name": "Keep Space",
+      "intensity": 0.5,
+      "risk": "medium",
+      "instructions": [
+        "Keep Space"
+      ],
+      "sub_actions": [
+        {
+          "start": 86.92,
+          "end": 90.30333333333333,
+          "time": "01:26.92 - 01:30.30",
+          "action_id": "oi_oi",
+          "display_name": "Oi Oi",
+          "text": "Oi! Oi!",
+          "note": "LLM chain sub-action."
+        },
+        {
+          "start": 90.30333333333333,
+          "end": 93.68666666666667,
+          "time": "01:30.30 - 01:33.69",
+          "action_id": "ainu_mix",
+          "display_name": "ainu_mix",
+          "text": "",
+          "note": "LLM chain sub-action."
+        },
+        {
+          "start": 93.68666666666667,
+          "end": 97.07,
+          "time": "01:33.69 - 01:37.07",
+          "action_id": "tiger_fire_activation",
+          "display_name": "Tiger Fire Activation",
+          "text": "Tiger! Fire! ...",
+          "note": "LLM chain sub-action."
+        }
+      ],
+      "alternatives": [
+        "oi_oi",
+        "clap",
+        "tiger_fire_activation"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 97.07,
+      "end": 117.4,
+      "time": "01:37.07 - 01:57.40",
+      "slot_label": "verse_subsection",
+      "arrangement_type": "single",
+      "primary_action_id": "ppph",
+      "display_name": "PPPH",
+      "intensity": 0.5,
+      "risk": "low",
+      "instructions": [
+        "PPPH: Pan-pa-pan, hyu!"
+      ],
+      "sub_actions": [],
+      "alternatives": [
+        "clap"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 117.4,
+      "end": 132.62,
+      "time": "01:57.40 - 02:12.62",
+      "slot_label": "pre_chorus_candidate",
+      "arrangement_type": "single",
+      "primary_action_id": "ietora",
+      "display_name": "Ietora",
+      "intensity": 0.5,
+      "risk": "high",
+      "instructions": [
+        "Ietora: Ie Tiger!"
+      ],
+      "sub_actions": [],
+      "alternatives": [
+        "ppph",
+        "clap"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 132.62,
+      "end": 152.92,
+      "time": "02:12.62 - 02:32.92",
+      "slot_label": "chorus",
+      "arrangement_type": "single",
+      "primary_action_id": "fuwa_fuwa",
+      "display_name": "Fuwa Fuwa",
+      "intensity": 0.5,
+      "risk": "low",
+      "instructions": [
+        "Fuwa Fuwa: Fuwa fuwa!"
+      ],
+      "sub_actions": [],
+      "alternatives": [
+        "hai_hai",
+        "clap"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 152.92,
+      "end": 175.8,
+      "time": "02:32.92 - 02:55.80",
+      "slot_label": "chorus",
+      "arrangement_type": "single",
+      "primary_action_id": "fuwa_fuwa",
+      "display_name": "Fuwa Fuwa",
+      "intensity": 0.5,
+      "risk": "low",
+      "instructions": [
+        "Fuwa Fuwa: Fuwa fuwa!"
+      ],
+      "sub_actions": [],
+      "alternatives": [
+        "hai_hai",
+        "clap"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 175.8,
+      "end": 203.73,
+      "time": "02:55.80 - 03:23.73",
+      "slot_label": "inst",
+      "arrangement_type": "chain",
+      "primary_action_id": "keep_space",
+      "display_name": "Keep Space",
+      "intensity": 0.5,
+      "risk": "medium",
+      "instructions": [
+        "Keep Space"
+      ],
+      "sub_actions": [
+        {
+          "start": 175.8,
+          "end": 185.11,
+          "time": "02:55.80 - 03:05.11",
+          "action_id": "oi_oi",
+          "display_name": "Oi Oi",
+          "text": "Oi! Oi!",
+          "note": "LLM chain sub-action."
+        },
+        {
+          "start": 185.11,
+          "end": 194.42,
+          "time": "03:05.11 - 03:14.42",
+          "action_id": "ainu_mix",
+          "display_name": "Ainu MIX",
+          "text": "Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!",
+          "note": "LLM chain sub-action."
+        },
+        {
+          "start": 194.42,
+          "end": 203.73,
+          "time": "03:14.42 - 03:23.73",
+          "action_id": "tiger_fire_activation",
+          "display_name": "Tiger Fire Activation",
+          "text": "Tiger! Fire! ...",
+          "note": "LLM chain sub-action."
+        }
+      ],
+      "alternatives": [
+        "oi_oi",
+        "kaho_sanren_mix",
+        "gachikoi_koujou"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 203.73,
+      "end": 216.43,
+      "time": "03:23.73 - 03:36.43",
+      "slot_label": "solo",
+      "arrangement_type": "single",
+      "primary_action_id": "ainu_mix",
+      "display_name": "Ainu MIX",
+      "intensity": 0.5,
+      "risk": "medium",
+      "instructions": [
+        "Ainu MIX: Chape! Ape! Kara! Kina! Rara! Tusuke! Myohon-tusuke!"
+      ],
+      "sub_actions": [],
+      "alternatives": [
+        "oi_oi",
+        "tiger_fire_activation"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 216.43,
+      "end": 229.14,
+      "time": "03:36.43 - 03:49.14",
+      "slot_label": "verse_subsection",
+      "arrangement_type": "single",
+      "primary_action_id": "ppph",
+      "display_name": "PPPH",
+      "intensity": 0.5,
+      "risk": "low",
+      "instructions": [
+        "PPPH: Pan-pa-pan, hyu!"
+      ],
+      "sub_actions": [],
+      "alternatives": [
+        "clap"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 229.14,
+      "end": 245.64,
+      "time": "03:49.14 - 04:05.64",
+      "slot_label": "pre_chorus_candidate",
+      "arrangement_type": "single",
+      "primary_action_id": "ietora",
+      "display_name": "Ietora",
+      "intensity": 0.5,
+      "risk": "high",
+      "instructions": [
+        "Ietora: Ie Tiger!"
+      ],
+      "sub_actions": [],
+      "alternatives": [
+        "ppph",
+        "clap"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 245.64,
+      "end": 268.48,
+      "time": "04:05.64 - 04:28.48",
+      "slot_label": "chorus",
+      "arrangement_type": "single",
+      "primary_action_id": "fuwa_fuwa",
+      "display_name": "Fuwa Fuwa",
+      "intensity": 0.5,
+      "risk": "low",
+      "instructions": [
+        "Fuwa Fuwa: Fuwa fuwa!"
+      ],
+      "sub_actions": [],
+      "alternatives": [
+        "hai_hai",
+        "clap"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 268.48,
+      "end": 293.9,
+      "time": "04:28.48 - 04:53.90",
+      "slot_label": "chorus",
+      "arrangement_type": "single",
+      "primary_action_id": "fuwa_fuwa",
+      "display_name": "Fuwa Fuwa",
+      "intensity": 0.5,
+      "risk": "low",
+      "instructions": [
+        "Fuwa Fuwa: Fuwa fuwa!"
+      ],
+      "sub_actions": [],
+      "alternatives": [
+        "hai_hai",
+        "clap"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 293.9,
+      "end": 304.08,
+      "time": "04:53.90 - 05:04.08",
+      "slot_label": "outro",
+      "arrangement_type": "single",
+      "primary_action_id": "oi_oi",
+      "display_name": "Oi Oi",
+      "intensity": 0.5,
+      "risk": "low",
+      "instructions": [
+        "Oi Oi: Oi! Oi!"
+      ],
+      "sub_actions": [],
+      "alternatives": [
+        "clap"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 304.08,
+      "end": 310.73,
+      "time": "05:04.08 - 05:10.73",
+      "slot_label": "outro",
+      "arrangement_type": "single",
+      "primary_action_id": "oi_oi",
+      "display_name": "Oi Oi",
+      "intensity": 0.5,
+      "risk": "low",
+      "instructions": [
+        "Oi Oi: Oi! Oi!"
+      ],
+      "sub_actions": [],
+      "alternatives": [
+        "clap"
+      ],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    },
+    {
+      "start": 310.73,
+      "end": 315.4,
+      "time": "05:10.73 - 05:15.40",
+      "slot_label": "end",
+      "arrangement_type": "silence",
+      "primary_action_id": "keep_space",
+      "display_name": "Keep Space",
+      "intensity": 0.5,
+      "risk": "none",
+      "instructions": [
+        "Keep Space"
+      ],
+      "sub_actions": [],
+      "alternatives": [],
+      "rationale": "Normalized from LLM output and the slot candidate list.",
+      "cautions": []
+    }
+  ]
+}

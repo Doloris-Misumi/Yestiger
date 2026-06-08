@@ -1,0 +1,362 @@
+{
+  "song_id": "teardrops",
+  "method": "callability_rule",
+  "call_spans": [
+    {
+      "start": 0.0,
+      "end": 0.45,
+      "call_role": "keepspace",
+      "bar_start": 0,
+      "bar_end": 0,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 0.45,
+      "end": 13.08,
+      "call_role": "mix",
+      "bar_start": 1,
+      "bar_end": 5,
+      "bars": 5,
+      "method": "callability_rule"
+    },
+    {
+      "start": 13.08,
+      "end": 23.18,
+      "call_role": "rhythmcall",
+      "bar_start": 6,
+      "bar_end": 9,
+      "bars": 4,
+      "method": "callability_rule"
+    },
+    {
+      "start": 23.18,
+      "end": 28.23,
+      "call_role": "mix",
+      "bar_start": 10,
+      "bar_end": 11,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 28.23,
+      "end": 30.75,
+      "call_role": "rhythmcall",
+      "bar_start": 12,
+      "bar_end": 12,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 30.75,
+      "end": 33.28,
+      "call_role": "mix",
+      "bar_start": 13,
+      "bar_end": 13,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 33.28,
+      "end": 35.81,
+      "call_role": "rhythmcall",
+      "bar_start": 14,
+      "bar_end": 14,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 35.81,
+      "end": 38.34,
+      "call_role": "mix",
+      "bar_start": 15,
+      "bar_end": 15,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 38.34,
+      "end": 56.01,
+      "call_role": "rhythmcall",
+      "bar_start": 16,
+      "bar_end": 22,
+      "bars": 7,
+      "method": "callability_rule"
+    },
+    {
+      "start": 56.01,
+      "end": 61.06,
+      "call_role": "mix",
+      "bar_start": 23,
+      "bar_end": 24,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 61.06,
+      "end": 63.61,
+      "call_role": "rhythmcall",
+      "bar_start": 25,
+      "bar_end": 25,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 63.61,
+      "end": 66.13,
+      "call_role": "mix",
+      "bar_start": 26,
+      "bar_end": 26,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 66.13,
+      "end": 81.29,
+      "call_role": "rhythmcall",
+      "bar_start": 27,
+      "bar_end": 32,
+      "bars": 6,
+      "method": "callability_rule"
+    },
+    {
+      "start": 81.29,
+      "end": 86.35,
+      "call_role": "mix",
+      "bar_start": 33,
+      "bar_end": 34,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 86.35,
+      "end": 96.44,
+      "call_role": "rhythmcall",
+      "bar_start": 35,
+      "bar_end": 38,
+      "bars": 4,
+      "method": "callability_rule"
+    },
+    {
+      "start": 96.44,
+      "end": 98.96,
+      "call_role": "mix",
+      "bar_start": 39,
+      "bar_end": 39,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 98.96,
+      "end": 101.49,
+      "call_role": "rhythmcall",
+      "bar_start": 40,
+      "bar_end": 40,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 101.49,
+      "end": 104.02,
+      "call_role": "mix",
+      "bar_start": 41,
+      "bar_end": 41,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 104.02,
+      "end": 106.54,
+      "call_role": "rhythmcall",
+      "bar_start": 42,
+      "bar_end": 42,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 106.54,
+      "end": 111.61,
+      "call_role": "mix",
+      "bar_start": 43,
+      "bar_end": 44,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 111.61,
+      "end": 116.65,
+      "call_role": "rhythmcall",
+      "bar_start": 45,
+      "bar_end": 46,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 116.65,
+      "end": 119.19,
+      "call_role": "mix",
+      "bar_start": 47,
+      "bar_end": 47,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 119.19,
+      "end": 124.23,
+      "call_role": "rhythmcall",
+      "bar_start": 48,
+      "bar_end": 49,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 124.23,
+      "end": 126.76,
+      "call_role": "mix",
+      "bar_start": 50,
+      "bar_end": 50,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 126.76,
+      "end": 131.84,
+      "call_role": "rhythmcall",
+      "bar_start": 51,
+      "bar_end": 52,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 131.84,
+      "end": 134.35,
+      "call_role": "mix",
+      "bar_start": 53,
+      "bar_end": 53,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 134.35,
+      "end": 146.98,
+      "call_role": "rhythmcall",
+      "bar_start": 54,
+      "bar_end": 58,
+      "bars": 5,
+      "method": "callability_rule"
+    },
+    {
+      "start": 146.98,
+      "end": 159.62,
+      "call_role": "mix",
+      "bar_start": 59,
+      "bar_end": 63,
+      "bars": 5,
+      "method": "callability_rule"
+    },
+    {
+      "start": 159.62,
+      "end": 164.64,
+      "call_role": "rhythmcall",
+      "bar_start": 64,
+      "bar_end": 65,
+      "bars": 2,
+      "method": "callability_rule"
+    },
+    {
+      "start": 164.64,
+      "end": 179.82,
+      "call_role": "mix",
+      "bar_start": 66,
+      "bar_end": 71,
+      "bars": 6,
+      "method": "callability_rule"
+    },
+    {
+      "start": 179.82,
+      "end": 194.97,
+      "call_role": "rhythmcall",
+      "bar_start": 72,
+      "bar_end": 77,
+      "bars": 6,
+      "method": "callability_rule"
+    },
+    {
+      "start": 194.97,
+      "end": 197.5,
+      "call_role": "mix",
+      "bar_start": 78,
+      "bar_end": 78,
+      "bars": 1,
+      "method": "callability_rule"
+    },
+    {
+      "start": 197.5,
+      "end": 210.1,
+      "call_role": "rhythmcall",
+      "bar_start": 79,
+      "bar_end": 83,
+      "bars": 5,
+      "method": "callability_rule"
+    },
+    {
+      "start": 210.1,
+      "end": 217.23,
+      "call_role": "mix",
+      "bar_start": 84,
+      "bar_end": 86,
+      "bars": 3,
+      "method": "callability_rule"
+    }
+  ],
+  "comparison_to_manual_grid": {
+    "time_weighted_role_accuracy": 0.397597,
+    "macro_role_iou": 0.151475,
+    "role_iou": {
+      "keepspace": 0.01115,
+      "rhythmcall": 0.307706,
+      "mix": 0.287046,
+      "underground_gei": 0.0
+    },
+    "boundary": {
+      "precision": 0.545455,
+      "recall": 0.642857,
+      "f1": 0.590164,
+      "tp": 18,
+      "fp": 15,
+      "fn": 10,
+      "target_count": 28,
+      "predicted_count": 33,
+      "tolerance_seconds": 2.53
+    },
+    "target_span_count": 29,
+    "predicted_span_count": 34,
+    "duration_seconds": 217.23,
+    "confusion_duration": {
+      "keepspace": {
+        "keepspace": 0.45,
+        "rhythmcall": 27.75,
+        "mix": 12.16,
+        "underground_gei": 0.0
+      },
+      "rhythmcall": {
+        "keepspace": 0.0,
+        "rhythmcall": 50.51,
+        "mix": 37.92,
+        "underground_gei": 0.0
+      },
+      "mix": {
+        "keepspace": 0.0,
+        "rhythmcall": 32.81,
+        "mix": 35.41,
+        "underground_gei": 0.0
+      },
+      "underground_gei": {
+        "keepspace": 0.0,
+        "rhythmcall": 15.16,
+        "mix": 5.06,
+        "underground_gei": 0.0
+      }
+    }
+  }
+}

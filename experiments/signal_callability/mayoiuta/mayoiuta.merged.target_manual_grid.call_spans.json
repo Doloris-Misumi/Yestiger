@@ -1,0 +1,150 @@
+{
+  "song_id": "mayoiuta",
+  "method": "target_manual_grid",
+  "call_spans": [
+    {
+      "start": 0.0,
+      "end": 3.7,
+      "call_role": "keepspace",
+      "bar_start": 0,
+      "bar_end": 1,
+      "bars": 2,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 3.7,
+      "end": 6.21,
+      "call_role": "rhythmcall",
+      "bar_start": 2,
+      "bar_end": 2,
+      "bars": 1,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 6.21,
+      "end": 16.33,
+      "call_role": "mix",
+      "bar_start": 3,
+      "bar_end": 6,
+      "bars": 4,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 16.33,
+      "end": 26.43,
+      "call_role": "rhythmcall",
+      "bar_start": 7,
+      "bar_end": 10,
+      "bars": 4,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 26.43,
+      "end": 48.72,
+      "call_role": "mix",
+      "bar_start": 11,
+      "bar_end": 19,
+      "bars": 9,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 48.72,
+      "end": 50.43,
+      "call_role": "keepspace",
+      "bar_start": 20,
+      "bar_end": 20,
+      "bars": 1,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 50.43,
+      "end": 70.65,
+      "call_role": "underground_gei",
+      "bar_start": 21,
+      "bar_end": 28,
+      "bars": 8,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 70.65,
+      "end": 73.18,
+      "call_role": "rhythmcall",
+      "bar_start": 29,
+      "bar_end": 29,
+      "bars": 1,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 73.18,
+      "end": 83.27,
+      "call_role": "mix",
+      "bar_start": 30,
+      "bar_end": 33,
+      "bars": 4,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 83.27,
+      "end": 93.36,
+      "call_role": "rhythmcall",
+      "bar_start": 34,
+      "bar_end": 37,
+      "bars": 4,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 93.36,
+      "end": 117.37,
+      "call_role": "mix",
+      "bar_start": 38,
+      "bar_end": 46,
+      "bars": 9,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 117.37,
+      "end": 137.56,
+      "call_role": "underground_gei",
+      "bar_start": 47,
+      "bar_end": 54,
+      "bars": 8,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 137.56,
+      "end": 140.12,
+      "call_role": "rhythmcall",
+      "bar_start": 55,
+      "bar_end": 55,
+      "bars": 1,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 140.12,
+      "end": 183.06,
+      "call_role": "mix",
+      "bar_start": 56,
+      "bar_end": 72,
+      "bars": 17,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 183.06,
+      "end": 188.11,
+      "call_role": "rhythmcall",
+      "bar_start": 73,
+      "bar_end": 74,
+      "bars": 2,
+      "method": "target_manual_grid"
+    },
+    {
+      "start": 188.11,
+      "end": 211.38,
+      "call_role": "keepspace",
+      "bar_start": 75,
+      "bar_end": 83,
+      "bars": 9,
+      "method": "target_manual_grid"
+    }
+  ]
+}

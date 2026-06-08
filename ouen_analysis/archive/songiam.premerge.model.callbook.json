@@ -1,0 +1,964 @@
+{
+  "song": {
+    "song_id": "songiam",
+    "title": "Song I am.",
+    "artist": "",
+    "franchise": "",
+    "audio_path": "songs\\SongIam.mp3",
+    "bpm": 95,
+    "meter": "4/4"
+  },
+  "source_struct": "struct\\SongIam.json",
+  "model_dir": "models\\tiny_pipeline",
+  "entries": [
+    {
+      "start": 10.58,
+      "end": 20.69,
+      "music_label": "intro",
+      "call_role": "mix",
+      "recommended_actions": [
+        "tiger_fire_activation"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "tiger_fire_activation",
+          "score": 0.9997
+        },
+        {
+          "action_id": "standard_mix_second_half",
+          "score": 0.0001
+        },
+        {
+          "action_id": "standard_mix",
+          "score": 0.0001
+        },
+        {
+          "action_id": "gachikoi_koujou",
+          "score": 0.0
+        },
+        {
+          "action_id": "gozen_ichiban_mix",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 20.69,
+      "end": 35.84,
+      "music_label": "intro",
+      "call_role": "mix",
+      "recommended_actions": [
+        "tiger_fire_activation"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "tiger_fire_activation",
+          "score": 0.6406
+        },
+        {
+          "action_id": "bismarck_mix",
+          "score": 0.2895
+        },
+        {
+          "action_id": "ietora_konzetsu_mix",
+          "score": 0.0038
+        },
+        {
+          "action_id": "standard_mix",
+          "score": 0.0
+        },
+        {
+          "action_id": "gozen_ichiban_mix",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 35.84,
+      "end": 45.95,
+      "music_label": "verse",
+      "call_role": "mix",
+      "recommended_actions": [
+        "gozen_ichiban_mix"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "gozen_ichiban_mix",
+          "score": 0.9856
+        },
+        {
+          "action_id": "tsunagaridai_mix",
+          "score": 0.938
+        },
+        {
+          "action_id": "tiger_fire_activation",
+          "score": 0.0
+        },
+        {
+          "action_id": "standard_mix_second_half",
+          "score": 0.0
+        },
+        {
+          "action_id": "pan_mix",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 45.95,
+      "end": 56.06,
+      "music_label": "verse",
+      "call_role": "mix",
+      "recommended_actions": [
+        "gozen_ichiban_mix"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "gozen_ichiban_mix",
+          "score": 0.9799
+        },
+        {
+          "action_id": "tsunagaridai_mix",
+          "score": 0.9321
+        },
+        {
+          "action_id": "pan_mix",
+          "score": 0.0
+        },
+        {
+          "action_id": "tiger_fire_activation",
+          "score": 0.0
+        },
+        {
+          "action_id": "standard_mix_second_half",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 56.06,
+      "end": 61.11,
+      "music_label": "pre_chorus",
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "ppph"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "ppph",
+          "score": 0.9543
+        },
+        {
+          "action_id": "sing_along",
+          "score": 0.881
+        },
+        {
+          "action_id": "name_call",
+          "score": 0.838
+        },
+        {
+          "action_id": "hai_hai",
+          "score": 0.7948
+        },
+        {
+          "action_id": "clap",
+          "score": 0.0001
+        }
+      ]
+    },
+    {
+      "start": 61.11,
+      "end": 66.16,
+      "music_label": "pre_chorus_build",
+      "call_role": "mix",
+      "recommended_actions": [
+        "ietora"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "ietora",
+          "score": 0.994
+        },
+        {
+          "action_id": "bismarck_mix_first_half",
+          "score": 0.8575
+        },
+        {
+          "action_id": "japanese_mix_second_half",
+          "score": 0.0
+        },
+        {
+          "action_id": "aiai_mix",
+          "score": 0.0
+        },
+        {
+          "action_id": "myhontousuke",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 66.16,
+      "end": 76.27,
+      "music_label": "chorus",
+      "call_role": "underground_gei",
+      "recommended_actions": [
+        "long_zhi_mao"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "long_zhi_mao",
+          "score": 0.953
+        },
+        {
+          "action_id": "lei_she",
+          "score": 0.9328
+        },
+        {
+          "action_id": "luo_man_si",
+          "score": 0.8183
+        },
+        {
+          "action_id": "cun_zheng",
+          "score": 0.7963
+        },
+        {
+          "action_id": "ali_shizi",
+          "score": 0.1505
+        }
+      ]
+    },
+    {
+      "start": 76.27,
+      "end": 86.37,
+      "music_label": "chorus",
+      "call_role": "underground_gei",
+      "recommended_actions": [
+        "lei_she"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "lei_she",
+          "score": 0.922
+        },
+        {
+          "action_id": "long_zhi_mao",
+          "score": 0.8607
+        },
+        {
+          "action_id": "ali_shizi",
+          "score": 0.8591
+        },
+        {
+          "action_id": "cun_zheng",
+          "score": 0.8009
+        },
+        {
+          "action_id": "luo_man_si",
+          "score": 0.3966
+        }
+      ]
+    },
+    {
+      "start": 86.37,
+      "end": 91.43,
+      "music_label": "chorus",
+      "call_role": "underground_gei",
+      "recommended_actions": [],
+      "action_candidates": [
+        {
+          "action_id": "lei_she",
+          "score": 0.0479
+        },
+        {
+          "action_id": "cun_zheng",
+          "score": 0.0
+        },
+        {
+          "action_id": "tian_zhao",
+          "score": 0.0
+        },
+        {
+          "action_id": "ali_shizi",
+          "score": 0.0
+        },
+        {
+          "action_id": "heibai_shuangyi",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 91.43,
+      "end": 96.48,
+      "music_label": "instrumental_break",
+      "call_role": "mix",
+      "recommended_actions": [
+        "jp_mix_seigyaku_dt"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "jp_mix_seigyaku_dt",
+          "score": 0.9695
+        },
+        {
+          "action_id": "standard_mix_first_half",
+          "score": 0.9622
+        },
+        {
+          "action_id": "mix_leadin_aaa_ikuzo",
+          "score": 0.004
+        },
+        {
+          "action_id": "aiai_mix",
+          "score": 0.0007
+        },
+        {
+          "action_id": "bismarck_mix_first_half",
+          "score": 0.0001
+        }
+      ]
+    },
+    {
+      "start": 96.48,
+      "end": 99.0,
+      "music_label": "verse",
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "name_call"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "name_call",
+          "score": 0.9828
+        },
+        {
+          "action_id": "hai_hai",
+          "score": 0.8242
+        },
+        {
+          "action_id": "fuwa_fuwa",
+          "score": 0.7916
+        },
+        {
+          "action_id": "clap",
+          "score": 0.7474
+        },
+        {
+          "action_id": "sing_along",
+          "score": 0.0047
+        }
+      ]
+    },
+    {
+      "start": 101.53,
+      "end": 106.58,
+      "music_label": "verse",
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "name_call"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "name_call",
+          "score": 0.957
+        },
+        {
+          "action_id": "oi_oi",
+          "score": 0.9491
+        },
+        {
+          "action_id": "clap",
+          "score": 0.8838
+        },
+        {
+          "action_id": "hai_hai",
+          "score": 0.2787
+        },
+        {
+          "action_id": "fuwa_fuwa",
+          "score": 0.0645
+        }
+      ]
+    },
+    {
+      "start": 106.58,
+      "end": 109.11,
+      "music_label": "verse",
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "name_call"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "name_call",
+          "score": 0.977
+        },
+        {
+          "action_id": "hai_hai",
+          "score": 0.8373
+        },
+        {
+          "action_id": "clap",
+          "score": 0.7513
+        },
+        {
+          "action_id": "fuwa_fuwa",
+          "score": 0.7282
+        },
+        {
+          "action_id": "sing_along",
+          "score": 0.0024
+        }
+      ]
+    },
+    {
+      "start": 109.11,
+      "end": 116.69,
+      "music_label": "verse",
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "clap"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "clap",
+          "score": 0.9495
+        },
+        {
+          "action_id": "name_call",
+          "score": 0.6875
+        },
+        {
+          "action_id": "oi_oi",
+          "score": 0.1385
+        },
+        {
+          "action_id": "hai_hai",
+          "score": 0.03
+        },
+        {
+          "action_id": "fuwa_fuwa",
+          "score": 0.0001
+        }
+      ]
+    },
+    {
+      "start": 116.69,
+      "end": 121.74,
+      "music_label": "pre_chorus",
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "ppph"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "ppph",
+          "score": 0.8919
+        },
+        {
+          "action_id": "sing_along",
+          "score": 0.8188
+        },
+        {
+          "action_id": "hai_hai",
+          "score": 0.7425
+        },
+        {
+          "action_id": "name_call",
+          "score": 0.0029
+        },
+        {
+          "action_id": "clap",
+          "score": 0.0001
+        }
+      ]
+    },
+    {
+      "start": 124.27,
+      "end": 126.79,
+      "music_label": "pre_chorus_build",
+      "call_role": "mix",
+      "recommended_actions": [
+        "ietora"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "ietora",
+          "score": 0.9923
+        },
+        {
+          "action_id": "highclap",
+          "score": 0.0
+        },
+        {
+          "action_id": "japanese_mix_second_half",
+          "score": 0.0
+        },
+        {
+          "action_id": "haiseno_activation",
+          "score": 0.0
+        },
+        {
+          "action_id": "japanese_mix_second_half_double_time",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 126.79,
+      "end": 131.85,
+      "music_label": "chorus",
+      "call_role": "underground_gei",
+      "recommended_actions": [],
+      "action_candidates": [
+        {
+          "action_id": "lei_she",
+          "score": 0.0021
+        },
+        {
+          "action_id": "cun_zheng",
+          "score": 0.0
+        },
+        {
+          "action_id": "tian_zhao",
+          "score": 0.0
+        },
+        {
+          "action_id": "ali_shizi",
+          "score": 0.0
+        },
+        {
+          "action_id": "heibai_shuangyi",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 131.85,
+      "end": 136.9,
+      "music_label": "chorus",
+      "call_role": "underground_gei",
+      "recommended_actions": [],
+      "action_candidates": [
+        {
+          "action_id": "lei_she",
+          "score": 0.001
+        },
+        {
+          "action_id": "cun_zheng",
+          "score": 0.0
+        },
+        {
+          "action_id": "tian_zhao",
+          "score": 0.0
+        },
+        {
+          "action_id": "ali_shizi",
+          "score": 0.0
+        },
+        {
+          "action_id": "heibai_shuangyi",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 136.9,
+      "end": 139.43,
+      "music_label": "chorus",
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "fuwa_fuwa"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "fuwa_fuwa",
+          "score": 0.9218
+        },
+        {
+          "action_id": "sing_along",
+          "score": 0.9152
+        },
+        {
+          "action_id": "fufu_call",
+          "score": 0.9015
+        },
+        {
+          "action_id": "hai_hai",
+          "score": 0.6326
+        },
+        {
+          "action_id": "clap",
+          "score": 0.0006
+        }
+      ]
+    },
+    {
+      "start": 144.48,
+      "end": 152.06,
+      "music_label": "bridge",
+      "call_role": "mix",
+      "recommended_actions": [],
+      "action_candidates": [
+        {
+          "action_id": "aiai_mix",
+          "score": 0.0
+        },
+        {
+          "action_id": "ietora",
+          "score": 0.0
+        },
+        {
+          "action_id": "sae_mix",
+          "score": 0.0
+        },
+        {
+          "action_id": "haiseno_activation",
+          "score": 0.0
+        },
+        {
+          "action_id": "sekai_konton_mix_first_half",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 152.06,
+      "end": 154.59,
+      "music_label": "bridge",
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "popipapipopa"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "popipapipopa",
+          "score": 0.9997
+        },
+        {
+          "action_id": "sing_along",
+          "score": 0.1106
+        },
+        {
+          "action_id": "clap",
+          "score": 0.0
+        },
+        {
+          "action_id": "fufu_call",
+          "score": 0.0
+        },
+        {
+          "action_id": "hai_hai",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 154.59,
+      "end": 159.64,
+      "music_label": "bridge",
+      "call_role": "mix",
+      "recommended_actions": [],
+      "action_candidates": [
+        {
+          "action_id": "ietora",
+          "score": 0.0
+        },
+        {
+          "action_id": "aiai_mix",
+          "score": 0.0
+        },
+        {
+          "action_id": "haiseno_activation",
+          "score": 0.0
+        },
+        {
+          "action_id": "bismarck_mix_first_half",
+          "score": 0.0
+        },
+        {
+          "action_id": "japanese_mix_second_half",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 162.16,
+      "end": 167.21,
+      "music_label": "pre_chorus_build",
+      "call_role": "mix",
+      "recommended_actions": [
+        "ietora"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "ietora",
+          "score": 0.9995
+        },
+        {
+          "action_id": "haiseno_activation",
+          "score": 0.0
+        },
+        {
+          "action_id": "ainu_second_half_mix",
+          "score": 0.0
+        },
+        {
+          "action_id": "aiai_mix",
+          "score": 0.0
+        },
+        {
+          "action_id": "jp_mix_seigyaku_dt",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 167.21,
+      "end": 177.32,
+      "music_label": "solo",
+      "call_role": "mix",
+      "recommended_actions": [
+        "ietora"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "ietora",
+          "score": 0.9965
+        },
+        {
+          "action_id": "ainu_kahen_mix",
+          "score": 0.0
+        },
+        {
+          "action_id": "tiger_fire_activation",
+          "score": 0.0
+        },
+        {
+          "action_id": "bandor_mix",
+          "score": 0.0
+        },
+        {
+          "action_id": "standard_mix_second_half",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 177.32,
+      "end": 189.95,
+      "music_label": "solo",
+      "call_role": "mix",
+      "recommended_actions": [],
+      "action_candidates": [
+        {
+          "action_id": "ainu_kahen_mix",
+          "score": 0.0
+        },
+        {
+          "action_id": "tiger_fire_activation",
+          "score": 0.0
+        },
+        {
+          "action_id": "ainu_mix",
+          "score": 0.0
+        },
+        {
+          "action_id": "sekai_konton_mix_first_half",
+          "score": 0.0
+        },
+        {
+          "action_id": "standard_mix",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 189.95,
+      "end": 192.48,
+      "music_label": "solo",
+      "call_role": "mix",
+      "recommended_actions": [
+        "ietora"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "ietora",
+          "score": 0.972
+        },
+        {
+          "action_id": "highclap",
+          "score": 0.0
+        },
+        {
+          "action_id": "japanese_mix_second_half_double_time",
+          "score": 0.0
+        },
+        {
+          "action_id": "mix_leadin_aaa_ikuzo",
+          "score": 0.0
+        },
+        {
+          "action_id": "japanese_mix_second_half",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 192.48,
+      "end": 195.0,
+      "music_label": "solo",
+      "call_role": "mix",
+      "recommended_actions": [
+        "ietora"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "ietora",
+          "score": 0.9514
+        },
+        {
+          "action_id": "highclap",
+          "score": 0.0
+        },
+        {
+          "action_id": "japanese_mix_second_half_double_time",
+          "score": 0.0
+        },
+        {
+          "action_id": "mix_leadin_aaa_ikuzo",
+          "score": 0.0
+        },
+        {
+          "action_id": "japanese_mix_second_half",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 195.0,
+      "end": 197.53,
+      "music_label": "chorus",
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "fufu_call"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "fufu_call",
+          "score": 0.9445
+        },
+        {
+          "action_id": "fuwa_fuwa",
+          "score": 0.8879
+        },
+        {
+          "action_id": "sing_along",
+          "score": 0.8764
+        },
+        {
+          "action_id": "hai_hai",
+          "score": 0.0037
+        },
+        {
+          "action_id": "clap",
+          "score": 0.0003
+        }
+      ]
+    },
+    {
+      "start": 197.53,
+      "end": 205.11,
+      "music_label": "chorus",
+      "call_role": "mix",
+      "recommended_actions": [
+        "aiai_mix"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "aiai_mix",
+          "score": 0.9917
+        },
+        {
+          "action_id": "ietora",
+          "score": 0.0014
+        },
+        {
+          "action_id": "haiseno_activation",
+          "score": 0.0
+        },
+        {
+          "action_id": "jyajya_mix",
+          "score": 0.0
+        },
+        {
+          "action_id": "sae_mix",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 205.11,
+      "end": 215.22,
+      "music_label": "chorus",
+      "call_role": "mix",
+      "recommended_actions": [
+        "aiai_mix"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "aiai_mix",
+          "score": 0.7124
+        },
+        {
+          "action_id": "sekai_konton_mix_first_half",
+          "score": 0.0003
+        },
+        {
+          "action_id": "ietora",
+          "score": 0.0001
+        },
+        {
+          "action_id": "ainu_mix",
+          "score": 0.0
+        },
+        {
+          "action_id": "ainu_kahen_mix",
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 215.22,
+      "end": 227.85,
+      "music_label": "chorus",
+      "call_role": "rhythmcall",
+      "recommended_actions": [
+        "clap"
+      ],
+      "action_candidates": [
+        {
+          "action_id": "clap",
+          "score": 0.9824
+        },
+        {
+          "action_id": "sing_along",
+          "score": 0.9529
+        },
+        {
+          "action_id": "hai_hai",
+          "score": 0.0772
+        },
+        {
+          "action_id": "fuwa_fuwa",
+          "score": 0.0164
+        },
+        {
+          "action_id": "oi_oi",
+          "score": 0.0
+        }
+      ]
+    }
+  ]
+}
