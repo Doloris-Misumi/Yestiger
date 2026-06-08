@@ -433,7 +433,10 @@ async function analyzeUpload(event) {
     setResult(data, data.audio_url);
     setStatus("Analysis ready");
   } catch (error) {
-    setStatus(`Error: ${error.message}. Upload analysis needs a YesTiger backend API.`);
+    const backendHint = API_BASE || window.location.protocol.startsWith("http")
+      ? "Check the backend log for details."
+      : "Upload analysis needs a YesTiger backend API.";
+    setStatus(`Error: ${error.message}. ${backendHint}`);
   } finally {
     els.analyzeBtn.disabled = false;
   }

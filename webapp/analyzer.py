@@ -14,6 +14,11 @@ import numpy as np
 import torch
 import torchaudio
 
+try:
+    import miniaudio
+except ImportError:  # pragma: no cover - optional decoder for local uploads
+    miniaudio = None
+
 
 ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS = ROOT / "scripts"
@@ -94,16 +99,38 @@ def safe_mean(values: np.ndarray, span: slice) -> float:
     return float(np.nanmean(chunk))
 
 
+def load_audio_with_miniaudio(audio_path: Path, target_sr: int) -> Tuple[np.ndarray, int]:
+    if miniaudio is None:
+        raise RuntimeError("miniaudio is not installed; cannot use fallback decoder.")
+    decoded = miniaudio.decode_file(
+        str(audio_path),
+        output_format=miniaudio.SampleFormat.FLOAT32,
+        nchannels=1,
+        sample_rate=target_sr,
+    )
+    y = np.asarray(decoded.samples, dtype=np.float32).reshape(-1)
+    return y, int(decoded.sample_rate)
+
+
 def load_audio(audio_path: Path, target_sr: int = 16000) -> Tuple[np.ndarray, int, float]:
-    waveform, sr = torchaudio.load(str(audio_path))
-    if waveform.ndim == 2:
-        waveform = waveform.mean(dim=0)
-    else:
-        waveform = waveform.reshape(-1)
-    if sr != target_sr:
-        waveform = torchaudio.functional.resample(waveform, sr, target_sr)
-        sr = target_sr
-    y = waveform.detach().cpu().numpy().astype(np.float32)
+    try:
+        waveform, sr = torchaudio.load(str(audio_path))
+        if waveform.ndim == 2:
+            waveform = waveform.mean(dim=0)
+        else:
+            waveform = waveform.reshape(-1)
+        if sr != target_sr:
+            waveform = torchaudio.functional.resample(waveform, sr, target_sr)
+            sr = target_sr
+        y = waveform.detach().cpu().numpy().astype(np.float32)
+    except Exception as exc:
+        try:
+            y, sr = load_audio_with_miniaudio(audio_path, target_sr)
+        except Exception as fallback_exc:
+            raise RuntimeError(
+                f"Audio decode failed. torchaudio={type(exc).__name__}: {exc}; "
+                f"miniaudio={type(fallback_exc).__name__}: {fallback_exc}"
+            ) from fallback_exc
     if y.size == 0:
         raise ValueError("Uploaded audio is empty.")
     peak = float(np.max(np.abs(y)))
@@ -678,7 +705,7 @@ def _analyze_audio_pipeline(
     song_id: str,
     title: str,
     job_id: str,
-    duration: float,
+    duration: Optional[float] = None,
 ) -> Dict[str, Any]:
     tmp_dir = UPLOAD_DIR / f"_struct_{job_id}"
     struct = run_allin1(audio_path, tmp_dir)
@@ -689,6 +716,7 @@ def _analyze_audio_pipeline(
     base_std = standardizer_from_json(metadata["base_standardizer"])
 
     song_end = infer_song_end(struct, None)
+    result_duration = float(duration if duration is not None else song_end)
     rows = build_rows_from_struct(struct, song_id, song_end)
     if not rows:
         raise ValueError("No bar rows could be built from allin1 struct.")
@@ -760,7 +788,7 @@ def _analyze_audio_pipeline(
             "song_id": song_id,
             "title": title or audio_path.stem,
             "audio_filename": audio_path.name,
-            "duration": round(duration, 3),
+            "duration": round(result_duration, 3),
             "tempo": round(float(tempo), 2) if tempo else 0,
             "bar_count": len(rows),
         },
@@ -854,17 +882,18 @@ def _analyze_audio_heuristic(
 def analyze_audio(audio_path: Path, title: Optional[str] = None, job_id: Optional[str] = None) -> Dict[str, Any]:
     job_id = job_id or uuid.uuid4().hex[:12]
     song_id = slugify(title or audio_path.stem)
-    y, sr, duration = load_audio(audio_path)
     effective_title = title or audio_path.stem
 
     if _PIPELINE_AVAILABLE:
         try:
-            return _analyze_audio_pipeline(audio_path, song_id, effective_title, job_id, duration)
+            return _analyze_audio_pipeline(audio_path, song_id, effective_title, job_id)
         except Exception as exc:
             fallback_reason = f"{type(exc).__name__}: {exc}"
             print(f"[analyzer] Pipeline failed ({fallback_reason}), falling back to heuristic.", flush=True)
+            y, sr, duration = load_audio(audio_path)
             return _analyze_audio_heuristic(audio_path, song_id, effective_title, job_id, y, sr, duration, fallback_reason=fallback_reason)
 
+    y, sr, duration = load_audio(audio_path)
     return _analyze_audio_heuristic(audio_path, song_id, effective_title, job_id, y, sr, duration)
 
 

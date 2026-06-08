@@ -4,6 +4,12 @@ Local web wrapper for uploading idol songs, estimating call sections, filling ba
 
 ## Run
 
+Install the optional MP3 fallback decoder if uploads fail with a `soundfile` decode error:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install miniaudio
+```
+
 ```powershell
 .\.venv\Scripts\python.exe webapp\server.py --host 127.0.0.1 --port 8765
 ```
