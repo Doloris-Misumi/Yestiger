@@ -2,6 +2,7 @@ import json
 import math
 import os
 import re
+import shutil
 import subprocess
 import sys
 import uuid
@@ -102,12 +103,30 @@ def safe_mean(values: np.ndarray, span: slice) -> float:
 def load_audio_with_miniaudio(audio_path: Path, target_sr: int) -> Tuple[np.ndarray, int]:
     if miniaudio is None:
         raise RuntimeError("miniaudio is not installed; cannot use fallback decoder.")
-    decoded = miniaudio.decode_file(
-        str(audio_path),
-        output_format=miniaudio.SampleFormat.FLOAT32,
-        nchannels=1,
-        sample_rate=target_sr,
-    )
+    decoder_path = Path(audio_path)
+    temporary_path: Optional[Path] = None
+    try:
+        str(decoder_path).encode("ascii")
+    except UnicodeEncodeError:
+        cache_dir = RUN_DIR / "_decode_cache"
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        suffix = decoder_path.suffix if decoder_path.suffix else ".audio"
+        temporary_path = cache_dir / f"{uuid.uuid4().hex}{suffix}"
+        shutil.copy2(decoder_path, temporary_path)
+        decoder_path = temporary_path
+    try:
+        decoded = miniaudio.decode_file(
+            str(decoder_path),
+            output_format=miniaudio.SampleFormat.FLOAT32,
+            nchannels=1,
+            sample_rate=target_sr,
+        )
+    finally:
+        if temporary_path:
+            try:
+                temporary_path.unlink()
+            except OSError:
+                pass
     y = np.asarray(decoded.samples, dtype=np.float32).reshape(-1)
     return y, int(decoded.sample_rate)
 

@@ -187,9 +187,14 @@ class YesTigerHandler(BaseHTTPRequestHandler):
         field = form["audio"]
         if isinstance(field, list):
             field = field[0]
-        filename = Path(field.filename or "uploaded_audio.wav").name
-        title = form.getfirst("title") or Path(filename).stem
-        job_id = slugify(f"{Path(filename).stem}_{slugify(title)}")[:40]
+        original_filename = Path(field.filename or "uploaded_audio.wav").name
+        original_path = Path(original_filename)
+        suffix = original_path.suffix.lower()
+        safe_suffix = suffix if suffix and len(suffix) <= 10 and all(char.isalnum() or char == "." for char in suffix) else ".audio"
+        safe_stem = slugify(original_path.stem)[:80] or "uploaded_audio"
+        filename = f"{safe_stem}{safe_suffix}"
+        title = form.getfirst("title") or original_path.stem
+        job_id = slugify(f"{safe_stem}_{slugify(title)}")[:40]
         if not job_id:
             job_id = "uploaded"
         job_id = f"{job_id}_{len(list(JOB_DIR.glob(job_id + '*'))):03d}"
@@ -200,6 +205,7 @@ class YesTigerHandler(BaseHTTPRequestHandler):
             shutil.copyfileobj(field.file, handle)
 
         result = analyze_audio(audio_path, title=title, job_id=job_id)
+        result.setdefault("song", {})["original_audio_filename"] = original_filename
         result["audio_url"] = f"/api/jobs/{job_id}/audio"
         result["downloads"] = {
             "json": f"/api/jobs/{job_id}/result.json",
