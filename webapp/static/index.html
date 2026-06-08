@@ -55,6 +55,15 @@
             </div>
           </div>
 
+          <div class="process-panel">
+            <div class="process-head">
+              <h2>Signal Flow</h2>
+              <span id="pipelineBadge" class="pipeline-badge">Idle</span>
+            </div>
+            <div id="methodLine" class="method-line">No analysis loaded</div>
+            <ol id="processSteps" class="process-steps"></ol>
+          </div>
+
           <div class="export-panel">
             <button id="exportJsonBtn" type="button" disabled>Export JSON</button>
             <button id="exportMdBtn" type="button" disabled>Export MD</button>
@@ -78,6 +87,8 @@
               <thead>
                 <tr>
                   <th>Time</th>
+                  <th>Music</th>
+                  <th>Struct</th>
                   <th>Role</th>
                   <th>Action</th>
                   <th>Bars</th>

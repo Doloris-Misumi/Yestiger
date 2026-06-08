@@ -20,6 +20,9 @@ const els = {
   tempoStat: document.getElementById("tempoStat"),
   barsStat: document.getElementById("barsStat"),
   actionsStat: document.getElementById("actionsStat"),
+  pipelineBadge: document.getElementById("pipelineBadge"),
+  methodLine: document.getElementById("methodLine"),
+  processSteps: document.getElementById("processSteps"),
   exportJsonBtn: document.getElementById("exportJsonBtn"),
   exportMdBtn: document.getElementById("exportMdBtn"),
   recordBtn: document.getElementById("recordBtn"),
@@ -62,6 +65,22 @@ const roleColors = {
   underground_gei: "#7a4fa3",
 };
 
+const musicColors = {
+  intro: "#2f6fb2",
+  verse: "#1d8f74",
+  pre_chorus: "#b7791f",
+  pre_chorus_build: "#d97706",
+  chorus: "#c65347",
+  post_chorus: "#9f5f2a",
+  bridge: "#7a4fa3",
+  instrumental_break: "#0f766e",
+  interlude: "#0f766e",
+  solo: "#8b5cf6",
+  outro: "#475467",
+  end: "#334155",
+  unknown: "#64748b",
+};
+
 function setStatus(text) {
   els.statusLine.textContent = text;
 }
@@ -95,12 +114,12 @@ function markdownFromTimeline(result) {
   const lines = [
     `# ${title}`,
     "",
-    "| Time | Role | Action | Bars | Risk | Text |",
-    "|---:|---|---|---:|---|---|",
+    "| Time | Music | Struct | Role | Action | Bars | Risk | Text |",
+    "|---:|---|---|---|---|---:|---|---|",
   ];
   for (const action of result.timeline || []) {
     lines.push(
-      `| ${fmtTime(action.start)}-${fmtTime(action.end)} | ${action.role || "-"} | ${action.display_name || "-"} | ${action.bar_count ?? "-"} | ${action.risk || "-"} | ${action.typical_text || "-"} |`
+      `| ${fmtTime(action.start)}-${fmtTime(action.end)} | ${action.music_label || "-"} | ${action.struct_label || "-"} | ${action.role || "-"} | ${action.display_name || "-"} | ${action.bar_count ?? "-"} | ${action.risk || "-"} | ${action.typical_text || "-"} |`
     );
   }
   return `${lines.join("\n")}\n`;
@@ -116,12 +135,52 @@ function nextAction(time) {
   return timeline.find((item) => Number(item.start) > time) || null;
 }
 
+function musicSegmentAt(time) {
+  const segments = state.result?.music_segments || state.result?.segments || [];
+  return segments.find((item) => time >= Number(item.start) && time < Number(item.end)) || null;
+}
+
 function renderStats() {
   const song = state.result?.song || {};
   els.durationStat.textContent = song.duration ? fmtTime(song.duration) : "-";
   els.tempoStat.textContent = song.tempo ? `${Math.round(song.tempo)} BPM` : "-";
   els.barsStat.textContent = song.bar_count ?? "-";
   els.actionsStat.textContent = (state.result?.timeline || []).length || "-";
+}
+
+function renderProcess() {
+  const process = state.result?.signal_process || {};
+  const method = state.result?.method || {};
+  const status = process.status || state.result?.pipeline_status || "idle";
+  els.pipelineBadge.textContent = status;
+  els.pipelineBadge.dataset.status = status;
+  els.methodLine.textContent = method.structure
+    ? `${method.structure} -> ${method.actions || "actions"}`
+    : "No analysis loaded";
+  els.processSteps.innerHTML = "";
+
+  const counts = [];
+  if (process.rows != null) counts.push(`${process.rows} bars`);
+  if (process.music_segments != null) counts.push(`${process.music_segments} music segments`);
+  if (process.call_spans != null) counts.push(`${process.call_spans} call spans`);
+  if (counts.length) {
+    const item = document.createElement("li");
+    item.innerHTML = `<strong>Output grid</strong><span>${counts.join(" / ")}</span>`;
+    els.processSteps.appendChild(item);
+  }
+
+  for (const step of process.steps || []) {
+    const item = document.createElement("li");
+    item.innerHTML = `<strong>${escapeHtml(step.name || "")}</strong><span>${escapeHtml(step.detail || "")}</span>`;
+    els.processSteps.appendChild(item);
+  }
+
+  if (process.fallback_reason) {
+    const item = document.createElement("li");
+    item.className = "fallback-note";
+    item.innerHTML = `<strong>Fallback reason</strong><span>${escapeHtml(process.fallback_reason)}</span>`;
+    els.processSteps.appendChild(item);
+  }
 }
 
 function renderTimeline() {
@@ -133,6 +192,8 @@ function renderTimeline() {
     const riskClass = action.risk === "high" ? "risk-high" : action.risk === "medium" ? "risk-medium" : "";
     tr.innerHTML = `
       <td>${fmtTime(action.start)}-${fmtTime(action.end)}</td>
+      <td><span class="music-pill music-${action.music_label || "unknown"}">${escapeHtml(action.music_label || "-")}</span></td>
+      <td><span class="struct-pill">${escapeHtml(action.struct_label || "-")}</span></td>
       <td><span class="role-pill role-${action.role || "keepspace"}">${action.role || "-"}</span></td>
       <td><input class="editable-action" value="${escapeAttr(action.display_name || "")}" data-field="display_name" /></td>
       <td>${action.bar_count ?? "-"}</td>
@@ -164,7 +225,7 @@ function updateActiveRow() {
     const index = (state.result.timeline || []).indexOf(active);
     const row = els.timelineBody.querySelector(`tr[data-index="${index}"]`);
     if (row) row.classList.add("is-active");
-    els.currentAction.textContent = `${active.display_name} · ${fmtTime(active.start)}-${fmtTime(active.end)}`;
+    els.currentAction.textContent = `${active.music_label || "-"} | ${active.role || "-"} | ${active.display_name} | ${fmtTime(active.start)}-${fmtTime(active.end)}`;
   } else {
     els.currentAction.textContent = state.result ? "Keep Space" : "No action loaded";
   }
@@ -214,6 +275,7 @@ function drawCanvas() {
   const duration = Number(result?.song?.duration || els.audio.duration || 1);
   const current = actionAt(time);
   const upcoming = nextAction(time);
+  const currentMusic = musicSegmentAt(time);
 
   ctx.fillStyle = "#111827";
   ctx.fillRect(0, 0, width, height);
@@ -226,26 +288,58 @@ function drawCanvas() {
   ctx.font = "700 44px Segoe UI, sans-serif";
   ctx.fillText(result?.song?.title || "YesTiger", 48, 78);
 
-  ctx.font = "700 74px Segoe UI, sans-serif";
+  ctx.fillStyle = "#cbd5e1";
+  ctx.font = "28px Segoe UI, sans-serif";
+  const musicText = currentMusic
+    ? `Music: ${currentMusic.music_label || "-"} | Struct: ${currentMusic.struct_label || "-"}`
+    : "Music: -";
+  ctx.fillText(musicText, 52, 124);
+
+  ctx.fillStyle = "#f8fafc";
+  ctx.font = "700 68px Segoe UI, sans-serif";
   const actionText = current?.display_name || "Keep Space";
-  ctx.fillText(actionText, 48, 210);
+  ctx.fillText(actionText, 48, 218);
 
   ctx.font = "28px Segoe UI, sans-serif";
   ctx.fillStyle = "#cbd5e1";
-  const meta = current ? `${fmtTime(current.start)}-${fmtTime(current.end)} · ${current.bar_count ?? "-"} bars · ${current.risk || "low"}` : fmtTime(time);
-  ctx.fillText(meta, 52, 260);
+  const meta = current ? `${fmtTime(current.start)}-${fmtTime(current.end)} | ${current.bar_count ?? "-"} bars | ${current.role || "-"} | ${current.risk || "low"}` : fmtTime(time);
+  ctx.fillText(meta, 52, 270);
 
   if (upcoming) {
     ctx.fillStyle = "#94a3b8";
     ctx.font = "26px Segoe UI, sans-serif";
-    ctx.fillText(`Next: ${upcoming.display_name} @ ${fmtTime(upcoming.start)}`, 52, 318);
+    ctx.fillText(`Next: ${upcoming.music_label || "-"} / ${upcoming.display_name} @ ${fmtTime(upcoming.start)}`, 52, 326);
   }
 
+  drawMusicBands(ctx, width, height, duration, time);
   drawWaveform(ctx, width, height, duration, time);
   drawRoleBands(ctx, width, height, duration, time);
 
   updateActiveRow();
   state.animationId = requestAnimationFrame(drawCanvas);
+}
+
+function drawMusicBands(ctx, width, height, duration, time) {
+  const segments = state.result?.music_segments || state.result?.segments || [];
+  const left = 52;
+  const top = height - 226;
+  const w = width - 104;
+  const h = 24;
+  ctx.fillStyle = "#0f172a";
+  ctx.fillRect(left, top, w, h);
+  segments.forEach((segment) => {
+    const label = segment.music_label || "unknown";
+    const x = left + (Number(segment.start) / duration) * w;
+    const endX = left + (Number(segment.end) / duration) * w;
+    ctx.fillStyle = musicColors[label] || musicColors.unknown;
+    ctx.fillRect(x, top, Math.max(2, endX - x), h);
+  });
+  ctx.fillStyle = "#cbd5e1";
+  ctx.font = "18px Segoe UI, sans-serif";
+  ctx.fillText("music structure", left, top - 8);
+  const progressX = left + (time / Math.max(0.001, duration)) * w;
+  ctx.fillStyle = "#f8fafc";
+  ctx.fillRect(progressX, top - 6, 3, h + 12);
 }
 
 function drawWaveform(ctx, width, height, duration, time) {
@@ -280,6 +374,9 @@ function drawRoleBands(ctx, width, height, duration, time) {
     ctx.fillStyle = roleColors[span.call_role] || "#6b7280";
     ctx.fillRect(x, top, Math.max(2, endX - x), h);
   });
+  ctx.fillStyle = "#cbd5e1";
+  ctx.font = "18px Segoe UI, sans-serif";
+  ctx.fillText("call role", left, top - 8);
   ctx.fillStyle = "#f8fafc";
   const progressX = left + (time / Math.max(0.001, duration)) * w;
   ctx.fillRect(progressX, top - 8, 3, h + 16);
@@ -288,6 +385,7 @@ function drawRoleBands(ctx, width, height, duration, time) {
 function setResult(result, audioUrl) {
   state.result = result;
   renderStats();
+  renderProcess();
   renderTimeline();
   els.exportJsonBtn.disabled = false;
   els.exportMdBtn.disabled = false;

@@ -16,6 +16,279 @@
     "uses_tiny_action_ranker": false,
     "leakage_note": "The held-out song's recommended_actions are not used for action selection."
   },
+  "pipeline_status": "stored_example",
+  "signal_process": {
+    "status": "stored_example",
+    "structure": "stored_loso_audio_vote_rf1_logreg1_gb1",
+    "rows": 84,
+    "music_segments": 24,
+    "call_spans": 24,
+    "actions": 20,
+    "steps": [
+      {
+        "name": "Audio decode",
+        "detail": "Load waveform and estimate duration from the uploaded track."
+      },
+      {
+        "name": "Signal features",
+        "detail": "Use frame energy, onset strength, spectral centroid/flatness, and novelty proxies."
+      },
+      {
+        "name": "Estimated bars",
+        "detail": "Estimate a regular bar grid from onset peaks and tempo heuristics."
+      },
+      {
+        "name": "Rule labels",
+        "detail": "Assign coarse music sections and call roles from position, energy, onset, and vocal-density proxy."
+      },
+      {
+        "name": "Action fitting",
+        "detail": "Use the same barfit action library after the fallback segmentation."
+      }
+    ]
+  },
+  "music_segments": [
+    {
+      "start": 0.0,
+      "end": 8.74,
+      "music_label": "intro",
+      "struct_label": "intro",
+      "bar_start": 0,
+      "bar_end": 0,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 8.74,
+      "end": 16.33,
+      "music_label": "intro",
+      "struct_label": "intro",
+      "bar_start": 1,
+      "bar_end": 1,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 16.33,
+      "end": 50.43,
+      "music_label": "verse",
+      "struct_label": "verse",
+      "bar_start": 2,
+      "bar_end": 2,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 50.43,
+      "end": 78.2,
+      "music_label": "chorus",
+      "struct_label": "chorus",
+      "bar_start": 3,
+      "bar_end": 3,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 78.2,
+      "end": 80.75,
+      "music_label": "instrumental_break",
+      "struct_label": "chorus",
+      "bar_start": 4,
+      "bar_end": 4,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 80.75,
+      "end": 83.27,
+      "music_label": "instrumental_break",
+      "struct_label": "chorus",
+      "bar_start": 5,
+      "bar_end": 5,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 83.27,
+      "end": 114.86,
+      "music_label": "verse",
+      "struct_label": "verse",
+      "bar_start": 6,
+      "bar_end": 6,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 114.86,
+      "end": 117.37,
+      "music_label": "pre_chorus_build",
+      "struct_label": "verse",
+      "bar_start": 7,
+      "bar_end": 7,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 117.37,
+      "end": 124.95,
+      "music_label": "chorus",
+      "struct_label": "chorus",
+      "bar_start": 8,
+      "bar_end": 8,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 124.95,
+      "end": 127.47,
+      "music_label": "chorus",
+      "struct_label": "chorus",
+      "bar_start": 9,
+      "bar_end": 9,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 127.47,
+      "end": 132.55,
+      "music_label": "chorus",
+      "struct_label": "chorus",
+      "bar_start": 10,
+      "bar_end": 10,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 132.55,
+      "end": 135.07,
+      "music_label": "chorus",
+      "struct_label": "chorus",
+      "bar_start": 11,
+      "bar_end": 11,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 135.07,
+      "end": 137.56,
+      "music_label": "chorus",
+      "struct_label": "chorus",
+      "bar_start": 12,
+      "bar_end": 12,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 137.56,
+      "end": 140.12,
+      "music_label": "chorus",
+      "struct_label": "chorus",
+      "bar_start": 13,
+      "bar_end": 13,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 140.12,
+      "end": 160.33,
+      "music_label": "solo",
+      "struct_label": "solo",
+      "bar_start": 14,
+      "bar_end": 14,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 160.33,
+      "end": 162.85,
+      "music_label": "solo",
+      "struct_label": "chorus",
+      "bar_start": 15,
+      "bar_end": 15,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 162.85,
+      "end": 170.43,
+      "music_label": "chorus",
+      "struct_label": "chorus",
+      "bar_start": 16,
+      "bar_end": 16,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 170.43,
+      "end": 172.98,
+      "music_label": "chorus",
+      "struct_label": "chorus",
+      "bar_start": 17,
+      "bar_end": 17,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 172.98,
+      "end": 177.99,
+      "music_label": "chorus",
+      "struct_label": "chorus",
+      "bar_start": 18,
+      "bar_end": 18,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 177.99,
+      "end": 190.63,
+      "music_label": "chorus",
+      "struct_label": "chorus",
+      "bar_start": 19,
+      "bar_end": 19,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 190.63,
+      "end": 193.16,
+      "music_label": "outro",
+      "struct_label": "chorus",
+      "bar_start": 20,
+      "bar_end": 20,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 193.16,
+      "end": 195.7,
+      "music_label": "outro",
+      "struct_label": "chorus",
+      "bar_start": 21,
+      "bar_end": 21,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 195.7,
+      "end": 198.23,
+      "music_label": "outro",
+      "struct_label": "outro",
+      "bar_start": 22,
+      "bar_end": 22,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    },
+    {
+      "start": 198.23,
+      "end": 211.38,
+      "music_label": "outro",
+      "struct_label": "outro",
+      "bar_start": 23,
+      "bar_end": 23,
+      "bars": 1,
+      "source": "stored_callbook_context"
+    }
+  ],
   "call_spans": [
     {
       "start": 0.0,
@@ -4131,6 +4404,7 @@
       "display_name": "Myohon Activation",
       "role": "mix",
       "music_label": "intro",
+      "struct_label": "intro",
       "risk": "medium",
       "bar_count": 2,
       "typical_text": "Myohon activation phrase for a 2-bar gap.",
@@ -4144,6 +4418,7 @@
       "display_name": "MIX Lead-in Aaa Ikuzo",
       "role": "mix",
       "music_label": "intro",
+      "struct_label": "intro",
       "risk": "medium",
       "bar_count": 1,
       "typical_text": "Aaa, yossha ikuzo!",
@@ -4157,6 +4432,7 @@
       "display_name": "Clap",
       "role": "rhythmcall",
       "music_label": "verse",
+      "struct_label": "verse",
       "risk": "low",
       "bar_count": 2,
       "typical_text": "Clap on beat or backbeat.",
@@ -4170,6 +4446,7 @@
       "display_name": "Sing Along",
       "role": "rhythmcall",
       "music_label": "verse",
+      "struct_label": "verse",
       "risk": "low",
       "bar_count": 12,
       "typical_text": "Sing the main hook or chorus melody with the crowd.",
@@ -4183,6 +4460,7 @@
       "display_name": "Gongfu She",
       "role": "underground_gei",
       "music_label": "chorus",
+      "struct_label": "chorus",
       "risk": "high",
       "bar_count": 9,
       "typical_text": "Gongfu She underground-gei movement sequence.",
@@ -4196,6 +4474,7 @@
       "display_name": "Keep Space / Unassigned Gap",
       "role": "underground_gei",
       "music_label": "chorus",
+      "struct_label": "chorus",
       "risk": "low",
       "bar_count": 2,
       "typical_text": "",
@@ -4209,6 +4488,7 @@
       "display_name": "Hai Hai",
       "role": "rhythmcall",
       "music_label": "instrumental_break",
+      "struct_label": "chorus",
       "risk": "low",
       "bar_count": 1,
       "typical_text": "Hai! Hai!",
@@ -4222,6 +4502,7 @@
       "display_name": "Keep Space / Too Short for Action",
       "role": "underground_gei",
       "music_label": "instrumental_break",
+      "struct_label": "chorus",
       "risk": "low",
       "bar_count": 1,
       "typical_text": "",
@@ -4235,6 +4516,7 @@
       "display_name": "Clap",
       "role": "rhythmcall",
       "music_label": "verse",
+      "struct_label": "verse",
       "risk": "low",
       "bar_count": 2,
       "typical_text": "Clap on beat or backbeat.",
@@ -4248,6 +4530,7 @@
       "display_name": "Sing Along",
       "role": "rhythmcall",
       "music_label": "verse",
+      "struct_label": "verse",
       "risk": "low",
       "bar_count": 10,
       "typical_text": "Sing the main hook or chorus melody with the crowd.",
@@ -4261,6 +4544,7 @@
       "display_name": "Haiseno Activation",
       "role": "mix",
       "music_label": "pre_chorus_build",
+      "struct_label": "verse",
       "risk": "medium",
       "bar_count": 1,
       "typical_text": "Haiseno activation phrase for a 1 or 2 eight-count gap.",
@@ -4274,6 +4558,7 @@
       "display_name": "Sing Along",
       "role": "rhythmcall",
       "music_label": "chorus",
+      "struct_label": "chorus",
       "risk": "low",
       "bar_count": 3,
       "typical_text": "Sing the main hook or chorus melody with the crowd.",
@@ -4287,6 +4572,7 @@
       "display_name": "Keep Space / Too Short for Action",
       "role": "underground_gei",
       "music_label": "chorus",
+      "struct_label": "chorus",
       "risk": "low",
       "bar_count": 1,
       "typical_text": "",
@@ -4300,6 +4586,7 @@
       "display_name": "Clap",
       "role": "rhythmcall",
       "music_label": "chorus",
+      "struct_label": "chorus",
       "risk": "low",
       "bar_count": 2,
       "typical_text": "Clap on beat or backbeat.",
@@ -4313,6 +4600,7 @@
       "display_name": "Fu Fu Fu Call",
       "role": "rhythmcall",
       "music_label": "chorus",
+      "struct_label": "chorus",
       "risk": "low",
       "bar_count": 1,
       "typical_text": "Fu! Fu! Fu!",
@@ -4326,6 +4614,7 @@
       "display_name": "Bariyado MIX",
       "role": "mix",
       "music_label": "solo",
+      "struct_label": "solo",
       "risk": "medium",
       "bar_count": 8,
       "typical_text": "Bariyado MIX phrase in romanized form.",
@@ -4339,6 +4628,7 @@
       "display_name": "Sing Along",
       "role": "rhythmcall",
       "music_label": "chorus",
+      "struct_label": "chorus",
       "risk": "low",
       "bar_count": 3,
       "typical_text": "Sing the main hook or chorus melody with the crowd.",
@@ -4352,6 +4642,7 @@
       "display_name": "Imi Fumei Ai MIX",
       "role": "mix",
       "music_label": "chorus",
+      "struct_label": "chorus",
       "risk": "medium",
       "bar_count": 2,
       "typical_text": "Imi fumei ai MIX phrase in romanized form.",
@@ -4365,6 +4656,7 @@
       "display_name": "Imi Fumei Ai MIX",
       "role": "mix",
       "music_label": "outro",
+      "struct_label": "chorus",
       "risk": "medium",
       "bar_count": 1,
       "typical_text": "Imi fumei ai MIX phrase in romanized form.",
@@ -4378,6 +4670,7 @@
       "display_name": "Imi Fumei Ai MIX",
       "role": "mix",
       "music_label": "outro",
+      "struct_label": "outro",
       "risk": "medium",
       "bar_count": 1,
       "typical_text": "Imi fumei ai MIX phrase in romanized form.",

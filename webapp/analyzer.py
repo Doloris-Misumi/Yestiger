@@ -1,13 +1,17 @@
 import json
 import math
+import os
 import re
+import subprocess
 import sys
 import uuid
 import warnings
+from collections import Counter
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
 
 import numpy as np
+import torch
 import torchaudio
 
 
@@ -25,6 +29,29 @@ from enrich_callbook_actions import (  # noqa: E402
     safe_float,
     write_json,
 )
+
+try:
+    from predict_tiny_pipeline import (  # noqa: E402
+        build_rows_from_struct,
+        call_rows_to_tensor,
+        infer_song_end,
+        make_segments,
+        rows_to_tensor,
+        sanitize_call_role,
+        sanitize_music_label,
+    )
+    from train_tiny_pipeline import (  # noqa: E402
+        BASE_NUMERIC_FEATURES,
+        Standardizer,
+        TinySequenceTagger,
+    )
+
+    def _load_json_file(path: Path) -> Dict[str, Any]:
+        return json.loads(path.read_text(encoding="utf-8"))
+
+    _PIPELINE_AVAILABLE = True
+except ImportError:
+    _PIPELINE_AVAILABLE = False
 
 
 ROLE_VOCAB = {"keepspace", "rhythmcall", "mix", "underground_gei"}
@@ -371,6 +398,7 @@ def flatten_actions(call_spans: Sequence[Dict[str, Any]]) -> List[Dict[str, Any]
                     "display_name": str(action.get("display_name") or action.get("action_id") or ""),
                     "role": span.get("call_role"),
                     "music_label": span.get("music_label_context"),
+                    "struct_label": span.get("allin1_struct_context"),
                     "risk": action.get("risk"),
                     "bar_count": action.get("bar_count"),
                     "typical_text": action.get("typical_text") or "",
@@ -408,26 +436,377 @@ def callbook_to_markdown(song_id: str, call_spans: Sequence[Dict[str, Any]]) -> 
     return "\n".join(lines) + "\n"
 
 
-def analyze_audio(audio_path: Path, title: Optional[str] = None, job_id: Optional[str] = None) -> Dict[str, Any]:
-    job_id = job_id or uuid.uuid4().hex[:12]
-    song_id = slugify(title or audio_path.stem)
-    y, sr, duration = load_audio(audio_path)
-    bar_times, tempo = estimate_bars(y, sr, duration)
-    frame_features = compute_frame_features(y, sr)
-    rows = build_rows(song_id, bar_times, frame_features, sr, duration)
-    call_spans = merge_role_spans(rows)
+def label_at_time(segments: Sequence[Dict[str, Any]], time: float, key: str, default: str = "-") -> str:
+    for segment in segments:
+        if safe_float(segment.get("start")) <= time < safe_float(segment.get("end")):
+            return str(segment.get(key) or default)
+    if segments and abs(time - safe_float(segments[-1].get("end"))) < 0.05:
+        return str(segments[-1].get(key) or default)
+    return default
+
+
+def rows_to_music_segments(rows: Sequence[Dict[str, Any]], source: str) -> List[Dict[str, Any]]:
+    segments: List[Dict[str, Any]] = []
+    current: Optional[Dict[str, Any]] = None
+    for row in rows:
+        target = row.get("target") or {}
+        features = row.get("features") or {}
+        music_label = str(target.get("music_label") or features.get("allin1_struct_label") or "unknown")
+        struct_label = str(features.get("allin1_struct_label") or music_label)
+        boundary = int(target.get("boundary") or features.get("allin1_struct_boundary") or 0)
+        start = safe_float(row.get("start"))
+        end = safe_float(row.get("end"))
+        if current and current["music_label"] == music_label and not boundary:
+            current["end"] = end
+            current["bar_end"] = int(row.get("bar_index", current["bar_end"]))
+            current["bars"] += 1
+            if struct_label != current.get("struct_label"):
+                current["struct_label"] = f"{current.get('struct_label')}/{struct_label}"
+        else:
+            if current:
+                segments.append(current)
+            current = {
+                "start": start,
+                "end": end,
+                "music_label": music_label,
+                "struct_label": struct_label,
+                "bar_start": int(row.get("bar_index", 0)),
+                "bar_end": int(row.get("bar_index", 0)),
+                "bars": 1,
+                "source": source,
+            }
+    if current:
+        segments.append(current)
+    return segments
+
+
+def normalize_music_segments(segments: Sequence[Dict[str, Any]], rows: Sequence[Dict[str, Any]], source: str) -> List[Dict[str, Any]]:
+    if not segments:
+        return rows_to_music_segments(rows, source)
+    normalized = []
+    for segment in segments:
+        start = safe_float(segment.get("start"))
+        end = safe_float(segment.get("end"))
+        covered = [
+            row
+            for row in rows
+            if min(safe_float(row.get("end")), end) > max(safe_float(row.get("start")), start)
+        ]
+        struct_labels = [
+            str((row.get("features") or {}).get("allin1_struct_label") or "")
+            for row in covered
+            if str((row.get("features") or {}).get("allin1_struct_label") or "")
+        ]
+        struct_label = Counter(struct_labels).most_common(1)[0][0] if struct_labels else str(segment.get("struct_label") or "-")
+        normalized.append(
+            {
+                "start": round(start, 3),
+                "end": round(end, 3),
+                "music_label": str(segment.get("music_label") or segment.get("label") or "unknown"),
+                "struct_label": struct_label,
+                "bars": len(covered) if covered else None,
+                "source": source,
+                "notes": segment.get("notes") or "",
+            }
+        )
+    return normalized
+
+
+def music_segments_from_call_spans(call_spans: Sequence[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    pseudo_rows = []
+    for index, span in enumerate(call_spans):
+        music_label = str(span.get("music_label_context") or span.get("music_label") or "unknown")
+        struct_label = str(span.get("allin1_struct_context") or span.get("allin1_struct_label") or music_label)
+        pseudo_rows.append(
+            {
+                "bar_index": index,
+                "start": safe_float(span.get("start")),
+                "end": safe_float(span.get("end")),
+                "features": {
+                    "allin1_struct_label": struct_label,
+                    "allin1_struct_boundary": 1,
+                },
+                "target": {
+                    "music_label": music_label,
+                    "boundary": 1,
+                },
+            }
+        )
+    return rows_to_music_segments(pseudo_rows, "stored_callbook_context")
+
+
+def signal_process_summary(
+    status: str,
+    structure: str,
+    rows_count: int,
+    music_segment_count: int,
+    call_span_count: int,
+    timeline_count: int,
+    fallback_reason: Optional[str] = None,
+) -> Dict[str, Any]:
+    if status == "full":
+        steps = [
+            {"name": "Audio decode", "detail": "Load waveform, estimate duration, preserve the original audio for playback."},
+            {"name": "Structure analysis", "detail": "Run allin1 to obtain section labels and downbeat grid."},
+            {"name": "Bar-level features", "detail": "Convert downbeats and allin1 labels into normalized bar-wise features."},
+            {"name": "Sequence models", "detail": "Tiny segmenter predicts music labels; call_slotter predicts call roles and boundaries."},
+            {"name": "Action fitting", "detail": "Use barfit duration rules, context prototypes, and long-MIX non-repeat constraints."},
+        ]
+    else:
+        steps = [
+            {"name": "Audio decode", "detail": "Load waveform and estimate duration from the uploaded track."},
+            {"name": "Signal features", "detail": "Use frame energy, onset strength, spectral centroid/flatness, and novelty proxies."},
+            {"name": "Estimated bars", "detail": "Estimate a regular bar grid from onset peaks and tempo heuristics."},
+            {"name": "Rule labels", "detail": "Assign coarse music sections and call roles from position, energy, onset, and vocal-density proxy."},
+            {"name": "Action fitting", "detail": "Use the same barfit action library after the fallback segmentation."},
+        ]
+    summary = {
+        "status": status,
+        "structure": structure,
+        "rows": rows_count,
+        "music_segments": music_segment_count,
+        "call_spans": call_span_count,
+        "actions": timeline_count,
+        "steps": steps,
+    }
+    if fallback_reason:
+        summary["fallback_reason"] = fallback_reason
+    return summary
+
+
+def standardizer_from_json(data: Dict[str, Any]):
+    """Build a Standardizer from metadata JSON. Requires pipeline imports."""
+    return Standardizer(data["mean"], data["std"])
+
+
+def run_allin1(audio_path: Path, output_dir: Path, timeout: int = 600) -> Dict[str, Any]:
+    allin1_exe = ROOT / ".venv" / "Scripts" / "allin1.exe"
+    if not allin1_exe.exists():
+        raise FileNotFoundError(f"allin1 not found at {allin1_exe}")
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    for cache_dir in (ROOT / ".cache" / "matplotlib", ROOT / ".cache" / "huggingface", ROOT / ".cache" / "torch"):
+        cache_dir.mkdir(parents=True, exist_ok=True)
+    env = {
+        **dict(os.environ),
+        "MPLCONFIGDIR": str(ROOT / ".cache" / "matplotlib"),
+        "HF_HOME": str(ROOT / ".cache" / "huggingface"),
+        "TORCH_HOME": str(ROOT / ".cache" / "torch"),
+        "HF_HUB_DISABLE_SYMLINKS_WARNING": "1",
+    }
+    result = subprocess.run(
+        [str(allin1_exe), str(audio_path), "-o", str(output_dir), "--no-multiprocess", "-d", "cpu"],
+        capture_output=True, text=True, timeout=timeout, env=env,
+    )
+    if result.returncode != 0:
+        raise RuntimeError(f"allin1 failed (code {result.returncode}): {result.stderr}")
+    struct_files = sorted(output_dir.glob("*.json"))
+    if not struct_files:
+        raise FileNotFoundError(f"allin1 produced no JSON in {output_dir}")
+    return _load_json_file(struct_files[0])
+
+
+def load_pipeline_models(model_dir: Path, metadata: Dict[str, Any]) -> Dict[str, Any]:
+    label_vocab = metadata["label_vocab"]
+    call_role_vocab = metadata["call_role_vocab"]
+    struct_vocab = metadata["struct_vocab"]
+    hidden_dim = int(metadata["hidden_dim"])
+    segmenter = TinySequenceTagger(
+        input_dim=len(BASE_NUMERIC_FEATURES) + len(struct_vocab),
+        hidden_dim=hidden_dim,
+        num_labels=len(label_vocab),
+    )
+    call_slotter = TinySequenceTagger(
+        input_dim=len(BASE_NUMERIC_FEATURES) + len(struct_vocab) + len(label_vocab),
+        hidden_dim=hidden_dim,
+        num_labels=len(call_role_vocab),
+    )
+    segmenter.load_state_dict(torch.load(model_dir / "segmenter.pt", map_location="cpu"))
+    call_slotter.load_state_dict(torch.load(model_dir / "call_slotter.pt", map_location="cpu"))
+    segmenter.eval()
+    call_slotter.eval()
+    return {"segmenter": segmenter, "call_slotter": call_slotter}
+
+
+def _rows_to_call_spans(
+    rows: Sequence[Dict[str, Any]],
+    call_roles: Sequence[str],
+    music_labels: Sequence[str],
+    call_boundary_probs: Optional[Sequence[float]] = None,
+    threshold: float = 0.5,
+) -> List[Dict[str, Any]]:
+    spans: List[Dict[str, Any]] = []
+    current: Optional[Dict[str, Any]] = None
+    call_boundary_probs = call_boundary_probs or [0.0] * len(rows)
+    for index, (row, role, music_label) in enumerate(zip(rows, call_roles, music_labels)):
+        features = row.get("features") or {}
+        struct_label = str(features.get("allin1_struct_label") or "unknown")
+        boundary_prob = float(call_boundary_probs[index]) if index < len(call_boundary_probs) else 0.0
+        starts_new = (
+            current is None
+            or current["call_role"] != role
+            or current.get("music_label") != music_label
+            or (index > 0 and boundary_prob >= threshold)
+        )
+        if not starts_new and current:
+            current["end"] = safe_float(row.get("end"))
+            current["bar_end"] = int(row.get("bar_index", 0))
+            current["bars"] += 1
+            current["boundary_probs"].append(round(boundary_prob, 4))
+        else:
+            if current:
+                spans.append(current)
+            current = {
+                "start": safe_float(row.get("start")),
+                "end": safe_float(row.get("end")),
+                "call_role": role,
+                "music_label": music_label,
+                "allin1_struct_label": struct_label,
+                "bar_start": int(row.get("bar_index", 0)),
+                "bar_end": int(row.get("bar_index", 0)),
+                "bars": 1,
+                "method": "allin1_tiny_pipeline",
+                "boundary_probs": [round(boundary_prob, 4)],
+            }
+    if current:
+        spans.append(current)
+    return spans
+
+
+def _analyze_audio_pipeline(
+    audio_path: Path,
+    song_id: str,
+    title: str,
+    job_id: str,
+    duration: float,
+) -> Dict[str, Any]:
+    tmp_dir = UPLOAD_DIR / f"_struct_{job_id}"
+    struct = run_allin1(audio_path, tmp_dir)
+
+    model_dir = ROOT / "models" / "tiny_pipeline"
+    metadata = _load_json_file(model_dir / "metadata.json")
+    models_data = load_pipeline_models(model_dir, metadata)
+    base_std = standardizer_from_json(metadata["base_standardizer"])
+
+    song_end = infer_song_end(struct, None)
+    rows = build_rows_from_struct(struct, song_id, song_end)
+    if not rows:
+        raise ValueError("No bar rows could be built from allin1 struct.")
+
+    label_vocab = metadata["label_vocab"]
+    call_role_vocab = metadata["call_role_vocab"]
+    struct_vocab = metadata["struct_vocab"]
+
+    with torch.no_grad():
+        seg_x = rows_to_tensor(rows, struct_vocab, base_std)
+        seg_logits, seg_bnd_logits = models_data["segmenter"](seg_x)
+        music_label_ids = seg_logits.argmax(dim=-1).tolist()
+        music_labels = [
+            sanitize_music_label(
+                label_vocab[i],
+                str((r.get("features") or {}).get("allin1_struct_label") or "unknown"),
+            )
+            for i, r in zip(music_label_ids, rows)
+        ]
+        seg_bnd_probs = torch.sigmoid(seg_bnd_logits).tolist()
+
+        call_x = call_rows_to_tensor(rows, music_labels, struct_vocab, label_vocab, base_std)
+        call_logits, call_bnd_logits = models_data["call_slotter"](call_x)
+        call_role_ids = call_logits.argmax(dim=-1).tolist()
+        call_roles = [sanitize_call_role(call_role_vocab[i]) for i in call_role_ids]
+        call_bnd_probs = torch.sigmoid(call_bnd_logits).tolist()
+
+    for index, (row, m_label, c_role) in enumerate(zip(rows, music_labels, call_roles)):
+        row["target"] = {
+            "music_label": m_label,
+            "call_role": c_role,
+            "boundary": 1 if index == 0 or float(seg_bnd_probs[index]) >= 0.5 else 0,
+            "call_boundary": 1 if index == 0 or float(call_bnd_probs[index]) >= 0.5 else 0,
+        }
+
+    segments = make_segments(rows, music_labels, seg_bnd_probs, threshold=0.5)
+    music_segments = normalize_music_segments(segments, rows, "tiny_segmenter")
+    raw_call_spans = _rows_to_call_spans(rows, call_roles, music_labels, call_bnd_probs, threshold=0.5)
 
     records = load_song_records(ROOT / "experiments" / "signal_callability")
     examples = build_training_examples(records, held_out_song=song_id)
     library = load_library(ROOT / "knowledge" / "call_mix_library.json")
     record = {"song_id": song_id, "rows": rows}
-    used_nonrepeatable = set()
+    used_nonrepeatable: set = set()
     enriched = [
         enrich_span(
-            span,
-            record,
-            examples,
-            library,
+            span, record, examples, library,
+            strategy="barfit",
+            used_nonrepeatable_mix_actions=used_nonrepeatable,
+        )
+        for span in raw_call_spans
+    ]
+
+    timeline = flatten_actions(enriched)
+    markdown = callbook_to_markdown(song_id, enriched)
+    tempo = struct.get("bpm", 0)
+    process = signal_process_summary(
+        "full",
+        "allin1_tiny_pipeline",
+        len(rows),
+        len(music_segments),
+        len(enriched),
+        len(timeline),
+    )
+
+    return {
+        "job_id": job_id,
+        "song": {
+            "song_id": song_id,
+            "title": title or audio_path.stem,
+            "audio_filename": audio_path.name,
+            "duration": round(duration, 3),
+            "tempo": round(float(tempo), 2) if tempo else 0,
+            "bar_count": len(rows),
+        },
+        "method": {
+            "structure": "allin1_tiny_pipeline",
+            "actions": "barfit_action",
+            "notes": [
+                "Uses allin1 struct + trained tiny pipeline models (segmenter/call_slotter).",
+                "Action selection uses barfit with knowledge library + LOSO annotation prototypes.",
+            ],
+        },
+        "pipeline_status": "full",
+        "signal_process": process,
+        "segments": segments,
+        "music_segments": music_segments,
+        "bars": rows,
+        "call_spans": enriched,
+        "timeline": timeline,
+        "markdown": markdown,
+    }
+
+
+def _analyze_audio_heuristic(
+    audio_path: Path,
+    song_id: str,
+    title: str,
+    job_id: str,
+    y: np.ndarray,
+    sr: int,
+    duration: float,
+    fallback_reason: Optional[str] = None,
+) -> Dict[str, Any]:
+    bar_times, tempo = estimate_bars(y, sr, duration)
+    frame_features = compute_frame_features(y, sr)
+    rows = build_rows(song_id, bar_times, frame_features, sr, duration)
+    call_spans = merge_role_spans(rows)
+    music_segments = rows_to_music_segments(rows, "audio_heuristic")
+
+    records = load_song_records(ROOT / "experiments" / "signal_callability")
+    examples = build_training_examples(records, held_out_song=song_id)
+    library = load_library(ROOT / "knowledge" / "call_mix_library.json")
+    record = {"song_id": song_id, "rows": rows}
+    used_nonrepeatable: set = set()
+    enriched = [
+        enrich_span(
+            span, record, examples, library,
             strategy="barfit",
             used_nonrepeatable_mix_actions=used_nonrepeatable,
         )
@@ -435,6 +814,15 @@ def analyze_audio(audio_path: Path, title: Optional[str] = None, job_id: Optiona
     ]
     timeline = flatten_actions(enriched)
     markdown = callbook_to_markdown(song_id, enriched)
+    process = signal_process_summary(
+        "fallback" if fallback_reason else "heuristic",
+        "web_heuristic_estimated_bars",
+        len(rows),
+        len(music_segments),
+        len(enriched),
+        len(timeline),
+        fallback_reason=fallback_reason,
+    )
     return {
         "job_id": job_id,
         "song": {
@@ -449,15 +837,35 @@ def analyze_audio(audio_path: Path, title: Optional[str] = None, job_id: Optiona
             "structure": "web_heuristic_estimated_bars",
             "actions": "barfit_action",
             "notes": [
-                "This web MVP estimates bars and structure directly from audio.",
-                "Action selection uses the YesTiger knowledge library and LOSO annotation prototypes.",
+                "Fallback: crude onset-peak bar estimation + position/energy heuristics.",
+                "Install allin1 and ensure models/tiny_pipeline/ exists for full pipeline analysis.",
             ],
         },
+        "pipeline_status": "fallback" if fallback_reason else "heuristic",
+        "signal_process": process,
+        "music_segments": music_segments,
         "bars": rows,
         "call_spans": enriched,
         "timeline": timeline,
         "markdown": markdown,
     }
+
+
+def analyze_audio(audio_path: Path, title: Optional[str] = None, job_id: Optional[str] = None) -> Dict[str, Any]:
+    job_id = job_id or uuid.uuid4().hex[:12]
+    song_id = slugify(title or audio_path.stem)
+    y, sr, duration = load_audio(audio_path)
+    effective_title = title or audio_path.stem
+
+    if _PIPELINE_AVAILABLE:
+        try:
+            return _analyze_audio_pipeline(audio_path, song_id, effective_title, job_id, duration)
+        except Exception as exc:
+            fallback_reason = f"{type(exc).__name__}: {exc}"
+            print(f"[analyzer] Pipeline failed ({fallback_reason}), falling back to heuristic.", flush=True)
+            return _analyze_audio_heuristic(audio_path, song_id, effective_title, job_id, y, sr, duration, fallback_reason=fallback_reason)
+
+    return _analyze_audio_heuristic(audio_path, song_id, effective_title, job_id, y, sr, duration)
 
 
 def save_analysis_result(result: Dict[str, Any], job_dir: Path) -> Tuple[Path, Path]:
@@ -489,6 +897,15 @@ def load_example_result(song_id: str) -> Dict[str, Any]:
             audio_path = candidate if candidate.is_absolute() else ROOT / candidate
     timeline = flatten_actions(call_spans)
     duration = max((safe_float(span.get("end")) for span in call_spans), default=0.0)
+    music_segments = music_segments_from_call_spans(call_spans)
+    process = signal_process_summary(
+        "stored_example",
+        "stored_loso_audio_vote_rf1_logreg1_gb1",
+        int(sum(int(span.get("bars") or 0) for span in call_spans)),
+        len(music_segments),
+        len(call_spans),
+        len(timeline),
+    )
     return {
         "job_id": f"example_{song_id}",
         "song": {
@@ -499,6 +916,9 @@ def load_example_result(song_id: str) -> Dict[str, Any]:
             "bar_count": sum(int(span.get("bars") or 0) for span in call_spans),
         },
         "method": data.get("action_selector") or {},
+        "pipeline_status": "stored_example",
+        "signal_process": process,
+        "music_segments": music_segments,
         "call_spans": call_spans,
         "timeline": timeline,
         "markdown": markdown_path.read_text(encoding="utf-8") if markdown_path.exists() else callbook_to_markdown(song_id, call_spans),
