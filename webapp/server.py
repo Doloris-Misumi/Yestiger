@@ -1,5 +1,6 @@
 import argparse
 import cgi
+from email.header import decode_header, make_header
 import json
 import mimetypes
 import shutil
@@ -42,6 +43,30 @@ def example_audio_path(song_id: str) -> Path:
     if not audio.exists():
         raise FileNotFoundError(audio)
     return audio
+
+
+def decode_upload_filename(value: str) -> str:
+    raw = str(value or "uploaded_audio.wav")
+    try:
+        decoded = str(make_header(decode_header(raw)))
+    except Exception:
+        decoded = raw
+    return Path(decoded).name or "uploaded_audio.wav"
+
+
+def suffix_from_content_type(content_type: str) -> str:
+    content_type = str(content_type or "").split(";")[0].strip().lower()
+    if content_type in {"audio/mpeg", "audio/mp3", "audio/x-mpeg"}:
+        return ".mp3"
+    if content_type in {"audio/wav", "audio/wave", "audio/x-wav"}:
+        return ".wav"
+    if content_type == "audio/flac":
+        return ".flac"
+    if content_type in {"audio/mp4", "audio/x-m4a"}:
+        return ".m4a"
+    if content_type in {"audio/ogg", "application/ogg"}:
+        return ".ogg"
+    return ".audio"
 
 
 class YesTigerHandler(BaseHTTPRequestHandler):
@@ -187,10 +212,10 @@ class YesTigerHandler(BaseHTTPRequestHandler):
         field = form["audio"]
         if isinstance(field, list):
             field = field[0]
-        original_filename = Path(field.filename or "uploaded_audio.wav").name
+        original_filename = decode_upload_filename(field.filename or "uploaded_audio.wav")
         original_path = Path(original_filename)
         suffix = original_path.suffix.lower()
-        safe_suffix = suffix if suffix and len(suffix) <= 10 and all(char.isalnum() or char == "." for char in suffix) else ".audio"
+        safe_suffix = suffix if suffix and len(suffix) <= 10 and all(char.isalnum() or char == "." for char in suffix) else suffix_from_content_type(getattr(field, "type", ""))
         safe_stem = slugify(original_path.stem)[:80] or "uploaded_audio"
         filename = f"{safe_stem}{safe_suffix}"
         title = form.getfirst("title") or original_path.stem
