@@ -7,6 +7,8 @@
     "franchise": "",
     "audio_path": "songs/礎の花冠.mp3",
     "bpm": 176,
+    "call_bpm": 88,
+    "call_bar_multiplier": 0.5,
     "meter": "4/4"
   },
   "segments": [

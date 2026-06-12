@@ -20,6 +20,8 @@ Current annotation files use `annotation_version: 0.2.0`.
     "franchise": "bang_dream",
     "audio_path": "songs/迷星叫.mp3",
     "bpm": 95,
+    "call_bpm": 95,
+    "call_bar_multiplier": 1.0,
     "meter": "4/4"
   },
   "segments": [],

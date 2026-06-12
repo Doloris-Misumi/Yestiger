@@ -1,5 +1,6 @@
 import argparse
 import json
+import math
 from collections import Counter
 from pathlib import Path
 from statistics import median
@@ -7,6 +8,7 @@ from typing import Any, Dict, Iterable, List, Optional, Sequence
 
 import numpy as np
 import torch
+import torchaudio
 
 from build_bar_level_dataset import as_float, best_segment, rounded
 from build_pipeline_dataset import load_library
@@ -173,6 +175,105 @@ def nearest_boundary_indices(
         if abs(times[nearest_index] - start) <= tolerance or start == 0.0:
             indices.add(nearest_index)
     return indices
+
+
+def _compute_bar_signal_features(
+    audio_path: Path,
+    rows: List[Dict[str, Any]],
+    target_sr: int = 16000,
+    hop_length: int = 1024,
+) -> None:
+    """Compute per-bar energy, onset, vocal_density_proxy, beat_stability from audio and attach as row['signal_features']."""
+    if not audio_path or not Path(audio_path).exists():
+        return
+    waveform, sr = torchaudio.load(str(audio_path))
+    if waveform.ndim == 2:
+        waveform = waveform.mean(dim=0)
+    else:
+        waveform = waveform.reshape(-1)
+    if sr != target_sr:
+        waveform = torchaudio.functional.resample(waveform, sr, target_sr)
+        sr = target_sr
+    y = waveform.detach().cpu().numpy().astype(np.float32)
+    if y.size == 0:
+        return
+
+    # Normalize
+    peak = float(np.max(np.abs(y)))
+    if peak > 1.0:
+        y = y / peak
+
+    # Frame-level
+    frame_length = 2048
+    num_frames = max(0, (y.size - frame_length) // hop_length + 1)
+    if num_frames < 2:
+        return
+    starts = np.arange(0, y.size - frame_length + 1, hop_length, dtype=np.int64)
+    frames = np.stack([y[s:s+frame_length] for s in starts]).astype(np.float32)
+    rms = np.sqrt(np.mean(frames * frames, axis=1) + 1e-10)
+    energy = _smooth_minmax(rms, 5)
+    onset = np.zeros_like(energy)
+    if energy.size > 1:
+        onset[1:] = np.maximum(0.0, np.diff(energy))
+    onset = _smooth_minmax(onset, 3)
+
+    # Spectral features for vocal proxy
+    spectrum = np.abs(np.fft.rfft(frames * np.hanning(frame_length), axis=1)).astype(np.float32)
+    freqs = np.fft.rfftfreq(frame_length, d=1.0/sr).astype(np.float32)
+    spec_sum = np.sum(spectrum, axis=1) + 1e-8
+    centroid = np.sum(spectrum * freqs[None, :], axis=1) / spec_sum
+    centroid_norm = _minmax(centroid)
+    geo_mean = np.exp(np.mean(np.log(spectrum + 1e-8), axis=1))
+    arith_mean = np.mean(spectrum, axis=1) + 1e-8
+    flatness = _minmax(geo_mean / arith_mean)
+    midrange = np.clip(1.0 - np.abs(centroid_norm - 0.45) / 0.45, 0.0, 1.0)
+    vocal_density = _minmax((0.42 * energy + 0.20 * (1.0 - onset) + 0.18 * (1.0 - flatness) + 0.12 * midrange + 0.08 * 0.5) * energy)
+
+    # Aggregate to bars
+    bar_durations = [float(row["end"]) - float(row["start"]) for row in rows]
+    median_bar = float(np.median(bar_durations)) if bar_durations else 2.5
+    for row in rows:
+        start = float(row["start"])
+        end = float(row["end"])
+        left = int(np.clip(round(start * sr / hop_length), 0, max(0, num_frames - 1)))
+        right = int(np.clip(round(end * sr / hop_length), 0, max(0, num_frames)))
+        if right <= left:
+            right = min(num_frames, left + 1)
+        sl = slice(left, right)
+        bar_energy = float(np.mean(energy[sl])) if energy[sl].size else 0.0
+        bar_onset = float(np.mean(onset[sl])) if onset[sl].size else 0.0
+        bar_vocal = float(np.mean(vocal_density[sl])) if vocal_density[sl].size else 0.0
+        # beat stability: combination of bar regularity and downbeat confidence
+        dur = end - start
+        ratio = dur / median_bar if median_bar else 1.0
+        bar_reg = math.exp(-3.0 * abs(ratio - 1.0))
+        grid_src = row.get("grid_sources") or []
+        dq = 1.0 if "struct_downbeat" in grid_src else 0.65 if "extrapolated_downbeat" in grid_src else 0.35
+        bs = min(1.0, 0.65 * bar_reg + 0.35 * dq)
+        row["signal_features"] = {
+            "energy": round(bar_energy, 4),
+            "onset": round(bar_onset, 4),
+            "vocal_density_proxy": round(bar_vocal, 4),
+            "beat_stability": round(bs, 4),
+        }
+
+def _smooth_minmax(arr: np.ndarray, width: int) -> np.ndarray:
+    arr = np.asarray(arr, dtype=np.float32)
+    if width <= 1 or arr.size == 0:
+        return _minmax(arr)
+    kernel = np.ones(width, dtype=np.float32) / float(width)
+    smoothed = np.convolve(arr, kernel, mode="same")
+    return _minmax(smoothed)
+
+def _minmax(arr: np.ndarray) -> np.ndarray:
+    arr = np.asarray(arr, dtype=np.float32)
+    if arr.size == 0:
+        return arr
+    lo = np.nanmin(arr)
+    hi = np.nanmax(arr)
+    if not np.isfinite(lo) or not np.isfinite(hi) or hi - lo < 1e-8:
+        return np.zeros_like(arr, dtype=np.float32)
+    return ((arr - lo) / (hi - lo)).astype(np.float32)
 
 
 def build_rows_from_struct(
@@ -732,6 +833,9 @@ def main() -> int:
     rows = build_rows_from_struct(struct, song_id, song_end)
     if not rows:
         raise SystemExit("No bar rows could be built from the struct.")
+
+    if audio_path and Path(audio_path).exists():
+        _compute_bar_signal_features(audio_path, rows)
 
     label_vocab = metadata["label_vocab"]
     call_role_vocab = metadata["call_role_vocab"]

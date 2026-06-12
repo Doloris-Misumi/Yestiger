@@ -7,6 +7,8 @@
     "franchise": "",
     "audio_path": "songs/dododo.mp3",
     "bpm": 98,
+    "call_bpm": 98,
+    "call_bar_multiplier": 1.0,
     "meter": "4/4"
   },
   "segments": [

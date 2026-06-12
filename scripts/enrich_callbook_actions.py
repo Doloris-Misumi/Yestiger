@@ -472,15 +472,39 @@ def rank_actions(query: Dict[str, Any], examples: Sequence[Dict[str, Any]], libr
         if risk == "high" and not any(field in matched_fields for field in ("music_label", "coarse_music_label", "struct_label")):
             score *= 0.70 if strategy == "frequency" else 0.60
             reasons.append("high-risk action down-weighted because only weak context fields matched")
-        if risk == "high" and query["bars"] < 4:
+        # ── ietora family: in pre_chorus / pre_chorus_build context, treat as medium-risk ──
+        effective_risk = risk
+        ietora_in_home_context = (
+            action_family(action_id) == "ietora"
+            and query.get("music_label") in {"pre_chorus", "pre_chorus_build"}
+        )
+        if ietora_in_home_context:
+            effective_risk = "medium"
+
+        if effective_risk == "high" and query["bars"] < 4:
             score *= 0.75 if strategy == "frequency" else 0.62
             reasons.append("high-risk action down-weighted for a short slot")
-        if strategy in {"balanced", "barfit"} and role == "mix" and risk == "high":
+        if strategy in {"balanced", "barfit"} and role == "mix" and effective_risk == "high":
             score -= 0.12
             reasons.append("balanced strategy down-weights high-risk mix actions")
             if action_family(action_id) == "ietora":
                 score -= 0.08
                 reasons.append("balanced strategy limits repeated ietora-style selections")
+        if ietora_in_home_context:
+            reasons.append("ietora treated as medium-risk in pre_chorus/pre_chorus_build context")
+
+        # ── low-evidence penalty: actions with very few training examples get down-weighted ──
+        evidence = int(proto["evidence_count"])
+        if 1 <= evidence <= 2:
+            low_evidence_penalty = 0.30 if evidence == 1 else 0.15
+            score -= low_evidence_penalty
+            reasons.append(f"low-evidence penalty ({evidence} training example(s))")
+        elif evidence == 0 and not any(
+            action_id in fallback for fallback in FALLBACK_ACTIONS.values()
+        ):
+            score -= 0.08
+            reasons.append("no training examples, slight penalty")
+
         if proto["evidence_count"]:
             reasons.insert(0, f"seen {proto['evidence_count']} times in training songs for role `{role}`")
         else:
@@ -755,12 +779,17 @@ def make_action_plan(
     library: Dict[str, Dict[str, Any]],
     rows: Optional[Sequence[Dict[str, Any]]] = None,
     strategy: str = "balanced",
+    call_bar_multiplier: float = 1.0,
 ) -> List[Dict[str, Any]]:
     start = safe_float(span.get("start"))
     end = safe_float(span.get("end"))
     role = str(span.get("call_role") or "keepspace")
     bars = safe_float(span.get("bars"), max(0.1, len(selected)))
-    target_bars = max(1, int(round(bars)))
+    if call_bar_multiplier <= 0:
+        call_bar_multiplier = 1.0
+    call_bars = bars * call_bar_multiplier
+    target_bars_call = max(1, int(round(call_bars)))
+    target_bars_music = max(1, int(round(bars)))
     if not selected:
         if strategy == "barfit" and role != "keepspace":
             return [
@@ -773,7 +802,7 @@ def make_action_plan(
                     "typical_text": "",
                     "risk": "low",
                     "bar_start_offset": 0,
-                    "bar_count": target_bars,
+                    "bar_count": target_bars_call,
                     "duration_fit": 1.0,
                     "mode": "barfit_gap",
                 }
@@ -782,14 +811,17 @@ def make_action_plan(
 
     if strategy == "barfit":
         span_rows = rows_overlapping_span(rows or [], start, end)
-        cursor_bars = 0
+        cursor_call = 0
+        cursor_music = 0
         plan = []
         for action in selected:
-            planned_bars = max(1, int(action.get("planned_bars") or round(preferred_bars(str(action["action_id"]), library))))
-            planned_bars = min(planned_bars, max(0, target_bars - cursor_bars))
-            if planned_bars <= 0:
+            planned_bars_call = max(1, int(action.get("planned_bars") or round(preferred_bars(str(action["action_id"]), library))))
+            planned_bars_call = min(planned_bars_call, max(0, target_bars_call - cursor_call))
+            if planned_bars_call <= 0:
                 continue
-            sub_start, sub_end = bar_slice_time(start, end, span_rows, cursor_bars, planned_bars, target_bars)
+            planned_bars_music = max(1, int(round(planned_bars_call / call_bar_multiplier)))
+            planned_bars_music = min(planned_bars_music, max(0, target_bars_music - cursor_music))
+            sub_start, sub_end = bar_slice_time(start, end, span_rows, cursor_music, planned_bars_music, target_bars_music)
             plan.append(
                 {
                     "start": round(sub_start, 3),
@@ -799,15 +831,18 @@ def make_action_plan(
                     "display_name": action["display_name"],
                     "typical_text": action.get("typical_text", ""),
                     "risk": action.get("risk"),
-                    "bar_start_offset": cursor_bars,
-                    "bar_count": planned_bars,
-                    "duration_fit": action.get("duration_fit", duration_option_score(str(action["action_id"]), planned_bars, library)),
+                    "bar_start_offset": cursor_call,
+                    "bar_count": planned_bars_call,
+                    "duration_fit": action.get("duration_fit", duration_option_score(str(action["action_id"]), planned_bars_call, library)),
                     "mode": "barfit_action",
                 }
             )
-            cursor_bars += planned_bars
-        if cursor_bars < target_bars:
-            sub_start, sub_end = bar_slice_time(start, end, span_rows, cursor_bars, target_bars - cursor_bars, target_bars)
+            cursor_call += planned_bars_call
+            cursor_music += planned_bars_music
+        if cursor_music < target_bars_music:
+            remaining_music = target_bars_music - cursor_music
+            remaining_call = max(1, int(round(remaining_music * call_bar_multiplier)))
+            sub_start, sub_end = bar_slice_time(start, end, span_rows, cursor_music, remaining_music, target_bars_music)
             plan.append(
                 {
                     "start": round(sub_start, 3),
@@ -817,8 +852,8 @@ def make_action_plan(
                     "display_name": "Keep Space / Unassigned Gap",
                     "typical_text": "",
                     "risk": "low",
-                    "bar_start_offset": cursor_bars,
-                    "bar_count": target_bars - cursor_bars,
+                    "bar_start_offset": cursor_call,
+                    "bar_count": remaining_call,
                     "duration_fit": 1.0,
                     "mode": "barfit_gap",
                 }
@@ -836,7 +871,7 @@ def make_action_plan(
                 "display_name": action["display_name"],
                 "typical_text": action.get("typical_text", ""),
                 "risk": action.get("risk"),
-                "bar_count": target_bars,
+                "bar_count": target_bars_call,
                 "duration_fit": action.get("duration_fit", 1.0),
                 "mode": "repeat_or_follow_phrase",
             }
@@ -867,6 +902,33 @@ def make_action_plan(
     return plan
 
 
+# ── Franchise / artist restrictions ──
+
+# Actions that are only allowed when the song's artist matches a pattern.
+# Key = action_id, Value = a callable or string pattern to match against annotation.song.artist (case-insensitive substring).
+FRANCHISE_RESTRICTED_ACTIONS: Dict[str, str] = {
+    "chokokoro_call": "poppin",
+    "sae_mix": "poppin",
+}
+
+
+def _is_poppin_party(record: Dict[str, Any]) -> bool:
+    artist = str(
+        (record.get("annotation") or {}).get("song", {}).get("artist") or ""
+    ).lower()
+    return "poppin" in artist
+
+
+def _action_allowed_for_song(action_id: str, record: Dict[str, Any]) -> bool:
+    pattern = FRANCHISE_RESTRICTED_ACTIONS.get(action_id)
+    if pattern is None:
+        return True
+    artist = str(
+        (record.get("annotation") or {}).get("song", {}).get("artist") or ""
+    ).lower()
+    return pattern in artist
+
+
 def enrich_span(
     span: Dict[str, Any],
     record: Dict[str, Any],
@@ -874,6 +936,7 @@ def enrich_span(
     library: Dict[str, Dict[str, Any]],
     strategy: str = "balanced",
     used_nonrepeatable_mix_actions: Optional[set] = None,
+    previous_ug_action: Optional[List[str]] = None,
 ) -> Dict[str, Any]:
     start = safe_float(span.get("start"))
     end = safe_float(span.get("end"))
@@ -881,6 +944,15 @@ def enrich_span(
     bars = safe_float(span.get("bars"), 0.0)
     rows = record["rows"]
     song_end = song_end_from_rows(rows)
+
+    call_bar_multiplier = safe_float(
+        (record.get("annotation") or {}).get("song", {}).get("call_bar_multiplier"),
+        1.0,
+    )
+    if call_bar_multiplier <= 0:
+        call_bar_multiplier = 1.0
+    call_bars = bars * call_bar_multiplier
+
     music_label = weighted_label_from_rows(rows, start, end, "music")
     struct_label = weighted_label_from_rows(rows, start, end, "struct")
     query = {
@@ -888,21 +960,43 @@ def enrich_span(
         "music_label": music_label,
         "coarse_music_label": coarse_music_label(music_label),
         "struct_label": struct_label,
-        "duration_bucket": duration_bucket(bars),
+        "duration_bucket": duration_bucket(call_bars),
         "position_bucket": position_bucket(start, song_end),
-        "bars": bars,
-        "context_tags": context_tags(music_label, struct_label, role, bars),
+        "bars": call_bars,
+        "context_tags": context_tags(music_label, struct_label, role, call_bars),
     }
     ranked = rank_actions(query, examples, library, strategy=strategy)
+
+    # ── franchise / artist restrictions ──
+    ranked = [
+        item for item in ranked
+        if _action_allowed_for_song(str(item.get("action_id") or ""), record)
+    ]
+
+    # ── consecutive underground-gei dedup ──
     selected = select_plan_actions(
         role,
-        bars,
+        call_bars,
         ranked,
         library,
         strategy=strategy,
         used_nonrepeatable_mix_actions=used_nonrepeatable_mix_actions,
     )
-    action_plan = make_action_plan(span, selected, library, rows=rows, strategy=strategy)
+    if role == "underground_gei" and previous_ug_action is not None and selected:
+        prev_id = previous_ug_action[0] if previous_ug_action else None
+        if prev_id and selected[0].get("action_id") == prev_id:
+            for alt in ranked:
+                alt_id = str(alt.get("action_id") or "")
+                if alt_id != prev_id and alt_id in {str(s.get("action_id") or "") for s in ranked[:8]}:
+                    selected = [alt] + selected[1:] if len(selected) > 1 else [alt]
+                    break
+        if selected:
+            previous_ug_action[0] = str(selected[0].get("action_id") or "")
+
+    action_plan = make_action_plan(
+        span, selected, library, rows=rows, strategy=strategy,
+        call_bar_multiplier=call_bar_multiplier,
+    )
     if strategy == "barfit" and used_nonrepeatable_mix_actions is not None:
         for item in selected:
             action_id = str(item.get("action_id") or "")
@@ -925,6 +1019,9 @@ def enrich_span(
                 "training_action_examples": len(examples),
                 "used_nonrepeatable_mix_actions": sorted(used_nonrepeatable_mix_actions or []),
                 "note": "Held-out song annotation actions are not used for selection.",
+                "call_bar_multiplier": call_bar_multiplier,
+                "call_bars": round(call_bars, 2),
+                "music_bars": round(bars, 2),
             },
         }
     )
@@ -992,6 +1089,7 @@ def enrich_callbook(
     examples = build_training_examples(records, held_out_song=song_id)
     selector_name = f"loso_annotation_prototype_plus_knowledge_library_{strategy}"
     used_nonrepeatable_mix_actions = set()
+    previous_ug_action: List[str] = [""]
     enriched_spans = [
         enrich_span(
             span,
@@ -1000,6 +1098,7 @@ def enrich_callbook(
             library,
             strategy=strategy,
             used_nonrepeatable_mix_actions=used_nonrepeatable_mix_actions,
+            previous_ug_action=previous_ug_action,
         )
         for span in payload.get("call_spans") or []
     ]

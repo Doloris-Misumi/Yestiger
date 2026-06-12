@@ -7,8 +7,9 @@
     "franchise": "idolmaster",
     "audio_path": "songs/自分REST@RT.mp3",
     "bpm": 171,
-    "meter": "4/4",
-    "call_bar_multiplier": 0.5
+    "call_bpm": 85.5,
+    "call_bar_multiplier": 0.5,
+    "meter": "4/4"
   },
   "segments": [
     {

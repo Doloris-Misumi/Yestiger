@@ -7,6 +7,8 @@
     "franchise": "bang_dream",
     "audio_path": "songs/\u4e8c\u91cd\u306e\u8679.mp3",
     "bpm": 94,
+    "call_bpm": 94,
+    "call_bar_multiplier": 1.0,
     "meter": "4/4"
   },
   "segments": [

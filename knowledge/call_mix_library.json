@@ -51,10 +51,13 @@
         "post_chorus_interlude"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 8,
+        "min_bars": 4.0,
+        "max_bars": 4.0,
         "vocal_density": "low",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          4
+        ]
       },
       "duration": {
         "preferred_bars": 4,
@@ -87,8 +90,8 @@
         "high_energy_break"
       ],
       "requires": {
-        "min_bars": 5,
-        "max_bars": 5,
+        "min_bars": 5.0,
+        "max_bars": 5.0,
         "allowed_bars": [
           5
         ],
@@ -126,8 +129,8 @@
         "high_energy_break"
       ],
       "requires": {
-        "min_bars": 1,
-        "max_bars": 2,
+        "min_bars": 1.0,
+        "max_bars": 2.0,
         "allowed_bars": [
           1,
           2
@@ -139,9 +142,9 @@
         "preferred_bars": 1,
         "preferred_counts": 4,
         "count_unit": "beat",
-        "strict_bars": false,
+        "strict_bars": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "dense_vocal",
@@ -168,8 +171,8 @@
         "high_energy_break"
       ],
       "requires": {
-        "min_bars": 2,
-        "max_bars": 2,
+        "min_bars": 2.0,
+        "max_bars": 2.0,
         "allowed_bars": [
           2
         ],
@@ -212,7 +215,10 @@
         "min_bars": 4,
         "max_bars": 4,
         "vocal_density": "low",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          4
+        ]
       },
       "duration": {
         "preferred_bars": 4,
@@ -247,10 +253,13 @@
         "short_high_energy_gap"
       ],
       "requires": {
-        "min_bars": 1,
-        "max_bars": 1,
+        "min_bars": 1.0,
+        "max_bars": 1.0,
         "vocal_density": "low",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          1
+        ]
       },
       "duration": {
         "preferred_bars": 1,
@@ -280,10 +289,13 @@
         "post_chorus_interlude"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 8,
+        "min_bars": 4.0,
+        "max_bars": 4.0,
         "vocal_density": "low",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          4
+        ]
       },
       "duration": {
         "preferred_bars": 4,
@@ -314,8 +326,8 @@
         "high_energy_break"
       ],
       "requires": {
-        "min_bars": 5,
-        "max_bars": 5,
+        "min_bars": 5.0,
+        "max_bars": 5.0,
         "allowed_bars": [
           5
         ],
@@ -352,17 +364,21 @@
         "high_energy_break"
       ],
       "requires": {
-        "min_bars": 1,
-        "max_bars": 2,
+        "min_bars": 1.0,
+        "max_bars": 2.0,
         "vocal_density": "low",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          1,
+          2
+        ]
       },
       "duration": {
-        "preferred_bars": 2,
+        "preferred_bars": 1,
         "preferred_counts": 8,
         "count_unit": "beat",
-        "strict_bars": false,
-        "can_compress": true,
+        "strict_bars": true,
+        "can_compress": false,
         "can_extend": false
       },
       "avoid": [
@@ -390,10 +406,13 @@
         "short_high_energy_gap"
       ],
       "requires": {
-        "min_bars": 1,
-        "max_bars": 1,
+        "min_bars": 1.0,
+        "max_bars": 1.0,
         "vocal_density": "low",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          1
+        ]
       },
       "duration": {
         "preferred_bars": 1,
@@ -428,10 +447,13 @@
         "chorus_entry"
       ],
       "requires": {
-        "min_bars": 2,
-        "max_bars": 2,
+        "min_bars": 2.0,
+        "max_bars": 2.0,
         "vocal_density": "low",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          2
+        ]
       },
       "duration": {
         "preferred_bars": 2,
@@ -463,10 +485,13 @@
         "final_build"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 8,
+        "min_bars": 4.0,
+        "max_bars": 4.0,
         "vocal_density": "low",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          4
+        ]
       },
       "duration": {
         "preferred_bars": 4,
@@ -497,8 +522,8 @@
         "high_energy_break"
       ],
       "requires": {
-        "min_bars": 5,
-        "max_bars": 5,
+        "min_bars": 5.0,
+        "max_bars": 5.0,
         "allowed_bars": [
           5
         ],
@@ -537,10 +562,13 @@
         "chorus_entry"
       ],
       "requires": {
-        "min_bars": 2,
-        "max_bars": 2,
+        "min_bars": 2.0,
+        "max_bars": 2.0,
         "vocal_density": "low_or_gap",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          2
+        ]
       },
       "duration": {
         "preferred_bars": 2,
@@ -574,10 +602,13 @@
         "post_chorus_interlude"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 8,
+        "min_bars": 4.0,
+        "max_bars": 4.0,
         "vocal_density": "low",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          4
+        ]
       },
       "duration": {
         "preferred_bars": 4,
@@ -610,18 +641,21 @@
         "high_energy_break"
       ],
       "requires": {
-        "min_bars": 2,
-        "max_bars": 2,
+        "min_bars": 2.0,
+        "max_bars": 2.0,
         "vocal_density": "low",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          2
+        ]
       },
       "duration": {
         "preferred_bars": 2,
         "preferred_counts": 8,
         "count_unit": "beat",
-        "strict_bars": false,
+        "strict_bars": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "dense_vocal",
@@ -649,8 +683,8 @@
         "high_energy_break"
       ],
       "requires": {
-        "min_bars": 2,
-        "max_bars": 2,
+        "min_bars": 2.0,
+        "max_bars": 2.0,
         "allowed_bars": [
           2
         ],
@@ -689,10 +723,13 @@
         "high_energy_outro"
       ],
       "requires": {
-        "min_bars": 8,
-        "max_bars": 16,
+        "min_bars": 8.0,
+        "max_bars": 8.0,
         "vocal_density": "low",
-        "energy": "high"
+        "energy": "high",
+        "allowed_bars": [
+          8
+        ]
       },
       "duration": {
         "preferred_bars": 8,
@@ -727,10 +764,13 @@
         "high_energy_break"
       ],
       "requires": {
-        "min_bars": 8,
-        "max_bars": 16,
+        "min_bars": 8.0,
+        "max_bars": 8.0,
         "vocal_density": "low",
-        "energy": "high"
+        "energy": "high",
+        "allowed_bars": [
+          8
+        ]
       },
       "duration": {
         "preferred_bars": 8,
@@ -762,10 +802,13 @@
         "pre_final_chorus_gap"
       ],
       "requires": {
-        "min_bars": 8,
-        "max_bars": 8,
+        "min_bars": 8.0,
+        "max_bars": 8.0,
         "vocal_density": "low",
-        "energy": "high"
+        "energy": "high",
+        "allowed_bars": [
+          8
+        ]
       },
       "duration": {
         "preferred_bars": 8,
@@ -801,8 +844,8 @@
         "high_energy_outro"
       ],
       "requires": {
-        "min_bars": 8,
-        "max_bars": 8,
+        "min_bars": 8.0,
+        "max_bars": 8.0,
         "allowed_bars": [
           8
         ],
@@ -841,8 +884,8 @@
         "high_energy_break"
       ],
       "requires": {
-        "min_bars": 8,
-        "max_bars": 8,
+        "min_bars": 8.0,
+        "max_bars": 8.0,
         "allowed_bars": [
           8
         ],
@@ -881,8 +924,8 @@
         "short_high_energy_gap"
       ],
       "requires": {
-        "min_bars": 3,
-        "max_bars": 3,
+        "min_bars": 3.0,
+        "max_bars": 3.0,
         "allowed_bars": [
           3
         ],
@@ -918,14 +961,17 @@
         "call_and_response"
       ],
       "requires": {
-        "min_bars": 1,
-        "max_bars": 1,
+        "min_bars": 1.0,
+        "max_bars": 1.0,
         "vocal_density": "gap",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          1
+        ]
       },
       "duration": {
         "preferred_bars": 1,
-        "strict_bars": true,
+        "strict_bars": false,
         "can_compress": false,
         "can_extend": false
       },
@@ -991,8 +1037,8 @@
         "pre_final_chorus_gap"
       ],
       "requires": {
-        "min_bars": 8,
-        "max_bars": 8,
+        "min_bars": 8.0,
+        "max_bars": 8.0,
         "allowed_bars": [
           8
         ],
@@ -1029,14 +1075,17 @@
         "chorus_entry"
       ],
       "requires": {
-        "min_bars": 1,
-        "max_bars": 1,
+        "min_bars": 1.0,
+        "max_bars": 1.0,
         "vocal_density": "gap",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          1
+        ]
       },
       "duration": {
         "preferred_bars": 1,
-        "strict_bars": true,
+        "strict_bars": false,
         "can_compress": false,
         "can_extend": false
       },
@@ -1063,10 +1112,13 @@
         "high_tension_gap"
       ],
       "requires": {
-        "min_bars": 7,
-        "max_bars": 7,
+        "min_bars": 7.0,
+        "max_bars": 7.0,
         "vocal_density": "low_or_gap",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          7
+        ]
       },
       "duration": {
         "preferred_bars": 7,
@@ -1098,10 +1150,13 @@
         "high_energy_break"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 4,
+        "min_bars": 4.0,
+        "max_bars": 4.0,
         "vocal_density": "low_or_gap",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          4
+        ]
       },
       "duration": {
         "preferred_bars": 4,
@@ -1133,8 +1188,8 @@
         "chorus_entry"
       ],
       "requires": {
-        "min_bars": 1,
-        "max_bars": 2,
+        "min_bars": 1.0,
+        "max_bars": 2.0,
         "allowed_bars": [
           1,
           2
@@ -1144,9 +1199,9 @@
       },
       "duration": {
         "preferred_bars": 1,
-        "strict_bars": false,
+        "strict_bars": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "dense_vocal",
@@ -1171,22 +1226,21 @@
         "pre_final_chorus_gap"
       ],
       "requires": {
-        "min_bars": 8,
-        "max_bars": 16,
+        "min_bars": 8.0,
+        "max_bars": 8.0,
         "bar_multiple": 8,
         "allowed_bars": [
-          8,
-          16
+          8
         ],
         "vocal_density": "low",
         "energy": "high"
       },
       "duration": {
         "preferred_bars": 8,
-        "strict_bars": false,
+        "strict_bars": true,
         "strict_bar_multiple": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "short_gap",
@@ -1214,16 +1268,19 @@
         "short_high_energy_gap"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 8,
+        "min_bars": 4.0,
+        "max_bars": 4.0,
         "vocal_density": "low",
-        "energy": "high"
+        "energy": "high",
+        "allowed_bars": [
+          4
+        ]
       },
       "duration": {
         "preferred_bars": 4,
-        "strict_bars": false,
+        "strict_bars": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "short_gap_under_4_bars",
@@ -1251,15 +1308,19 @@
         "high_tension_gap"
       ],
       "requires": {
-        "min_bars": 1,
-        "max_bars": 4,
+        "min_bars": 1.0,
+        "max_bars": 2.0,
         "energy_trend": "rising",
-        "vocal_density": "low_or_gap"
+        "vocal_density": "low_or_gap",
+        "allowed_bars": [
+          1,
+          2
+        ]
       },
       "duration": {
         "preferred_bars": 1,
-        "strict_bars": false,
-        "can_compress": true,
+        "strict_bars": true,
+        "can_compress": false,
         "can_extend": false
       },
       "avoid": [
@@ -1285,10 +1346,13 @@
         "reintro"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 8,
+        "min_bars": 4.0,
+        "max_bars": 4.0,
         "vocal_density": "low",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          4
+        ]
       },
       "duration": {
         "preferred_bars": 4,
@@ -1319,10 +1383,13 @@
         "short_high_energy_gap"
       ],
       "requires": {
-        "min_bars": 2,
-        "max_bars": 2,
+        "min_bars": 2.0,
+        "max_bars": 2.0,
         "vocal_density": "low",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          2
+        ]
       },
       "duration": {
         "preferred_bars": 2,
@@ -1360,8 +1427,8 @@
         "chorus_entry"
       ],
       "requires": {
-        "min_bars": 1,
-        "max_bars": 2,
+        "min_bars": 1.0,
+        "max_bars": 2.0,
         "allowed_bars": [
           1,
           2
@@ -1370,12 +1437,12 @@
         "beat_stability": "high"
       },
       "duration": {
-        "preferred_bars": 2,
+        "preferred_bars": 1,
         "preferred_counts": 8,
         "count_unit": "beat",
         "preferred_eight_counts": 2,
-        "strict_bars": false,
-        "can_compress": true,
+        "strict_bars": true,
+        "can_compress": false,
         "can_extend": false
       },
       "avoid": [
@@ -1404,8 +1471,8 @@
         "post_chorus_interlude"
       ],
       "requires": {
-        "min_bars": 1,
-        "max_bars": 1,
+        "min_bars": 1.0,
+        "max_bars": 1.0,
         "allowed_bars": [
           1
         ],
@@ -1444,10 +1511,13 @@
         "high_energy_break"
       ],
       "requires": {
-        "min_bars": 2,
-        "max_bars": 2,
+        "min_bars": 2.0,
+        "max_bars": 2.0,
         "vocal_density": "low",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          2
+        ]
       },
       "duration": {
         "preferred_bars": 2,
@@ -1487,8 +1557,8 @@
         "long_vocal_gap"
       ],
       "requires": {
-        "min_bars": 6,
-        "max_bars": 7,
+        "min_bars": 6.0,
+        "max_bars": 7.0,
         "allowed_bars": [
           6,
           7
@@ -1501,9 +1571,9 @@
         "preferred_counts": 48,
         "count_unit": "double_time_call_count",
         "preferred_eight_counts": 6,
-        "strict_bars": false,
+        "strict_bars": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "dense_vocal",
@@ -1533,8 +1603,8 @@
         "high_energy_break"
       ],
       "requires": {
-        "min_bars": 9,
-        "max_bars": 9,
+        "min_bars": 9.0,
+        "max_bars": 9.0,
         "allowed_bars": [
           9
         ],
@@ -1574,22 +1644,21 @@
         "short_high_energy_gap"
       ],
       "requires": {
-        "min_bars": 2,
-        "max_bars": 4,
+        "min_bars": 2.0,
+        "max_bars": 2.0,
         "bar_multiple": 2,
         "allowed_bars": [
-          2,
-          4
+          2
         ],
         "vocal_density": "low",
         "beat_stability": "high"
       },
       "duration": {
         "preferred_bars": 2,
-        "strict_bars": false,
+        "strict_bars": true,
         "strict_bar_multiple": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "dense_vocal",
@@ -1618,8 +1687,8 @@
         "chorus_entry"
       ],
       "requires": {
-        "min_bars": 1,
-        "max_bars": 2,
+        "min_bars": 1.0,
+        "max_bars": 2.0,
         "allowed_bars": [
           1,
           2
@@ -1629,9 +1698,9 @@
       },
       "duration": {
         "preferred_bars": 1,
-        "strict_bars": false,
+        "strict_bars": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "dense_vocal",
@@ -1657,16 +1726,19 @@
         "high_energy_break"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 8,
+        "min_bars": 4.0,
+        "max_bars": 4.0,
         "vocal_density": "low",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          4
+        ]
       },
       "duration": {
         "preferred_bars": 4,
-        "strict_bars": false,
+        "strict_bars": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "dense_vocal",
@@ -1694,16 +1766,19 @@
         "pre_final_chorus_gap"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 8,
+        "min_bars": 4.0,
+        "max_bars": 4.0,
         "vocal_density": "low",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          4
+        ]
       },
       "duration": {
         "preferred_bars": 4,
-        "strict_bars": false,
+        "strict_bars": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "dense_vocal",
@@ -1732,7 +1807,10 @@
         "min_bars": 8,
         "max_bars": 8,
         "vocal_density": "low",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          8
+        ]
       },
       "duration": {
         "preferred_bars": 8,
@@ -1767,8 +1845,8 @@
         "pre_final_chorus_gap"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 8,
+        "min_bars": 4.0,
+        "max_bars": 8.0,
         "allowed_bars": [
           4,
           8
@@ -1778,10 +1856,9 @@
       },
       "duration": {
         "preferred_bars": 8,
-        "strict_bars": false,
-        "strict_bar_multiple": true,
+        "strict_bars": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "dense_vocal",
@@ -1806,10 +1883,13 @@
         "pre_final_chorus_gap"
       ],
       "requires": {
-        "min_bars": 8,
-        "max_bars": 16,
+        "min_bars": 8.0,
+        "max_bars": 8.0,
         "vocal_density": "low",
-        "emotional_style": "oshi_focused"
+        "emotional_style": "oshi_focused",
+        "allowed_bars": [
+          8
+        ]
       },
       "duration": {
         "preferred_bars": 8,
@@ -1842,8 +1922,8 @@
         "mid_energy_vocal"
       ],
       "requires": {
-        "min_bars": 7,
-        "max_bars": 7,
+        "min_bars": 7.0,
+        "max_bars": 7.0,
         "allowed_bars": [
           7
         ],
@@ -1886,8 +1966,8 @@
         "short_high_energy_gap"
       ],
       "requires": {
-        "min_bars": 2,
-        "max_bars": 2,
+        "min_bars": 2.0,
+        "max_bars": 2.0,
         "allowed_bars": [
           2
         ],
@@ -1919,12 +1999,11 @@
         "post_chorus_interlude"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 8,
+        "min_bars": 4.0,
+        "max_bars": 4.0,
         "bar_multiple": 4,
         "allowed_bars": [
-          4,
-          8
+          4
         ],
         "vocal_density": "low_or_gap",
         "beat_stability": "high"
@@ -1934,9 +2013,9 @@
         "preferred_counts": 16,
         "count_unit": "beat",
         "strict_bar_multiple": true,
-        "strict_bars": false,
+        "strict_bars": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "dense_vocal",
@@ -1969,18 +2048,21 @@
         "extended_instrumental"
       ],
       "requires": {
-        "min_bars": 8,
-        "max_bars": 9,
+        "min_bars": 8.0,
+        "max_bars": 8.0,
         "vocal_density": "low_or_gap",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          8
+        ]
       },
       "duration": {
         "preferred_bars": 8,
         "preferred_counts": 32,
         "count_unit": "beat",
-        "strict_bars": false,
+        "strict_bars": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "dense_vocal",
@@ -2010,10 +2092,13 @@
         "post_chorus_interlude"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 4,
+        "min_bars": 4.0,
+        "max_bars": 4.0,
         "vocal_density": "low_or_gap",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          4
+        ]
       },
       "duration": {
         "preferred_bars": 4,
@@ -2050,10 +2135,13 @@
         "post_chorus_interlude"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 4,
+        "min_bars": 4.0,
+        "max_bars": 4.0,
         "vocal_density": "low_or_gap",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          4
+        ]
       },
       "duration": {
         "preferred_bars": 4,
@@ -2081,12 +2169,11 @@
         "post_chorus_interlude"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 8,
+        "min_bars": 4.0,
+        "max_bars": 4.0,
         "bar_multiple": 4,
         "allowed_bars": [
-          4,
-          8
+          4
         ],
         "vocal_density": "low_or_gap",
         "beat_stability": "high"
@@ -2096,9 +2183,9 @@
         "preferred_counts": 16,
         "count_unit": "beat",
         "strict_bar_multiple": true,
-        "strict_bars": false,
+        "strict_bars": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "dense_vocal",
@@ -2124,12 +2211,11 @@
         "post_chorus_interlude"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 8,
+        "min_bars": 4.0,
+        "max_bars": 4.0,
         "bar_multiple": 4,
         "allowed_bars": [
-          4,
-          8
+          4
         ],
         "vocal_density": "low_or_gap",
         "beat_stability": "high"
@@ -2139,9 +2225,9 @@
         "preferred_counts": 16,
         "count_unit": "beat",
         "strict_bar_multiple": true,
-        "strict_bars": false,
+        "strict_bars": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "dense_vocal",
@@ -2167,12 +2253,11 @@
         "post_chorus_interlude"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 8,
+        "min_bars": 4.0,
+        "max_bars": 4.0,
         "bar_multiple": 4,
         "allowed_bars": [
-          4,
-          8
+          4
         ],
         "vocal_density": "low_or_gap",
         "beat_stability": "high"
@@ -2182,9 +2267,9 @@
         "preferred_counts": 16,
         "count_unit": "beat",
         "strict_bar_multiple": true,
-        "strict_bars": false,
+        "strict_bars": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "dense_vocal",
@@ -2210,12 +2295,11 @@
         "extended_instrumental"
       ],
       "requires": {
-        "min_bars": 8,
-        "max_bars": 16,
+        "min_bars": 8.0,
+        "max_bars": 8.0,
         "bar_multiple": 8,
         "allowed_bars": [
-          8,
-          16
+          8
         ],
         "vocal_density": "low_or_gap",
         "beat_stability": "high"
@@ -2224,10 +2308,10 @@
         "preferred_bars": 8,
         "preferred_counts": 32,
         "count_unit": "beat",
-        "strict_bars": false,
+        "strict_bars": true,
         "strict_bar_multiple": true,
         "can_compress": false,
-        "can_extend": true
+        "can_extend": false
       },
       "avoid": [
         "dense_vocal",
@@ -2253,10 +2337,13 @@
         "extended_instrumental"
       ],
       "requires": {
-        "min_bars": 8,
-        "max_bars": 8,
+        "min_bars": 8.0,
+        "max_bars": 8.0,
         "vocal_density": "low_or_gap",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          8
+        ]
       },
       "duration": {
         "preferred_bars": 8,
@@ -2296,10 +2383,13 @@
         "extended_instrumental"
       ],
       "requires": {
-        "min_bars": 8,
-        "max_bars": 8,
+        "min_bars": 8.0,
+        "max_bars": 8.0,
         "vocal_density": "low_or_gap",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          8
+        ]
       },
       "duration": {
         "preferred_bars": 8,
@@ -2334,23 +2424,22 @@
         "extended_instrumental"
       ],
       "requires": {
-        "min_bars": 4,
-        "max_bars": 8,
+        "min_bars": 4.0,
+        "max_bars": 4.0,
         "vocal_density": "low_or_gap",
         "beat_stability": "high",
         "bar_multiple": 4,
         "allowed_bars": [
-          4,
-          8
+          4
         ]
       },
       "duration": {
         "preferred_bars": 4,
         "preferred_counts": 16,
         "count_unit": "beat",
-        "strict_bars": false,
+        "strict_bars": true,
         "can_compress": false,
-        "can_extend": true,
+        "can_extend": false,
         "strict_bar_multiple": true
       },
       "avoid": [
@@ -2380,10 +2469,13 @@
         "pre_final_chorus_gap"
       ],
       "requires": {
-        "min_bars": 12,
-        "max_bars": 12,
+        "min_bars": 12.0,
+        "max_bars": 12.0,
         "vocal_density": "low_or_gap",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          12
+        ]
       },
       "duration": {
         "preferred_bars": 12,
@@ -2421,10 +2513,13 @@
         "pre_final_chorus_gap"
       ],
       "requires": {
-        "min_bars": 20,
-        "max_bars": 20,
+        "min_bars": 20.0,
+        "max_bars": 20.0,
         "vocal_density": "low_or_gap",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          20
+        ]
       },
       "duration": {
         "preferred_bars": 20,
@@ -2459,16 +2554,19 @@
         "mid_energy_vocal"
       ],
       "requires": {
-        "min_bars": 2,
-        "max_bars": 16,
+        "min_bars": 2.0,
+        "max_bars": 2.0,
         "vocal_density": "medium",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          2
+        ]
       },
       "duration": {
-        "preferred_bars": 4,
+        "preferred_bars": 2,
         "strict_bars": false,
-        "can_compress": true,
-        "can_extend": true
+        "can_compress": false,
+        "can_extend": false
       },
       "avoid": [
         "very_dense_vocal",
@@ -2525,15 +2623,18 @@
         "chorus_entry"
       ],
       "requires": {
-        "min_bars": 0.25,
-        "max_bars": 1,
+        "min_bars": 1.0,
+        "max_bars": 1.0,
         "energy": "rising",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          1
+        ]
       },
       "duration": {
-        "preferred_bars": 0.5,
+        "preferred_bars": 1,
         "strict_bars": false,
-        "can_compress": true,
+        "can_compress": false,
         "can_extend": false
       },
       "avoid": [
@@ -2558,16 +2659,20 @@
         "instrumental_riff"
       ],
       "requires": {
-        "min_bars": 0.5,
-        "max_bars": 16,
+        "min_bars": 1.0,
+        "max_bars": 2.0,
         "energy": "medium_high",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          1,
+          2
+        ]
       },
       "duration": {
         "preferred_bars": 1,
         "strict_bars": false,
-        "can_compress": true,
-        "can_extend": true
+        "can_compress": false,
+        "can_extend": false
       },
       "avoid": [
         "quiet_ballad",
@@ -2624,16 +2729,21 @@
         "high_energy_outro"
       ],
       "requires": {
-        "min_bars": 1,
-        "max_bars": 16,
+        "min_bars": 1.0,
+        "max_bars": 4.0,
         "energy": "high",
-        "beat_stability": "high"
+        "beat_stability": "high",
+        "allowed_bars": [
+          1,
+          2,
+          4
+        ]
       },
       "duration": {
         "preferred_bars": 2,
         "strict_bars": false,
-        "can_compress": true,
-        "can_extend": true
+        "can_compress": false,
+        "can_extend": false
       },
       "avoid": [
         "cute_soft_chorus",
@@ -2658,15 +2768,23 @@
         "outro"
       ],
       "requires": {
-        "min_bars": 1,
-        "max_bars": 32,
-        "beat_stability": "high"
+        "min_bars": 1.0,
+        "max_bars": 8.0,
+        "beat_stability": "high",
+        "allowed_bars": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8
+        ]
       },
       "duration": {
         "preferred_bars": 2,
         "strict_bars": false,
-        "can_compress": true,
-        "can_extend": true
+        "can_compress": false,
+        "can_extend": false
       },
       "avoid": [
         "silent_break",
@@ -2690,15 +2808,19 @@
         "member_focus"
       ],
       "requires": {
-        "min_bars": 1,
-        "max_bars": 8,
+        "min_bars": 1.0,
+        "max_bars": 2.0,
         "metadata": "member_or_unit_name",
-        "vocal_density": "gap"
+        "vocal_density": "gap",
+        "allowed_bars": [
+          1,
+          2
+        ]
       },
       "duration": {
         "preferred_bars": 1,
         "strict_bars": false,
-        "can_compress": true,
+        "can_compress": false,
         "can_extend": false
       },
       "avoid": [
@@ -2725,16 +2847,19 @@
         "short_vocal_hook"
       ],
       "requires": {
-        "min_bars": 0.5,
-        "max_bars": 2,
+        "min_bars": 1.0,
+        "max_bars": 1.0,
         "vocal_density": "chant",
-        "lyric_familiarity": "medium"
+        "lyric_familiarity": "medium",
+        "allowed_bars": [
+          1
+        ]
       },
       "duration": {
         "preferred_bars": 1,
         "strict_bars": false,
-        "can_compress": true,
-        "can_extend": true
+        "can_compress": false,
+        "can_extend": false
       },
       "avoid": [
         "dense_melody_line",
@@ -2826,16 +2951,23 @@
         "outro"
       ],
       "requires": {
-        "min_bars": 1,
-        "max_bars": 32,
+        "min_bars": 1.0,
+        "max_bars": 8.0,
         "vocal_density": "can_overlap",
-        "lyric_familiarity": "high"
+        "lyric_familiarity": "high",
+        "allowed_bars": [
+          1,
+          2,
+          3,
+          4,
+          8
+        ]
       },
       "duration": {
-        "preferred_bars": 4,
+        "preferred_bars": 2,
         "strict_bars": false,
-        "can_compress": true,
-        "can_extend": true
+        "can_compress": false,
+        "can_extend": false
       },
       "avoid": [
         "solo_line_focus",

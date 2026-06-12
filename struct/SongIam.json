@@ -17,13 +17,28 @@
     },
     {
       "start": 35.52,
-      "end": 66.16,
+      "end": 56.06,
       "label": "verse"
     },
     {
+      "start": 56.06,
+      "end": 63.64,
+      "label": "pre_chorus"
+    },
+    {
+      "start": 63.64,
+      "end": 66.16,
+      "label": "pre_chorus_build"
+    },
+    {
       "start": 66.16,
-      "end": 96.47,
+      "end": 86.37,
       "label": "chorus"
+    },
+    {
+      "start": 86.37,
+      "end": 96.47,
+      "label": "instrumental_break"
     },
     {
       "start": 96.47,
@@ -32,28 +47,44 @@
     },
     {
       "start": 126.79,
-      "end": 147.0,
+      "end": 134.37,
+      "label": "pre_chorus"
+    },
+
+    {
+      "start": 134.37,
+      "end": 136.9,
+      "label": "pre_chorus_build"
+    },
+    {
+      "start": 136.9,
+      "end": 157.11,
       "label": "chorus"
     },
     {
-      "start": 147.0,
+      "start": 157.11,
       "end": 167.21,
-      "label": "bridge"
+      "label": "interlude"
     },
     {
       "start": 167.21,
-      "end": 195.0,
+      "end": 177.32,
+      "label": "bridge"
+    },
+    {
+      "start": 177.32,
+      "end": 205.11,
       "label": "solo"
     },
     {
-      "start": 195.0,
-      "end": 215.21,
+      "start": 205.11,
+      "end": 225.32,
       "label": "chorus"
     },
     {
-      "start": 215.21,
+      "start": 225.32,
       "end": 235.48,
-      "label": "chorus"
+      "label": "post_chorus"
     },
     {
       "start": 235.48,

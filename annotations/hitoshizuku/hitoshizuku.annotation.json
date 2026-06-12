@@ -7,6 +7,8 @@
     "franchise": "",
     "audio_path": "songs/壱雫空.mp3",
     "bpm": 102,
+    "call_bpm": 102,
+    "call_bar_multiplier": 1.0,
     "meter": "4/4"
   },
   "segments": [

@@ -1017,7 +1017,7 @@ def plot_callability(rows: List[Dict[str, Any]], path: Path, title: str) -> None
     axes[0].plot(times, [row["signal_features"]["energy"] for row in rows], label="energy", color="#1f77b4")
     axes[0].plot(times, [row["signal_features"]["onset"] for row in rows], label="onset", color="#ff7f0e")
     axes[0].plot(times, [row["signal_features"]["vocal_density_proxy"] for row in rows], label="vocal density proxy", color="#2ca02c")
-    axes[0].plot(times, [row["novelty"]["fused"] for row in rows], label="fused novelty", color="#d62728")
+    axes[0].plot(times, [row["novelty"]["fused"] for row in rows], label="music change curve", color="#d62728")
     axes[0].set_ylabel("Signal")
     axes[0].set_ylim(-0.05, 1.05)
     axes[0].legend(loc="upper right", ncol=4, fontsize=8)

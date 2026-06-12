@@ -21,6 +21,11 @@ BASE_NUMERIC_FEATURES = [
     "start_extrapolated_downbeat",
     "allin1_struct_boundary",
     "allin1_struct_label_overlap",
+    # ── audio features: help distinguish instrumental/solo from vocal chorus ──
+    "energy",
+    "onset",
+    "vocal_density_proxy",
+    "beat_stability",
 ]
 
 ACTION_NUMERIC_FEATURES = [
@@ -109,9 +114,20 @@ def group_rows_by_song(rows: Sequence[Dict[str, Any]]) -> Dict[str, List[Dict[st
     return dict(sorted(songs.items()))
 
 
-def base_numeric(row: Dict[str, Any]) -> List[float]:
+def base_numeric(row: Dict[str, Any], defaults: Optional[Dict[str, float]] = None) -> List[float]:
     features = row.get("features") or {}
-    return [float(features.get(name, 0.0)) for name in BASE_NUMERIC_FEATURES]
+    signal = row.get("signal_features") or {}
+    defaults = defaults or {}
+    result = []
+    for name in BASE_NUMERIC_FEATURES:
+        if name in ("energy", "onset", "vocal_density_proxy", "beat_stability"):
+            val = signal.get(name)
+            if val is None:
+                val = defaults.get(name, 0.0)
+            result.append(float(val))
+        else:
+            result.append(float(features.get(name, 0.0)))
+    return result
 
 
 def collect_struct_vocab(rows: Sequence[Dict[str, Any]]) -> List[str]:
@@ -124,8 +140,14 @@ def build_base_features(
     standardizer: Standardizer,
 ) -> List[float]:
     features = row.get("features") or {}
+    # Build per-feature defaults from standardizer mean: if signal_features are missing,
+    # use the training mean so the standardized value is 0 (neutral) instead of an outlier.
+    signal_defaults = {}
+    for i, name in enumerate(BASE_NUMERIC_FEATURES):
+        if name in ("energy", "onset", "vocal_density_proxy", "beat_stability"):
+            signal_defaults[name] = float(standardizer.mean[i])
     return (
-        standardizer.transform(base_numeric(row))
+        standardizer.transform(base_numeric(row, defaults=signal_defaults))
         + one_hot(str(features.get("allin1_struct_label") or "unknown"), struct_vocab)
     )
 
